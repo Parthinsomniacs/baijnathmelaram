@@ -104,28 +104,39 @@
 	 * 1. Video zooms forward with cinematic depth (scale: 1.7 - passing through the window effect)
 	 * 2. Scroll Prompt fades out on first scroll
 	 * 3. White background layer opens up smoothly
-	 * 4. Banner title animates in with mask-reveal
-	 * 5. Header slides down and reveals simultaneously when title arrives
+	 * 4. Title words animate up with mask-reveal
+	 * 5. Top-Left & Bottom-Right Theme AI Images smoothly reveal into view
+	 * 6. Header slides down and reveals simultaneously when title arrives
 	 **/
 	function initHeroBannerAnimation() {
 		const bannerSection = document.querySelector("#section-banner");
 		const whiteLayer = document.querySelector(".banner-white-layer");
 		const wordInners = document.querySelectorAll(".banner-word-inner");
+		const floatLeft = document.querySelector(".banner-float-img--left");
+		const floatRight = document.querySelector(".banner-float-img--right");
+		const floatImgs = document.querySelectorAll(".banner-float-img-inner img");
 		const scrollPrompt = document.querySelector(".banner-scroll-prompt");
 		const headerEl = document.querySelector("#header");
 		if (!bannerSection || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
 
 		gsap.registerPlugin(ScrollTrigger);
 
-		// Initial state: white layer at opacity 0, words hidden below mask
+		// Initial state: white layer at opacity 0, words hidden below mask, float images hidden with clipPath/scale
 		if (whiteLayer) {
 			gsap.set(whiteLayer, { opacity: 0 });
 		}
 		if (wordInners.length) {
 			gsap.set(wordInners, { y: "115%", opacity: 0 });
 		}
-
-
+		if (floatLeft) {
+			gsap.set(floatLeft, { opacity: 0, y: 45, scale: 0.88, clipPath: "inset(100% 0% 0% 0%)" });
+		}
+		if (floatRight) {
+			gsap.set(floatRight, { opacity: 0, y: -45, scale: 0.88, clipPath: "inset(0% 0% 100% 0%)" });
+		}
+		if (floatImgs.length) {
+			gsap.set(floatImgs, { scale: 1.25 });
+		}
 
 		const bannerScrollTl = gsap.timeline({
 			scrollTrigger: {
@@ -179,6 +190,34 @@
 				stagger: 0.08,
 				ease: "power3.out"
 			}, 0.65);
+		}
+
+		// 5. Top-Left & Bottom-Right Theme AI Images reveal smoothly as title arrives (0.58 to 0.95)
+		if (floatLeft) {
+			bannerScrollTl.to(floatLeft, {
+				opacity: 1,
+				y: 0,
+				scale: 1,
+				clipPath: "inset(0% 0% 0% 0%)",
+				ease: "power3.out"
+			}, 0.58);
+		}
+
+		if (floatRight) {
+			bannerScrollTl.to(floatRight, {
+				opacity: 1,
+				y: 0,
+				scale: 1,
+				clipPath: "inset(0% 0% 0% 0%)",
+				ease: "power3.out"
+			}, 0.64);
+		}
+
+		if (floatImgs.length) {
+			bannerScrollTl.to(floatImgs, {
+				scale: 1.0,
+				ease: "power2.out"
+			}, 0.58);
 		}
 	}
 

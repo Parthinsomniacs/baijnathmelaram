@@ -1,3 +1,29 @@
+:root {
+  --color-primary: #1B4332;
+  --color-secondary: #40916C;
+  --primary: #1B4332;
+  --secondary: #40916C;
+}
+
+.text-primary,
+.color-primary {
+  color: var(--color-primary, #1B4332) !important;
+}
+
+.text-secondary,
+.color-secondary {
+  color: var(--color-secondary, #40916C) !important;
+}
+
+.section-title h1 .text-primary,
+.section-title h1 .color-primary,
+.section-title h1 .banner-word--green,
+.banner-title .text-primary,
+.banner-title .color-primary,
+.banner-title .banner-word--green {
+  color: var(--color-primary, #1B4332) !important;
+}
+
 html,
 body {
   overflow-x: clip !important;
@@ -484,6 +510,7 @@ section,
   margin: 0;
   position: relative;
   display: inline-block;
+  text-transform: uppercase;
 }
 
 .section-title h2 {
@@ -2267,12 +2294,86 @@ body.insomenu-active {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   opacity: 0;
   pointer-events: none;
   will-change: opacity;
 }
 
+/* Floating AI Reveal Images on White Transition Layer */
+.banner-float-img {
+  position: absolute;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+  will-change: transform, opacity, clip-path;
+  pointer-events: none;
+}
+
+.banner-float-img-inner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.banner-float-img-inner picture,
+.banner-float-img-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.18);
+  transform-origin: center center;
+  will-change: transform;
+}
+
+/* Top-Left Position */
+.banner-float-img--left {
+  top: 15%;
+  left: 5vw;
+  width: clamp(200px, 20vw, 340px);
+  aspect-ratio: 1 / 1;
+}
+
+/* Bottom-Right Position */
+.banner-float-img--right {
+  bottom: 10%;
+  right: 5vw;
+  width: clamp(190px, 18vw, 310px);
+  aspect-ratio: 3 / 4;
+}
+
+@media screen and (max-width: 1024px) {
+  .banner-float-img--left {
+    top: 12%;
+    left: 4vw;
+    width: 180px;
+  }
+  .banner-float-img--right {
+    bottom: 8%;
+    right: 4vw;
+    width: 160px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner-float-img--left {
+    top: 8%;
+    left: 4vw;
+    width: 130px;
+  }
+  .banner-float-img--right {
+    bottom: 6%;
+    right: 4vw;
+    width: 120px;
+  }
+}
+
 .banner-white-layer .theme-padding {
+  position: relative;
+  z-index: 3;
   width: 100%;
   pointer-events: auto;
   text-align: center;

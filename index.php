@@ -52,15 +52,35 @@ $utm = "yes";
       </div>
     </div>
 
-    <!-- White Background Transition Layer with Animated Title & Floating Arc Cards Slider on Scroll -->
-    <div class="banner-white-layer"><div class="theme-padding">
+    <!-- White Background Transition Layer with Animated Title & Floating Reveal Images on Scroll -->
+    <div class="banner-white-layer">
+      <!-- Top-Left Floating Reveal Image -->
+      <div class="banner-float-img banner-float-img--left">
+        <div class="banner-float-img-inner">
+          <picture>
+            <img src="<?php echo $imagesurl; ?>banner/showcase-tech.jpg" alt="Green Ship Recycling Innovation" width="600" height="600">
+          </picture>
+        </div>
+      </div>
+
+      <!-- Center Title -->
+      <div class="theme-padding">
         <div class="banner-title-center text-center">
           <div class="section-title">
             <h1 class="banner-title">
-              <span class="banner-word-mask"><span class="banner-word-inner">Green</span></span> <span class="banner-word-mask"><span class="banner-word-inner">Recycling</span></span><br>
+              <span class="banner-word-mask"><span class="banner-word-inner text-primary">Green</span></span> <span class="banner-word-mask"><span class="banner-word-inner">Recycling</span></span><br>
               <span class="banner-word-mask"><span class="banner-word-inner">To</span></span> <span class="banner-word-mask"><span class="banner-word-inner">Navigate</span></span> <span class="banner-word-mask"><span class="banner-word-inner">Future</span></span>
             </h1>
           </div>
+        </div>
+      </div>
+
+      <!-- Bottom-Right Floating Reveal Image -->
+      <div class="banner-float-img banner-float-img--right">
+        <div class="banner-float-img-inner">
+          <picture>
+            <img src="<?php echo $imagesurl; ?>banner/showcase-steel.jpg" alt="Sustainable Steel Manufacturing" width="600" height="800">
+          </picture>
         </div>
       </div>
     </div>
