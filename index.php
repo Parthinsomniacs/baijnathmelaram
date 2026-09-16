@@ -29,58 +29,24 @@ $utm = "yes";
     <!-- Banner Video Background with Smooth Seamless Loop -->
     <div class="banner-video-wrap">
       <video id="banner-video-1" class="banner-video banner-video--1" autoplay muted playsinline preload="auto">
-        <source src="<?php echo $imagesurl; ?>banner/banner-video.mp4" type="video/mp4">
+        <source src="<?php echo $imagesurl; ?>banner/banner-new-video.mp4" type="video/mp4">
       </video>
       <video id="banner-video-2" class="banner-video banner-video--2" muted playsinline preload="auto">
-        <source src="<?php echo $imagesurl; ?>banner/banner-video.mp4" type="video/mp4">
+        <source src="<?php echo $imagesurl; ?>banner/banner-new-video.mp4" type="video/mp4">
       </video>
       <div class="banner-video-overlay"></div>
     </div>
 
-    <!-- Glassmorphic Tabler Arrow Scroll Indicator -->
-    <div class="banner-scroll-prompt">
-      <div class="scroll-prompt-glass">
-        <span class="scroll-prompt-label">SCROLL TO EXPLORE</span>
-        <span class="scroll-tabler-arrow">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-down">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M12 5l0 14" />
-            <path d="M18 13l-6 6" />
-            <path d="M6 13l6 6" />
-          </svg>
-        </span>
-      </div>
-    </div>
-
-    <!-- White Background Transition Layer with Animated Title & Floating Reveal Images on Scroll -->
-    <div class="banner-white-layer">
-      <!-- Top-Left Floating Reveal Image -->
-      <div class="banner-float-img banner-float-img--left">
-        <div class="banner-float-img-inner">
-          <picture>
-            <img src="<?php echo $imagesurl; ?>banner/showcase-tech.jpg" alt="Green Ship Recycling Innovation" width="600" height="600">
-          </picture>
-        </div>
-      </div>
-
-      <!-- Center Title -->
+    <!-- Banner Content Overlay Directly on Video -->
+    <div class="banner-overlay-wrap">
       <div class="theme-padding">
         <div class="banner-title-center text-center">
           <div class="section-title">
             <h1 class="banner-title">
-              <span class="banner-word-mask"><span class="banner-word-inner text-primary">Green</span></span> <span class="banner-word-mask"><span class="banner-word-inner">Recycling</span></span><br>
+              <span class="banner-word-mask"><span class="banner-word-inner text-secondary">Green</span></span> <span class="banner-word-mask"><span class="banner-word-inner">Recycling</span></span><br>
               <span class="banner-word-mask"><span class="banner-word-inner">To</span></span> <span class="banner-word-mask"><span class="banner-word-inner">Navigate</span></span> <span class="banner-word-mask"><span class="banner-word-inner">Future</span></span>
             </h1>
           </div>
-        </div>
-      </div>
-
-      <!-- Bottom-Right Floating Reveal Image -->
-      <div class="banner-float-img banner-float-img--right">
-        <div class="banner-float-img-inner">
-          <picture>
-            <img src="<?php echo $imagesurl; ?>banner/showcase-steel.jpg" alt="Sustainable Steel Manufacturing" width="600" height="800">
-          </picture>
         </div>
       </div>
     </div>

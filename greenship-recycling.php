@@ -48,7 +48,7 @@ $utm = "yes";
             <div class="section-title">
               <h1 class="banner-title">
                 <span class="banner-word-mask"><span class="banner-word-inner">A</span></span> <span class="banner-word-mask"><span class="banner-word-inner">Commitment</span></span> <span class="banner-word-mask"><span class="banner-word-inner">to</span></span><br>
-                <span class="banner-word-mask"><span class="banner-word-inner text-primary">Green</span></span> <span class="banner-word-mask"><span class="banner-word-inner">Ship</span></span> <span class="banner-word-mask"><span class="banner-word-inner">Recycling</span></span>
+                <span class="banner-word-mask"><span class="banner-word-inner text-secondary">Green</span></span> <span class="banner-word-mask"><span class="banner-word-inner">Ship</span></span> <span class="banner-word-mask"><span class="banner-word-inner">Recycling</span></span>
               </h1>
             </div>
           </div>

@@ -4,21 +4,26 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script>
-	// 60/120fps synchronized Lenis + GSAP ScrollTrigger
-	window.lenis = new Lenis({
-		autoRaf: false,
-		duration: 1.2,
-		easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-		orientation: 'vertical',
-		smoothWheel: true
-	});
+	if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+		gsap.registerPlugin(ScrollTrigger);
+	}
 
-	if (window.lenis && typeof ScrollTrigger !== "undefined") {
-		window.lenis.on('scroll', ScrollTrigger.update);
-		gsap.ticker.add((time) => {
-			window.lenis.raf(time * 1000);
+	if (typeof Lenis !== "undefined") {
+		window.lenis = new Lenis({
+			autoRaf: false,
+			duration: 1.2,
+			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+			orientation: 'vertical',
+			smoothWheel: true
 		});
-		gsap.ticker.lagSmoothing(0);
+
+		if (window.lenis && typeof ScrollTrigger !== "undefined") {
+			window.lenis.on('scroll', ScrollTrigger.update);
+			gsap.ticker.add((time) => {
+				window.lenis.raf(time * 1000);
+			});
+			gsap.ticker.lagSmoothing(0);
+		}
 	}
 </script>
 <!--Common JS-->
@@ -100,191 +105,63 @@
 		requestAnimationFrame(checkLoop);
 	}
 
-	/** Hero Banner Video Scroll:
-	 * 1. Video zooms forward with cinematic depth (scale: 1.7 - passing through the window effect)
-	 * 2. Scroll Prompt fades out on first scroll
-	 * 3. White background layer opens up smoothly
-	 * 4. Title words animate up with mask-reveal
-	 * 5. Top-Left & Bottom-Right Theme AI Images smoothly reveal into view
-	 * 6. Header slides down and reveals simultaneously when title arrives
-	 **/
+	/** Hero Banner Animation on Load **/
 	function initHeroBannerAnimation() {
-		const bannerSection = document.querySelector("#section-banner");
-		const whiteLayer = document.querySelector(".banner-white-layer");
-		const wordInners = document.querySelectorAll(".banner-word-inner");
-		const floatLeft = document.querySelector(".banner-float-img--left");
-		const floatRight = document.querySelector(".banner-float-img--right");
-		const floatImgs = document.querySelectorAll(".banner-float-img-inner img");
-		const scrollPrompt = document.querySelector(".banner-scroll-prompt");
-		const headerEl = document.querySelector("#header");
-		if (!bannerSection || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
-
-		gsap.registerPlugin(ScrollTrigger);
-
-		// Initial state: white layer at opacity 0, words hidden below mask, float images hidden with clipPath/scale
-		if (whiteLayer) {
-			gsap.set(whiteLayer, { opacity: 0 });
-		}
-		if (wordInners.length) {
-			gsap.set(wordInners, { y: "115%", opacity: 0 });
-		}
-		if (floatLeft) {
-			gsap.set(floatLeft, { opacity: 0, y: 45, scale: 0.88, clipPath: "inset(100% 0% 0% 0%)" });
-		}
-		if (floatRight) {
-			gsap.set(floatRight, { opacity: 0, y: -45, scale: 0.88, clipPath: "inset(0% 0% 100% 0%)" });
-		}
-		if (floatImgs.length) {
-			gsap.set(floatImgs, { scale: 1.25 });
-		}
-
-		const bannerScrollTl = gsap.timeline({
-			scrollTrigger: {
-				trigger: bannerSection,
-				start: "top top",
-				end: "+=170%",
-				scrub: 1.1,
-				pin: true,
-				anticipatePin: 1,
-				onUpdate: (self) => {
-					// Header reveals simultaneously when title arrives (progress >= 0.65)
-					if (headerEl && document.getElementById("home")) {
-						if (self.progress >= 0.65) {
-							headerEl.classList.add("header--visible");
-						} else {
-							headerEl.classList.remove("header--visible");
-						}
-					}
-				}
-			}
-		});
-
-		// 1. Scroll Prompt fades out immediately on first scroll (0.0 to 0.15)
-		if (scrollPrompt) {
-			bannerScrollTl.to(scrollPrompt, {
-				opacity: 0,
-				y: 20,
-				ease: "power1.out"
-			}, 0);
-		}
-
-		// 2. Video zooms forward giving the immersive feeling of passing through a window (scale: 1.7)
-		bannerScrollTl.to("#section-banner .banner-video", {
-			scale: 1.7,
-			ease: "power1.inOut"
-		}, 0);
-
-		// 3. White background layer opens up smoothly as we pass through (0.42 to 0.78)
-		if (whiteLayer) {
-			bannerScrollTl.to(whiteLayer, {
-				opacity: 1,
-				ease: "power2.inOut"
-			}, 0.42);
-		}
-
-		// 4. Title words animate up with mask reveal onto the white background (0.65 to 1.0)
-		if (wordInners.length) {
-			bannerScrollTl.to(wordInners, {
-				y: "0%",
-				opacity: 1,
-				stagger: 0.08,
-				ease: "power3.out"
-			}, 0.65);
-		}
-
-		// 5. Top-Left & Bottom-Right Theme AI Images reveal smoothly as title arrives (0.58 to 0.95)
-		if (floatLeft) {
-			bannerScrollTl.to(floatLeft, {
-				opacity: 1,
-				y: 0,
-				scale: 1,
-				clipPath: "inset(0% 0% 0% 0%)",
-				ease: "power3.out"
-			}, 0.58);
-		}
-
-		if (floatRight) {
-			bannerScrollTl.to(floatRight, {
-				opacity: 1,
-				y: 0,
-				scale: 1,
-				clipPath: "inset(0% 0% 0% 0%)",
-				ease: "power3.out"
-			}, 0.64);
-		}
-
-		if (floatImgs.length) {
-			bannerScrollTl.to(floatImgs, {
-				scale: 1.0,
-				ease: "power2.out"
-			}, 0.58);
-		}
-	}
-
-	/** About Section Sequential Animation:
-	 * 1. Ship glides smoothly in from right as user scrolls into about section.
-	 * 2. ONLY when ship has arrived completely, text animates in with mask-reveal!
-	 **/
-	function initAboutSectionAnimation() {
-		if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
-		const ship = document.querySelector(".about-ship-img");
-		const section = document.querySelector("#section-about-us");
-		const aboutP = document.querySelector(".about-desc p");
-		if (!section) return;
-
-		gsap.registerPlugin(ScrollTrigger);
-
-		// Prepare words mask in about-desc
-		if (aboutP && !aboutP.classList.contains("split-ready")) {
-			aboutP.classList.add("split-ready");
-			const text = aboutP.textContent.trim();
-			const words = text.split(/\s+/);
-			aboutP.innerHTML = words.map(w => `<span class="about-word-mask"><span class="about-word-inner">${w}</span></span>`).join(' ');
-		}
-
-		const wordInners = document.querySelectorAll(".about-word-inner");
-		let textRevealed = false;
-
-		// Create text animation (starts paused, hidden)
-		const textTl = gsap.timeline({
-			paused: true
-		});
-		if (wordInners.length) {
-			textTl.fromTo(wordInners, {
+		const wordInners = document.querySelectorAll("#section-banner .banner-word-inner");
+		if (wordInners.length && typeof gsap !== "undefined") {
+			gsap.fromTo(wordInners, {
 				y: "115%",
 				opacity: 0
 			}, {
 				y: "0%",
 				opacity: 1,
-				duration: 0.85,
-				stagger: 0.015,
-				ease: "power3.out"
+				duration: 0.95,
+				stagger: 0.08,
+				ease: "power3.out",
+				delay: 0.1
+			});
+		}
+	}
+
+	/** About Section Sequential Animation **/
+	function initAboutSectionAnimation() {
+		if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+		const ship = document.querySelector(".about-ship-img");
+		const section = document.querySelector("#section-about-us");
+		const aboutDesc = document.querySelector(".about-desc");
+		if (!section) return;
+
+		if (aboutDesc) {
+			gsap.fromTo(aboutDesc, {
+				y: 35,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.9,
+				ease: "power2.out",
+				scrollTrigger: {
+					trigger: section,
+					start: "top 80%",
+					once: true
+				}
 			});
 		}
 
-		// 1. Ship glides in with calm, smooth, majestic pace as user scrolls into about section
 		if (ship) {
 			gsap.fromTo(ship, {
-				xPercent: 32
+				xPercent: 30,
+				opacity: 0.7
 			}, {
 				xPercent: 0,
+				opacity: 1,
 				ease: "power1.out",
 				scrollTrigger: {
 					trigger: section,
-					start: "top 95%",
+					start: "top 90%",
 					end: "center 40%",
 					scrub: 1.0,
-					invalidateOnRefresh: true,
-					onUpdate: (self) => {
-						// ONLY when the ship has completed its arrival (progress >= 0.90)
-						if (self.progress >= 0.90 && !textRevealed) {
-							textRevealed = true;
-							textTl.play();
-						} else if (self.progress < 0.25 && textRevealed) {
-							textRevealed = false;
-							textTl.reverse();
-						}
-					}
+					invalidateOnRefresh: true
 				}
 			});
 		}
@@ -1524,23 +1401,45 @@
 	}
 
 	function initAllAnimations() {
-		initSeamlessBannerVideoLoop();
-		initHeroBannerAnimation();
-		initAboutSectionAnimation();
-		initAnchorsInteractiveExperience();
-		initCapabilitiesAnimation();
-		initExtensionsShowcase();
-		initPartnersAnimation();
-		initLegacyStickyScrollAnimation();
-		initImpactHorizontalScrollAnimation();
-		initMilestonesAnimation();
-		initEnvironmentSectionAnimation();
-		initWelfareSectionAnimation();
-		initSafetySectionAnimation();
-		initPolicySectionAnimation();
-		initYardSectionAnimation();
-		initTimelineSectionAnimation();
-		initQASectionAnimation();
+		if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+			gsap.registerPlugin(ScrollTrigger);
+		}
+
+		const funcs = [
+			initSeamlessBannerVideoLoop,
+			initHeroBannerAnimation,
+			initAboutSectionAnimation,
+			initAnchorsInteractiveExperience,
+			initCapabilitiesAnimation,
+			initExtensionsShowcase,
+			initPartnersAnimation,
+			initLegacyStickyScrollAnimation,
+			initImpactHorizontalScrollAnimation,
+			initMilestonesAnimation,
+			initEnvironmentSectionAnimation,
+			initWelfareSectionAnimation,
+			initSafetySectionAnimation,
+			initPolicySectionAnimation,
+			initYardSectionAnimation,
+			initTimelineSectionAnimation,
+			initQASectionAnimation
+		];
+
+		funcs.forEach(fn => {
+			if (typeof fn === "function") {
+				try {
+					fn();
+				} catch (err) {
+					console.warn("Animation init error:", err);
+				}
+			}
+		});
+
+		if (typeof ScrollTrigger !== "undefined") {
+			setTimeout(() => {
+				ScrollTrigger.refresh();
+			}, 100);
+		}
 	}
 
 	if (document.readyState === "loading") {
@@ -1714,29 +1613,6 @@
 		if (fleetDrawer) {
 			fleetDrawer.addEventListener("wheel", function(e) {
 				e.stopPropagation();
-			}, { passive: true });
-		}
-
-		// Fallback header visibility when scrolled well past banner section on homepage
-		const headerEl = document.querySelector("#header");
-		const isHome = document.getElementById("home");
-		const bannerEl = document.querySelector("#section-banner");
-		if (headerEl && isHome) {
-			function updateHeaderVisibility(scrollY) {
-				const threshold = (bannerEl ? bannerEl.offsetHeight * 1.5 : 300);
-				if (scrollY >= threshold) {
-					headerEl.classList.add("header--visible");
-				}
-			}
-
-			if (window.lenis) {
-				window.lenis.on("scroll", function(e) {
-					updateHeaderVisibility(e.scroll);
-				});
-			}
-
-			window.addEventListener("scroll", function() {
-				updateHeaderVisibility(window.scrollY || window.pageYOffset || document.documentElement.scrollTop);
 			}, { passive: true });
 		}
 	});
