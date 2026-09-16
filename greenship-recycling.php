@@ -19,20 +19,16 @@ $utm = "yes";
 
 <head>
   <?php require_once $head; ?>
+  <link rel="stylesheet" type="text/css" href="<?php echo $cssurl; ?>smruti.css?v=<?php echo time(); ?>">
 </head>
 
 <body>
   <?php echo $block_body_start; ?>
   <?php require_once $header; ?>
 
-  <section id="section-banner" class="section section-banner p-0">
+  <section id="greenship-banner" class="section section-banner p-0">
     <div class="banner-image">
-      <picture>
-        <source media="(max-width:600px)" srcset="<?php echo $imagesurl; ?>greenship-recycling/banner/banner-1-sm.webp" type="image/webp">
-        <source media="(max-width:1000px)" srcset="<?php echo $imagesurl; ?>greenship-recycling/banner/banner-1-md.webp" type="image/webp">
-        <source media="(max-width:1350px)" srcset="<?php echo $imagesurl; ?>greenship-recycling/banner/banner-1-lg.webp" type="image/webp">
-        <img src="<?php echo $imagesurl; ?>greenship-recycling/banner/banner-1-xl.webp" width="1920" height="880" alt="Banner" />
-      </picture>
+      <img src="<?php echo $imagesurl; ?>greenship-recycling/Banner%20image%20greeny.jpg" width="1980" height="1000" alt="Green Ship Recycling - Baijnath Melaram" class="greenship-banner-img" />
     </div>
 
     <!-- Banner Content Overlay (Matches Reference Design) -->
@@ -43,8 +39,8 @@ $utm = "yes";
           <span class="banner-tag-text">GREENSHIP RECYCLING</span>
         </div>
         <div class="banner-divider"></div>
-        <div class="banner-content-row columns is-variable is-8 is-vcentered">
-          <div class="column is-12-mobile is-12-tablet is-7-desktop is-7-widescreen">
+        <div class="banner-content-row columns is-vcentered">
+          <div class="column is-12-mobile is-12-tablet is-10-desktop">
             <div class="section-title">
               <h1 class="banner-title">
                 <span class="banner-word-mask"><span class="banner-word-inner">A</span></span> <span class="banner-word-mask"><span class="banner-word-inner">Commitment</span></span> <span class="banner-word-mask"><span class="banner-word-inner">to</span></span><br>
@@ -52,148 +48,275 @@ $utm = "yes";
               </h1>
             </div>
           </div>
-          <div class="column is-12-mobile is-12-tablet is-5-desktop is-5-widescreen banner-right-col">
-            <div class="banner-desc">
-              <span class="banner-desc-arrow">&#x21B3;</span>
-              <p>
-                <span class="banner-line-mask"><span class="banner-line-inner">Recycle. Reclaim. Renew:</span></span>
-                <span class="banner-line-mask"><span class="banner-line-inner">Our Green Ship Recycling Initiative</span></span>
-              </p>
-            </div>
-            <div class="banner-cta">
-              <a href="javascript:void(0)" class="banner-btn" onclick="openForm('enquire')"><span>Contact Us</span></a>
-            </div>
-          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- We Value Our Environment Section -->
+  <!-- We Value Our Environment Section (Sticky Stacking Cards Showcase matching Priya Blue) -->
   <section id="section-environment" class="section section-environment">
     <div class="theme-padding">
-      <!-- Centered Header: Big Title & Lead Description -->
-      <div class="env-header-wrap">
-        <div class="section-title">
-          <h2 class="env-main-heading">
-            <span class="env-word-mask"><span class="env-word-inner">We</span></span>
-            <span class="env-word-mask"><span class="env-word-inner">value</span></span>
-            <span class="env-word-mask"><span class="env-word-inner">our</span></span>
-            <span class="env-word-mask"><span class="env-word-inner">Environment</span></span>
-          </h2>
+      
+      <!-- Top Title & Description Header -->
+      <div class="bm-env-header">
+        <div class="banner-tag">
+          <span class="banner-tag-plus">+</span>
+          <span class="banner-tag-text">SUSTAINABLE MARITIME RECYCLING</span>
         </div>
-
-        <p class="env-lead-desc">
+        <div class="section-title">
+          <h2 class="bm-env-main-heading">We value <span class="bm-env-highlight">our Environment</span></h2>
+        </div>
+        <p class="bm-env-main-desc">
           By accomplishing <strong>SOC for HKC, COC for EU SRR from Class NK and AP-Moller Maersk RSRS Compliance</strong>, Baijnath Melaram has made a critical stride towards moving up to the perfect Green Ship Recycling Yard.
         </p>
       </div>
 
-      <!-- Features Layout: 3 Columns Top, 2 Centered Bottom -->
-      <div class="env-features-wrap">
-        <div class="env-feature-card">
-          <h4 class="env-feature-title">Zero Intertidal Spillage</h4>
-          <p class="env-feature-text">Taking measures to avoid metal slag touching the intertidal zone</p>
+      <!-- Sticky Stacking Cards Container -->
+      <div class="bm-env-sticky-cards">
+
+        <!-- Card 1 -->
+        <div class="bm-env-sticky-card">
+          <div class="bm-env-card-grid">
+            <div class="bm-env-card-content">
+              <div class="bm-env-card-meta">
+                <span class="bm-env-card-num">01</span>
+                <span class="bm-env-card-tag">Containment &amp; Clean Zone</span>
+              </div>
+              <h3 class="bm-env-card-title">Zero Intertidal Spillage</h3>
+              <p class="bm-env-card-desc">Taking comprehensive measures to avoid metal slag touching the intertidal zone, ensuring total marine life preservation and pristine seabed protection.</p>
+            </div>
+            <div class="bm-env-card-media">
+              <img src="<?php echo $imagesurl; ?>greenship-recycling/environment-green.jpg" alt="Zero Intertidal Spillage" class="bm-env-card-img" />
+            </div>
+          </div>
         </div>
 
-        <div class="env-feature-card">
-          <h4 class="env-feature-title">Impermeable Floor</h4>
-          <p class="env-feature-text">100 % concrete yard &amp; 30 metre Jetty. A vessel lands 5 metres from the Jetty.</p>
+        <!-- Card 2 -->
+        <div class="bm-env-sticky-card">
+          <div class="bm-env-card-grid">
+            <div class="bm-env-card-content">
+              <div class="bm-env-card-meta">
+                <span class="bm-env-card-num">02</span>
+                <span class="bm-env-card-tag">Yard Infrastructure</span>
+              </div>
+              <h3 class="bm-env-card-title">Impermeable Floor</h3>
+              <p class="bm-env-card-desc">100% impermeable reinforced concrete yard with a 30-metre dedicated jetty landing. A vessel lands safely 5 metres from the jetty, preventing any substrate contamination.</p>
+            </div>
+            <div class="bm-env-card-media">
+              <img src="<?php echo $imagesurl; ?>greenship-recycling/our-yard.jpg" alt="Impermeable Floor" class="bm-env-card-img" />
+            </div>
+          </div>
         </div>
 
-        <div class="env-feature-card">
-          <h4 class="env-feature-title">Metal Slag Collector</h4>
-          <p class="env-feature-text">100% collection of metal slag while cutting side shells</p>
+        <!-- Card 3 -->
+        <div class="bm-env-sticky-card">
+          <div class="bm-env-card-grid">
+            <div class="bm-env-card-content">
+              <div class="bm-env-card-meta">
+                <span class="bm-env-card-num">03</span>
+                <span class="bm-env-card-tag">Marine Protection</span>
+              </div>
+              <h3 class="bm-env-card-title">Metal Slag Collector</h3>
+              <p class="bm-env-card-desc">100% capture and containment of metal slag while cutting vessel side shells, guaranteeing zero toxic residual discharge into the oceanic environment.</p>
+            </div>
+            <div class="bm-env-card-media">
+              <img src="<?php echo $imagesurl; ?>greenship-recycling/safety-standards.jpg" alt="Metal Slag Collector" class="bm-env-card-img" />
+            </div>
+          </div>
         </div>
 
-        <div class="env-feature-card">
-          <h4 class="env-feature-title">Environmental Impact Assessment</h4>
-          <p class="env-feature-text">Intertidal Zone water, RO water, Intertidal Zone soil, Noise and Ambient Air are tested quarterly.</p>
+        <!-- Card 4 -->
+        <div class="bm-env-sticky-card">
+          <div class="bm-env-card-grid">
+            <div class="bm-env-card-content">
+              <div class="bm-env-card-meta">
+                <span class="bm-env-card-num">04</span>
+                <span class="bm-env-card-tag">3rd Party Audits</span>
+              </div>
+              <h3 class="bm-env-card-title">Environmental Impact Assessment</h3>
+              <p class="bm-env-card-desc">Rigorous quarterly laboratory testing of Intertidal Zone water, RO water, Intertidal Zone soil, Noise levels, and Ambient Air quality by government-approved testing agencies.</p>
+            </div>
+            <div class="bm-env-card-media">
+              <img src="<?php echo $imagesurl; ?>greenship-recycling/policy-training.jpg" alt="Environmental Impact Assessment" class="bm-env-card-img" />
+            </div>
+          </div>
         </div>
 
-        <div class="env-feature-card">
-          <h4 class="env-feature-title">100% Lifting</h4>
-          <p class="env-feature-text">Zero contact with the intertidal zone using 150 Tons and 250 tons capacity cranes</p>
+        <!-- Card 5 -->
+        <div class="bm-env-sticky-card">
+          <div class="bm-env-card-grid">
+            <div class="bm-env-card-content">
+              <div class="bm-env-card-meta">
+                <span class="bm-env-card-num">05</span>
+                <span class="bm-env-card-tag">Heavy-Duty Operations</span>
+              </div>
+              <h3 class="bm-env-card-title">100% lifting</h3>
+              <p class="bm-env-card-desc">Zero contact with the intertidal zone using 150-ton and 250-ton capacity high-tonnage cranes to lift and transfer cut sections directly onto the impermeable concrete yard.</p>
+            </div>
+            <div class="bm-env-card-media">
+              <img src="<?php echo $imagesurl; ?>greenship-recycling/workers-welfare.jpg" alt="100% Lifting" class="bm-env-card-img" />
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Full-View Edge-to-Edge Cinematic Parallax Image Showcase (Outside theme-padding) -->
-    <div class="env-full-image-wrap">
-      <div class="env-full-image-card">
-        <img src="<?php echo $imagesurl; ?>greenship-recycling/environment-green.jpg" alt="We value our Environment - Green Ship Recycling" class="env-parallax-img" />
       </div>
     </div>
   </section>
 
-  <!-- We Value Our Worker's Welfare Section -->
+  <!-- We Value Our Worker's Welfare Section (With Matching Header) -->
   <section id="section-welfare" class="section section-welfare">
     <div class="theme-padding">
-      <!-- Centered Header: Big Title & Lead Description -->
-      <div class="welfare-header-wrap">
-        <div class="section-title">
-          <h2 class="welfare-main-heading">
-            <span class="welfare-word-mask"><span class="welfare-word-inner">We</span></span>
-            <span class="welfare-word-mask"><span class="welfare-word-inner">value</span></span>
-            <span class="welfare-word-mask"><span class="welfare-word-inner">our</span></span>
-            <span class="welfare-word-mask"><span class="welfare-word-inner">Worker's</span></span>
-            <span class="welfare-word-mask"><span class="welfare-word-inner">Welfare</span></span>
-          </h2>
+      
+      <!-- Top Title & Description Header (Matching We value our Environment) -->
+      <div class="bm-env-header bm-welfare-header">
+        <div class="banner-tag">
+          <span class="banner-tag-plus">+</span>
+          <span class="banner-tag-text">WORKFORCE EMPOWERMENT &amp; WELFARE</span>
         </div>
-
-        <p class="welfare-lead-desc">
+        <div class="section-title">
+          <h2 class="bm-env-main-heading">We value <span class="bm-env-highlight">our Worker's Welfare</span></h2>
+        </div>
+        <p class="bm-env-main-desc">
           At our Baijnath Melaram Ship Recycling Yard, we deeply value the welfare of our workers at the ship recycling yard. Ensuring their well-being is our top priority. <strong>Our commitment to our workers' welfare is integral to our organisation, as their satisfaction directly contributes to our overall success.</strong>
         </p>
       </div>
 
-      <!-- Welfare Features Layout: 4 Columns Minimalist Centered Layout -->
-      <div class="welfare-features-wrap">
-        <div class="welfare-feature-card">
-          <h4 class="welfare-feature-title">Medical Facility</h4>
-          <p class="welfare-feature-text">First Aid Room, Ambulance and First Aid Kits in case of Emergencies.</p>
-        </div>
+      <div class="bm-welfare-cards-grid-v3">
 
-        <div class="welfare-feature-card">
-          <h4 class="welfare-feature-title">Policies and Agreements</h4>
-          <p class="welfare-feature-text">The yard manager will ensure that the worker has undergone training at GMB as per his designation and possesses a GMB Certificate.</p>
-        </div>
+            <!-- Card 1: Medical Facility -->
+            <div class="bm-welfare-card-v3">
+              <div class="bm-welfare-card-v3-top">
+                <div class="bm-welfare-card-v3-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                    <path d="M12 7v6"></path>
+                    <path d="M9 10h6"></path>
+                  </svg>
+                </div>
+                <span class="bm-welfare-card-v3-tag">24/7 First Aid</span>
+              </div>
+              <h4 class="bm-welfare-card-v3-title">Medical Facility</h4>
+              <p class="bm-welfare-card-v3-desc">First Aid Room, Ambulance and First Aid Kits in case of Emergencies.</p>
+            </div>
 
-        <div class="welfare-feature-card">
-          <h4 class="welfare-feature-title">Inward/Exit forms</h4>
-          <p class="welfare-feature-text">If the worker wants to leave, he has to fill resignation letter and get the full and final exit form.</p>
-        </div>
+            <!-- Card 2: Policies and Agreements -->
+            <div class="bm-welfare-card-v3">
+              <div class="bm-welfare-card-v3-top">
+                <div class="bm-welfare-card-v3-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <path d="m9 15 2 2 4-4"></path>
+                  </svg>
+                </div>
+                <span class="bm-welfare-card-v3-tag">GMB Certified</span>
+              </div>
+              <h4 class="bm-welfare-card-v3-title">Policies and Agreements</h4>
+              <p class="bm-welfare-card-v3-desc">The yard manager will ensure that the worker has undergone training at CMB as per his designation and possesses a GMB Certificate</p>
+            </div>
 
-        <div class="welfare-feature-card">
-          <h4 class="welfare-feature-title">Induction of Workers</h4>
-          <p class="welfare-feature-text">Workers are provided with induction training before they start working in the yard.</p>
-        </div>
+            <!-- Card 3: Inward/Exit forms -->
+            <div class="bm-welfare-card-v3">
+              <div class="bm-welfare-card-v3-top">
+                <div class="bm-welfare-card-v3-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                    <path d="M10 12h8"></path>
+                    <path d="M15 9l3 3-3 3"></path>
+                  </svg>
+                </div>
+                <span class="bm-welfare-card-v3-tag">Formal Protocol</span>
+              </div>
+              <h4 class="bm-welfare-card-v3-title">Inward/Exit forms</h4>
+              <p class="bm-welfare-card-v3-desc">If the worker wants to leave, he has to fill resignation letter and get the full and final exit form.</p>
+            </div>
 
-        <div class="welfare-feature-card">
-          <h4 class="welfare-feature-title">Issuing PPE to Workers</h4>
-          <p class="welfare-feature-text">After induction as well as the appointment, all workers are handed proper NEBOSH-approved PPE.</p>
-        </div>
+            <!-- Card 4: Induction of Workers -->
+            <div class="bm-welfare-card-v3">
+              <div class="bm-welfare-card-v3-top">
+                <div class="bm-welfare-card-v3-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                <span class="bm-welfare-card-v3-tag">Pre-Job Training</span>
+              </div>
+              <h4 class="bm-welfare-card-v3-title">Induction of Workers</h4>
+              <p class="bm-welfare-card-v3-desc">Workers are provided with induction training before they start working in the yard.</p>
+            </div>
 
-        <div class="welfare-feature-card">
-          <h4 class="welfare-feature-title">Dormitory</h4>
-          <p class="welfare-feature-text">A dormitory, fulfilling all ILO Standards, has been provided for all the workers working for the organisation.</p>
-        </div>
+            <!-- Card 5: Issuing PPE to Workers -->
+            <div class="bm-welfare-card-v3">
+              <div class="bm-welfare-card-v3-top">
+                <div class="bm-welfare-card-v3-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                </div>
+                <span class="bm-welfare-card-v3-tag">NEBOSH Standard</span>
+              </div>
+              <h4 class="bm-welfare-card-v3-title">Issuing PPE to Workers</h4>
+              <p class="bm-welfare-card-v3-desc">After induction as well as the appointment, all workers are handed proper NEBOSH-approved PPE</p>
+            </div>
 
-        <div class="welfare-feature-card">
-          <h4 class="welfare-feature-title">Transport</h4>
-          <p class="welfare-feature-text">Bus Service has been provided for all the workers staying in the dormitory to travel to and fro from the Yard.</p>
-        </div>
+            <!-- Card 6: Dormitory -->
+            <div class="bm-welfare-card-v3">
+              <div class="bm-welfare-card-v3-top">
+                <div class="bm-welfare-card-v3-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg>
+                </div>
+                <span class="bm-welfare-card-v3-tag">ILO Standards</span>
+              </div>
+              <h4 class="bm-welfare-card-v3-title">Dormitory</h4>
+              <p class="bm-welfare-card-v3-desc">A dormitory, fulfilling all ILO Standards, has been provided for all the workers working for the organisation.</p>
+            </div>
 
-        <div class="welfare-feature-card">
-          <h4 class="welfare-feature-title">Emergency Preparedness</h4>
-          <p class="welfare-feature-text">Fire Alarms are placed to intimate others. Evacuation Plan, Emergency lights, Muster point and Emergency exits have been strategically placed.</p>
-        </div>
-      </div>
-    </div>
+            <!-- Card 7: Transport -->
+            <div class="bm-welfare-card-v3">
+              <div class="bm-welfare-card-v3-top">
+                <div class="bm-welfare-card-v3-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="15" rx="2"></rect>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                    <circle cx="7" cy="15" r="1.5"></circle>
+                    <circle cx="17" cy="15" r="1.5"></circle>
+                    <line x1="5" y1="18" x2="3" y2="21"></line>
+                    <line x1="19" y1="18" x2="21" y2="21"></line>
+                  </svg>
+                </div>
+                <span class="bm-welfare-card-v3-tag">Daily Shuttle</span>
+              </div>
+              <h4 class="bm-welfare-card-v3-title">Transport</h4>
+              <p class="bm-welfare-card-v3-desc">Bus Service has been provided for all the workers staying in the dormitory to travel to and fro from the Yard.</p>
+            </div>
 
-    <!-- Full-View Edge-to-Edge Cinematic Parallax Image Showcase (Outside theme-padding) -->
-    <div class="welfare-full-image-wrap">
-      <div class="welfare-full-image-card">
-        <img src="<?php echo $imagesurl; ?>greenship-recycling/workers-welfare.jpg" alt="We value our Worker's Welfare - Safety Equipment" class="welfare-parallax-img" />
-      </div>
+            <!-- Card 8: Emergency Preparedness for Dormitory -->
+            <div class="bm-welfare-card-v3">
+              <div class="bm-welfare-card-v3-top">
+                <div class="bm-welfare-card-v3-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    <line x1="2" y1="4" x2="4" y2="6"></line>
+                    <line x1="22" y1="4" x2="20" y2="6"></line>
+                  </svg>
+                </div>
+                <span class="bm-welfare-card-v3-tag">Rapid Response</span>
+              </div>
+              <h4 class="bm-welfare-card-v3-title">Emergency Preparedness for Dormitory</h4>
+              <p class="bm-welfare-card-v3-desc">Fire Alarms are placed to intimate others. Evacuation Plan, Emergency lights, Muster point and Emergency exits have been strategically placed.</p>
+            </div>
+
+          </div>
+
     </div>
   </section>
 
@@ -206,7 +329,7 @@ $utm = "yes";
           <h2 class="safety-main-heading">
             <span class="safety-word-mask"><span class="safety-word-inner">We</span></span>
             <span class="safety-word-mask"><span class="safety-word-inner">value</span></span>
-            <span class="safety-word-mask"><span class="safety-word-inner">Safety</span></span>
+            <span class="safety-word-mask"><span class="safety-word-inner text-orange">Safety</span></span>
           </h2>
         </div>
 
@@ -481,6 +604,7 @@ $utm = "yes";
 
   <?php require_once $footer; ?>
   <?php require_once $footscripts; ?>
+
   <?php echo $block_body_end; ?>
 </body>
 

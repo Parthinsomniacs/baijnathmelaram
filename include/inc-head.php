@@ -18,6 +18,7 @@ $version = "1.8.7";
   <link rel="stylesheet" type="text/css" href="<?php echo $cssurl; ?>swiper-bundle.min.css">
 <?php } ?>
 <link rel="stylesheet" type="text/css" href="<?php echo $cssurl; ?>all-custom.css?<?php echo $version; ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo $cssurl; ?>smruti.css?<?php echo $version; ?>">
 <link rel="stylesheet" type="text/css" href="<?php echo $cssurl; ?>all-responsive.css?<?php echo $version; ?>">
 <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.26/dist/lenis.css">
 <!--End Common CSS-->

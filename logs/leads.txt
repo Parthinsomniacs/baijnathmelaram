@@ -1,0 +1,6 @@
+
+
+Type : S:/xampp/htdocs/baijnathmelaram/logs/leads.txt
+Message : {"fname":"","lname":"","phone":"","email":"","formtype":"enquire","tracker_code":"","gclid":"","site_url":"http:\/\/localhost\/baijnathmelaram\/","contact":"","random_val":"78901234567890123456","USOURCE":"","UMEDIUM":"","UCAMPAIGN":"","UCONTENT":"","UTERM":"","IREFERRER":"direct","LREFERRER":"direct","ILANDPAGE":"http%3A\/\/localhost\/baijnathmelaram\/","VISITS":"8","utm_source":"","utm_medium":"","utm_campaign":"","utm_content":"","utm_term":"","utm_isource":"","utm_imedium":"","utm_icampaign":"","utm_icontent":"","utm_iterm":"","utm_initial_referrer":"direct","utm_last_referrer":"direct","utm_landing_page":"http%3A\/\/localhost\/baijnathmelaram\/","utm_visits":"8","browser_name":"Google Chrome","browser_version":"151.0.0.0","browser_platform":"Windows","ip_address":"::1"}
+logged at : 2026-09-16 16:50:23
+=======================================================
