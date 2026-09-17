@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $version = "1.8.7";
 ?>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -6,9 +6,9 @@ $version = "1.8.7";
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Science+Gothic:wght@100..900" rel="stylesheet">
 
-<link rel=preload href="<?php echo $fontsurl; ?>gyByhwUxId8gMEwcGFU.woff2" as="font" type="font/woff2" crossorigin />
+<link rel=preload href="<?php echo $fontsurl; ?>JTUSjIg1_i6t8kCHKm459Wlhyw.woff2" as="font" type="font/woff2" crossorigin />
 
 <?php require_once $stylecss; ?>
 <?php require_once $inccss; ?>

@@ -1,17 +1,17 @@
-:root {
-  --color-primary: #02265d;
+﻿:root {
+  --color-primary: #000000;
   --color-secondary: #e5912f;
-  --color-navy: #02265d;
+  --color-navy: #000000;
   --color-orange: #e5912f;
   --color-accent: #e5912f;
-  --primary: #02265d;
+  --primary: #000000;
   --secondary: #e5912f;
 }
 
 .text-primary,
 .color-primary,
 .text-navy {
-  color: var(--color-primary, #02265d) !important;
+  color: var(--color-primary, #000000) !important;
 }
 
 .text-secondary,
@@ -22,7 +22,7 @@
 }
 
 .bg-primary {
-  background-color: var(--color-primary, #02265d) !important;
+  background-color: var(--color-primary, #000000) !important;
 }
 
 .bg-secondary {
@@ -43,7 +43,7 @@ body {
   overflow-x: clip !important;
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Fragment Mono';
   font-style: normal;
   font-weight: 400;
@@ -59,6 +59,24 @@ body {
   font-display: swap;
   src: url("../fonts/gyByhwUxId8gMEwcGFU.woff2") format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+} */
+
+@font-face {
+  font-family: 'Science Gothic';
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("../fonts/CHydV-7EH1X7aiQh5jPNDTJnVUAvhrL0sQdjzDQhk11iTp6mX-ANuf1d_83dPfZJ7Lvcvg8EGYzcW7TqdtQ.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 html {
@@ -68,7 +86,7 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Geist';
+  font-family: 'Montserrat';
   color: #000000;
   font-size: 16px;
   font-weight: 400;
@@ -451,19 +469,19 @@ html.is-active:before {
 .sticky-bottom-form .col-form .form-control::-webkit-input-placeholder,
 .theme-modal .col-form .form-control::-webkit-input-placeholder {
   color: #ffffff;
-  font-family: 'Geist';
+  font-family: 'Montserrat';
 }
 
 .sticky-bottom-form .col-form .form-control:-ms-input-placeholder,
 .theme-modal .col-form .form-control:-ms-input-placeholder {
   color: #fff;
-  font-family: 'Geist';
+  font-family: 'Montserrat';
 }
 
 .sticky-bottom-form .col-form .form-control::placeholder,
 .theme-modal .col-form .form-control::placeholder {
   color: #ffffff;
-  font-family: 'Geist';
+  font-family: 'Montserrat';
 }
 
 .theme-scrollbar {
@@ -519,11 +537,11 @@ section,
 
 .section-title h1,
 .banner-title {
-  font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: clamp(38px, 5.333vw, 88px);
   font-weight: 500;
   line-height: 1.05;
-  color: var(--color-primary, #02265d);
+  color: var(--color-primary, #000000);
   letter-spacing: -0.045em;
   margin: 0;
   position: relative;
@@ -534,7 +552,7 @@ section,
 .section-title h2 {
   font-size: 60px;
   line-height: 75px;
-  color: var(--color-primary, #02265d);
+  color: var(--color-primary, #000000);
   margin: 0;
   font-weight: 600;
   position: relative;
@@ -547,7 +565,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--color-primary, #02265d);
+  color: var(--color-primary, #000000);
 }
 
 h1 {
@@ -603,7 +621,7 @@ picture {
 
 .btn {
   position: relative;
-  font-family: 'Geist';
+  font-family: 'Montserrat';
   border: 1px solid;
   display: inline-block;
   padding: 8px 16px;
@@ -868,7 +886,7 @@ button:focus {
 }
 
 .form-control {
-  font-family: 'Geist';
+  font-family: 'Montserrat';
   display: block;
   width: 100%;
   border: none;
@@ -1874,7 +1892,7 @@ body.insomenu-active {
 .fleet-menu-container {
   width: 100%;
   margin: 0 auto;
-  padding:48px 40px;
+  padding: 48px 40px;
   min-height: auto;
   display: flex;
   flex-direction: column;
@@ -1885,13 +1903,13 @@ body.insomenu-active {
 
 /* Section Labels */
 .fleet-menu-label {
-  font-family: 'Fragment Mono';
-  font-size: 18px;
+  font-family: 'Science Gothic';
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #717171;
-  margin-bottom: 22px;
+  margin-bottom: 15px;
   display: block;
   text-align: left;
 }
@@ -1929,8 +1947,8 @@ body.insomenu-active {
 }
 
 .fleet-nav-link {
-  font-family: 'Geist';
-  font-size: clamp(26px, 3vw, 40px);
+  font-family: 'Montserrat';
+  font-size: clamp(16px, 1.1vw, 24px);
   font-weight: 400;
   line-height: 1.25;
   color: #111111;
@@ -1939,13 +1957,21 @@ body.insomenu-active {
   letter-spacing: -0.02em;
   position: relative;
   transition: opacity 0.25s ease, transform 0.25s ease;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
   text-align: left;
 }
 
 .fleet-nav-link:hover {
-  opacity: 0.5;
-  color: #111111;
-  transform: translateX(4px);
+  color: #e5912f;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 /* Right: Contact CTA Buttons */
@@ -1972,7 +1998,7 @@ body.insomenu-active {
   transition: all 0.2s ease;
   cursor: pointer;
   border: none;
-  font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .fleet-btn-dark {
@@ -2026,7 +2052,7 @@ body.insomenu-active {
 }
 
 .fleet-contact-tag {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: 14px;
   font-weight: 600;
   color: #555555;
@@ -2036,7 +2062,7 @@ body.insomenu-active {
 }
 
 .fleet-contact-link {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: 13.5px;
   font-weight: 500;
   color: #111111;
@@ -2056,7 +2082,7 @@ body.insomenu-active {
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: #111111;
+  background-color: #e5912f;
   transform: scaleX(0);
   transform-origin: right center;
   transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
@@ -2064,7 +2090,7 @@ body.insomenu-active {
 }
 
 .fleet-contact-link:hover {
-  color: #111111;
+  color: #e5912f;
 }
 
 .fleet-contact-item:hover .fleet-contact-link::after,
@@ -2137,13 +2163,13 @@ body.insomenu-active {
 }
 
 .fleet-social-box:hover {
-  background-color: #111111;
-  border-color: #111111;
+  background-color: #e5912f;
+  border-color: #e5912f;
   color: #ffffff;
 }
 
 .fleet-address-text {
-  font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 13px;
   line-height: 1.65;
   color: #444444;
@@ -2160,7 +2186,7 @@ body.insomenu-active {
 }
 
 .header-contact-btn {
-  font-family: 'Fragment Mono';
+  font-family: 'Science Gothic';
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 14px;
@@ -2179,7 +2205,7 @@ body.insomenu-active {
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: #111111;
+  background-color: #e5912f;
   transform: scaleX(0);
   transform-origin: right center;
   transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
@@ -2187,7 +2213,7 @@ body.insomenu-active {
 }
 
 .header-contact-btn:hover {
-  color: #111111;
+  color: #e5912f;
 }
 
 .header-contact-btn:hover::after {
@@ -2200,16 +2226,21 @@ body.insomenu-active {
    ========================================================================== */
 
 #section-banner {
-  position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
   background: #000000;
+  z-index: 1;
 }
 
 #section-banner .banner-video-wrap {
   position: relative;
   width: 100%;
-  height: 100vh;
-  min-height: 85vh;
+  height: 100%;
+  min-height: 100%;
   overflow: hidden;
   background: #000000;
 }
@@ -2239,13 +2270,10 @@ body.insomenu-active {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.18);
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.28) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.55) 45%, rgba(0, 0, 0, 0.92) 100%);
   pointer-events: none;
   z-index: 2;
 }
-
-
 
 .banner-overlay-wrap {
   position: absolute;
@@ -2255,26 +2283,152 @@ body.insomenu-active {
   height: 100%;
   z-index: 10;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: clamp(30px, 5vh, 60px);
   pointer-events: none;
 }
 
+.banner-overlay-wrap .theme-padding {
+  width: 100%;
+  pointer-events: auto;
+}
+
+.banner-hero-main {
+  text-align: left;
+}
+
+.banner-hero-main .section-title {
+  margin-bottom: 0;
+}
+
 #section-banner .banner-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(42px, 5.8vw, 86px);
+  font-weight: 600;
+  line-height: 1.02;
   color: #ffffff;
-  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.65);
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  margin: 0 0 24px 0;
+  text-align: left;
+  display: block;
+}
+
+#section-banner .banner-title .banner-italic,
+#section-banner .banner-title .font-italic {
+  font-weight: 700;
 }
 
 #section-banner .banner-title .text-primary,
 #section-banner .banner-title .text-secondary,
 #section-banner .banner-title .banner-word--green {
   color: var(--color-secondary, #e5912f) !important;
-  text-shadow: 0 2px 18px rgba(229, 145, 47, 0.45);
 }
 
-.banner-overlay-wrap .theme-padding {
+.banner-ref-divider {
   width: 100%;
-  pointer-events: auto;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.28);
+  margin: 0 0 24px 0;
+}
+
+.banner-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+}
+
+.banner-scroll-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.04em;
+  padding-bottom: 6px;
+  user-select: none;
+}
+
+.banner-ref-right {
+  max-width: 440px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.banner-ref-desc {
+  font-size: 14px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  font-weight: 400;
+}
+
+.banner-ref-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  background-color: #ffffff;
+  color: var(--color-secondary, #e5912f) !important;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  width: fit-content;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+}
+
+.banner-ref-btn span {
+  position: relative;
+  z-index: 2;
+  color: var(--color-secondary, #e5912f);
+  transition: color 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.banner-ref-btn::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -25%;
+  width: 150%;
+  height: 200%;
+  background-color: var(--color-secondary, #e5912f);
+  border-radius: 50% 50% 0 0;
+  z-index: 1;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.55s cubic-bezier(0.3, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.banner-ref-btn:hover::before {
+  transform: translate3d(0, -100%, 0);
+}
+
+.banner-ref-btn:hover {
+  transform: translateY(-2px);
+}
+
+.banner-ref-btn:hover span {
+  color: #ffffff !important;
+}
+
+@media screen and (max-width: 768px) {
+  .banner-bottom-row {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .banner-ref-right {
+    max-width: 100%;
+  }
 }
 
 .banner-tag {
@@ -2286,7 +2440,7 @@ body.insomenu-active {
 }
 
 .banner-tag-plus {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: 15px;
   font-weight: 400;
   color: #ffffff;
@@ -2294,7 +2448,7 @@ body.insomenu-active {
 }
 
 .banner-tag-text {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.12em;
@@ -2462,13 +2616,48 @@ body.insomenu-active {
   z-index: 6;
 }
 
-/* About Us Section & Ship Scroll Animation */
-#section-about-us {
+/* ==========================================================================
+   Section Stacking & Solid Backgrounds (Prevents Sticky Banner Showing Behind)
+   ========================================================================== */
+#section-about-us,
+#section-anchors,
+#section-capabilities,
+#section-extensions,
+#section-partners,
+#section-legacy,
+#section-impact,
+#section-milestones,
+#section-environment,
+#section-welfare,
+#section-safety,
+#section-policy,
+#section-yard,
+#section-timeline,
+#section-qa,
+#footer,
+footer {
   position: relative;
+  z-index: 5;
+}
+
+#section-partners {
+  background-color: #ffffff;
+  box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.22);
+}
+
+#section-about-us {
+  background-color: #ffffff;
+}
+
+#section-anchors,
+#section-extensions,
+#section-partners,
+#section-impact {
+  background-color: #ffffff;
 }
 
 .about-desc p {
-  font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: clamp(20px, 1.8vw, 30px);
   font-weight: 400;
   line-height: 1.45;
@@ -2570,7 +2759,7 @@ body.insomenu-active {
 }
 
 .anchor-tag {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.12em;
@@ -2587,7 +2776,7 @@ body.insomenu-active {
 }
 
 .anchor-card-title {
-  font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: clamp(20px, 1.4vw, 24px);
   font-weight: 600;
   letter-spacing: -0.03em;
@@ -2597,7 +2786,7 @@ body.insomenu-active {
 }
 
 .anchor-card-desc {
-  font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.6;
@@ -2623,7 +2812,7 @@ body.insomenu-active {
 }
 
 .anchor-stat-num {
-  font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: clamp(46px, 3.8vw, 68px);
   font-weight: 600;
   letter-spacing: -0.045em;
@@ -2644,7 +2833,7 @@ body.insomenu-active {
 }
 
 .anchor-stat-label {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -2758,7 +2947,7 @@ body.insomenu-active {
 }
 
 .cap-tagline {
-  font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 16px;
   margin-top: 10px;
   max-width: 600px;
@@ -2860,7 +3049,7 @@ body.insomenu-active {
 }
 
 .capability-name {
-  font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: clamp(20px, 1.35vw, 23px);
   font-weight: 600;
   letter-spacing: -0.025em;
@@ -2870,7 +3059,7 @@ body.insomenu-active {
 }
 
 .capability-desc {
-  font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 13.5px;
   color: #ffffff;
   opacity: 0.37;
@@ -2881,7 +3070,7 @@ body.insomenu-active {
 }
 
 .capability-link {
-  font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 13px;
   font-weight: 500;
   color: #ffffff;
@@ -3075,7 +3264,7 @@ body.insomenu-active {
 }
 
 .legacy-card-tag {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -3091,7 +3280,7 @@ body.insomenu-active {
 }
 
 .legacy-stat-count {
-  font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: clamp(44px, 3.8vw, 58px);
   font-weight: 700;
   letter-spacing: -0.035em;
@@ -3103,7 +3292,7 @@ body.insomenu-active {
 }
 
 .legacy-stat-suffix {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(26px, 2.4vw, 36px);
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -3117,7 +3306,7 @@ body.insomenu-active {
 }
 
 .legacy-card-title {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15.5px;
   font-weight: 500;
   letter-spacing: -0.01em;
@@ -3179,7 +3368,7 @@ body.insomenu-active {
 }
 
 .impact-stat-count {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: clamp(44px, 4vw, 64px);
   font-weight: 700;
   letter-spacing: -0.03em;
@@ -3191,7 +3380,7 @@ body.insomenu-active {
 }
 
 .impact-stat-suffix {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: clamp(26px, 2.4vw, 38px);
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -3243,7 +3432,7 @@ body.insomenu-active {
 }
 
 .extensions-heading {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(32px, 3.8vw, 48px);
   font-weight: 700;
   line-height: 1.15;
@@ -3335,7 +3524,7 @@ body.insomenu-active {
   color: #ffffff;
   margin: 0 0 12px 0;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
-  font-family: 'Fragment Mono';
+  font-family: 'Science Gothic';
 }
 
 .ext-col-desc {
@@ -3347,76 +3536,174 @@ body.insomenu-active {
 }
 
 /* ==========================================================================
-   Our Partners Section & Slider
+   Our Global Partners Section
    ========================================================================== */
+#section-partners,
 .section-partners {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  position: relative;
+  z-index: 5;
   background-color: #ffffff;
-  position: relative;
+  background-image: 
+    radial-gradient(circle at 0% 0%, rgba(229, 145, 47, 0.18) 0%, rgba(255, 255, 255, 0) 40%),
+    radial-gradient(circle at 100% 100%, rgba(229, 145, 47, 0.16) 0%, rgba(255, 255, 255, 0) 38%);
+  padding-top: 90px;
+  padding-bottom: 90px;
   overflow: hidden;
+  box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.22);
 }
 
-.partners-slider {
-  position: relative;
-  width: 100%;
-}
-
-.partners-slider::before,
-.partners-slider::after {
+/* World Map Background */
+.section-partners::before {
   content: '';
   position: absolute;
-  top: 0;
-  bottom: 0;
-  width: clamp(50px, 12vw, 180px);
-  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(1200px, 92vw);
+  height: 90%;
+  background-image: url('../images/world-map.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.12;
   pointer-events: none;
+  z-index: 1;
 }
 
-.partners-slider::before {
-  left: 0;
-  background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 100%);
+.partners-head-wrap {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.partners-slider::after {
-  right: 0;
-  background: linear-gradient(to left, #ffffff 10%, rgba(255, 255, 255, 0) 100%);
+.partners-pre-tag {
+  font-family: var(--font-accent, 'Science Gothic', monospace);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 3.5px;
+  color: #111111;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pre-tag-dash {
+  color: #e5912f;
+  font-weight: 800;
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+.partners-main-title {
+  font-family: var(--font-primary, 'Montserrat', sans-serif);
+  font-size: clamp(40px, 4.8vw, 58px);
+  font-weight: 900;
+  line-height: 1.05;
+  color: #000000;
+  letter-spacing: -0.025em;
+  margin: 0 0 16px 0;
+}
+
+.partners-ref-subtitle {
+  font-family: var(--font-primary, 'Montserrat', sans-serif);
+  font-size: clamp(16px, 1.35vw, 19px);
+  font-weight: 600;
+  line-height: 1.5;
+  color: #1a1a1a;
+  letter-spacing: -0.015em;
+  margin: 0 auto;
+  max-width: 660px;
+}
+
+/* Slider with True Alpha Gradient Mask */
+.partners-slider {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  margin-top: 30px;
+  padding: 12px 0;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000000 8%, #000000 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, #000000 8%, #000000 92%, transparent 100%);
 }
 
 .partners-slider .splide__track {
-  overflow: hidden;
+  overflow: visible;
 }
 
 .partner-logo-item {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  height: 86px;
+  min-width: 220px;
+  padding: 14px 28px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90px;
-  padding: 10px 24px;
+  position: relative;
+  box-shadow: none;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  user-select: none;
+}
+
+.partner-logo-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(229, 145, 47, 0.4);
 }
 
 .partner-logo-img {
-  max-height: 55px;
-  max-width: 170px;
+  max-height: 48px;
+  max-width: 165px;
   width: auto;
   height: auto;
   object-fit: contain;
   display: block;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease;
   user-select: none;
   -webkit-user-drag: none;
 }
 
 .partner-logo-item:hover .partner-logo-img {
-  transform: scale(1.06);
+  transform: scale(1.04);
 }
 
+.partner-tag-mask,
+.partner-word-mask,
+.partner-sub-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
 
+.partner-tag-mask {
+  margin: 0 0.15em;
+}
+
+.partner-sub-mask {
+  margin-right: 0.22em;
+}
+
+.partner-tag-inner,
+.partner-word-inner,
+.partner-sub-inner {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+.pre-tag-dash {
+  display: inline-block;
+  will-change: transform, opacity;
+}
 /* ==========================================================================
    Section Headings Text Animation Masks
    ========================================================================== */
 .ext-word-mask,
-.partner-word-mask,
 .legacy-word-mask,
 .impact-word-mask,
 .ms-word-mask {
@@ -3429,7 +3716,6 @@ body.insomenu-active {
 }
 
 .ext-word-inner,
-.partner-word-inner,
 .legacy-word-inner,
 .impact-word-inner,
 .impact-tag-inner,
@@ -3521,7 +3807,7 @@ body.insomenu-active {
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 6px;
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -3532,7 +3818,7 @@ body.insomenu-active {
 }
 
 .milestones-heading {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(40px, 4.4vw, 62px);
   font-weight: 700;
   line-height: 1.08;
@@ -3582,7 +3868,7 @@ body.insomenu-active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: 11px;
 }
 
@@ -3630,7 +3916,7 @@ body.insomenu-active {
 }
 
 .cert-issuer {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: 10px;
   letter-spacing: 0.14em;
   color: rgba(255, 255, 255, 0.5);
@@ -3644,7 +3930,7 @@ body.insomenu-active {
   margin: 0;
   line-height: 1.38;
   letter-spacing: -0.01em;
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .cert-item-row:hover .cert-name {
@@ -3729,7 +4015,7 @@ body.insomenu-active {
 
 .footer-col-label,
 .footer-middle-label {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.14em;
@@ -3740,7 +4026,7 @@ body.insomenu-active {
 }
 
 .footer-col-title {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(24px, 2.2vw, 32px);
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -3764,7 +4050,7 @@ body.insomenu-active {
 .footer-cta-btn {
   background: #ffffff;
   color: #111111;
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -3949,7 +4235,7 @@ body.insomenu-active {
   justify-content: space-between;
   align-items: center;
   padding: 26px 0 45px;
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: 11px;
   color: rgba(255, 255, 255, 0.5);
   letter-spacing: 0.06em;
@@ -3993,7 +4279,7 @@ body.insomenu-active {
 }
 
 .footer-watermark-text {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(48px, 11vw, 160px);
   font-weight: 800;
   letter-spacing: -0.04em;
@@ -4047,7 +4333,7 @@ body.insomenu-active {
 }
 
 .env-main-heading {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(40px, 5.2vw, 76px);
   font-weight: 700;
   line-height: 1.08;
@@ -4071,7 +4357,7 @@ body.insomenu-active {
 }
 
 .env-lead-desc {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(18px, 1.5vw, 23px);
   line-height: 1.65;
   color: #555555;
@@ -4121,7 +4407,7 @@ body.insomenu-active {
 }
 
 .env-feature-title {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: clamp(18px, 1.65vw, 23px);
   font-weight: 500;
   color: #111111;
@@ -4137,7 +4423,7 @@ body.insomenu-active {
 }
 
 .env-feature-text {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   line-height: 1.62;
   color: #666666;
@@ -4217,7 +4503,7 @@ body.insomenu-active {
 }
 
 .welfare-main-heading {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(40px, 5.2vw, 76px);
   font-weight: 700;
   line-height: 1.08;
@@ -4241,7 +4527,7 @@ body.insomenu-active {
 }
 
 .welfare-lead-desc {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(18px, 1.5vw, 23px);
   line-height: 1.65;
   color: #555555;
@@ -4284,7 +4570,7 @@ body.insomenu-active {
 }
 
 .welfare-feature-title {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: clamp(17px, 1.45vw, 21px);
   font-weight: 500;
   color: #111111;
@@ -4300,7 +4586,7 @@ body.insomenu-active {
 }
 
 .welfare-feature-text {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   line-height: 1.62;
   color: #666666;
@@ -4374,7 +4660,7 @@ body.insomenu-active {
 }
 
 .safety-main-heading {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(40px, 5.2vw, 76px);
   font-weight: 700;
   line-height: 1.08;
@@ -4398,7 +4684,7 @@ body.insomenu-active {
 }
 
 .safety-lead-desc {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(18px, 1.5vw, 23px);
   line-height: 1.65;
   color: #555555;
@@ -4441,7 +4727,7 @@ body.insomenu-active {
 }
 
 .safety-feature-title {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: clamp(17px, 1.45vw, 21px);
   font-weight: 500;
   color: #111111;
@@ -4457,7 +4743,7 @@ body.insomenu-active {
 }
 
 .safety-feature-text {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   line-height: 1.62;
   color: #666666;
@@ -4531,7 +4817,7 @@ body.insomenu-active {
 }
 
 .policy-main-heading {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(40px, 5.2vw, 76px);
   font-weight: 700;
   line-height: 1.08;
@@ -4555,7 +4841,7 @@ body.insomenu-active {
 }
 
 .policy-lead-desc {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(18px, 1.5vw, 23px);
   line-height: 1.65;
   color: #555555;
@@ -4618,7 +4904,7 @@ body.insomenu-active {
 }
 
 .policy-hero-pill-text {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: 13px;
   font-weight: 500;
   color: #ffffff;
@@ -4694,7 +4980,7 @@ body.insomenu-active {
 }
 
 .policy-num {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: 14px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.35);
@@ -4702,7 +4988,7 @@ body.insomenu-active {
 }
 
 .policy-category-tag {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -4713,7 +4999,7 @@ body.insomenu-active {
 }
 
 .policy-card-title {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: clamp(18px, 1.5vw, 22px);
   font-weight: 500;
   line-height: 1.35;
@@ -4728,7 +5014,7 @@ body.insomenu-active {
 }
 
 .policy-card-desc {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14.5px;
   line-height: 1.68;
   color: #666666;
@@ -4778,7 +5064,7 @@ body.insomenu-active {
 }
 
 .yard-main-heading {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(40px, 5.2vw, 76px);
   font-weight: 700;
   line-height: 1.08;
@@ -4802,7 +5088,7 @@ body.insomenu-active {
 }
 
 .yard-lead-desc {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(18px, 1.5vw, 23px);
   line-height: 1.65;
   color: #555555;
@@ -4865,7 +5151,7 @@ body.insomenu-active {
 }
 
 .yard-pill-text {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: 13.5px;
   font-weight: 500;
   color: #ffffff;
@@ -4941,7 +5227,7 @@ body.insomenu-active {
 }
 
 .yard-detail-num {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: 14px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.35);
@@ -4949,7 +5235,7 @@ body.insomenu-active {
 }
 
 .yard-category-tag {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -4960,7 +5246,7 @@ body.insomenu-active {
 }
 
 .yard-card-title {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: clamp(18px, 1.5vw, 22px);
   font-weight: 500;
   line-height: 1.35;
@@ -4970,7 +5256,7 @@ body.insomenu-active {
 }
 
 .yard-card-text {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   line-height: 1.68;
   color: #555555;
@@ -4978,7 +5264,7 @@ body.insomenu-active {
 }
 
 .yard-phone-link {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: clamp(17px, 1.4vw, 20px);
   font-weight: 600;
   color: #111111;
@@ -5037,7 +5323,7 @@ body.insomenu-active {
 }
 
 .timeline-tag {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.12em;
@@ -5050,7 +5336,7 @@ body.insomenu-active {
 .section-timeline .section-title h2,
 .section-timeline .timeline-main-heading,
 .timeline-main-heading {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(44px, 5.8vw, 82px);
   font-weight: 700;
   line-height: 1.05;
@@ -5075,7 +5361,7 @@ body.insomenu-active {
 }
 
 .timeline-lead-desc {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(17px, 1.4vw, 21px);
   line-height: 1.65;
   color: rgba(255, 255, 255, 0.85) !important;
@@ -5145,7 +5431,7 @@ body.insomenu-active {
 }
 
 .timeline-year-text {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: clamp(32px, 4.2vw, 58px);
   font-weight: 700;
   line-height: 1.1;
@@ -5205,7 +5491,7 @@ body.insomenu-active {
 }
 
 .timeline-card-tag {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -5216,7 +5502,7 @@ body.insomenu-active {
 }
 
 .timeline-card-title {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: clamp(20px, 1.8vw, 26px);
   font-weight: 600;
   line-height: 1.3;
@@ -5226,7 +5512,7 @@ body.insomenu-active {
 }
 
 .timeline-card-desc {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   line-height: 1.72;
   color: rgba(255, 255, 255, 0.72);
@@ -5260,7 +5546,7 @@ body.insomenu-active {
 }
 
 .timeline-highlight-text {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: 13.5px;
   font-weight: 500;
   color: #ffffff;
@@ -5321,7 +5607,7 @@ body.insomenu-active {
 }
 
 .qa-tag {
-  font-family: 'Fragment Mono', monospace;
+  font-family: 'Science Gothic', monospace;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.12em;
@@ -5332,7 +5618,7 @@ body.insomenu-active {
 }
 
 .qa-main-heading {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(38px, 4.8vw, 68px);
   font-weight: 700;
   line-height: 1.1;
@@ -5356,7 +5642,7 @@ body.insomenu-active {
 }
 
 .qa-lead-desc {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(17px, 1.4vw, 21px);
   line-height: 1.65;
   color: #555555;
@@ -5459,7 +5745,7 @@ body.insomenu-active {
 }
 
 .qa-slide-title {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(19px, 1.5vw, 24px);
   font-weight: 600;
   line-height: 1.32;
@@ -5474,7 +5760,7 @@ body.insomenu-active {
 }
 
 .qa-slide-desc {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(13px, 0.95vw, 14.5px);
   font-weight: 400;
   line-height: 1.55;
@@ -5594,7 +5880,7 @@ body.insomenu-active {
 }
 
 .die-casting-heading {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(34px, 3.4vw, 50px);
   font-weight: 600;
   line-height: 1.15;
@@ -5614,7 +5900,7 @@ body.insomenu-active {
 }
 
 .die-casting-desc {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(15px, 1.15vw, 17px);
   line-height: 1.8;
   color: #383838;
@@ -5647,7 +5933,7 @@ body.insomenu-active {
 }
 
 .die-casting-point-text {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(14px, 1.1vw, 16px);
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -5665,5 +5951,270 @@ body.insomenu-active {
   .die-casting-sticky-col {
     position: relative;
     top: 0;
+  }
+}
+
+
+/* ==========================================================================
+
+/* ==========================================================================
+
+/* ==========================================================================
+
+/* ==========================================================================
+   About Us Section - Clean 2-Column Layout (Section Title H2, No Right Image)
+   ========================================================================== */
+#section-about-us {
+  position: relative;
+  z-index: 5;
+  background-color: #ffffff;
+  padding: 50px 0 60px;
+  overflow: hidden;
+}
+
+#section-about-us.pb-0 {
+  padding-bottom: 0 !important;
+}
+
+/* Background World Map Pattern (Top Right Corner) */
+.about-bg-map-pattern {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 52%;
+  max-width: 700px;
+  height: 95%;
+  background-image: url('../images/world-map.svg');
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: contain;
+  opacity: 0.09;
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+/* Background Sweeping Curves */
+.about-bg-curves {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 65%;
+  height: 220px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about-bg-curves svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Columns Layout Container */
+.about-columns-layout {
+  position: relative;
+  z-index: 2;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+
+/* ==========================================================================
+   FIRST COLUMN: Left Ship Image (Flush Corner, Big Sizing)
+   ========================================================================== */
+.about-col-ship {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 0 !important;
+  padding-right: 20px;
+  margin-left: 0 !important;
+}
+
+.about-hero-ship-box {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  margin-left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  filter: drop-shadow(0 18px 36px rgba(0, 0, 0, 0.14));
+}
+
+.about-hero-ship-img {
+  width: 100%;
+  max-height: 680px;
+  height: auto;
+  object-fit: contain;
+  object-position: left center;
+  display: block;
+}
+
+/* ==========================================================================
+   SECOND COLUMN: Section Title H2, Description & 4 Badges
+   ========================================================================== */
+.about-col-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 24px;
+}
+/* Eyebrow */
+.about-ref-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.about-eyebrow-line {
+  width: 32px;
+  height: 2px;
+  background-color: #ea8f28;
+  display: inline-block;
+}
+
+.about-eyebrow-text {
+  font-family: var(--font-accent, 'Science Gothic', monospace);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  color: #475569;
+  text-transform: uppercase;
+}
+
+/* Section Title H2 */
+#section-about-us .section-title {
+  margin-bottom: 18px;
+}
+
+#section-about-us .section-title h2 {
+  font-family: var(--font-primary, 'Montserrat', sans-serif);
+  font-size: clamp(30px, 3.2vw, 48px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: #111111;
+  margin: 0;
+}
+
+#section-about-us .section-title h2 span,
+#section-about-us .section-title h2 .text-secondary,
+#section-about-us .text-secondary,
+#section-about-us .about-accent {
+  color: #e5912f !important;
+}
+
+
+/* Description Paragraph */
+.about-ref-paragraph {
+  font-family: var(--font-primary, 'Montserrat', sans-serif);
+  font-size: clamp(14px, 1.05vw, 16px);
+  line-height: 1.7;
+  color: #4b5563;
+  margin: 0 0 30px 0;
+}
+
+/* 4 Badges Row (Expanded to Column Width with Larger Icons & Typography) */
+.about-ref-badges {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  max-width: 100%;
+  padding-top: 10px;
+}
+
+.about-badge-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.about-badge-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1.5px solid #d1d5db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111111;
+  background-color: #ffffff;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.about-badge-card:hover .about-badge-circle {
+  border-color: #ea8f28;
+  color: #ea8f28;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(234, 143, 40, 0.25);
+}
+
+.about-badge-name {
+  font-family: var(--font-primary, 'Montserrat', sans-serif);
+  font-size: clamp(13px, 1.05vw, 14.5px);
+  font-weight: 600;
+  line-height: 1.35;
+  color: #262626;
+  margin-top: 12px;
+}
+
+.about-badge-sep {
+  width: 1px;
+  height: 58px;
+  background-color: #e5e7eb;
+  align-self: center;
+  flex-shrink: 0;
+}
+
+
+/* RESPONSIVE BREAKPOINTS */
+@media screen and (max-width: 1024px) {
+  .about-columns-layout {
+    flex-direction: column;
+    text-align: center;
+    gap: 36px;
+  }
+  .about-col-ship,
+  .about-col-content {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+  }
+  .about-hero-ship-img {
+    object-position: center;
+  }
+  .about-ref-center {
+    margin: 0 auto;
+  }
+  .about-ref-eyebrow {
+    justify-content: center;
+  }
+  .about-hero-ship-box {
+    max-width: 520px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #section-about-us {
+    padding: 40px 0;
+  }
+  .about-ref-badges {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .about-badge-sep {
+    display: none;
+  }
+  .about-badge-card {
+    flex: 0 0 45%;
   }
 }

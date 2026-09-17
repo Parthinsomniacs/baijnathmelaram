@@ -1,4 +1,4 @@
-<?php require_once("inc-global.php"); ?>
+﻿<?php require_once("inc-global.php"); ?>
 <?php
 $page = "home";
 $pagetype = "onepage";
@@ -37,37 +37,254 @@ $utm = "yes";
       <div class="banner-video-overlay"></div>
     </div>
 
-    <!-- Banner Content Overlay Directly on Video -->
+    <!-- Banner Content Overlay Directly on Video (Matches Reference Layout) -->
     <div class="banner-overlay-wrap">
       <div class="theme-padding">
-        <div class="banner-title-center text-center">
+        <div class="banner-hero-main">
           <div class="section-title">
             <h1 class="banner-title">
-              <span class="banner-word-mask"><span class="banner-word-inner text-secondary">Green</span></span> <span class="banner-word-mask"><span class="banner-word-inner">Recycling</span></span><br>
-              <span class="banner-word-mask"><span class="banner-word-inner">To</span></span> <span class="banner-word-mask"><span class="banner-word-inner">Navigate</span></span> <span class="banner-word-mask"><span class="banner-word-inner">Future</span></span>
+              <span class="banner-word-mask"><span class="banner-word-inner">GREEN</span></span><br>
+              <span class="banner-word-mask"><span class="banner-word-inner">RECYCLING</span></span><br>
+              <span class="banner-word-mask"><span class="banner-word-inner banner-italic text-secondary">NAVIGATE</span></span> <span class="banner-word-mask"><span class="banner-word-inner">FUTURE</span></span>
             </h1>
+          </div>
+        </div>
+
+        <div class="banner-ref-divider"></div>
+
+        <div class="banner-bottom-row">
+          <div class="banner-scroll-label">[ Scroll Down ]</div>
+          <div class="banner-ref-right">
+            <p class="banner-ref-desc">
+              Pioneering sustainable ship recycling &amp; engineered alloy casting for a clean, circular maritime future.
+            </p>
+            <div class="banner-ref-cta">
+              <a href="javascript:void(0)" class="banner-ref-btn" onclick="openForm('enquire')"><span>Contact Us</span></a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="section-about-us" class="section section-about-us">
-    <div class="theme-padding pr-0">
-      <div class="columns is-multiline is-variable is-6 is-vcentered">
-        <div class="column is-12-mobile is-12-tablet is-6-desktop is-4-widescreen">
-          <div class="about-desc">
-            <p>
-              To become the world’s most respected, valued, and Innovative organization in the <span class="about-inline-pill"><img src="<?php echo $imagesurl; ?>banner/banner-1-xl.webp" alt="Ship Recycling Yard"></span> Ship Recycling Industry. To be the world’s leading Green Ship Recycler <span class="about-inline-pill"><img src="<?php echo $imagesurl; ?>banner/banner-3-xl.webp" alt="Sustainable Technologies"></span> by exploring and utilizing new recycling methods and technologies for greater cost-effectiveness.
-            </p>
-          </div>
-        </div>
-        <div class="column is-12-mobile is-12-tablet is-6-desktop is-8-widescreen">
+  <!-- Our Partners Section -->
+  <section id="section-partners" class="section section-partners theme-padding">
 
-          <div class="about-ship-wrapper">
-            <img src="<?php echo $imagesurl; ?>about/ship-transparent.webp" class="about-ship-img" alt="Green Ship Recycling" width="1463" height="387">
+    <!-- Header Wrap -->
+    <div class="partners-head-wrap text-center">
+      <div class="partners-pre-tag">
+        <span class="pre-tag-dash">&mdash;</span>
+        <span class="partner-tag-mask"><span class="partner-tag-inner">OUR</span></span>
+        <span class="partner-tag-mask"><span class="partner-tag-inner">GLOBAL</span></span>
+        <span class="pre-tag-dash">&mdash;</span>
+      </div>
+      <div class="section-title">
+        <h2 class="partners-main-title">
+          <span class="partner-word-mask"><span class="partner-word-inner">Part</span></span><span class="partner-word-mask"><span class="partner-word-inner text-secondary">ners</span></span>
+        </h2>
+      </div>
+      <p class="partners-ref-subtitle">
+        <span class="partner-sub-mask"><span class="partner-sub-inner">Collaborating</span></span>
+        <span class="partner-sub-mask"><span class="partner-sub-inner">with</span></span>
+        <span class="partner-sub-mask"><span class="partner-sub-inner">industry</span></span>
+        <span class="partner-sub-mask"><span class="partner-sub-inner">leaders</span></span>
+        <span class="partner-sub-mask"><span class="partner-sub-inner">to</span></span>
+        <span class="partner-sub-mask"><span class="partner-sub-inner">build</span></span>
+        <span class="partner-sub-mask"><span class="partner-sub-inner">smarter,</span></span>
+        <span class="partner-sub-mask"><span class="partner-sub-inner">stronger</span></span>
+        <span class="partner-sub-mask"><span class="partner-sub-inner">and</span></span>
+        <span class="partner-sub-mask"><span class="partner-sub-inner">more</span></span>
+        <span class="partner-sub-mask"><span class="partner-sub-inner">sustainable</span></span>
+        <span class="partner-sub-mask"><span class="partner-sub-inner">solutions.</span></span>
+      </p>
+    </div>
+
+    <!-- Carousel Slider -->
+    <div id="partners-slider" class="splide partners-slider">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <div class="partner-logo-item">
+              <img src="<?php echo $imagesurl; ?>out-partner/cnco-black-logo.png" alt="China Navigation" class="partner-logo-img" />
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="partner-logo-item">
+              <img src="<?php echo $imagesurl; ?>out-partner/International-Seaways-1080x675.png" alt="International Seaways, Inc." class="partner-logo-img" />
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="partner-logo-item">
+              <img src="<?php echo $imagesurl; ?>out-partner/Maersk-Logo_edited.png" alt="Maersk" class="partner-logo-img" />
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="partner-logo-item">
+              <img src="<?php echo $imagesurl; ?>out-partner/Saipem_logo_svg.png" alt="Saipem" class="partner-logo-img" />
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="partner-logo-item">
+              <img src="<?php echo $imagesurl; ?>out-partner/2560px-Evergreen_Logo_svg.png" alt="Evergreen" class="partner-logo-img" />
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="partner-logo-item">
+              <img src="<?php echo $imagesurl; ?>out-partner/Berge-Bulk_edited.png" alt="Berge Bulk" class="partner-logo-img" />
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="partner-logo-item">
+              <img src="<?php echo $imagesurl; ?>out-partner/BWO_full-version-logo---gradient.png" alt="BW Offshore" class="partner-logo-img" />
+            </div>
+          </li>
+          <!-- Duplicate set for seamless continuous loop -->
+          <li class="splide__slide">
+            <div class="partner-logo-item">
+              <img src="<?php echo $imagesurl; ?>out-partner/cnco-black-logo.png" alt="China Navigation" class="partner-logo-img" />
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="partner-logo-item">
+              <img src="<?php echo $imagesurl; ?>out-partner/International-Seaways-1080x675.png" alt="International Seaways, Inc." class="partner-logo-img" />
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="partner-logo-item">
+              <img src="<?php echo $imagesurl; ?>out-partner/Maersk-Logo_edited.png" alt="Maersk" class="partner-logo-img" />
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="partner-logo-item">
+              <img src="<?php echo $imagesurl; ?>out-partner/Saipem_logo_svg.png" alt="Saipem" class="partner-logo-img" />
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="partner-logo-item">
+              <img src="<?php echo $imagesurl; ?>out-partner/2560px-Evergreen_Logo_svg.png" alt="Evergreen" class="partner-logo-img" />
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="partner-logo-item">
+              <img src="<?php echo $imagesurl; ?>out-partner/Berge-Bulk_edited.png" alt="Berge Bulk" class="partner-logo-img" />
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="partner-logo-item">
+              <img src="<?php echo $imagesurl; ?>out-partner/BWO_full-version-logo---gradient.png" alt="BW Offshore" class="partner-logo-img" />
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="section-about-us" class="section section-about-us pb-0">
+    <!-- Subtle Background World Map Watermark -->
+    <div class="about-bg-map-pattern" aria-hidden="true"></div>
+
+    <!-- Subtle Sweeping Curved Lines on Bottom Right -->
+    <div class="about-bg-curves" aria-hidden="true">
+      <svg viewBox="0 0 1000 300" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M 0,280 Q 400,240 700,290 T 1000,180" stroke="rgba(234,143,40,0.22)" stroke-width="1.5" />
+        <path d="M 100,295 Q 500,260 780,295 T 1000,210" stroke="rgba(234,143,40,0.15)" stroke-width="1.2" />
+        <path d="M 200,300 Q 600,280 850,300 T 1000,240" stroke="rgba(234,143,40,0.08)" stroke-width="1.0" />
+      </svg>
+    </div>
+
+    <div class="theme-padding pl-0">
+      <div class="columns is-vcentered is-variable is-5-desktop about-columns-layout">
+
+        <!-- FIRST COLUMN: Our Ship Image -->
+        <div class="column is-6-widescreen is-6-desktop is-12-tablet is-12-mobile about-col-ship">
+          <div class="about-hero-ship-box">
+            <img src="<?php echo $imagesurl; ?>about/transparent-ship.webp"
+              class="about-hero-ship-img"
+              alt="Global Container Vessel - Safer Seas Stronger Connections"
+              loading="lazy">
           </div>
         </div>
+
+        <!-- SECOND COLUMN: Content (Section Title H2, Description, 4 Badges) -->
+        <div class="column is-6-widescreen is-6-desktop is-12-tablet is-12-mobile about-col-content">
+          <div class="about-ref-center">
+            <!-- Eyebrow Tag -->
+            <div class="about-ref-eyebrow">
+              <span class="about-eyebrow-line"></span>
+              <span class="about-eyebrow-text">GLOBAL SHIPPING SOLUTIONS</span>
+            </div>
+
+            <!-- Section Title H2 (Standard) -->
+            <div class="section-title">
+              <h2>Connecting Markets, <span class="text-secondary">Delivering Tomorrow</span></h2>
+            </div>
+
+            <!-- Description -->
+            <p class="about-ref-paragraph">
+              To become the world's most respected, valued, and Innovative organization in the Ship Recycling Industry. To be the world's leading Green Ship Recycler by exploring and utilizing new recycling methods and technologies for greater cost-effectiveness.
+            </p>
+
+            <!-- 4 Badges Row -->
+            <div class="about-ref-badges">
+
+              <div class="about-badge-card">
+                <div class="about-badge-circle">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                </div>
+                <span class="about-badge-name">Global<br>Reach</span>
+              </div>
+
+              <div class="about-badge-sep"></div>
+
+              <div class="about-badge-card">
+                <div class="about-badge-circle">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <polyline points="9 12 11 14 15 10"></polyline>
+                  </svg>
+                </div>
+                <span class="about-badge-name">Safe & Secure<br>Transport</span>
+              </div>
+
+              <div class="about-badge-sep"></div>
+
+              <div class="about-badge-card">
+                <div class="about-badge-circle">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 20a2.4 2.4 0 0 0 2 1 2.4 2.4 0 0 0 2-1 2.4 2.4 0 0 1 2-1 2.4 2.4 0 0 1 2 1 2.4 2.4 0 0 0 2 1 2.4 2.4 0 0 0 2-1 2.4 2.4 0 0 1 2-1 2.4 2.4 0 0 1 2 1 2.4 2.4 0 0 0 2 1 2.4 2.4 0 0 0 2-1"></path>
+                    <path d="M4 18L3 12h18l-1 6"></path>
+                    <path d="M12 12V3"></path>
+                    <path d="M8 7h8"></path>
+                  </svg>
+                </div>
+                <span class="about-badge-name">Efficient<br>Operations</span>
+              </div>
+
+              <div class="about-badge-sep"></div>
+
+              <div class="about-badge-card">
+                <div class="about-badge-circle">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2"></path>
+                    <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                    <circle cx="12" cy="10" r="2"></circle>
+                    <line x1="8" y1="2" x2="8" y2="4"></line>
+                    <line x1="16" y1="2" x2="16" y2="4"></line>
+                  </svg>
+                </div>
+                <span class="about-badge-name">Trusted<br>Partnerships</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -168,7 +385,7 @@ $utm = "yes";
               </div>
               <h3 class="anchor-card-title">Today</h3>
               <p class="anchor-card-desc">
-                Baijnath Melaram’s Core Values include Honesty, Excellence, Leading Change, and Respect. With our Statement of Compliance (SOC) from Class NK, we have successfully cut complex vessels under the highest global safety and eco-standards.
+                Baijnath Melaramâ€™s Core Values include Honesty, Excellence, Leading Change, and Respect. With our Statement of Compliance (SOC) from Class NK, we have successfully cut complex vessels under the highest global safety and eco-standards.
               </p>
             </div>
           </div>
@@ -196,7 +413,7 @@ $utm = "yes";
           <li class="splide__slide">
             <div class="capability-card" onclick="openForm('enquire')">
               <div class="capability-icon-wrap">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M2 17l2 4h16l2-4H2z"></path>
                   <path d="M4 17V9a1 1 0 0 1 1-1h4v9"></path>
                   <path d="M13 11v6"></path>
@@ -222,7 +439,7 @@ $utm = "yes";
           <li class="splide__slide">
             <div class="capability-card" onclick="openForm('enquire')">
               <div class="capability-icon-wrap">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="3" y="3" width="8" height="8" rx="1.5"></rect>
                   <rect x="13" y="3" width="8" height="8" rx="1.5"></rect>
                   <rect x="3" y="13" width="8" height="8" rx="1.5"></rect>
@@ -247,7 +464,7 @@ $utm = "yes";
           <li class="splide__slide">
             <div class="capability-card" onclick="openForm('enquire')">
               <div class="capability-icon-wrap">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
                   <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
                   <line x1="12" y1="22.08" x2="12" y2="12"></line>
@@ -271,7 +488,7 @@ $utm = "yes";
           <li class="splide__slide">
             <div class="capability-card" onclick="openForm('enquire')">
               <div class="capability-icon-wrap">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
                 </svg>
               </div>
@@ -293,7 +510,7 @@ $utm = "yes";
           <li class="splide__slide">
             <div class="capability-card" onclick="openForm('enquire')">
               <div class="capability-icon-wrap">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M17 2.1l4 4-4 4"></path>
                   <path d="M3 12.2v-2a4 4 0 0 1 4-4h14"></path>
                   <path d="M7 21.9l-4-4 4-4"></path>
@@ -318,7 +535,7 @@ $utm = "yes";
           <li class="splide__slide">
             <div class="capability-card" onclick="openForm('enquire')">
               <div class="capability-icon-wrap">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M4 22h16"></path>
                   <path d="M12 2v20"></path>
                   <path d="M7 16h10"></path>
@@ -344,7 +561,7 @@ $utm = "yes";
           <li class="splide__slide">
             <div class="capability-card" onclick="openForm('enquire')">
               <div class="capability-icon-wrap">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                 </svg>
               </div>
@@ -366,7 +583,7 @@ $utm = "yes";
           <li class="splide__slide">
             <div class="capability-card" onclick="openForm('enquire')">
               <div class="capability-icon-wrap">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="12" cy="12" r="10"></circle>
                   <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
                 </svg>
@@ -389,7 +606,7 @@ $utm = "yes";
           <li class="splide__slide">
             <div class="capability-card" onclick="openForm('enquire')">
               <div class="capability-icon-wrap">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="9" cy="9" r="6"></circle>
                   <circle cx="15" cy="15" r="6"></circle>
                 </svg>
@@ -471,96 +688,6 @@ $utm = "yes";
           <h3 class="ext-col-title">BM Educon LLP (TED)</h3>
           <p class="ext-col-desc">Toddlers Entertainment Den, educational venture for early learning, creative play, and cognitive growth.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Our Partners Section -->
-  <section id="section-partners" class="section section-partners theme-padding pt-0">
-    <div class="partners-head-wrap">
-      <div class="section-title has-text-centered">
-        <h2>
-          <span class="partner-word-mask"><span class="partner-word-inner">Our</span></span>
-          <span class="partner-word-mask"><span class="partner-word-inner">Partners</span></span>
-        </h2>
-      </div>
-    </div>
-
-    <div id="partners-slider" class="splide partners-slider">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide">
-            <div class="partner-logo-item">
-              <img src="<?php echo $imagesurl; ?>out-partner/2560px-Evergreen_Logo_svg.png" alt="Evergreen" class="partner-logo-img" />
-            </div>
-          </li>
-          <li class="splide__slide">
-            <div class="partner-logo-item">
-              <img src="<?php echo $imagesurl; ?>out-partner/Berge-Bulk_edited.png" alt="Berge Bulk" class="partner-logo-img" />
-            </div>
-          </li>
-          <li class="splide__slide">
-            <div class="partner-logo-item">
-              <img src="<?php echo $imagesurl; ?>out-partner/BWO_full-version-logo---gradient.png" alt="BW Offshore" class="partner-logo-img" />
-            </div>
-          </li>
-          <li class="splide__slide">
-            <div class="partner-logo-item">
-              <img src="<?php echo $imagesurl; ?>out-partner/cnco-black-logo.png" alt="China Navigation Co" class="partner-logo-img" />
-            </div>
-          </li>
-          <li class="splide__slide">
-            <div class="partner-logo-item">
-              <img src="<?php echo $imagesurl; ?>out-partner/International-Seaways-1080x675.png" alt="International Seaways" class="partner-logo-img" />
-            </div>
-          </li>
-          <li class="splide__slide">
-            <div class="partner-logo-item">
-              <img src="<?php echo $imagesurl; ?>out-partner/Maersk-Logo_edited.png" alt="Maersk" class="partner-logo-img" />
-            </div>
-          </li>
-          <li class="splide__slide">
-            <div class="partner-logo-item">
-              <img src="<?php echo $imagesurl; ?>out-partner/Saipem_logo_svg.png" alt="Saipem" class="partner-logo-img" />
-            </div>
-          </li>
-          <!-- Duplicate set for seamless continuous loop -->
-          <li class="splide__slide">
-            <div class="partner-logo-item">
-              <img src="<?php echo $imagesurl; ?>out-partner/2560px-Evergreen_Logo_svg.png" alt="Evergreen" class="partner-logo-img" />
-            </div>
-          </li>
-          <li class="splide__slide">
-            <div class="partner-logo-item">
-              <img src="<?php echo $imagesurl; ?>out-partner/Berge-Bulk_edited.png" alt="Berge Bulk" class="partner-logo-img" />
-            </div>
-          </li>
-          <li class="splide__slide">
-            <div class="partner-logo-item">
-              <img src="<?php echo $imagesurl; ?>out-partner/BWO_full-version-logo---gradient.png" alt="BW Offshore" class="partner-logo-img" />
-            </div>
-          </li>
-          <li class="splide__slide">
-            <div class="partner-logo-item">
-              <img src="<?php echo $imagesurl; ?>out-partner/cnco-black-logo.png" alt="China Navigation Co" class="partner-logo-img" />
-            </div>
-          </li>
-          <li class="splide__slide">
-            <div class="partner-logo-item">
-              <img src="<?php echo $imagesurl; ?>out-partner/International-Seaways-1080x675.png" alt="International Seaways" class="partner-logo-img" />
-            </div>
-          </li>
-          <li class="splide__slide">
-            <div class="partner-logo-item">
-              <img src="<?php echo $imagesurl; ?>out-partner/Maersk-Logo_edited.png" alt="Maersk" class="partner-logo-img" />
-            </div>
-          </li>
-          <li class="splide__slide">
-            <div class="partner-logo-item">
-              <img src="<?php echo $imagesurl; ?>out-partner/Saipem_logo_svg.png" alt="Saipem" class="partner-logo-img" />
-            </div>
-          </li>
-        </ul>
       </div>
     </div>
   </section>
@@ -777,7 +904,7 @@ $utm = "yes";
           </div>
 
           <p class="milestones-subtitle">
-            Explore our certificates and documents—a testament to our excellence, transparency, and responsible practices.
+            Explore our certificates and documentsâ€”a testament to our excellence, transparency, and responsible practices.
           </p>
         </div>
 

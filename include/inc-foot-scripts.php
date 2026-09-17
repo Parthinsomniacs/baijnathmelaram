@@ -1,4 +1,4 @@
-<!--Common JS-->
+﻿<!--Common JS-->
 <?php require_once $alljs; ?>
 <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -107,9 +107,21 @@
 
 	/** Hero Banner Animation on Load **/
 	function initHeroBannerAnimation() {
+		if (typeof gsap === "undefined") return;
+
 		const wordInners = document.querySelectorAll("#section-banner .banner-word-inner");
-		if (wordInners.length && typeof gsap !== "undefined") {
-			gsap.fromTo(wordInners, {
+		const divider = document.querySelector(".banner-ref-divider");
+		const scrollLabel = document.querySelector(".banner-scroll-label");
+		const refDesc = document.querySelector(".banner-ref-desc");
+		const refBtn = document.querySelector(".banner-ref-btn");
+
+		const heroTl = gsap.timeline({
+			delay: 0.15
+		});
+
+		// 1. Title words reveal with mask stagger
+		if (wordInners.length) {
+			heroTl.fromTo(wordInners, {
 				y: "115%",
 				opacity: 0
 			}, {
@@ -117,22 +129,99 @@
 				opacity: 1,
 				duration: 0.95,
 				stagger: 0.08,
-				ease: "power3.out",
-				delay: 0.1
+				ease: "power3.out"
 			});
+		}
+
+		// 2. Horizontal divider scales out smoothly
+		if (divider) {
+			heroTl.fromTo(divider, {
+				scaleX: 0,
+				transformOrigin: "left center"
+			}, {
+				scaleX: 1,
+				duration: 0.8,
+				ease: "power2.out"
+			}, "-=0.4");
+		}
+
+		// 3. Scroll Down label fades in
+		if (scrollLabel) {
+			heroTl.fromTo(scrollLabel, {
+				y: 15,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.6,
+				ease: "power2.out"
+			}, "-=0.5");
+		}
+
+		// 4. Description text reveals smoothly with upward slide & fade
+		if (refDesc) {
+			heroTl.fromTo(refDesc, {
+				y: 20,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.75,
+				ease: "power2.out"
+			}, "-=0.45");
+		}
+
+		// 5. CTA Button pops in with gentle spring
+		if (refBtn) {
+			heroTl.fromTo(refBtn, {
+				y: 18,
+				opacity: 0,
+				scale: 0.95
+			}, {
+				y: 0,
+				opacity: 1,
+				scale: 1,
+				duration: 0.65,
+				ease: "back.out(1.5)"
+			}, "-=0.35");
 		}
 	}
 
-	/** About Section Sequential Animation **/
+	/** About Section Animation **/
 	function initAboutSectionAnimation() {
 		if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
-		const ship = document.querySelector(".about-ship-img");
 		const section = document.querySelector("#section-about-us");
-		const aboutDesc = document.querySelector(".about-desc");
 		if (!section) return;
 
-		if (aboutDesc) {
-			gsap.fromTo(aboutDesc, {
+		const leftShip = document.querySelector(".about-col-ship");
+		const contentBlock = document.querySelector(".about-col-content");
+		const badges = document.querySelectorAll(".about-badge-card");
+
+		const tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: section,
+				start: "top 75%",
+				once: true
+			}
+		});
+
+		if (leftShip) {
+			tl.fromTo(leftShip, {
+				x: -60,
+				opacity: 0,
+				scale: 0.94
+			}, {
+				x: 0,
+				opacity: 1,
+				scale: 1,
+				duration: 1.0,
+				ease: "power3.out",
+				clearProps: "transform,opacity"
+			}, 0);
+		}
+
+		if (contentBlock) {
+			tl.fromTo(contentBlock, {
 				y: 35,
 				opacity: 0
 			}, {
@@ -140,30 +229,24 @@
 				opacity: 1,
 				duration: 0.9,
 				ease: "power2.out",
-				scrollTrigger: {
-					trigger: section,
-					start: "top 80%",
-					once: true
-				}
-			});
+				clearProps: "transform,opacity"
+			}, 0.15);
 		}
 
-		if (ship) {
-			gsap.fromTo(ship, {
-				xPercent: 30,
-				opacity: 0.7
+		if (badges.length) {
+			tl.fromTo(badges, {
+				y: 20,
+				opacity: 0,
+				scale: 0.9
 			}, {
-				xPercent: 0,
+				y: 0,
 				opacity: 1,
-				ease: "power1.out",
-				scrollTrigger: {
-					trigger: section,
-					start: "top 90%",
-					end: "center 40%",
-					scrub: 1.0,
-					invalidateOnRefresh: true
-				}
-			});
+				scale: 1,
+				duration: 0.55,
+				stagger: 0.08,
+				ease: "back.out(1.5)",
+				clearProps: "transform,opacity"
+			}, 0.35);
 		}
 	}
 
@@ -831,28 +914,70 @@
 		if (!partnerSection || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
 		gsap.registerPlugin(ScrollTrigger);
 
+		const tagWords = partnerSection.querySelectorAll(".partner-tag-inner");
 		const partnerWords = partnerSection.querySelectorAll(".partner-word-inner");
+		const subWords = partnerSection.querySelectorAll(".partner-sub-inner");
 		const partnerSlider = partnerSection.querySelector("#partners-slider");
+		const dashes = partnerSection.querySelectorAll(".pre-tag-dash");
 
 		const partnerTl = gsap.timeline({
 			scrollTrigger: {
 				trigger: partnerSection,
-				start: "top 85%",
+				start: "top 95%",
 				once: true
 			}
 		});
 
-		if (partnerWords.length) {
-			partnerTl.fromTo(partnerWords, {
-				y: "115%",
+		if (tagWords.length) {
+			partnerTl.fromTo(tagWords, {
+				yPercent: 115,
 				opacity: 0
 			}, {
-				y: "0%",
+				yPercent: 0,
+				opacity: 1,
+				duration: 0.65,
+				stagger: 0.06,
+				ease: "power3.out"
+			}, 0);
+		}
+
+		if (dashes.length) {
+			partnerTl.fromTo(dashes, {
+				scale: 0,
+				opacity: 0
+			}, {
+				scale: 1,
+				opacity: 1,
+				duration: 0.5,
+				stagger: 0.08,
+				ease: "back.out(2)"
+			}, 0);
+		}
+
+		if (partnerWords.length) {
+			partnerTl.fromTo(partnerWords, {
+				yPercent: 115,
+				opacity: 0
+			}, {
+				yPercent: 0,
 				opacity: 1,
 				duration: 0.85,
 				stagger: 0.08,
 				ease: "power3.out"
-			}, 0);
+			}, tagWords.length ? "-=0.35" : 0);
+		}
+
+		if (subWords.length) {
+			partnerTl.fromTo(subWords, {
+				yPercent: 115,
+				opacity: 0
+			}, {
+				yPercent: 0,
+				opacity: 1,
+				duration: 0.65,
+				stagger: 0.02,
+				ease: "power2.out"
+			}, "-=0.5");
 		}
 
 		if (partnerSlider) {
@@ -864,7 +989,7 @@
 				opacity: 1,
 				duration: 0.85,
 				ease: "power2.out"
-			}, 0.2);
+			}, "-=0.35");
 		}
 	}
 
