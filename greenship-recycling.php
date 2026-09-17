@@ -328,20 +328,9 @@ $utm = "yes";
       <div class="safety-reveal-grid">
         
         <!-- Card 1 -->
-        <div class="safety-reveal-card span-4-cols is-active" data-safety-card="1">
+        <div class="safety-reveal-card is-active" data-safety-card="1">
           <div class="safety-reveal-icon-wrap">
-            <svg class="safety-reveal-icon" width="84" height="84" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <!-- Lifting Swivel Ring & Heavy Hook -->
-              <circle cx="26" cy="11" r="5"></circle>
-              <path d="M26 16v6"></path>
-              <path d="M21 22h10"></path>
-              <path d="M26 22c7 0 10 4 10 10 0 9-7 15-15 15-7.5 0-13-5.5-13-13 0-5 3.5-9 8-9 2.5 0 4.5 1.5 4.5 4 0 2-1.5 3.5-3.5 3.5"></path>
-              <line x1="26" y1="22" x2="20" y2="35"></line>
-              <!-- Certified Inspection Badge with Checkmark -->
-              <circle cx="46" cy="30" r="10"></circle>
-              <path d="M42 30l3 3 6-6" class="icon-accent-ray" stroke-width="2.5"></path>
-              <path d="M43 40l-2 7 5-2.5 5 2.5-2-7"></path>
-            </svg>
+            <img src="<?php echo $imagesurl; ?>greenship-recycling/icon-certificate1.svg" width="84" height="84" alt="Tested and Certified Equipment" class="safety-reveal-icon safety-icon-svg" />
           </div>
           <div class="safety-reveal-content">
             <h3 class="safety-reveal-title">Tested and Certified Equipment</h3>
@@ -350,26 +339,9 @@ $utm = "yes";
         </div>
 
         <!-- Card 2 -->
-        <div class="safety-reveal-card span-4-cols" data-safety-card="2">
+        <div class="safety-reveal-card" data-safety-card="2">
           <div class="safety-reveal-icon-wrap">
-            <svg class="safety-reveal-icon" width="84" height="84" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <!-- Industrial Gas Cylinder -->
-              <rect x="12" y="24" width="16" height="32" rx="4"></rect>
-              <path d="M16 24v-6h8v6"></path>
-              <line x1="15" y1="14" x2="25" y2="14"></line>
-              <circle cx="26" cy="19" r="3.5"></circle>
-              <!-- High-Pressure Supply Line -->
-              <path d="M24 19h13v10"></path>
-              <!-- Flashback Arrestor Quenching Unit -->
-              <rect x="31" y="29" width="22" height="13" rx="3"></rect>
-              <line x1="38" y1="29" x2="38" y2="42"></line>
-              <line x1="45" y1="29" x2="45" y2="42"></line>
-              <!-- Safe Gas Outlet -->
-              <path d="M53 35.5h4v12"></path>
-              <!-- Flame Arrest & Directional Barrier -->
-              <path d="M42 9c-2 2.5-4 4.5-4 7a4 4 0 0 0 8 0c0-2.5-2-4.5-4-7z" class="icon-accent-ray"></path>
-              <line x1="35" y1="20" x2="49" y2="12" class="icon-accent-ray" stroke-width="2.2"></line>
-            </svg>
+            <img src="<?php echo $imagesurl; ?>greenship-recycling/icon-certificate1.svg" width="84" height="84" alt="Flashback arrestor" class="safety-reveal-icon safety-icon-svg" />
           </div>
           <div class="safety-reveal-content">
             <h3 class="safety-reveal-title">Flashback arrestor</h3>
@@ -378,29 +350,9 @@ $utm = "yes";
         </div>
 
         <!-- Card 3 -->
-        <div class="safety-reveal-card span-4-cols" data-safety-card="3">
+        <div class="safety-reveal-card" data-safety-card="3">
           <div class="safety-reveal-icon-wrap">
-            <svg class="safety-reveal-icon" width="84" height="84" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <!-- Torch Grip Handle -->
-              <path d="M10 50l7-7 4 4-7 7z"></path>
-              <line x1="7" y1="53" x2="10" y2="50"></line>
-              <!-- Dual Gas Inlets & Control Knobs -->
-              <circle cx="19" cy="41" r="2.5"></circle>
-              <circle cx="23" cy="45" r="2.5"></circle>
-              <!-- 3-Way Delivery Tubes -->
-              <path d="M20 37l20-17"></path>
-              <path d="M23 40l20-17"></path>
-              <path d="M26 43l20-17"></path>
-              <!-- High Pressure Oxygen Cutting Lever -->
-              <path d="M21 34l15-12"></path>
-              <!-- Cutting Head Nozzle Tip -->
-              <path d="M43 18l5-4 4 4-4 5z"></path>
-              <path d="M49 16l5-4"></path>
-              <!-- Focused Cutting Flame Jet & Sparks -->
-              <path d="M54 12l5-4-2 5z" class="icon-accent-ray" stroke-width="2.2"></path>
-              <line x1="58" y1="6" x2="56" y2="9" class="icon-accent-ray"></line>
-              <line x1="62" y1="12" x2="59" y2="13" class="icon-accent-ray"></line>
-            </svg>
+            <img src="<?php echo $imagesurl; ?>greenship-recycling/icon-certificate1.svg" width="84" height="84" alt="Three-way Gas Torches" class="safety-reveal-icon safety-icon-svg" />
           </div>
           <div class="safety-reveal-content">
             <h3 class="safety-reveal-title">Three-way Gas Torches</h3>
@@ -409,35 +361,9 @@ $utm = "yes";
         </div>
 
         <!-- Card 4 -->
-        <div class="safety-reveal-card span-4-cols" data-safety-card="4">
+        <div class="safety-reveal-card" data-safety-card="4">
           <div class="safety-reveal-icon-wrap">
-            <svg class="safety-reveal-icon" width="84" height="84" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <!-- Respirator Facepiece Silicone Seal -->
-              <path d="M32 15c-6 0-11 5-13 13 0 10 5 18 13 22 8-4 13-12 13-22 0-8-5-13-13-13z"></path>
-              <!-- Central Exhaust Valve -->
-              <circle cx="32" cy="38" r="4.5"></circle>
-              <line x1="32" y1="35" x2="32" y2="41"></line>
-              <line x1="29" y1="38" x2="35" y2="38"></line>
-              <!-- Left P100 Filter Canister -->
-              <rect x="8" y="27" width="11" height="18" rx="4"></rect>
-              <line x1="19" y1="35" x2="22" y2="35"></line>
-              <line x1="12" y1="32" x2="15" y2="32"></line>
-              <line x1="12" y1="40" x2="15" y2="40"></line>
-              <!-- Right P100 Filter Canister -->
-              <rect x="45" y="27" width="11" height="18" rx="4"></rect>
-              <line x1="42" y1="35" x2="45" y2="35"></line>
-              <line x1="49" y1="32" x2="52" y2="32"></line>
-              <line x1="49" y1="40" x2="52" y2="40"></line>
-              <!-- Secure Harness Straps -->
-              <path d="M23 20l-10-8"></path>
-              <path d="M41 20l10-8"></path>
-              <path d="M21 44l-8 7"></path>
-              <path d="M43 44l8 7"></path>
-              <!-- Particulate Dust Hazard Shield Accent -->
-              <circle cx="32" cy="9" r="1.5" class="icon-accent-ray" fill="currentColor"></circle>
-              <circle cx="24" cy="11" r="1.2" class="icon-accent-ray" fill="currentColor"></circle>
-              <circle cx="40" cy="11" r="1.2" class="icon-accent-ray" fill="currentColor"></circle>
-            </svg>
+            <img src="<?php echo $imagesurl; ?>greenship-recycling/icon-certificate1.svg" width="84" height="84" alt="Asbestos Removal" class="safety-reveal-icon safety-icon-svg" />
           </div>
           <div class="safety-reveal-content">
             <h3 class="safety-reveal-title">Asbestos Removal</h3>
@@ -446,23 +372,9 @@ $utm = "yes";
         </div>
 
         <!-- Card 5 -->
-        <div class="safety-reveal-card span-3-cols" data-safety-card="5">
+        <div class="safety-reveal-card" data-safety-card="5">
           <div class="safety-reveal-icon-wrap">
-            <svg class="safety-reveal-icon" width="84" height="84" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <!-- Hard Hat Dome -->
-              <path d="M14 36c0-11 8-19 18-19s18 8 18 19"></path>
-              <!-- Top Impact Ridges -->
-              <path d="M28 17v-4h8v4"></path>
-              <path d="M24 24c3-4 5-6 8-6s5 2 8 6"></path>
-              <!-- Protective Helmet Brim -->
-              <path d="M10 36h44c2 0 3 1.5 2 3l-3 4H11l-3-4c-1-1.5 0-3 2-3z"></path>
-              <!-- Ergonomic Chin Strap -->
-              <path d="M20 43l8 9c2.5 1.5 5.5 1.5 8 0l8-9"></path>
-              <!-- Quality Compliance Accents -->
-              <line x1="32" y1="6" x2="32" y2="10" class="icon-accent-ray" stroke-width="2.5"></line>
-              <line x1="48" y1="12" x2="45" y2="15" class="icon-accent-ray"></line>
-              <line x1="16" y1="12" x2="19" y2="15" class="icon-accent-ray"></line>
-            </svg>
+            <img src="<?php echo $imagesurl; ?>greenship-recycling/icon-certificate1.svg" width="84" height="84" alt="NEBOSH Approved PPE" class="safety-reveal-icon safety-icon-svg" />
           </div>
           <div class="safety-reveal-content">
             <h3 class="safety-reveal-title">NEBOSH Approved PPE</h3>
@@ -471,24 +383,9 @@ $utm = "yes";
         </div>
 
         <!-- Card 6 -->
-        <div class="safety-reveal-card span-3-cols" data-safety-card="6">
+        <div class="safety-reveal-card" data-safety-card="6">
           <div class="safety-reveal-icon-wrap">
-            <svg class="safety-reveal-icon" width="84" height="84" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <!-- Training Presentation Board -->
-              <rect x="10" y="10" width="44" height="32" rx="3"></rect>
-              <line x1="6" y1="42" x2="58" y2="42"></line>
-              <!-- Stand Legs -->
-              <line x1="22" y1="42" x2="15" y2="56"></line>
-              <line x1="42" y1="42" x2="49" y2="56"></line>
-              <line x1="32" y1="42" x2="32" y2="52"></line>
-              <!-- HSE Safety Emblem -->
-              <rect x="17" y="18" width="13" height="13" rx="2"></rect>
-              <path d="M23.5 20v9 M19 24.5h9" class="icon-accent-ray" stroke-width="2.4"></path>
-              <!-- Curriculum Checklist / Training Progress Chart -->
-              <line x1="36" y1="20" x2="47" y2="20"></line>
-              <line x1="36" y1="26" x2="45" y2="26"></line>
-              <path d="M35 34l3-3 4 3 5-5" class="icon-accent-ray" stroke-width="2.2"></path>
-            </svg>
+            <img src="<?php echo $imagesurl; ?>greenship-recycling/icon-certificate1.svg" width="84" height="84" alt="HSE Training Programs" class="safety-reveal-icon safety-icon-svg" />
           </div>
           <div class="safety-reveal-content">
             <h3 class="safety-reveal-title">HSE Training Programs</h3>
@@ -497,31 +394,24 @@ $utm = "yes";
         </div>
 
         <!-- Card 7 -->
-        <div class="safety-reveal-card span-3-cols" data-safety-card="7">
+        <div class="safety-reveal-card" data-safety-card="7">
           <div class="safety-reveal-icon-wrap">
-            <svg class="safety-reveal-icon" width="84" height="84" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <!-- Lifebuoy Ring Outer & Inner -->
-              <circle cx="32" cy="32" r="22"></circle>
-              <circle cx="32" cy="32" r="10"></circle>
-              <!-- 4 Reflective Quarter Straps -->
-              <path d="M32 10v12" class="icon-accent-ray" stroke-width="3"></path>
-              <path d="M32 42v12" class="icon-accent-ray" stroke-width="3"></path>
-              <path d="M10 32h12" class="icon-accent-ray" stroke-width="3"></path>
-              <path d="M42 32h12" class="icon-accent-ray" stroke-width="3"></path>
-              <!-- Perimeter Lifeline Grab Rope Loops -->
-              <path d="M47.5 16.5c3.5 3.5 4.5 7.5 4 11.5"></path>
-              <path d="M51.5 36c.5 4-.5 8-4 11.5"></path>
-              <path d="M36 51.5c-4 .5-8-.5-11.5-4"></path>
-              <path d="M16.5 47.5c-3.5-3.5-4.5-7.5-4-11.5"></path>
-              <path d="M12.5 28c-.5-4 .5-8 4-11.5"></path>
-              <path d="M28 12.5c4-.5 8 .5 11.5 4"></path>
-              <!-- Emergency Rapid Alert Beacon -->
-              <circle cx="32" cy="32" r="3.5" class="icon-accent-ray" fill="currentColor"></circle>
-            </svg>
+            <img src="<?php echo $imagesurl; ?>greenship-recycling/icon-certificate1.svg" width="84" height="84" alt="Emergency Preparedness & Mock Drills" class="safety-reveal-icon safety-icon-svg" />
           </div>
           <div class="safety-reveal-content">
             <h3 class="safety-reveal-title">Emergency Preparedness &amp; Mock Drills</h3>
             <p class="safety-reveal-desc">Dedicated rescue boats, certified firefighting stations, and medical first-aid stations are permanently deployed across the yard. Periodic live mock drills ensure rapid response readiness in any critical scenario.</p>
+          </div>
+        </div>
+
+        <!-- Card 8: Confined Space & Gas Free Certification (Fills 4th slot in row 2) -->
+        <div class="safety-reveal-card" data-safety-card="8">
+          <div class="safety-reveal-icon-wrap">
+            <img src="<?php echo $imagesurl; ?>greenship-recycling/icon-certificate1.svg" width="84" height="84" alt="Gas-Free & Confined Space Entry" class="safety-reveal-icon safety-icon-svg" />
+          </div>
+          <div class="safety-reveal-content">
+            <h3 class="safety-reveal-title">Gas-Free &amp; Confined Space Entry</h3>
+            <p class="safety-reveal-desc">Mandatory atmospheric gas testing and certification by approved marine chemists prior to hot work or entry into enclosed compartments.</p>
           </div>
         </div>
 
@@ -645,45 +535,88 @@ $utm = "yes";
     </div>
   </section>
 
-  <!-- Our Yard Section (Original Clean Design) -->
+  <!-- Our Yard Section (Custom Orange Themed Showcase matching Reference Mockup) -->
   <section id="section-yard" class="section section-yard">
+    <!-- Subtle Coastal Background Ambient Elements -->
+    <div class="yard-bg-curves" aria-hidden="true">
+      <svg class="yard-bg-arc" viewBox="0 0 600 600" fill="none">
+        <circle cx="300" cy="300" r="280" stroke="rgba(229, 145, 47, 0.07)" stroke-width="1.5" />
+        <circle cx="300" cy="300" r="230" stroke="rgba(229, 145, 47, 0.04)" stroke-width="1" />
+      </svg>
+    </div>
+
     <div class="theme-padding">
       
-      <!-- Clean Section Header -->
+      <!-- Centered Section Header Bar -->
       <div class="yard-header-wrap">
+        <!-- Keyword above Title -->
         <div class="section-kicker">
           <span class="section-kicker-line"></span>
           <span class="section-kicker-text">FACILITY &amp; LOCATION</span>
         </div>
+
+        <!-- Main Heading & Sub-motto -->
         <h2 class="yard-main-heading">Our <span class="yard-highlight">Yard</span></h2>
+        <p class="yard-sub-motto">WHERE RESPONSIBLE RECYCLING BEGINS</p>
       </div>
 
-      <!-- Main Split Showcase -->
+      <!-- Main 2-Column Showcase Grid -->
       <div class="yard-showcase-grid">
         
-        <!-- Left: Clean Natural Yard Photograph -->
-        <div class="yard-visual-card">
-          <img src="<?php echo $imagesurl; ?>greenship-recycling/our-yard.jpg" alt="Our Yard - Ship Recycling Yard no. 13, Alang, Gujarat" class="yard-visual-img" loading="lazy" />
+        <!-- Left: Clean Natural Yard Photo Card -->
+        <div class="yard-photo-card-wrap">
+          <div class="yard-photo-card">
+            <img src="<?php echo $imagesurl; ?>greenship-recycling/our-yard.jpg" alt="Our Yard - Ship Recycling Yard no. 13, Alang, Gujarat" class="yard-photo-img" loading="lazy" />
+          </div>
         </div>
 
-        <!-- Right: Original Clean Info Card -->
-        <div class="yard-info-master-card">
-          <h3 class="yard-sub-heading">Yard</h3>
+        <!-- Right: Light Theme Showcase Card with Animated India Map -->
+        <div class="yard-light-master-card">
           
-          <div class="yard-original-content">
-            <div class="yard-original-address">
-              <p class="yard-address-lines">
-                Ship Recycling Yard no. 13,<br>
-                S.B.Y., Alang - 364150 Dist. Bhavnagar, Gujarat.<br>
-                India.
-              </p>
-            </div>
+          <!-- Content Left Inside Light Card -->
+          <div class="yard-card-content">
             
-            <div class="yard-original-phone">
-              <span class="yard-phone-label">Phone</span>
-              <a href="tel:+919879787952" class="yard-phone-val">M: +91 9879787952</a>
+            <!-- Category Tag -->
+            <div class="yard-card-tag">
+              <svg class="yard-card-tag-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span class="yard-card-tag-text">YARD</span>
             </div>
+
+            <!-- Heading inside card -->
+            <h3 class="yard-card-title">Ship Recycling Yard <span class="yard-card-title-highlight">No. 13,</span></h3>
+            
+            <!-- Address Lines -->
+            <p class="yard-card-address">
+              S.B.Y., Alang - 364150 Dist. Bhavnagar,<br>
+              Gujarat. India.
+            </p>
+
+            <!-- Accent Orange Line -->
+            <div class="yard-card-divider" aria-hidden="true"></div>
+
+            <!-- Phone Call Block with Clear Title & Description Hierarchy -->
+            <div class="yard-phone-container">
+              <a href="tel:+919879787952" class="yard-phone-circle-btn" aria-label="Call Yard">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.02l-2.2 2.19z"/>
+                </svg>
+              </a>
+              <div class="yard-phone-info">
+                <span class="yard-phone-title">Phone</span>
+                <a href="tel:+919879787952" class="yard-phone-number">+91 9879787952</a>
+              </div>
+            </div>
+
           </div>
+
+          <!-- Graphic Right Inside Light Card (India Vector Map with Pulsing Alang Beacon) -->
+          <div class="yard-card-map-area">
+            <img src="<?php echo $imagesurl; ?>greenship-recycling/india-map.svg" alt="India Map highlighting Alang, Gujarat" class="yard-card-map-graphic" loading="lazy" />
+          </div>
+
         </div>
 
       </div>

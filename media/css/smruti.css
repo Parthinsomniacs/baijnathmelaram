@@ -16,6 +16,30 @@
   --color-secondary: #e5912f !important;
 }
 
+/* Eliminate top white strip: reset margin & padding-top on html and body across all responsive viewports */
+html#greenship-recycling,
+html#greenship-recycling body,
+body#greenship-recycling,
+#greenship-recycling body {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  background-color: #0b1523 !important;
+}
+
+@media screen and (max-width: 1599px) {
+  html#greenship-recycling body,
+  #greenship-recycling body {
+    padding-top: 0 !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html#greenship-recycling body,
+  #greenship-recycling body {
+    padding-top: 0 !important;
+  }
+}
+
 #greenship-recycling .text-primary {
   color: #e5912f !important;
 }
@@ -58,9 +82,9 @@
 #greenship-recycling .banner-tag-text,
 #greenship-recycling [class*="-kicker"] {
   font-family: 'Science Gothic', sans-serif !important;
-  font-size: clamp(12px, 0.95vw, 13.5px) !important;
+  font-size: 12px !important;
   font-weight: 700 !important;
-  letter-spacing: 0.14em !important;
+  letter-spacing: 0.12em !important;
   text-transform: uppercase !important;
   color: #1e293b !important;
   line-height: 1 !important;
@@ -71,7 +95,7 @@
   color: #ffffff !important;
 }
 
-/* 2. Titles & Headings: Science Gothic */
+/* 2. Titles & Headings: Montserrat (Decreased Font Weight to 600) */
 #greenship-recycling h1,
 #greenship-recycling h2,
 #greenship-recycling h3,
@@ -94,8 +118,8 @@
 #greenship-recycling .yard-card-title,
 #greenship-recycling [class*="-title"],
 #greenship-recycling [class*="-heading"] {
-  font-family: 'Science Gothic', sans-serif !important;
-  font-weight: 700;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600;
   color: #000000;
 }
 
@@ -132,26 +156,40 @@
 
 /* Header Section (Title & Description) */
 .bm-env-header {
-  max-width: 100%;
-  width: 100%;
+  max-width: 860px;
   margin-bottom: clamp(40px, 5vw, 65px);
 }
 
-.bm-env-main-heading {
-  font-family: 'Science Gothic', sans-serif !important;
-  font-size: clamp(30px, 3.8vw, 54px);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
-  color: #000000;
-  margin: 0 0 16px 0;
-  white-space: nowrap;
+.bm-env-header .banner-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
 }
 
-@media screen and (max-width: 600px) {
-  .bm-env-main-heading {
-    white-space: normal;
-  }
+.bm-env-header .banner-tag-plus {
+  color: #e5912f;
+  font-family: 'Fragment Mono', monospace;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.bm-env-header .banner-tag-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #64748b;
+}
+
+.bm-env-main-heading {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: clamp(30px, 3.5vw, 48px) !important;
+  font-weight: 600 !important;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #000000;
+  margin: 0 0 16px 0;
 }
 
 .bm-env-main-heading .bm-env-highlight,
@@ -161,16 +199,16 @@
 
 .bm-env-main-desc {
   font-family: 'Montserrat', sans-serif !important;
-  font-size: clamp(15.5px, 1.15vw, 18px);
-  line-height: 1.65;
+  font-size: 16px !important;
+  line-height: 1.7;
   color: #475569;
   margin: 0;
-  max-width: 860px;
+  max-width: 820px;
 }
 
 .bm-env-main-desc strong {
   color: #000000;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 /* Sticky Stacking Cards Container */
@@ -236,7 +274,7 @@
 }
 
 .bm-env-card-title {
-  font-family: 'Science Gothic', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: clamp(22px, 2.3vw, 32px);
   font-weight: 700;
   line-height: 1.22;
@@ -492,7 +530,7 @@
 }
 
 .bm-welfare-card-title {
-  font-family: 'Science Gothic', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: clamp(17.5px, 1.3vw, 20.5px);
   font-weight: 700;
   line-height: 1.3;
@@ -576,8 +614,10 @@
   margin-top: 0 !important;
   padding-top: 0 !important;
   position: relative;
+  top: 0;
+  left: 0;
   overflow: hidden;
-  background: #000000;
+  background: #0b1523 !important;
   width: 100%;
   z-index: 1;
 }
@@ -608,34 +648,58 @@
   }
 }
 
-/* Subtle cinematic overlay for maximum typographic clarity */
+/* Subtle cinematic overlay with rich dark lower gradient for maximum text readability over water */
 #greenship-banner .banner-image::after {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.45) 0%,
-    rgba(0, 0, 0, 0.25) 40%,
-    rgba(0, 0, 0, 0.65) 100%
+    rgba(0, 0, 0, 0.40) 0%,
+    rgba(0, 0, 0, 0.15) 35%,
+    rgba(0, 0, 0, 0.35) 60%,
+    rgba(4, 15, 29, 0.85) 100%
   );
   pointer-events: none;
 }
 
+/* Shift banner text to the bottom-left water area (red box location) */
 #greenship-banner .banner-overlay-wrap {
   position: absolute;
   inset: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
   z-index: 10;
   pointer-events: none;
-  padding-top: clamp(40px, 6vh, 80px);
+  padding-top: 0 !important;
+  padding-bottom: clamp(40px, 6.5vw, 85px);
 }
 
 #greenship-banner .banner-overlay-wrap .theme-padding {
   width: 100%;
   pointer-events: auto;
+}
+
+#greenship-banner .banner-content-row {
+  margin-bottom: 0 !important;
+}
+
+#greenship-banner .banner-content-row .column {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+#greenship-banner .section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: clamp(10px, 1.2vw, 16px) !important;
+}
+
+#greenship-banner .section-title {
+  margin-bottom: 0 !important;
 }
 
 #greenship-banner .banner-line-inner,
@@ -646,8 +710,15 @@
 }
 
 #greenship-banner .banner-title {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: clamp(28px, 3.5vw, 48px) !important;
+  font-weight: 600 !important;
+  line-height: 1.15 !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.01em !important;
   color: #ffffff !important;
-  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.75);
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.85);
+  margin: 0 !important;
 }
 
 #greenship-banner .banner-title .banner-word-inner {
@@ -671,7 +742,7 @@
 }
 
 #greenship-banner .banner-divider {
-  background: linear-gradient(90deg, #e5912f 0%, rgba(255, 255, 255, 0.45) 40%, transparent 100%) !important;
+  display: none !important;
 }
 
 
@@ -699,12 +770,12 @@ section#section-safety,
 }
 
 #section-safety .safety-main-heading {
-  font-family: 'Science Gothic', sans-serif !important;
-  font-size: clamp(38px, 4.5vw, 68px);
-  font-weight: 700;
-  line-height: 1.1;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: clamp(30px, 3.5vw, 48px) !important;
+  font-weight: 600 !important;
+  line-height: 1.2;
   color: #000000 !important;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -721,7 +792,7 @@ section#section-safety,
 
 #section-safety .safety-lead-desc {
   font-family: 'Montserrat', sans-serif !important;
-  font-size: clamp(15px, 1.15vw, 18px);
+  font-size: 16px !important;
   line-height: 1.7;
   color: #4b5563 !important;
   margin: 0 auto;
@@ -741,7 +812,7 @@ section#section-safety,
    ========================================================================== */
 .safety-reveal-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(4, 1fr); /* Exactly 4 equal columns: All cards same width */
   background-color: #ede8e1; /* Crisp 1px interior boundary lines */
   gap: 1px;
   border: 1px solid #ede8e1;
@@ -751,21 +822,9 @@ section#section-safety,
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
-/* Row 1: 4 Cards (12 / 4 = 3 columns each) - Elevated Height */
-.safety-reveal-card.span-4-cols {
-  grid-column: span 3;
-  min-height: clamp(440px, 32vw, 475px);
-}
-
-/* Row 2: 3 Cards (12 / 3 = 4 columns each) */
-.safety-reveal-card.span-3-cols {
-  grid-column: span 4;
-  min-height: clamp(395px, 28vw, 420px);
-}
-
 .safety-reveal-card {
   background-color: #ffffff;
-  min-height: 395px;
+  min-height: clamp(430px, 31vw, 470px); /* All cards exact same height */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -789,7 +848,13 @@ section#section-safety,
   stroke: #1e293b;
   stroke-width: 1.8;
   flex-shrink: 0;
-  transition: stroke 0.35s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: stroke 0.35s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
+}
+
+img.safety-reveal-icon,
+.safety-icon-svg {
+  object-fit: contain;
+  display: block;
 }
 
 .safety-reveal-icon .icon-accent-ray {
@@ -804,7 +869,7 @@ section#section-safety,
 }
 
 .safety-reveal-title {
-  font-family: 'Science Gothic', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: clamp(19px, 1.35vw, 23px);
   font-weight: 700;
   color: #0f172a;
@@ -841,6 +906,13 @@ section#section-safety,
   transform: scale(1.06);
 }
 
+.safety-reveal-card:hover img.safety-reveal-icon,
+.safety-reveal-card.is-active img.safety-reveal-icon,
+.safety-reveal-card:hover .safety-icon-svg,
+.safety-reveal-card.is-active .safety-icon-svg {
+  filter: brightness(0) invert(1) !important;
+}
+
 .safety-reveal-card:hover .safety-reveal-icon .icon-accent-ray,
 .safety-reveal-card.is-active .safety-reveal-icon .icon-accent-ray {
   stroke: #ffffff !important;
@@ -865,14 +937,8 @@ section#section-safety,
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .safety-reveal-card.span-4-cols,
-  .safety-reveal-card.span-3-cols {
-    grid-column: span 1;
+  .safety-reveal-card {
     min-height: clamp(390px, 36vw, 430px);
-  }
-
-  .safety-reveal-card:last-child {
-    grid-column: span 2;
   }
 }
 
@@ -880,12 +946,6 @@ section#section-safety,
   .safety-reveal-grid {
     grid-template-columns: 1fr;
     border-radius: 16px;
-  }
-
-  .safety-reveal-card.span-4-cols,
-  .safety-reveal-card.span-3-cols,
-  .safety-reveal-card:last-child {
-    grid-column: span 1;
   }
 
   .safety-reveal-card {
@@ -989,13 +1049,13 @@ section#section-policy,
 }
 
 .policy-sticky-title {
-  font-family: 'Science Gothic', sans-serif !important;
-  font-size: clamp(26px, 2.3vw, 34px);
-  font-weight: 700;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: clamp(28px, 2.6vw, 38px) !important;
+  font-weight: 600 !important;
   color: #0f172a;
   letter-spacing: -0.02em;
   margin: 16px 0 14px 0;
-  line-height: 1.18;
+  line-height: 1.2;
 }
 
 .policy-sticky-title .policy-highlight {
@@ -1003,8 +1063,8 @@ section#section-policy,
 }
 
 .policy-sticky-desc {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 16px !important;
   line-height: 1.7;
   color: #64748b;
   margin: 0;
@@ -1213,7 +1273,7 @@ section#section-policy,
 }
 
 .policy-step-title {
-  font-family: 'Science Gothic', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: clamp(23px, 1.7vw, 29px);
   font-weight: 700;
   color: #0f172a;
@@ -1280,7 +1340,7 @@ section#section-policy,
 }
 
 /* ==========================================================================
-   Section: Our Yard - Clean Original Design
+   Section: Our Yard - Custom Light Theme Showcase with Orange Accents
    ========================================================================== */
 #section-yard.section-yard,
 section#section-yard,
@@ -1290,145 +1350,413 @@ section#section-yard,
   background-color: #fbf6ee !important;
   z-index: 5;
   overflow: hidden;
-  padding-top: clamp(60px, 7vh, 100px);
-  padding-bottom: clamp(70px, 8vh, 110px);
+  padding-top: clamp(60px, 6.5vw, 95px);
+  padding-bottom: clamp(70px, 7.5vw, 110px);
 }
 
-#section-yard .yard-header-wrap {
-  text-align: left;
-  max-width: 100%;
-  margin-bottom: clamp(30px, 4vw, 50px);
+/* Background Ambient Decorative Curves */
+.yard-bg-curves {
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 520px;
+  height: 520px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.85;
 }
 
-#section-yard .yard-main-heading {
+.yard-bg-arc {
+  width: 100%;
+  height: 100%;
+}
+
+/* Centered Section Header Bar (Keyword above Title) */
+.yard-header-wrap {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: clamp(32px, 4vw, 50px);
+}
+
+.yard-header-wrap .section-kicker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.yard-header-wrap .section-kicker-line {
+  width: 26px;
+  height: 2px;
+  background-color: #e5912f;
+  border-radius: 1px;
+}
+
+.yard-header-wrap .section-kicker-text {
   font-family: 'Science Gothic', sans-serif !important;
-  font-size: clamp(38px, 4.5vw, 60px);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  color: #000000;
-  margin: 0;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: #1e293b;
 }
 
-#section-yard .yard-main-heading .yard-highlight {
+.yard-header-wrap .yard-main-heading {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: clamp(32px, 3.5vw, 48px) !important;
+  font-weight: 600 !important;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #000000;
+  margin: 0 0 8px 0;
+}
+
+.yard-header-wrap .yard-main-heading .yard-highlight {
   color: #e5912f !important;
 }
 
-/* 2-Column Split Grid */
+.yard-header-wrap .yard-sub-motto {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+  color: #64748b;
+  margin: 0;
+}
+
+/* 2-Column Split Showcase Grid - Balanced Widths */
 .yard-showcase-grid {
+  position: relative;
+  z-index: 3;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(24px, 3vw, 42px);
+  grid-template-columns: 0.88fr 1.12fr;
+  gap: clamp(24px, 2.5vw, 36px);
   align-items: stretch;
 }
 
-/* Left: Clean Visual Media Card (Pure Image, No Badges/Gradients) */
-.yard-visual-card {
+/* Left: Clean Natural Yard Photo Card */
+.yard-photo-card-wrap {
   position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  border: 1px solid #ede8e1;
-  background-color: #f1f5f9;
-  min-height: clamp(320px, 28vw, 420px);
+  width: 100%;
+  height: 100%;
+  min-height: clamp(280px, 22vw, 345px);
+  display: flex;
 }
 
-.yard-visual-img {
+.yard-photo-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  border: 1px solid #e7ded3;
+  box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.yard-photo-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.12);
+}
+
+.yard-photo-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
-  transition: transform 0.5s ease;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.yard-visual-card:hover .yard-visual-img {
-  transform: scale(1.025);
+.yard-photo-card:hover .yard-photo-img {
+  transform: scale(1.03);
 }
 
-/* Right: Original Clean Info Card */
-.yard-info-master-card {
+/* Right: Light Theme Master Card with Orange Accents - Compact & Balanced */
+.yard-light-master-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
   background: #ffffff;
-  border-radius: 20px;
-  border: 1px solid #ede8e1;
-  padding: clamp(36px, 4.5vw, 56px);
+  border: 1px solid #e7ded3;
+  box-shadow: 0 10px 32px -8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: stretch;
+  min-height: clamp(280px, 22vw, 345px);
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.yard-light-master-card:hover {
+  border-color: #e5912f;
+  box-shadow: 0 14px 38px -10px rgba(229, 145, 47, 0.14), 0 6px 20px -6px rgba(0, 0, 0, 0.04);
+}
+
+/* Content Column (Left inside Light Card - Balanced Spacing) */
+.yard-card-content {
+  flex: 0 0 52%;
+  max-width: 52%;
+  padding: clamp(18px, 2vw, 26px) clamp(22px, 2.5vw, 36px);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.04);
+  z-index: 2;
+  position: relative;
 }
 
-.yard-sub-heading {
-  font-family: 'Science Gothic', sans-serif !important;
-  font-size: clamp(28px, 2.4vw, 38px);
-  font-weight: 700;
-  color: #000000;
-  letter-spacing: -0.02em;
-  margin: 0 0 clamp(28px, 3.5vw, 44px) 0;
-}
-
-/* Original Content Layout: Address on Left, Phone on Right */
-.yard-original-content {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: clamp(24px, 3vw, 48px);
-  flex-wrap: wrap;
-}
-
-.yard-original-address {
-  flex: 1 1 240px;
-}
-
-.yard-address-lines {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(15px, 1.05vw, 17px);
-  line-height: 1.7;
-  color: #1e293b;
-  margin: 0;
-}
-
-.yard-original-phone {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: baseline;
-  gap: 16px;
-}
-
-.yard-phone-label {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(15px, 1.05vw, 17px);
-  font-weight: 500;
-  color: #64748b;
-}
-
-.yard-phone-val {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(16px, 1.15vw, 18.5px);
-  font-weight: 700;
-  color: #000000;
-  text-decoration: none;
-  transition: color 0.25s ease;
-}
-
-.yard-phone-val:hover {
+.yard-card-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
   color: #e5912f;
 }
 
-/* Responsive */
-@media screen and (max-width: 900px) {
+.yard-card-tag-icon {
+  color: #e5912f;
+  flex-shrink: 0;
+}
+
+.yard-card-tag-text {
+  font-family: 'Science Gothic', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  color: #e5912f;
+}
+
+.yard-card-title {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: clamp(20px, 1.85vw, 27px) !important;
+  font-weight: 600 !important;
+  color: #0f172a !important;
+  line-height: 1.22 !important;
+  letter-spacing: -0.015em;
+  margin: 0 0 8px 0;
+}
+
+.yard-card-title-highlight {
+  color: #e5912f !important;
+  font-weight: 600 !important;
+}
+
+.yard-card-address {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 14.5px !important;
+  line-height: 1.55 !important;
+  color: #475569 !important;
+  margin: 0 0 12px 0;
+}
+
+.yard-card-divider {
+  width: 32px;
+  height: 2px;
+  background-color: #e5912f;
+  border-radius: 2px;
+  margin-bottom: 14px;
+}
+
+/* Phone Block - Clear Title & Description Distinction */
+.yard-phone-container {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.yard-phone-circle-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(229, 145, 47, 0.1);
+  border: 1px solid rgba(229, 145, 47, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e5912f;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.yard-phone-circle-btn:hover {
+  background-color: #e5912f;
+  color: #ffffff;
+  transform: scale(1.08);
+  box-shadow: 0 0 16px rgba(229, 145, 47, 0.45);
+}
+
+.yard-phone-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Phone Title Style: Bold, Crisp Montserrat Title */
+.yard-phone-title {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.01em !important;
+  color: #000000 !important;
+  margin: 0;
+}
+
+/* Phone Number Description Style: 16px Regular Montserrat */
+.yard-phone-number {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.4 !important;
+  color: #475569 !important;
+  text-decoration: none;
+  transition: color 0.25s ease;
+  display: inline-block;
+}
+
+.yard-phone-number:hover {
+  color: #e5912f !important;
+}
+
+/* Map Column (Right inside Light Card - Fully Contained, Never Cut Off) */
+.yard-card-map-area {
+  flex: 0 0 48%;
+  max-width: 48%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px 10px 0;
+}
+
+.yard-card-map-graphic {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  max-height: 315px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.06));
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.yard-light-master-card:hover .yard-card-map-graphic {
+  transform: scale(1.03);
+}
+
+/* Responsive Adaptations */
+@media screen and (max-width: 991px) {
+  .yard-header-wrap {
+    margin-bottom: 28px;
+  }
+
   .yard-showcase-grid {
     grid-template-columns: 1fr;
     gap: 28px;
   }
 
-  .yard-visual-card {
+  .yard-photo-card-wrap {
     min-height: 280px;
   }
 
-  .yard-original-content {
+  .yard-light-master-card {
     flex-direction: column;
-    gap: 20px;
+    min-height: auto;
+  }
+
+  .yard-card-content {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 24px 20px 12px;
+  }
+
+  .yard-card-map-area {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 0 16px 20px;
+    min-height: 260px;
+  }
+
+  .yard-card-map-graphic {
+    max-width: 300px;
+    max-height: 280px;
+  }
+
+  .yard-light-master-card:hover .yard-card-map-graphic {
+    transform: scale(1.04);
   }
 }
 
+/* ==========================================================================
+   User Specified Typographic Hierarchy Overrides
+   - Keyword: 12px (Science Gothic, Bold uppercase, orange line)
+   - Title: 48px (Montserrat, Font weight decreased to 600)
+   - Description: 16px (Montserrat, 400/500, line-height 1.7)
+   ========================================================================== */
+#greenship-recycling .section-kicker-text,
+#greenship-recycling .banner-tag-text,
+#greenship-recycling .yard-kicker-text {
+  font-family: 'Science Gothic', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+}
 
+#greenship-recycling .section-kicker-line,
+#greenship-recycling .banner-tag-plus,
+#greenship-recycling .yard-kicker-line {
+  width: 22px !important;
+  height: 2px !important;
+  background-color: #e5912f !important;
+}
+
+#greenship-recycling .bm-env-main-heading,
+#greenship-recycling .safety-main-heading,
+#greenship-recycling .yard-main-heading {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.02em !important;
+}
+
+@media screen and (min-width: 992px) {
+  #greenship-recycling .bm-env-main-heading,
+  #greenship-recycling .safety-main-heading,
+  #greenship-recycling .yard-main-heading {
+    font-size: 48px !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #greenship-recycling .bm-env-main-heading,
+  #greenship-recycling .safety-main-heading,
+  #greenship-recycling .yard-main-heading {
+    font-size: clamp(28px, 4vw, 42px) !important;
+  }
+}
+
+#greenship-recycling .bm-env-main-desc,
+#greenship-recycling .safety-lead-desc,
+#greenship-recycling .policy-sticky-desc,
+#greenship-recycling .yard-address-lines,
+#greenship-recycling .yard-phone-number {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+}
+
+#greenship-recycling .yard-phone-title {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #000000 !important;
+}
