@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..800;1,300..800&family=Science+Gothic:wght@100..900&display=swap');
+
 /* ==========================================================================
    Baijnath Melaram - Greenship Recycling
    Color Palette: Pure Black #000000 / Neutral Gray Shades / Brand Orange #e5912f
    Strict Rule: No blue colors used - Only Black, Orange, and Gray shades
+   Typography Hierarchy:
+     - Keyword (Kicker / Eyebrow): Science Gothic (Bold, Uppercase, Spaced) with Orange Line
+     - Title / Headings: Montserrat (Bold / Extra-Bold #000000 + Orange Highlight)
+     - Description: Montserrat (400/500 Medium Neutral Gray)
    ========================================================================== */
 
 #greenship-recycling {
@@ -14,18 +20,111 @@
   color: #e5912f !important;
 }
 
+/* 1. Keyword / Eyebrow (Reference Layout: Orange Dash + Science Gothic Caps) */
+.section-kicker,
+.banner-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.section-kicker.is-centered {
+  display: inline-flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-kicker-line,
+.banner-tag-plus {
+  display: inline-block;
+  width: 26px;
+  height: 2.5px;
+  background-color: #e5912f !important;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.banner-tag-plus {
+  font-size: 0 !important;
+  line-height: 0 !important;
+  height: 2.5px !important;
+}
+
+.section-kicker-text,
+.banner-tag-text,
+#greenship-recycling .section-kicker-text,
+#greenship-recycling .banner-tag-text,
+#greenship-recycling [class*="-kicker"] {
+  font-family: 'Science Gothic', sans-serif !important;
+  font-size: clamp(12px, 0.95vw, 13.5px) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: #1e293b !important;
+  line-height: 1 !important;
+}
+
+#greenship-banner .section-kicker-text,
+#greenship-banner .banner-tag-text {
+  color: #ffffff !important;
+}
+
+/* 2. Titles & Headings: Science Gothic */
 #greenship-recycling h1,
 #greenship-recycling h2,
 #greenship-recycling h3,
 #greenship-recycling h4,
 #greenship-recycling h5,
-#greenship-recycling h6 {
+#greenship-recycling h6,
+#greenship-recycling .banner-title,
+#greenship-recycling .banner-word-inner,
+#greenship-recycling .section-title,
+#greenship-recycling .bm-env-main-heading,
+#greenship-recycling .bm-env-card-title,
+#greenship-recycling .welfare-main-heading,
+#greenship-recycling .bm-welfare-card-title,
+#greenship-recycling .safety-main-heading,
+#greenship-recycling .safety-reveal-title,
+#greenship-recycling .policy-sticky-title,
+#greenship-recycling .policy-step-title,
+#greenship-recycling .yard-main-heading,
+#greenship-recycling .yard-sub-heading,
+#greenship-recycling .yard-card-title,
+#greenship-recycling [class*="-title"],
+#greenship-recycling [class*="-heading"] {
+  font-family: 'Science Gothic', sans-serif !important;
+  font-weight: 700;
   color: #000000;
+}
+
+/* 3. Descriptions: Montserrat */
+#greenship-recycling p,
+#greenship-recycling .banner-desc,
+#greenship-recycling .bm-env-main-desc,
+#greenship-recycling .bm-env-card-desc,
+#greenship-recycling .welfare-lead-desc,
+#greenship-recycling .bm-welfare-card-desc,
+#greenship-recycling .safety-lead-desc,
+#greenship-recycling .safety-reveal-desc,
+#greenship-recycling .policy-sticky-desc,
+#greenship-recycling .policy-step-desc,
+#greenship-recycling .yard-lead-desc,
+#greenship-recycling .yard-card-desc,
+#greenship-recycling .yard-address-lines,
+#greenship-recycling .policy-scroll-subtitle,
+#greenship-recycling .policy-step-category,
+#greenship-recycling .bm-env-card-tag,
+#greenship-recycling [class*="-desc"],
+#greenship-recycling [class*="-lead"],
+#greenship-recycling [class*="-text"]:not(.section-kicker-text):not(.banner-tag-text) {
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 #section-environment.section-environment {
   position: relative;
-  background-color: #f4f5f8;
+  background-color: #fbf6ee !important;
   padding: clamp(70px, 8vw, 115px) 0 clamp(40px, 5vw, 75px);
   overflow: visible !important; /* Critical for position: sticky to stack */
   box-sizing: border-box;
@@ -33,40 +132,26 @@
 
 /* Header Section (Title & Description) */
 .bm-env-header {
-  max-width: 860px;
+  max-width: 100%;
+  width: 100%;
   margin-bottom: clamp(40px, 5vw, 65px);
 }
 
-.bm-env-header .banner-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 12px;
-}
-
-.bm-env-header .banner-tag-plus {
-  color: #e5912f;
-  font-family: 'Fragment Mono', monospace;
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.bm-env-header .banner-tag-text {
-  font-family: 'Fragment Mono', monospace;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  color: #64748b;
-}
-
 .bm-env-main-heading {
-  font-family: 'Geist', sans-serif;
-  font-size: clamp(36px, 4.2vw, 58px);
+  font-family: 'Science Gothic', sans-serif !important;
+  font-size: clamp(30px, 3.8vw, 54px);
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.15;
   letter-spacing: -0.03em;
   color: #000000;
   margin: 0 0 16px 0;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 600px) {
+  .bm-env-main-heading {
+    white-space: normal;
+  }
 }
 
 .bm-env-main-heading .bm-env-highlight,
@@ -75,12 +160,12 @@
 }
 
 .bm-env-main-desc {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: clamp(15.5px, 1.15vw, 18px);
   line-height: 1.65;
   color: #475569;
   margin: 0;
-  max-width: 780px;
+  max-width: 860px;
 }
 
 .bm-env-main-desc strong {
@@ -101,8 +186,8 @@
   top: clamp(95px, 13vh, 125px);
   background-color: #ffffff;
   border-radius: 20px;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 14px 38px -10px rgba(15, 23, 42, 0.1), 0 4px 14px -2px rgba(15, 23, 42, 0.04);
+  border: 1px solid #ede8e1;
+  box-shadow: 0 4px 18px -4px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.02);
   margin-bottom: clamp(35px, 6vh, 60px);
   overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -139,18 +224,11 @@
 }
 
 .bm-env-card-num {
-  font-family: 'Fragment Mono', monospace;
-  font-size: clamp(12.5px, 0.95vw, 14px);
-  font-weight: 700;
-  color: #e5912f;
-  background: #fff8f0;
-  border: 1px solid rgba(229, 145, 47, 0.35);
-  padding: 3px 10px;
-  border-radius: 6px;
+  display: none !important;
 }
 
 .bm-env-card-tag {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12.5px;
   font-weight: 600;
   color: #64748b;
@@ -158,7 +236,7 @@
 }
 
 .bm-env-card-title {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Science Gothic', sans-serif !important;
   font-size: clamp(22px, 2.3vw, 32px);
   font-weight: 700;
   line-height: 1.22;
@@ -174,7 +252,7 @@
 }
 
 .bm-env-card-desc {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(14.5px, 1.05vw, 16.5px);
   line-height: 1.7;
   color: #475569;
@@ -254,116 +332,240 @@
 }
 
 .bm-welfare-header {
-  max-width: 860px;
+  max-width: 100%;
+  width: 100%;
   margin-bottom: clamp(35px, 4.5vw, 60px);
+}
+
+.bm-welfare-header .bm-env-main-desc {
+  max-width: 100%;
+  width: 100%;
+  font-size: clamp(14px, 1.05vw, 17px);
+}
+
+.bm-welfare-line-break {
+  display: block;
+  margin-top: 6px;
+}
+
+@media screen and (min-width: 1200px) {
+  .bm-welfare-line-break {
+    white-space: nowrap;
+  }
 }
 
 .bm-welfare-cards-grid-v3 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 26px;
   width: 100%;
+  perspective: 1200px;
 }
 
-/* Individual Bento Card */
-.bm-welfare-card-v3 {
+.bm-welfare-tilt-card {
+  position: relative;
   background: #ffffff;
-  border: 1px solid #e4e4e7;
-  border-radius: 14px;
-  padding: 22px 20px 20px;
+  border: 1px solid #ede8e1;
+  border-radius: 24px;
+  padding: 26px 22px 22px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  justify-content: space-between;
+  box-shadow: 0 4px 18px -4px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: border-color 0.25s ease;
+  overflow: hidden;
+  box-sizing: border-box;
+  cursor: pointer;
+  transform: none !important;
+}
+
+.bm-welfare-tilt-card:hover {
+  border-color: #e5912f !important;
+  transform: none !important;
+}
+
+/* Dynamic Interactive Spotlight Glow Layer following mouse position */
+.bm-welfare-card-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 1;
+}
+
+/* Big Aesthetic Number Watermark in Background (01 - 08) */
+.bm-welfare-watermark {
+  position: absolute;
+  top: 8px;
+  right: 18px;
+  font-family: 'Science Gothic', sans-serif;
+  font-size: clamp(52px, 4.2vw, 68px);
+  font-weight: 800;
+  line-height: 1;
+  color: rgba(229, 145, 47, 0.08);
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: -0.04em;
+}
+
+.bm-welfare-tilt-card:hover .bm-welfare-watermark {
+  color: rgba(229, 145, 47, 0.2);
+  transform: translateY(-4px) scale(1.05);
+}
+
+/* Inner 3D Container */
+.bm-welfare-card-inner {
   position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
-.bm-welfare-card-v3:hover {
-  border-color: #e5912f;
-  transform: translateY(-4px);
-  box-shadow: 0 12px 26px rgba(229, 145, 47, 0.12);
-}
-
-.bm-welfare-card-v3-top {
+/* Floating Glassmorphic Pill Tag */
+.bm-welfare-card-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin-bottom: 14px;
 }
 
-.bm-welfare-card-v3-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
-  background: #fff8f0;
-  border: 1px solid rgba(229, 145, 47, 0.3);
-  color: #e5912f;
-  display: flex;
+.bm-welfare-glass-tag {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  gap: 7px;
+  background: rgba(255, 248, 240, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(229, 145, 47, 0.3);
+  color: #c27014;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(229, 145, 47, 0.08);
+  transition: all 0.3s ease;
+}
+
+.bm-welfare-tilt-card:hover .bm-welfare-glass-tag {
+  background: rgba(229, 145, 47, 0.15);
+  border-color: rgba(229, 145, 47, 0.6);
+  color: #b45309;
+  transform: translateY(-1px);
+}
+
+/* Pulsing Status Dot inside Tag */
+.bm-tag-pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #e5912f;
+  box-shadow: 0 0 0 0 rgba(229, 145, 47, 0.7);
+  animation: bmPulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
   flex-shrink: 0;
 }
 
-.bm-welfare-card-v3:hover .bm-welfare-card-v3-icon {
-  background: #e5912f;
-  color: #ffffff;
-  border-color: #e5912f;
-  transform: scale(1.08);
+@keyframes bmPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(229, 145, 47, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(229, 145, 47, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(229, 145, 47, 0);
+  }
 }
 
-.bm-welfare-card-v3-tag {
-  font-family: 'Fragment Mono', monospace;
-  font-size: 10.5px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: #71717a;
-  background: #f4f4f5;
-  border: 1px solid #e4e4e7;
-  padding: 3px 8px;
-  border-radius: 6px;
-  text-transform: uppercase;
+/* Card Content: Title & Description */
+.bm-welfare-card-body {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 
-.bm-welfare-card-v3-title {
-  font-family: 'Geist', sans-serif;
-  font-size: 15px;
+.bm-welfare-card-title {
+  font-family: 'Science Gothic', sans-serif !important;
+  font-size: clamp(17.5px, 1.3vw, 20.5px);
   font-weight: 700;
-  line-height: 1.35;
-  color: #000000;
-  margin: 0 0 6px 0;
-  transition: color 0.25s ease;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+  transition: color 0.3s ease;
 }
 
-#greenship-recycling .bm-welfare-card-v3:hover .bm-welfare-card-v3-title,
-.bm-welfare-card-v3:hover .bm-welfare-card-v3-title {
+#greenship-recycling .bm-welfare-tilt-card:hover .bm-welfare-card-title,
+.bm-welfare-tilt-card:hover .bm-welfare-card-title {
   color: #e5912f !important;
 }
 
-.bm-welfare-card-v3-desc {
-  font-family: 'Geist', sans-serif;
-  font-size: 12.5px;
-  line-height: 1.55;
-  color: #52525b;
+.bm-welfare-card-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(13px, 0.92vw, 14.5px);
+  line-height: 1.6;
+  color: #64748b;
   margin: 0;
 }
 
-/* Responsive Adaptations */
-@media screen and (max-width: 1200px) {
+/* Media Showcase with Gradient Overlay (10px radius) */
+.bm-welfare-card-media {
+  position: relative;
+  width: 100%;
+  height: clamp(165px, 14vw, 195px);
+  border-radius: 10px !important;
+  overflow: hidden;
+  background-color: #0f172a;
+}
+
+.bm-welfare-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 10px !important;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bm-welfare-tilt-card:hover .bm-welfare-card-img {
+  transform: none !important;
+}
+
+.bm-welfare-media-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.35) 100%);
+  pointer-events: none;
+}
+
+/* Responsive Grid Adaptations */
+@media screen and (max-width: 1280px) {
   .bm-welfare-cards-grid-v3 {
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 22px;
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 680px) {
   .bm-welfare-cards-grid-v3 {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 18px;
   }
 
-  .bm-welfare-card-v3 {
-    padding: 16px;
+  .bm-welfare-tilt-card {
+    padding: 22px 18px 18px;
+  }
+
+  .bm-welfare-card-media {
+    height: 185px;
   }
 }
 
@@ -476,12 +678,16 @@
 /* ==========================================================================
    Section: We Value Safety - Clean Contrasting Section with Orange Accents
    ========================================================================== */
-#section-safety.section-safety {
+#section-safety.section-safety,
+section#section-safety,
+#section-safety,
+.section.section-safety {
   position: relative;
-  background-color: #f4f5f8 !important;
+  background-color: #fbf6ee !important;
   z-index: 5;
   overflow: hidden;
   padding-top: clamp(70px, 8vh, 110px);
+  padding-bottom: clamp(75px, 8.5vh, 120px);
 }
 
 #section-safety .safety-header-wrap {
@@ -493,7 +699,7 @@
 }
 
 #section-safety .safety-main-heading {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Science Gothic', sans-serif !important;
   font-size: clamp(38px, 4.5vw, 68px);
   font-weight: 700;
   line-height: 1.1;
@@ -514,7 +720,7 @@
 }
 
 #section-safety .safety-lead-desc {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: clamp(15px, 1.15vw, 18px);
   line-height: 1.7;
   color: #4b5563 !important;
@@ -530,114 +736,699 @@
   font-weight: 600;
 }
 
-#section-safety .safety-features-wrap {
+/* ==========================================================================
+   Section: We Value Safety - Minimalist Architectural Grid with Hover Reveal
+   ========================================================================== */
+.safety-reveal-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  background-color: #ede8e1; /* Crisp 1px interior boundary lines */
+  gap: 1px;
+  border: 1px solid #ede8e1;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+/* Row 1: 4 Cards (12 / 4 = 3 columns each) - Elevated Height */
+.safety-reveal-card.span-4-cols {
+  grid-column: span 3;
+  min-height: clamp(440px, 32vw, 475px);
+}
+
+/* Row 2: 3 Cards (12 / 3 = 4 columns each) */
+.safety-reveal-card.span-3-cols {
+  grid-column: span 4;
+  min-height: clamp(395px, 28vw, 420px);
+}
+
+.safety-reveal-card {
+  background-color: #ffffff;
+  min-height: 395px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(30px, 3vw, 42px);
   position: relative;
-  z-index: 2;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s ease;
 }
 
-#section-safety .safety-feature-card {
-  opacity: 1 !important;
-  transform: none !important;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
-  padding: 32px 22px 26px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+/* Icon Showcase at the Top */
+.safety-reveal-icon-wrap {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 24px;
 }
 
-#section-safety .safety-feature-card:hover {
-  border-color: #e5912f !important;
-  border-top: 1px solid #e5912f !important;
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(229, 145, 47, 0.12) !important;
+.safety-reveal-icon {
+  width: clamp(74px, 5.2vw, 88px);
+  height: clamp(74px, 5.2vw, 88px);
+  stroke: #1e293b;
+  stroke-width: 1.8;
+  flex-shrink: 0;
+  transition: stroke 0.35s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-#greenship-recycling #section-safety .safety-feature-card:hover .safety-feature-title,
-#section-safety .safety-feature-card:hover .safety-feature-title {
-  color: #e5912f !important;
+.safety-reveal-icon .icon-accent-ray {
+  stroke: #e5912f;
+  stroke-width: 2.5px;
+  transition: stroke 0.35s ease;
 }
 
-#section-safety .safety-full-image-wrap {
-  position: relative;
-  z-index: 2;
-  width: 100%;
+/* Content Container at the Bottom */
+.safety-reveal-content {
+  margin-top: auto;
+}
+
+.safety-reveal-title {
+  font-family: 'Science Gothic', sans-serif !important;
+  font-size: clamp(19px, 1.35vw, 23px);
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0;
+  transition: color 0.35s ease;
+}
+
+.safety-reveal-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(13px, 0.92vw, 14.5px);
+  line-height: 1.62;
+  color: rgba(255, 255, 255, 0.95);
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(14px);
+  overflow: hidden;
+  margin: 0;
+  transition: max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease, transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), margin-top 0.35s ease;
 }
 
 /* ==========================================================================
-   Section: Policy & Yard - Orange Accent Details
+   Hover & Active State (Solid Brand Orange Background with Smooth Details Reveal)
    ========================================================================== */
-#section-policy.section-policy {
-  position: relative;
-  background-color: #f8fafc !important;
-  z-index: 5;
-  overflow: hidden;
-  padding-top: clamp(70px, 8vh, 110px);
+.safety-reveal-card:hover,
+.safety-reveal-card.is-active {
+  background-color: #e5912f !important;
 }
 
-.policy-card:hover {
-  border-color: #e5912f !important;
-  box-shadow: 0 12px 30px rgba(229, 145, 47, 0.1) !important;
+.safety-reveal-card:hover .safety-reveal-icon,
+.safety-reveal-card.is-active .safety-reveal-icon {
+  stroke: #ffffff !important;
+  transform: scale(1.06);
 }
 
-.policy-num {
-  color: #e5912f !important;
-  font-weight: 700;
+.safety-reveal-card:hover .safety-reveal-icon .icon-accent-ray,
+.safety-reveal-card.is-active .safety-reveal-icon .icon-accent-ray {
+  stroke: #ffffff !important;
 }
 
-.policy-icon-badge {
-  color: #e5912f !important;
-  background: #fff8f0 !important;
-  border-color: rgba(229, 145, 47, 0.3) !important;
-}
-
-.policy-category-tag {
-  color: #e5912f !important;
-  border-color: rgba(229, 145, 47, 0.35) !important;
-}
-
-#section-yard.section-yard {
-  position: relative;
-  background-color: #ffffff !important;
-  z-index: 5;
-}
-
-.yard-detail-card:hover {
-  border-color: #e5912f !important;
-  box-shadow: 0 12px 30px rgba(229, 145, 47, 0.1) !important;
-}
-
-.yard-detail-num {
-  color: #e5912f !important;
-  font-weight: 700;
-}
-
-.yard-icon-badge {
-  color: #e5912f !important;
-  background: #fff8f0 !important;
-  border-color: rgba(229, 145, 47, 0.3) !important;
-}
-
-.yard-category-tag {
-  color: #e5912f !important;
-  border-color: rgba(229, 145, 47, 0.35) !important;
-}
-
-.yard-phone-link {
-  color: #e5912f !important;
-  border-color: #e5912f !important;
-}
-
-.yard-phone-link:hover {
-  background: #e5912f !important;
+.safety-reveal-card:hover .safety-reveal-title,
+.safety-reveal-card.is-active .safety-reveal-title {
   color: #ffffff !important;
 }
 
-.yard-image-pill {
-  border-color: #e5912f !important;
+.safety-reveal-card:hover .safety-reveal-desc,
+.safety-reveal-card.is-active .safety-reveal-desc {
+  max-height: 220px;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: 14px;
 }
 
-.yard-pill-text {
+/* Responsive Rules for Safety Grid */
+@media screen and (max-width: 1100px) {
+  .safety-reveal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .safety-reveal-card.span-4-cols,
+  .safety-reveal-card.span-3-cols {
+    grid-column: span 1;
+    min-height: clamp(390px, 36vw, 430px);
+  }
+
+  .safety-reveal-card:last-child {
+    grid-column: span 2;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .safety-reveal-grid {
+    grid-template-columns: 1fr;
+    border-radius: 16px;
+  }
+
+  .safety-reveal-card.span-4-cols,
+  .safety-reveal-card.span-3-cols,
+  .safety-reveal-card:last-child {
+    grid-column: span 1;
+  }
+
+  .safety-reveal-card {
+    min-height: 320px;
+    padding: 26px 20px;
+  }
+
+  .safety-reveal-icon {
+    width: 68px;
+    height: 68px;
+  }
+}
+
+/* ==========================================================================
+   Section: Policy and Training - Wallem Sticky Timeline Layout
+   ========================================================================== */
+#section-policy.section-policy,
+section#section-policy,
+#section-policy,
+.section.section-policy {
+  position: relative;
+  background-color: #f8fafc !important;
+  z-index: 5;
+  overflow: visible !important;
+  padding-top: clamp(80px, 9vh, 120px);
+  padding-bottom: clamp(80px, 9vh, 130px);
+}
+
+#section-policy .theme-padding,
+#section-policy .policy-wallem-wrap {
+  overflow: visible !important;
+}
+
+.policy-wallem-wrap {
+  display: grid;
+  grid-template-columns: minmax(360px, 440px) 1fr;
+  gap: clamp(40px, 5vw, 72px);
+  align-items: start !important;
+  position: relative;
+}
+
+/* Left Column: Sticky Showcase Card */
+.policy-sticky-card {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 100px !important;
+  align-self: start !important;
+  height: fit-content !important;
+  z-index: 20 !important;
+}
+
+.policy-sticky-card-inner {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 12px 36px -6px rgba(0, 0, 0, 0.06);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.policy-sticky-card-inner:hover {
+  border-color: rgba(229, 145, 47, 0.45);
+  box-shadow: 0 20px 46px -8px rgba(229, 145, 47, 0.16);
+}
+
+.policy-sticky-media {
+  position: relative;
+  width: 100%;
+  height: clamp(360px, 40vh, 460px);
+  overflow: hidden;
+  background: #0f172a;
+  flex-shrink: 0;
+}
+
+.policy-sticky-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.policy-sticky-card-inner:hover .policy-sticky-img {
+  transform: scale(1.05);
+}
+
+.policy-sticky-media-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(15, 23, 42, 0.7) 100%);
+  pointer-events: none;
+}
+
+.policy-sticky-body {
+  padding: clamp(26px, 2.6vw, 36px);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.policy-sticky-title {
+  font-family: 'Science Gothic', sans-serif !important;
+  font-size: clamp(26px, 2.3vw, 34px);
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin: 16px 0 14px 0;
+  line-height: 1.18;
+}
+
+.policy-sticky-title .policy-highlight {
   color: #e5912f !important;
 }
+
+.policy-sticky-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #64748b;
+  margin: 0;
+}
+
+.policy-sticky-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #0f172a;
+  color: #ffffff;
+  padding: 13px 24px;
+  border-radius: 999px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.policy-sticky-btn:hover {
+  background: #e5912f;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(229, 145, 47, 0.35);
+}
+
+.policy-sticky-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.policy-sticky-btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* Right Column: Scroll Header */
+.policy-scroll-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.policy-scroll-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.policy-scroll-divider {
+  flex: 1;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+/* Timeline Track & Cards Area */
+.policy-timeline-container {
+  position: relative;
+  padding-left: 60px;
+}
+
+.policy-timeline-track {
+  position: absolute;
+  left: 22px;
+  top: 40px;
+  bottom: 40px;
+  width: 2px;
+  background: #e2e8f0;
+  border-radius: 2px;
+}
+
+.policy-timeline-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(180deg, #e5912f 0%, #ffad54 100%);
+  box-shadow: 0 0 8px rgba(229, 145, 47, 0.5);
+  border-radius: 2px;
+  transition: height 0.15s ease-out;
+}
+
+.policy-step-card {
+  position: relative;
+  margin-bottom: 34px;
+  cursor: pointer;
+}
+
+.policy-step-card:last-child {
+  margin-bottom: 0;
+}
+
+.policy-timeline-node {
+  position: absolute;
+  left: -60px;
+  top: 38px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.policy-node-ring {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #cbd5e1;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.policy-node-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #94a3b8;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.policy-step-card.is-active .policy-node-ring {
+  border-color: #e5912f;
+  box-shadow: 0 0 0 6px rgba(229, 145, 47, 0.2);
+  transform: scale(1.2);
+}
+
+.policy-step-card.is-active .policy-node-dot {
+  background: #e5912f;
+  transform: scale(1.3);
+}
+
+/* Increased Size for Right Side Scrollable Cards */
+.policy-card-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: clamp(34px, 3.4vw, 50px) clamp(30px, 3.2vw, 48px);
+  min-height: 210px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.03);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.policy-step-card:hover .policy-card-box {
+  transform: translateX(6px);
+  border-color: rgba(229, 145, 47, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.policy-step-card.is-active .policy-card-box {
+  border-color: rgba(229, 145, 47, 0.7);
+  box-shadow: 0 18px 42px -8px rgba(229, 145, 47, 0.18), 0 0 0 1px rgba(229, 145, 47, 0.4);
+  transform: translateX(10px);
+}
+
+.policy-step-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.policy-step-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  border: 1px solid #e2e8f0;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.policy-step-card.is-active .policy-step-icon {
+  background: #e5912f;
+  color: #ffffff;
+  border-color: #e5912f;
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(229, 145, 47, 0.4);
+}
+
+.policy-step-category {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #e5912f;
+}
+
+.policy-step-title {
+  font-family: 'Science Gothic', sans-serif !important;
+  font-size: clamp(23px, 1.7vw, 29px);
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.25;
+  margin: 0 0 14px 0;
+  transition: color 0.25s ease;
+}
+
+.policy-step-card.is-active .policy-step-title,
+.policy-step-card:hover .policy-step-title {
+  color: #e5912f;
+}
+
+.policy-step-desc {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: clamp(15px, 1.05vw, 17px);
+  line-height: 1.75;
+  color: #475569;
+  margin: 0;
+}
+
+/* Responsive Rules for Policy Section */
+@media screen and (max-width: 991px) {
+  .policy-wallem-wrap {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .policy-sticky-card {
+    position: relative !important;
+    top: 0 !important;
+  }
+
+  .policy-timeline-container {
+    padding-left: 48px;
+  }
+
+  .policy-timeline-track {
+    left: 16px;
+  }
+
+  .policy-timeline-node {
+    left: -48px;
+  }
+
+  .policy-step-card.is-active .policy-card-box {
+    transform: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .policy-timeline-container {
+    padding-left: 0;
+  }
+
+  .policy-timeline-track,
+  .policy-timeline-node {
+    display: none;
+  }
+
+  .policy-card-box {
+    padding: 24px 20px;
+  }
+}
+
+/* ==========================================================================
+   Section: Our Yard - Clean Original Design
+   ========================================================================== */
+#section-yard.section-yard,
+section#section-yard,
+#section-yard,
+.section.section-yard {
+  position: relative;
+  background-color: #fbf6ee !important;
+  z-index: 5;
+  overflow: hidden;
+  padding-top: clamp(60px, 7vh, 100px);
+  padding-bottom: clamp(70px, 8vh, 110px);
+}
+
+#section-yard .yard-header-wrap {
+  text-align: left;
+  max-width: 100%;
+  margin-bottom: clamp(30px, 4vw, 50px);
+}
+
+#section-yard .yard-main-heading {
+  font-family: 'Science Gothic', sans-serif !important;
+  font-size: clamp(38px, 4.5vw, 60px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #000000;
+  margin: 0;
+}
+
+#section-yard .yard-main-heading .yard-highlight {
+  color: #e5912f !important;
+}
+
+/* 2-Column Split Grid */
+.yard-showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 3vw, 42px);
+  align-items: stretch;
+}
+
+/* Left: Clean Visual Media Card (Pure Image, No Badges/Gradients) */
+.yard-visual-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #ede8e1;
+  background-color: #f1f5f9;
+  min-height: clamp(320px, 28vw, 420px);
+}
+
+.yard-visual-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.yard-visual-card:hover .yard-visual-img {
+  transform: scale(1.025);
+}
+
+/* Right: Original Clean Info Card */
+.yard-info-master-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #ede8e1;
+  padding: clamp(36px, 4.5vw, 56px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.04);
+}
+
+.yard-sub-heading {
+  font-family: 'Science Gothic', sans-serif !important;
+  font-size: clamp(28px, 2.4vw, 38px);
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: -0.02em;
+  margin: 0 0 clamp(28px, 3.5vw, 44px) 0;
+}
+
+/* Original Content Layout: Address on Left, Phone on Right */
+.yard-original-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: clamp(24px, 3vw, 48px);
+  flex-wrap: wrap;
+}
+
+.yard-original-address {
+  flex: 1 1 240px;
+}
+
+.yard-address-lines {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(15px, 1.05vw, 17px);
+  line-height: 1.7;
+  color: #1e293b;
+  margin: 0;
+}
+
+.yard-original-phone {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.yard-phone-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(15px, 1.05vw, 17px);
+  font-weight: 500;
+  color: #64748b;
+}
+
+.yard-phone-val {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(16px, 1.15vw, 18.5px);
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.yard-phone-val:hover {
+  color: #e5912f;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+  .yard-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .yard-visual-card {
+    min-height: 280px;
+  }
+
+  .yard-original-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
 
