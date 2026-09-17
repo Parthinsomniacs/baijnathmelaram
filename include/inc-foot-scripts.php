@@ -1,4 +1,4 @@
-﻿<!--Common JS-->
+<!--Common JS-->
 <?php require_once $alljs; ?>
 <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -256,12 +256,16 @@
 	 * 3. Video sticky shrink on scroll.
 	 * 4. 4 Cards slide in horizontally from right to left 0 strictly inside theme-padding.
 	 **/
+	/** Anchors Section Animation with Word Reveal **/
 	function initAnchorsInteractiveExperience() {
 		if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
 		gsap.registerPlugin(ScrollTrigger);
 
+		const anchorSec = document.querySelector("#section-anchors");
+		if (!anchorSec) return;
+
 		// 1. Title Word-Reveal Animation
-		const titleWords = document.querySelectorAll(".anchor-word-inner");
+		const titleWords = anchorSec.querySelectorAll(".word-inner, .anchor-word-inner");
 		if (titleWords.length) {
 			gsap.fromTo(titleWords, {
 				y: "115%",
@@ -270,18 +274,18 @@
 				y: "0%",
 				opacity: 1,
 				duration: 0.85,
-				stagger: 0.08,
+				stagger: 0.06,
 				ease: "power3.out",
 				scrollTrigger: {
-					trigger: ".js-anchors-title",
-					start: "top 88%",
+					trigger: anchorSec.querySelector(".js-anchors-title") || anchorSec,
+					start: "top 85%",
 					once: true
 				}
 			});
 		}
 
 		// 2. Counter Cards Stagger Entrance & Animated Number Counting
-		const statCards = document.querySelectorAll(".anchor-card-stat");
+		const statCards = anchorSec.querySelectorAll(".anchor-card-stat");
 		if (statCards.length) {
 			gsap.fromTo(statCards, {
 				y: 35,
@@ -302,167 +306,190 @@
 			statCards.forEach(card => {
 				const numEl = card.querySelector(".anchor-stat-count") || card.querySelector(".purecounter");
 				if (!numEl) return;
-				const target = parseFloat(numEl.getAttribute("data-target") || numEl.getAttribute("data-purecounter-end") || "0");
-				const decimals = parseInt(numEl.getAttribute("data-decimals") || numEl.getAttribute("data-purecounter-decimals") || "0");
-				const obj = { val: 0 };
-
-				gsap.to(obj, {
-					val: target,
-					duration: 2.0,
-					ease: "power2.out",
-					scrollTrigger: {
-						trigger: ".anchors-subgrid-stats",
-						start: "top 88%",
-						once: true
-					},
-					onUpdate: () => {
-						numEl.textContent = decimals > 0 ? obj.val.toFixed(decimals) : Math.round(obj.val);
-					}
-				});
+				const endVal = parseInt(numEl.getAttribute("data-target") || numEl.innerText.replace(/[^0-9]/g, ""), 10);
+				if (!isNaN(endVal) && endVal > 0) {
+					ScrollTrigger.create({
+						trigger: card,
+						start: "top 90%",
+						once: true,
+						onEnter: () => {
+							let obj = { val: 0 };
+							gsap.to(obj, {
+								val: endVal,
+								duration: 2.0,
+								ease: "power2.out",
+								onUpdate: () => {
+									numEl.innerText = Math.floor(obj.val);
+								}
+							});
+						}
+					});
+				}
 			});
 		}
 
-		// 3. Full-screen Video Pinned until shrunk (Only on screens > 768px)
-		const videoWrap = document.querySelector("#anchor-video-pin-wrap");
-		const videoScaler = document.querySelector(".anchor-video-scaler");
-		if (videoWrap && videoScaler) {
-			let mm = gsap.matchMedia();
-
-			mm.add("(min-width: 769px)", () => {
-				const videoTl = gsap.timeline({
-					scrollTrigger: {
-						trigger: videoWrap,
-						start: () => (window.innerWidth <= 1024 ? "center center" : "top top"),
-						end: () => (window.innerWidth <= 1024 ? "+=85%" : "+=120%"),
-						scrub: 0.5,
-						pin: true,
-						anticipatePin: 1,
-						pinSpacing: true,
-						invalidateOnRefresh: true
-					}
-				});
-
-				videoTl.fromTo(videoScaler, {
-					width: "100%",
-					height: "100%",
-					borderRadius: "0px"
-				}, {
-					width: () => {
-						const w = window.innerWidth;
-						if (w <= 1024) return "80%";
-						if (w <= 1408) return "70%";
-						return "62%";
-					},
-					height: () => {
-						const w = window.innerWidth;
-						if (w <= 1024) return "58vh";
-						if (w <= 1408) return "62vh";
-						return "66vh";
-					},
-					borderRadius: () => {
-						const w = window.innerWidth;
-						if (w <= 1024) return "16px";
-						return "18px";
-					},
-					ease: "none"
-				});
-			});
-		}
-
-		// 4. 4 Cards Horizontal Slide Entrance on Scroll (Only on desktop > 768px)
-		const cardsOuter = document.querySelector(".anchor-cards-horizontal-outer");
-		const cardsTrack = document.querySelector(".anchor-cards-horizontal-track");
-		if (cardsOuter && cardsTrack) {
-			let mmCards = gsap.matchMedia();
-			mmCards.add("(min-width: 769px)", () => {
-				gsap.fromTo(cardsTrack, {
-					x: () => Math.min(window.innerWidth * 0.4, 480),
-					opacity: 0.4
-				}, {
-					x: 0,
-					opacity: 1,
-					ease: "none",
-					scrollTrigger: {
-						trigger: cardsOuter,
-						start: "top 88%",
-						end: "top 30%",
-						scrub: 0.8,
-						invalidateOnRefresh: true
-					}
-				});
+		// 3. Pillar Cards Stagger Entrance
+		const pillarCards = anchorSec.querySelectorAll(".anchor-card-pillar");
+		if (pillarCards.length) {
+			gsap.fromTo(pillarCards, {
+				y: 40,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.8,
+				stagger: 0.12,
+				ease: "power2.out",
+				scrollTrigger: {
+					trigger: ".anchors-subgrid-pillars",
+					start: "top 88%",
+					once: true
+				}
 			});
 		}
 	}
 
 
-	function initCapabilitiesAnimation() {
+	/** Capabilities Sticky Stacking Cards Scroll Animation **/
+	/** Stats Section Parallax & Counter Animation **/
+	/** Stats Section Parallax, Word-Reveal & Counter Animation **/
+	function initStatsParallaxAnimation() {
 		if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
-		gsap.registerPlugin(ScrollTrigger);
+		const statsSec = document.querySelector("#section-stats");
+		if (!statsSec) return;
 
-		const capSection = document.querySelector("#section-capabilities");
-		if (!capSection) return;
-
-		// 1. Prepare word masks for cap-tagline if not yet split
-		const capTag = capSection.querySelector(".cap-tagline");
-		if (capTag && !capTag.classList.contains("split-ready")) {
-			capTag.classList.add("split-ready");
-			const text = capTag.textContent.trim();
-			const words = text.split(/\s+/);
-			capTag.innerHTML = words.map(w => `<span class="cap-word-mask"><span class="cap-tag-inner">${w}</span></span>`).join(' ');
+		const bg = statsSec.querySelector(".stats-bg-parallax, .stats-parallax-img");
+		if (bg) {
+			gsap.fromTo(bg, 
+				{ y: "-15%" }, 
+				{
+					y: "15%",
+					ease: "none",
+					scrollTrigger: {
+						trigger: statsSec,
+						start: "top bottom",
+						end: "bottom top",
+						scrub: true
+					}
+				}
+			);
 		}
 
-		const capWords = capSection.querySelectorAll(".cap-word-inner");
-		const tagWords = capSection.querySelectorAll(".cap-tag-inner");
-		const capCards = capSection.querySelectorAll(".capability-card");
-
-		const capTl = gsap.timeline({
-			scrollTrigger: {
-				trigger: capSection,
-				start: "top 82%",
-				once: true
-			}
-		});
-
-		// Animate Title words
-		if (capWords.length) {
-			capTl.fromTo(capWords, {
+		// Title Word-Reveal Animation
+		const titleWords = statsSec.querySelectorAll(".word-inner, .stats-word-inner");
+		if (titleWords.length) {
+			gsap.fromTo(titleWords, {
 				y: "115%",
 				opacity: 0
 			}, {
 				y: "0%",
 				opacity: 1,
-				duration: 0.9,
-				stagger: 0.08,
-				ease: "power3.out"
-			}, 0);
+				duration: 0.85,
+				stagger: 0.06,
+				ease: "power3.out",
+				scrollTrigger: {
+					trigger: statsSec.querySelector(".js-stats-title") || statsSec,
+					start: "top 85%",
+					once: true
+				}
+			});
 		}
 
-		// Animate Tagline words in sequence
-		if (tagWords.length) {
-			capTl.fromTo(tagWords, {
-				y: "115%",
-				opacity: 0
-			}, {
-				y: "0%",
-				opacity: 0.37,
-				duration: 0.75,
-				stagger: 0.02,
-				ease: "power3.out"
-			}, 0.18);
-		}
-
-		// Animate Cards stagger entrance
-		if (capCards.length) {
-			capTl.fromTo(capCards, {
-				y: 35,
-				opacity: 0
+		// Reveal stat glass cards & run number counters
+		const glassCards = statsSec.querySelectorAll(".stats-glass-card");
+		if (glassCards.length > 0) {
+			gsap.fromTo(glassCards, {
+				y: 40,
+				opacity: 0,
+				scale: 0.95
 			}, {
 				y: 0,
 				opacity: 1,
+				scale: 1,
+				stagger: 0.1,
 				duration: 0.85,
-				stagger: 0.08,
-				ease: "power2.out"
-			}, 0.28);
+				ease: "back.out(1.4)",
+				scrollTrigger: {
+					trigger: statsSec.querySelector(".stats-columns-grid") || statsSec,
+					start: "top 80%",
+					once: true,
+					onEnter: () => {
+						const counters = statsSec.querySelectorAll(".stats-stat-count");
+						counters.forEach(counter => {
+							const target = parseFloat(counter.getAttribute("data-target") || "0");
+							const decimals = parseInt(counter.getAttribute("data-decimals") || "0", 10);
+							if (target > 0) {
+								const obj = { val: 0 };
+								gsap.to(obj, {
+									val: target,
+									duration: 2.2,
+									ease: "power2.out",
+									onUpdate: () => {
+										counter.textContent = decimals > 0 ? obj.val.toFixed(decimals) : Math.floor(obj.val).toLocaleString();
+									}
+								});
+							}
+						});
+					}
+				}
+			});
+		}
+	}
+
+	/** Capabilities Sticky Stacking Cards & Word-Reveal Animation **/
+	/** Capabilities Sticky Full-Height Stacking Cards & Word-Reveal Animation **/
+	function initCapabilitiesAnimation() {
+		if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+		const capSection = document.querySelector("#section-capabilities");
+		if (!capSection) return;
+
+		// 1. Title & Tagline Word-Reveal Animation
+		const titleWords = capSection.querySelectorAll(".word-inner, .cap-word-inner");
+		if (titleWords.length) {
+			gsap.fromTo(titleWords, {
+				y: "115%",
+				opacity: 0
+			}, {
+				y: "0%",
+				opacity: 1,
+				duration: 0.8,
+				stagger: 0.04,
+				ease: "power3.out",
+				scrollTrigger: {
+					trigger: capSection.querySelector(".capabilities-head-wrap") || capSection,
+					start: "top 85%",
+					once: true
+				}
+			});
+		}
+
+		// 2. Card-over-Card Stacking Scrub Animation (100vh full-height cards)
+		const cards = gsap.utils.toArray("#section-capabilities .cap-stack-card");
+		if (cards.length > 0) {
+			cards.forEach((card, index) => {
+				// When next card scrolls over this card, scale down and dim this card
+				if (index < cards.length - 1) {
+					const nextCard = cards[index + 1];
+					ScrollTrigger.create({
+						trigger: nextCard,
+						start: "top bottom",
+						end: "top top",
+						scrub: 0.5,
+						onUpdate: (self) => {
+							const progress = self.progress;
+							const scale = 1 - (progress * 0.05); // scales down to 0.95
+							const opacity = 1 - (progress * 0.25); // dims slightly to 0.75
+							const filterVal = 1 - (progress * 0.25); // brightness down
+							gsap.set(card, {
+								scale: scale,
+								opacity: opacity,
+								filter: `brightness(${filterVal})`,
+								transformOrigin: "center top"
+							});
+						}
+					});
+				}
+			});
 		}
 	}
 
@@ -1535,6 +1562,7 @@
 			initHeroBannerAnimation,
 			initAboutSectionAnimation,
 			initAnchorsInteractiveExperience,
+			initStatsParallaxAnimation,
 			initCapabilitiesAnimation,
 			initExtensionsShowcase,
 			initPartnersAnimation,

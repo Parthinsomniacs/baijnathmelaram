@@ -290,103 +290,136 @@ $utm = "yes";
   </section>
 
   <!-- Our Anchors Section -->
-  <section id="section-anchors" class="section section-anchors p-0">
-    <!-- Top Zone: Title & Counters (WITH theme-padding) -->
-    <div class="theme-padding anchors-top-wrap">
-      <div class="section-title js-anchors-title">
+  <section id="section-anchors" class="section section-anchors orange-bg">
+    <!-- Rich Background Maritime & Ambient Elements -->
+    <div class="anchors-bg-ambient" aria-hidden="true"></div>
+    <div class="anchors-bg-grid" aria-hidden="true"></div>
+    
+    <!-- Nautical Compass & Coordinate Watermark -->
+    <div class="anchors-bg-compass" aria-hidden="true">
+      <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="300" cy="300" r="280" stroke="rgba(229,145,47,0.08)" stroke-width="1.5" stroke-dasharray="4 8" />
+        <circle cx="300" cy="300" r="220" stroke="rgba(229,145,47,0.12)" stroke-width="1" />
+        <circle cx="300" cy="300" r="140" stroke="rgba(229,145,47,0.09)" stroke-width="1.5" stroke-dasharray="2 6" />
+        <circle cx="300" cy="300" r="60" stroke="rgba(229,145,47,0.14)" stroke-width="1" />
+        <!-- Compass Crosshairs & Navigation Marks -->
+        <line x1="300" y1="10" x2="300" y2="590" stroke="rgba(229,145,47,0.1)" stroke-width="1" stroke-dasharray="6 6" />
+        <line x1="10" y1="300" x2="590" y2="300" stroke="rgba(229,145,47,0.1)" stroke-width="1" stroke-dasharray="6 6" />
+        <path d="M300 20 L310 50 L300 42 L290 50 Z" fill="rgba(229,145,47,0.25)" />
+        <path d="M580 300 L550 310 L558 300 L550 290 Z" fill="rgba(229,145,47,0.18)" />
+        <path d="M300 580 L290 550 L300 558 L310 550 Z" fill="rgba(229,145,47,0.18)" />
+        <path d="M20 300 L50 290 L42 300 L50 310 Z" fill="rgba(229,145,47,0.18)" />
+        <!-- Dial ticks -->
+        <g stroke="rgba(229,145,47,0.15)" stroke-width="1">
+          <line x1="300" y1="70" x2="300" y2="85" />
+          <line x1="300" y1="515" x2="300" y2="530" />
+          <line x1="70" y1="300" x2="85" y2="300" />
+          <line x1="515" y1="300" x2="530" y2="300" />
+          <line x1="137" y1="137" x2="148" y2="148" />
+          <line x1="463" y1="463" x2="452" y2="452" />
+          <line x1="463" y1="137" x2="452" y2="148" />
+          <line x1="137" y1="463" x2="148" y2="452" />
+        </g>
+      </svg>
+    </div>
+
+    <!-- Sweeping Maritime Wave Curves -->
+    <div class="anchors-bg-curves" aria-hidden="true">
+      <svg viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 240 C320 300, 640 180, 960 260 C1200 320, 1360 200, 1440 220" stroke="rgba(229,145,47,0.16)" stroke-width="1.5" />
+        <path d="M0 270 C360 320, 720 220, 1080 290 C1280 330, 1380 250, 1440 260" stroke="rgba(229,145,47,0.10)" stroke-width="1.2" stroke-dasharray="8 6" />
+        <path d="M0 200 C280 150, 580 260, 920 190 C1180 140, 1340 220, 1440 180" stroke="rgba(229,145,47,0.08)" stroke-width="1" />
+      </svg>
+    </div>
+    <!-- Top Zone: Title (WITH theme-padding) -->
+    <div class="theme-padding anchors-top-wrap text-center">
+      <div class="about-ref-eyebrow" style="justify-content: center; margin-bottom: 12px;">
+        <span class="about-eyebrow-line"></span>
+        <span class="about-eyebrow-text">OUR CORE PILLARS</span>
+        <span class="about-eyebrow-line"></span>
+      </div>
+      <div class="section-title js-anchors-title text-center">
         <h2>
-          <span class="anchor-word-mask"><span class="anchor-word-inner">Our</span></span>
-          <span class="anchor-word-mask"><span class="anchor-word-inner">Anchors</span></span>
+          <span class="word-mask"><span class="word-inner">Our</span></span>
+          <span class="word-mask"><span class="word-inner text-secondary">Anchors</span></span>
+          <span class="word-mask"><span class="word-inner">&amp;</span></span>
+          <span class="word-mask"><span class="word-inner">Core</span></span>
+          <span class="word-mask"><span class="word-inner">Strengths</span></span>
         </h2>
       </div>
-
-      <div class="anchors-subgrid-stats">
-        <div class="anchor-card anchor-card-stat">
-          <span class="anchor-stat-num">
-            <span data-target="350" data-purecounter-end="350" class="anchor-stat-count">0</span><span class="stat-plus">+</span>
-          </span>
-          <span class="anchor-stat-label">Ships Recycled</span>
-        </div>
-        <div class="anchor-card anchor-card-stat">
-          <span class="anchor-stat-num">
-            <span data-target="2.5" data-decimals="1" data-purecounter-end="2.5" data-purecounter-decimals="1" class="anchor-stat-count">0</span><span class="stat-unit">M</span>
-          </span>
-          <span class="anchor-stat-label">Tonnes Steel Recycled</span>
-        </div>
-        <div class="anchor-card anchor-card-stat">
-          <span class="anchor-stat-num">
-            <span data-target="5" data-purecounter-end="5" class="anchor-stat-count">0</span><span class="stat-plus">+</span>
-          </span>
-          <span class="anchor-stat-label">Navy Ships Recycled</span>
-        </div>
-        <div class="anchor-card anchor-card-stat">
-          <span class="anchor-stat-num">
-            <span data-target="2" data-purecounter-end="2" class="anchor-stat-count">0</span>
-          </span>
-          <span class="anchor-stat-label">Submarines Recycled</span>
-        </div>
-      </div>
     </div>
 
-    <!-- Video Showcase (NO theme-padding, Full Width, Pinned until shrunk) -->
-    <div class="anchor-video-pin-wrap" id="anchor-video-pin-wrap">
-      <div class="anchor-video-scaler">
-        <video class="anchor-bg-video" autoplay loop muted playsinline preload="auto">
-          <source src="<?php echo $imagesurl; ?>anchor/anchor-video.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-
-    <!-- 4 Cards Horizontal Showcase (WITH theme-padding) -->
+    <!-- 4 Cards Fan-Out Showcase with 3D TiltedCard Effect -->
     <div class="anchor-cards-scroll-wrap" id="anchor-cards-scroll-wrap">
       <div class="theme-padding">
-        <div class="anchor-cards-horizontal-outer">
-          <div class="anchor-cards-horizontal-track">
+        <div class="anchor-cards-fan-outer">
+          <div class="columns is-variable is-4-desktop anchor-cards-fan-columns">
             <!-- Card 1: Environment -->
-            <div class="anchor-card anchor-card-pillar anchor-card-slide">
-              <div class="anchor-card-top">
-                <span class="anchor-tag">+ 01 ENVIRONMENT</span>
-                <span class="anchor-glyph">&#x267B;</span>
+            <div class="column is-3-desktop is-6-tablet is-12-mobile anchor-fan-col">
+              <div class="anchor-card anchor-card-pillar anchor-fan-card js-tilted-card card-1" data-card="1">
+                <span class="anchor-tilt-tooltip">HKC & EUSRR</span>
+                <span class="anchor-card-watermark" aria-hidden="true">01</span>
+                <div class="anchor-card-top">
+                  <span class="anchor-tag">ENVIRONMENT</span>
+                  <span class="anchor-glyph">&#x267B;</span>
+                </div>
+                <h3 class="anchor-card-title">We Value Our Environment</h3>
+                <p class="anchor-card-desc">
+                  Accomplishing SOC for HKC from Class NK, AP-Moller Maersk RSRS Compliant, and EUSRR Application filed with CLASSNK, we recognize the key environmental parameters that matter most to ship owners.
+                </p>
+                <div class="anchor-card-accent-bar"></div>
               </div>
-              <h3 class="anchor-card-title">We Value Our Environment</h3>
-              <p class="anchor-card-desc">
-                Baijnath Melaram trusts that by accomplishing a SOC for HKC from Class NK, we have made a critical stride towards moving to the perfect Green Ship Recycling Yard. Accomplishing AP-Moller Maersk RSRS Compliant and EUSRR Application filed with CLASSNK, we recognize the key environmental parameters that matter most to ship owners.
-              </p>
             </div>
 
             <!-- Card 2: Safety -->
-            <div class="anchor-card anchor-card-pillar anchor-card-slide">
-              <div class="anchor-card-top">
-                <span class="anchor-tag">+ 02 SAFETY</span>
-                <span class="anchor-glyph">&#x25C7;</span>
+            <div class="column is-3-desktop is-6-tablet is-12-mobile anchor-fan-col">
+              <div class="anchor-card anchor-card-pillar anchor-fan-card js-tilted-card card-2" data-card="2">
+                <span class="anchor-tilt-tooltip">Zero Harm</span>
+                <span class="anchor-card-watermark" aria-hidden="true">02</span>
+                <div class="anchor-card-top">
+                  <span class="anchor-tag">SAFETY</span>
+                  <span class="anchor-glyph">&#x25C7;</span>
+                </div>
+                <h3 class="anchor-card-title">We Value Safety</h3>
+                <p class="anchor-card-desc">
+                  Ship Recycling is a labor-intensive industry where safety is non-negotiable. We approach hazard mitigation through systematic preventive measures, stringent yard protocols, and certified safety gear.
+                </p>
+                <div class="anchor-card-accent-bar"></div>
               </div>
-              <h3 class="anchor-card-title">We Value Safety</h3>
-              <p class="anchor-card-desc">
-                Ship Recycling is a labor-intensive industry where safety is non-negotiable. At Baijnath Melaram, we scientifically approach hazard mitigation through systematic preventive measures, stringent yard protocols, and certified safety gear for every single worker.
-              </p>
             </div>
 
             <!-- Card 3: Worker Welfare -->
-            <div class="anchor-card anchor-card-pillar anchor-card-slide">
-              <div class="anchor-card-top">
-                <span class="anchor-tag">+ 03 WELFARE</span>
-                <span class="anchor-glyph">&#x2661;</span>
+            <div class="column is-3-desktop is-6-tablet is-12-mobile anchor-fan-col">
+              <div class="anchor-card anchor-card-pillar anchor-fan-card js-tilted-card card-3" data-card="3">
+                <span class="anchor-tilt-tooltip">Worker Voice</span>
+                <span class="anchor-card-watermark" aria-hidden="true">03</span>
+                <div class="anchor-card-top">
+                  <span class="anchor-tag">WELFARE</span>
+                  <span class="anchor-glyph">&#x2661;</span>
+                </div>
+                <h3 class="anchor-card-title">We Value Worker's Welfare</h3>
+                <p class="anchor-card-desc">
+                  3 distinct worker committees formed through open elections connect Management, HSE, and our workforce. Monthly meetings review suggestion boxes across yard and dormitories to elevate working conditions.
+                </p>
+                <div class="anchor-card-accent-bar"></div>
               </div>
-              <h3 class="anchor-card-title">We Value Worker's Welfare</h3>
-              <p class="anchor-card-desc">
-                3 distinct worker committees formed through open elections connect Management, HSE, and our workforce. Meeting monthly to open suggestion and complaint boxes placed across yard and dormitories, we proactively resolve concerns and continuously elevate working conditions.
-              </p>
             </div>
 
             <!-- Card 4: Today & Core Values -->
-            <div class="anchor-card anchor-card-values anchor-card-slide">
-              <div class="anchor-card-top">
-                <span class="anchor-tag">+ TODAY & VALUES</span>
+            <div class="column is-3-desktop is-6-tablet is-12-mobile anchor-fan-col">
+              <div class="anchor-card anchor-card-values anchor-fan-card js-tilted-card card-4" data-card="4">
+                <span class="anchor-tilt-tooltip">Our Values</span>
+                <span class="anchor-card-watermark" aria-hidden="true">04</span>
+                <div class="anchor-card-top">
+                  <span class="anchor-tag">VALUES</span>
+                  <span class="anchor-glyph">&#x2726;</span>
+                </div>
+                <h3 class="anchor-card-title">Today & Core Values</h3>
+                <p class="anchor-card-desc">
+                  Core Values include Honesty, Excellence, Leading Change, and Respect. With Statement of Compliance (SOC) from Class NK, we cut complex vessels under the highest global safety and eco-standards.
+                </p>
+                <div class="anchor-card-accent-bar"></div>
               </div>
-              <h3 class="anchor-card-title">Today</h3>
-              <p class="anchor-card-desc">
-                Baijnath Melaramâ€™s Core Values include Honesty, Excellence, Leading Change, and Respect. With our Statement of Compliance (SOC) from Class NK, we have successfully cut complex vessels under the highest global safety and eco-standards.
-              </p>
             </div>
           </div>
         </div>
@@ -394,26 +427,140 @@ $utm = "yes";
     </div>
   </section>
 
-  <!-- Our Capabilities Section -->
-  <section id="section-capabilities" class="section section-capabilities theme-padding">
-    <div class="capabilities-head-wrap">
-      <div class="section-title js-capabilities-title">
+  <!-- Proven Track Record Parallax Stats Section -->
+  <section id="section-stats" class="section section-stats p-0">
+    <!-- Parallax Background Image with Cinematic Overlay -->
+    <div class="stats-parallax-bg-wrap" aria-hidden="true">
+      <img src="<?php echo $imagesurl; ?>about/shipyard-crane-ref.jpg" class="stats-parallax-img" alt="Baijnath Melaram Shipyard Operations" loading="lazy">
+      <div class="stats-parallax-overlay"></div>
+    </div>
+
+    <div class="theme-padding stats-content-wrap">
+      <div class="stats-head text-center">
+        <div class="about-ref-eyebrow" style="justify-content: center; margin-bottom: 12px;">
+          <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
+          <span class="about-eyebrow-text" style="color: #e5912f;">PROVEN TRACK RECORD</span>
+          <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
+        </div>
+        <div class="section-title js-stats-title text-center">
+          <h2 style="color: #ffffff;">
+            <span class="word-mask"><span class="word-inner">Decades</span></span>
+            <span class="word-mask"><span class="word-inner">of</span></span>
+            <span class="word-mask"><span class="word-inner">Leadership</span></span>
+            <span class="word-mask"><span class="word-inner">in</span></span>
+            <span class="word-mask"><span class="word-inner text-secondary">Green</span></span>
+            <span class="word-mask"><span class="word-inner text-secondary">Recycling</span></span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="columns is-variable is-4-desktop stats-columns-grid">
+        <!-- Stat 1 -->
+        <div class="column is-3-desktop is-6-tablet is-12-mobile">
+          <div class="stats-glass-card">
+            <span class="stats-stat-num">
+              <span data-target="350" class="stats-stat-count">0</span><span class="stat-plus">+</span>
+            </span>
+            <span class="stats-stat-label">Ships Recycled</span>
+          </div>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="column is-3-desktop is-6-tablet is-12-mobile">
+          <div class="stats-glass-card">
+            <span class="stats-stat-num">
+              <span data-target="2.5" data-decimals="1" class="stats-stat-count">0</span><span class="stat-unit">M</span>
+            </span>
+            <span class="stats-stat-label">Tonnes Steel Recycled</span>
+          </div>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="column is-3-desktop is-6-tablet is-12-mobile">
+          <div class="stats-glass-card">
+            <span class="stats-stat-num">
+              <span data-target="5" class="stats-stat-count">0</span><span class="stat-plus">+</span>
+            </span>
+            <span class="stats-stat-label">Navy Ships Recycled</span>
+          </div>
+        </div>
+
+        <!-- Stat 4 -->
+        <div class="column is-3-desktop is-6-tablet is-12-mobile">
+          <div class="stats-glass-card">
+            <span class="stats-stat-num">
+              <span data-target="2" class="stats-stat-count">0</span>
+            </span>
+            <span class="stats-stat-label">Submarines Recycled</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Capabilities Section (Sticky Stacking Cards - Full Width) -->
+  <section id="section-capabilities" class="section section-capabilities p-0">
+    <div class="theme-padding capabilities-head-wrap text-center">
+      <div class="about-ref-eyebrow" style="justify-content: center; margin-bottom: 12px;">
+        <span class="about-eyebrow-line"></span>
+        <span class="about-eyebrow-text">VESSEL CLASSES &amp; FLEET SERVICES</span>
+        <span class="about-eyebrow-line"></span>
+      </div>
+      <div class="section-title js-capabilities-title text-center">
         <h2>
-          <span class="cap-word-mask"><span class="cap-word-inner">Our</span></span>
-          <span class="cap-word-mask"><span class="cap-word-inner">Capabilities</span></span>
+          <span class="word-mask"><span class="word-inner">Our</span></span>
+          <span class="word-mask"><span class="word-inner text-secondary">Capabilities</span></span>
         </h2>
-        <p class="cap-tagline">Comprehensive expertise across diverse maritime and offshore vessel classes.</p>
+        <p class="cap-tagline text-center">
+          <span class="word-mask"><span class="word-inner">Comprehensive</span></span>
+          <span class="word-mask"><span class="word-inner">green</span></span>
+          <span class="word-mask"><span class="word-inner">recycling</span></span>
+          <span class="word-mask"><span class="word-inner">expertise</span></span>
+          <span class="word-mask"><span class="word-inner">across</span></span>
+          <span class="word-mask"><span class="word-inner">diverse</span></span>
+          <span class="word-mask"><span class="word-inner">maritime</span></span>
+          <span class="word-mask"><span class="word-inner">and</span></span>
+          <span class="word-mask"><span class="word-inner">offshore</span></span>
+          <span class="word-mask"><span class="word-inner">vessel</span></span>
+          <span class="word-mask"><span class="word-inner">classes.</span></span>
+        </p>
       </div>
     </div>
 
-    <div id="capabilities-slider" class="splide capabilities-slider">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <!-- Item 1: Bulk Carrier -->
-          <li class="splide__slide">
-            <div class="capability-card" onclick="openForm('enquire')">
-              <div class="capability-icon-wrap">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Sticky Stacking Cards Container - FULL WIDTH & FULL HEIGHT -->
+    <div class="capabilities-stack-wrapper">
+      <!-- Card 1: Bulk Carrier -->
+      <div class="cap-stack-card card-1" id="cap-card-1">
+        <div class="cap-card-top-bar">
+          <span class="cap-bar-left">EXPLORE</span>
+          <span class="cap-bar-center">01</span>
+          <span class="cap-bar-right">SERVICES</span>
+        </div>
+
+        <div class="cap-card-body">
+          <div class="columns is-vcentered">
+            <!-- Left Column -->
+            <div class="column is-5-desktop is-12-tablet cap-col-left">
+              <span class="cap-category-sub">Heavy Tonnage &amp; Dry Bulk</span>
+              <h3 class="cap-large-num">I.01</h3>
+              <div class="cap-circle-glyph" aria-hidden="true">
+                <svg width="44" height="44" viewBox="0 0 40 40" fill="none">
+                  <circle cx="20" cy="20" r="18" stroke="rgba(255,255,255,0.22)" stroke-width="1.2" stroke-dasharray="3 3"/>
+                  <circle cx="20" cy="20" r="10" stroke="rgba(255,255,255,0.45)" stroke-width="1"/>
+                  <circle cx="20" cy="20" r="3.5" fill="#e5912f"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="column is-7-desktop is-12-tablet cap-col-right">
+              <p class="cap-hero-statement">
+                We recycle high-capacity dry bulk carriers through Class NK certified green methodology, maximizing steel circularity and maritime safety.
+              </p>
+
+              <!-- Center Graphic Icon Frame -->
+              <div class="cap-graphic-badge">
+                <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#111827" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M2 17l2 4h16l2-4H2z"></path>
                   <path d="M4 17V9a1 1 0 0 1 1-1h4v9"></path>
                   <path d="M13 11v6"></path>
@@ -421,210 +568,238 @@ $utm = "yes";
                   <line x1="2" y1="13" x2="22" y2="13"></line>
                 </svg>
               </div>
-              <div class="capability-bottom">
-                <h3 class="capability-name">Bulk Carrier</h3>
-                <p class="capability-desc">High-capacity dry bulk transport and sustainable green recycling solutions.</p>
-                <div class="capability-link">
-                  <span>View List of Ships</span>
-                  <svg class="cap-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </div>
+
+              <div class="cap-divider-line"></div>
+
+              <!-- Tags Grid -->
+              <div class="cap-tags-row">
+                <div class="cap-tag-item">#BULKRECYCLING</div>
+                <div class="cap-tag-item">#HKCCOMPLIANT</div>
+                <div class="cap-tag-item">#STEELRECOVERY</div>
+                <div class="cap-tag-item">#HEAVYTONNAGE</div>
+                <div class="cap-tag-item">#CLASSNKCERTIFIED</div>
+                <div class="cap-tag-item">#CIRCULARECONOMY</div>
               </div>
             </div>
-          </li>
+          </div>
+        </div>
+      </div>
 
-          <!-- Item 2: General Cargo -->
-          <li class="splide__slide">
-            <div class="capability-card" onclick="openForm('enquire')">
-              <div class="capability-icon-wrap">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Card 2: General Cargo -->
+      <div class="cap-stack-card card-2" id="cap-card-2">
+        <div class="cap-card-top-bar">
+          <span class="cap-bar-left">EXPLORE</span>
+          <span class="cap-bar-center">02</span>
+          <span class="cap-bar-right">SERVICES</span>
+        </div>
+
+        <div class="cap-card-body">
+          <div class="columns is-vcentered">
+            <!-- Left Column -->
+            <div class="column is-5-desktop is-12-tablet cap-col-left">
+              <span class="cap-category-sub">Multipurpose Freight Vessels</span>
+              <h3 class="cap-large-num">I.02</h3>
+              <div class="cap-circle-glyph" aria-hidden="true">
+                <svg width="44" height="44" viewBox="0 0 40 40" fill="none">
+                  <circle cx="20" cy="20" r="18" stroke="rgba(255,255,255,0.22)" stroke-width="1.2" stroke-dasharray="3 3"/>
+                  <circle cx="20" cy="20" r="10" stroke="rgba(255,255,255,0.45)" stroke-width="1"/>
+                  <circle cx="20" cy="20" r="3.5" fill="#e5912f"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="column is-7-desktop is-12-tablet cap-col-right">
+              <p class="cap-hero-statement">
+                Versatile freight and cargo carriers disassembled with advanced crane logistics, strict hazardous material abatement, and systematic hazard mitigation.
+              </p>
+
+              <!-- Center Graphic Icon Frame -->
+              <div class="cap-graphic-badge">
+                <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#111827" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="3" y="3" width="8" height="8" rx="1.5"></rect>
                   <rect x="13" y="3" width="8" height="8" rx="1.5"></rect>
                   <rect x="3" y="13" width="8" height="8" rx="1.5"></rect>
                   <rect x="13" y="13" width="8" height="8" rx="1.5"></rect>
                 </svg>
               </div>
-              <div class="capability-bottom">
-                <h3 class="capability-name">General Cargo</h3>
-                <p class="capability-desc">Versatile multi-purpose freight vessels handled with high precision and safety.</p>
-                <div class="capability-link">
-                  <span>View List of Ships</span>
-                  <svg class="cap-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </div>
+
+              <div class="cap-divider-line"></div>
+
+              <!-- Tags Grid -->
+              <div class="cap-tags-row">
+                <div class="cap-tag-item">#GENERALCARGO</div>
+                <div class="cap-tag-item">#MULTIPURPOSE</div>
+                <div class="cap-tag-item">#HAZMATABATEMENT</div>
+                <div class="cap-tag-item">#SAFEDISMANTLING</div>
+                <div class="cap-tag-item">#GREENSTANDARDS</div>
+                <div class="cap-tag-item">#MAERSKRSRS</div>
               </div>
             </div>
-          </li>
+          </div>
+        </div>
+      </div>
 
-          <!-- Item 3: Container -->
-          <li class="splide__slide">
-            <div class="capability-card" onclick="openForm('enquire')">
-              <div class="capability-icon-wrap">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Card 3: Container Vessels -->
+      <div class="cap-stack-card card-3" id="cap-card-3">
+        <div class="cap-card-top-bar">
+          <span class="cap-bar-left">EXPLORE</span>
+          <span class="cap-bar-center">03</span>
+          <span class="cap-bar-right">SERVICES</span>
+        </div>
+
+        <div class="cap-card-body">
+          <div class="columns is-vcentered">
+            <!-- Left Column -->
+            <div class="column is-5-desktop is-12-tablet cap-col-left">
+              <span class="cap-category-sub">Global Liner &amp; Feeder Fleets</span>
+              <h3 class="cap-large-num">I.03</h3>
+              <div class="cap-circle-glyph" aria-hidden="true">
+                <svg width="44" height="44" viewBox="0 0 40 40" fill="none">
+                  <circle cx="20" cy="20" r="18" stroke="rgba(255,255,255,0.22)" stroke-width="1.2" stroke-dasharray="3 3"/>
+                  <circle cx="20" cy="20" r="10" stroke="rgba(255,255,255,0.45)" stroke-width="1"/>
+                  <circle cx="20" cy="20" r="3.5" fill="#e5912f"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="column is-7-desktop is-12-tablet cap-col-right">
+              <p class="cap-hero-statement">
+                High-precision green processing of massive container ships under HKC SOC certification, ensuring safe hazardous material inventory and responsible steel flow.
+              </p>
+
+              <!-- Center Graphic Icon Frame -->
+              <div class="cap-graphic-badge">
+                <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#111827" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
                   <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
                   <line x1="12" y1="22.08" x2="12" y2="12"></line>
                 </svg>
               </div>
-              <div class="capability-bottom">
-                <h3 class="capability-name">Container</h3>
-                <p class="capability-desc">Global standard container carriers processed under Class NK certified protocols.</p>
-                <div class="capability-link">
-                  <span>View List of Ships</span>
-                  <svg class="cap-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </div>
+
+              <div class="cap-divider-line"></div>
+
+              <!-- Tags Grid -->
+              <div class="cap-tags-row">
+                <div class="cap-tag-item">#CONTAINERSHIPS</div>
+                <div class="cap-tag-item">#FEEDERFLEET</div>
+                <div class="cap-tag-item">#IHMCOMPLIANCE</div>
+                <div class="cap-tag-item">#ZEROINCIDENT</div>
+                <div class="cap-tag-item">#GLOBALSTANDARDS</div>
+                <div class="cap-tag-item">#EUSRRFILED</div>
               </div>
             </div>
-          </li>
+          </div>
+        </div>
+      </div>
 
-          <!-- Item 4: Tanker -->
-          <li class="splide__slide">
-            <div class="capability-card" onclick="openForm('enquire')">
-              <div class="capability-icon-wrap">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Card 4: Tankers & Offshore -->
+      <div class="cap-stack-card card-4" id="cap-card-4">
+        <div class="cap-card-top-bar">
+          <span class="cap-bar-left">EXPLORE</span>
+          <span class="cap-bar-center">04</span>
+          <span class="cap-bar-right">SERVICES</span>
+        </div>
+
+        <div class="cap-card-body">
+          <div class="columns is-vcentered">
+            <!-- Left Column -->
+            <div class="column is-5-desktop is-12-tablet cap-col-left">
+              <span class="cap-category-sub">Crude, Product &amp; Chemicals</span>
+              <h3 class="cap-large-num">I.04</h3>
+              <div class="cap-circle-glyph" aria-hidden="true">
+                <svg width="44" height="44" viewBox="0 0 40 40" fill="none">
+                  <circle cx="20" cy="20" r="18" stroke="rgba(255,255,255,0.22)" stroke-width="1.2" stroke-dasharray="3 3"/>
+                  <circle cx="20" cy="20" r="10" stroke="rgba(255,255,255,0.45)" stroke-width="1"/>
+                  <circle cx="20" cy="20" r="3.5" fill="#e5912f"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="column is-7-desktop is-12-tablet cap-col-right">
+              <p class="cap-hero-statement">
+                Specialized gas-free certified degassing, hazardous sludge extraction, and ultra-safe hot-work recycling for crude, product, and chemical tanker hulls.
+              </p>
+
+              <!-- Center Graphic Icon Frame -->
+              <div class="cap-graphic-badge">
+                <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#111827" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
                 </svg>
               </div>
-              <div class="capability-bottom">
-                <h3 class="capability-name">Tanker</h3>
-                <p class="capability-desc">Crude, product, and chemical tankers managed with zero-pollution standards.</p>
-                <div class="capability-link">
-                  <span>View List of Ships</span>
-                  <svg class="cap-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </div>
+
+              <div class="cap-divider-line"></div>
+
+              <!-- Tags Grid -->
+              <div class="cap-tags-row">
+                <div class="cap-tag-item">#TANKERRECYCLING</div>
+                <div class="cap-tag-item">#GASFREECERTIFIED</div>
+                <div class="cap-tag-item">#SLUDGEMANAGEMENT</div>
+                <div class="cap-tag-item">#OFFSHOREVESSELS</div>
+                <div class="cap-tag-item">#ZEROPOLLUTION</div>
+                <div class="cap-tag-item">#ENVIRONMENTFIRST</div>
               </div>
             </div>
-          </li>
+          </div>
+        </div>
+      </div>
 
-          <!-- Item 5: Roro & Crew -->
-          <li class="splide__slide">
-            <div class="capability-card" onclick="openForm('enquire')">
-              <div class="capability-icon-wrap">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M17 2.1l4 4-4 4"></path>
-                  <path d="M3 12.2v-2a4 4 0 0 1 4-4h14"></path>
-                  <path d="M7 21.9l-4-4 4-4"></path>
-                  <path d="M21 11.8v2a4 4 0 0 1-4 4H3"></path>
+      <!-- Card 5: Naval & Submarines -->
+      <div class="cap-stack-card card-5" id="cap-card-5">
+        <div class="cap-card-top-bar">
+          <span class="cap-bar-left">EXPLORE</span>
+          <span class="cap-bar-center">05</span>
+          <span class="cap-bar-right">SERVICES</span>
+        </div>
+
+        <div class="cap-card-body">
+          <div class="columns is-vcentered">
+            <!-- Left Column -->
+            <div class="column is-5-desktop is-12-tablet cap-col-left">
+              <span class="cap-category-sub">Defense Combatants &amp; Subs</span>
+              <h3 class="cap-large-num">I.05</h3>
+              <div class="cap-circle-glyph" aria-hidden="true">
+                <svg width="44" height="44" viewBox="0 0 40 40" fill="none">
+                  <circle cx="20" cy="20" r="18" stroke="rgba(255,255,255,0.22)" stroke-width="1.2" stroke-dasharray="3 3"/>
+                  <circle cx="20" cy="20" r="10" stroke="rgba(255,255,255,0.45)" stroke-width="1"/>
+                  <circle cx="20" cy="20" r="3.5" fill="#e5912f"/>
                 </svg>
               </div>
-              <div class="capability-bottom">
-                <h3 class="capability-name">Roro &amp; Crew</h3>
-                <p class="capability-desc">Specialized roll-on/roll-off vehicle vessels and offshore crew transport carriers.</p>
-                <div class="capability-link">
-                  <span>View List of Ships</span>
-                  <svg class="cap-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </div>
-              </div>
             </div>
-          </li>
 
-          <!-- Item 6: FPSO -->
-          <li class="splide__slide">
-            <div class="capability-card" onclick="openForm('enquire')">
-              <div class="capability-icon-wrap">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 22h16"></path>
-                  <path d="M12 2v20"></path>
-                  <path d="M7 16h10"></path>
-                  <path d="M9 10h6"></path>
-                  <path d="M6 6l6-4 6 4"></path>
-                </svg>
-              </div>
-              <div class="capability-bottom">
-                <h3 class="capability-name">FPSO</h3>
-                <p class="capability-desc">Large floating production storage and offloading offshore structure handling.</p>
-                <div class="capability-link">
-                  <span>View List of Ships</span>
-                  <svg class="cap-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </li>
+            <!-- Right Column -->
+            <div class="column is-7-desktop is-12-tablet cap-col-right">
+              <p class="cap-hero-statement">
+                Trusted by defense and international maritime authorities for sensitive, secure dismantling of naval surface combatants and specialized submarines.
+              </p>
 
-          <!-- Item 7: Military -->
-          <li class="splide__slide">
-            <div class="capability-card" onclick="openForm('enquire')">
-              <div class="capability-icon-wrap">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
-              </div>
-              <div class="capability-bottom">
-                <h3 class="capability-name">Military</h3>
-                <p class="capability-desc">Naval and defense vessels dismantled with maximum security and compliance.</p>
-                <div class="capability-link">
-                  <span>View List of Ships</span>
-                  <svg class="cap-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </li>
-
-          <!-- Item 8: Research Vessel -->
-          <li class="splide__slide">
-            <div class="capability-card" onclick="openForm('enquire')">
-              <div class="capability-icon-wrap">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Center Graphic Icon Frame -->
+              <div class="cap-graphic-badge">
+                <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#111827" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="12" cy="12" r="10"></circle>
-                  <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                  <line x1="22" y1="12" x2="18" y2="12"></line>
+                  <line x1="6" y1="12" x2="2" y2="12"></line>
+                  <line x1="12" y1="6" x2="12" y2="2"></line>
+                  <line x1="12" y1="22" x2="12" y2="18"></line>
                 </svg>
               </div>
-              <div class="capability-bottom">
-                <h3 class="capability-name">Research Vessel</h3>
-                <p class="capability-desc">High-tech oceanographic and hydrographic surveying vessels processed safely.</p>
-                <div class="capability-link">
-                  <span>View List of Ships</span>
-                  <svg class="cap-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </li>
 
-          <!-- Item 9: Others -->
-          <li class="splide__slide">
-            <div class="capability-card" onclick="openForm('enquire')">
-              <div class="capability-icon-wrap">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="9" cy="9" r="6"></circle>
-                  <circle cx="15" cy="15" r="6"></circle>
-                </svg>
-              </div>
-              <div class="capability-bottom">
-                <h3 class="capability-name">Others</h3>
-                <p class="capability-desc">Specialized tugs, barges, offshore utility craft, and custom maritime assets.</p>
-                <div class="capability-link">
-                  <span>View List of Ships</span>
-                  <svg class="cap-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </div>
+              <div class="cap-divider-line"></div>
+
+              <!-- Tags Grid -->
+              <div class="cap-tags-row">
+                <div class="cap-tag-item">#NAVYSHIPS</div>
+                <div class="cap-tag-item">#SUBMARINES</div>
+                <div class="cap-tag-item">#SECUREDISMANTLING</div>
+                <div class="cap-tag-item">#STRATEGICDISPOSAL</div>
+                <div class="cap-tag-item">#PRECISIONCUTTING</div>
+                <div class="cap-tag-item">#350SHIPSRECYCLED</div>
               </div>
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>

@@ -70,6 +70,7 @@ body {
   src: url("../fonts/CHydV-7EH1X7aiQh5jPNDTJnVUAvhrL0sQdjzDQhk11iTp6mX-ANuf1d_83dPfZJ7Lvcvg8EGYzcW7TqdtQ.woff2") format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
@@ -537,7 +538,7 @@ section,
 
 .section-title h1,
 .banner-title {
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Montserrat';
   font-size: clamp(38px, 5.333vw, 88px);
   font-weight: 500;
   line-height: 1.05;
@@ -1998,7 +1999,7 @@ body.insomenu-active {
   transition: all 0.2s ease;
   cursor: pointer;
   border: none;
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Montserrat';
 }
 
 .fleet-btn-dark {
@@ -2169,7 +2170,7 @@ body.insomenu-active {
 }
 
 .fleet-address-text {
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Montserrat';
   font-size: 13px;
   line-height: 1.65;
   color: #444444;
@@ -2657,7 +2658,7 @@ footer {
 }
 
 .about-desc p {
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Montserrat';
   font-size: clamp(20px, 1.8vw, 30px);
   font-weight: 400;
   line-height: 1.45;
@@ -2723,13 +2724,24 @@ footer {
 
 /* Our Anchors Section - Modern Experience */
 
-.anchor-word-mask {
+.word-mask,
+.about-word-mask,
+.anchor-word-mask,
+.stats-word-mask,
+.cap-word-mask {
   display: inline-block;
   overflow: hidden;
   vertical-align: bottom;
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+  margin-right: 0.22em;
 }
 
-.anchor-word-inner {
+.word-inner,
+.about-word-inner,
+.anchor-word-inner,
+.stats-word-inner,
+.cap-word-inner {
   display: inline-block;
   transform: translate3d(0, 115%, 0);
   opacity: 0;
@@ -2776,7 +2788,7 @@ footer {
 }
 
 .anchor-card-title {
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Montserrat';
   font-size: clamp(20px, 1.4vw, 24px);
   font-weight: 600;
   letter-spacing: -0.03em;
@@ -2786,7 +2798,7 @@ footer {
 }
 
 .anchor-card-desc {
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Montserrat';
   font-size: 15px;
   font-weight: 400;
   line-height: 1.6;
@@ -2812,7 +2824,7 @@ footer {
 }
 
 .anchor-stat-num {
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Montserrat';
   font-size: clamp(46px, 3.8vw, 68px);
   font-weight: 600;
   letter-spacing: -0.045em;
@@ -2848,70 +2860,212 @@ footer {
   border-color: rgba(0, 0, 0, 0.05);
 }
 
-/* Full Width Video Section - Pinned on Scroll */
-.anchor-video-pin-wrap {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-}
-
-.anchor-video-scaler {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  border-radius: 0px;
-  will-change: width, height, border-radius;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
-  transform: translateZ(0);
-}
-
-.anchor-bg-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
 
 
-/* 4-Cards Showcase (Strictly inside theme-padding) */
+/* Anchor Fan-Out Cards (React Bits TiltedCard 3D Physics & Depth Layers) */
 .anchor-cards-scroll-wrap {
-  padding-top: 80px;
-  padding-bottom: 120px;
+  width: 100%;
   position: relative;
+  padding: 30px 0 40px;
+  overflow: visible;
 }
 
-.anchor-cards-horizontal-outer {
+.anchor-cards-fan-outer {
   width: 100%;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
+  padding: 20px 0;
+  perspective: 1000px;
+}
+
+.anchor-cards-fan-columns {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  align-items: stretch;
+}
+
+.anchor-fan-col {
+  display: flex;
+  transform-origin: center bottom;
+  will-change: transform, opacity;
+  perspective: 900px;
+}
+
+.anchor-fan-card,
+.anchor-card {
+  width: 100%;
+  min-height: 330px;
+  background: #ffffff;
   border-radius: 20px;
-  padding: 12px 0;
-}
-
-.anchor-cards-horizontal-track {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  width: 100%;
-  will-change: transform;
-}
-
-.anchor-card-slide {
-  width: 100%;
+  padding: 28px 24px 26px;
+  box-shadow: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  position: relative;
+  overflow: visible;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.anchor-fan-card:hover {
+  border-color: rgba(229, 145, 47, 0.45);
+}
+
+.anchor-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 18px;
+  position: relative;
+  transform: translateZ(26px);
+  transform-style: preserve-3d;
+  z-index: 3;
+}
+
+.anchor-tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Science Gothic', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #e5912f;
+  background: rgba(229, 145, 47, 0.09);
+  border: 1px solid rgba(229, 145, 47, 0.22);
+  padding: 5px 12px;
+  border-radius: 100px;
+  line-height: 1;
+}
+
+.anchor-glyph {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fafafa;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: #e5912f;
+  flex-shrink: 0;
+  transform: translateZ(10px);
+}
+
+.anchor-card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(17px, 1.2vw, 19.5px);
+  font-weight: 700;
+  line-height: 1.32;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+  position: relative;
+  transform: translateZ(22px);
+  z-index: 3;
+  transition: color 0.25s ease;
+}
+
+.anchor-fan-card:hover .anchor-card-title {
+  color: #e5912f;
+}
+
+.anchor-card-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #4b5563;
+  margin: 0;
+  position: relative;
+  transform: translateZ(14px);
+  z-index: 2;
+  flex-grow: 1;
+}
+
+.anchor-card-watermark {
+  position: absolute;
+  right: 14px;
+  bottom: 8px;
+  font-family: 'Science Gothic', sans-serif;
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 1;
+  color: #111827;
+  opacity: 0.04;
+  pointer-events: none;
+  user-select: none;
+  transform: translateZ(6px);
+  z-index: 1;
+}
+
+.anchor-card-accent-bar {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #e5912f, transparent);
+  opacity: 0.7;
+  transform: translateZ(10px);
+}
+
+.anchor-tilt-tooltip {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 6px;
+  background-color: #111827;
+  padding: 4px 9px;
+  font-family: 'Science Gothic', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 0;
+  z-index: 10;
+  transition: opacity 0.2s ease;
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 35px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.anchors-stats-wrap {
+  margin-top: 40px;
+  padding-bottom: 60px;
 }
 
 @media screen and (max-width: 1024px) {
-  .anchor-video-pin-wrap {
-    height: 75vh;
+  .anchor-cards-fan-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
+}
+
+@media screen and (max-width: 640px) {
+  .anchor-cards-fan-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .anchor-fan-card {
+    min-height: auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
 
   .anchors-subgrid-stats {
     grid-template-columns: repeat(2, 1fr);
@@ -2926,161 +3080,249 @@ footer {
 }
 
 
-/* Our Capabilities Section (#131313 Background with #222 Cards & Continuous Slider) */
+
+/* ==========================================================================
+   Our Capabilities Section (Full-Width Stacking Cards - Clean Light Background)
+   ========================================================================== */
+/* ==========================================================================
+   Our Capabilities Section (Full-Width Sticky Deck - Edge to Edge, No Radius)
+   ========================================================================== */
+
+/* ==========================================================================
+   Our Capabilities Section (Full-Width & Full-Height Sticky Deck)
+   ========================================================================== */
+
+/* ==========================================================================
+   Our Capabilities Section (Full-Width & Full-Height Sticky Deck - No Extra Bottom Space)
+   ========================================================================== */
+
 #section-capabilities {
-  background-color: #131313;
-  background-image: none;
+  background-color: #fcfbf8 !important;
   position: relative;
-  overflow: hidden;
-}
-
-#section-capabilities .section-title h2 {
-  color: #ffffff;
-}
-
-#section-capabilities .cap-tagline {
-  color: #ffffff;
+  overflow: visible;
+  padding: 80px 0 0 !important;
+  margin: 0 !important;
 }
 
 .capabilities-head-wrap {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.cap-tagline {
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 16px;
-  margin-top: 10px;
-  max-width: 600px;
-  line-height: 1.5;
+#section-capabilities .section-title h2 {
+  color: #111827;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-align: center;
 }
 
-.cap-word-mask {
-  display: inline-block;
-  overflow: hidden;
-  vertical-align: bottom;
-  padding-bottom: 0.08em;
-  margin-bottom: -0.08em;
-  margin-right: 0.28em;
+#section-capabilities .cap-tagline {
+  color: #4b5563;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15.5px;
+  margin: 12px auto 0;
+  max-width: 640px;
+  line-height: 1.55;
+  text-align: center;
 }
 
-.cap-word-inner,
-.cap-tag-inner {
-  display: inline-block;
-  transform: translate3d(0, 115%, 0);
-  opacity: 0;
-  will-change: transform, opacity;
-}
-
-.capabilities-slider {
-  width: 100%;
+/* Full Width & Full Height Stack Container - Zero Extra Spacing */
+.capabilities-stack-wrapper {
   position: relative;
+  width: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
-.capabilities-slider::before,
-.capabilities-slider::after {
-  content: '';
-  position: absolute;
+.cap-stack-card {
+  position: sticky;
   top: 0;
-  bottom: 0;
-  width: clamp(50px, 10vw, 160px);
-  z-index: 10;
-  pointer-events: none;
-}
-
-.capabilities-slider::before {
-  left: 0;
-  background: linear-gradient(to right, #131313 10%, rgba(19, 19, 19, 0) 100%);
-}
-
-.capabilities-slider::after {
-  right: 0;
-  background: linear-gradient(to left, #131313 10%, rgba(19, 19, 19, 0) 100%);
-}
-
-.capabilities-slider .splide__track {
-  padding: 12px 0;
-}
-
-.capability-card {
-  background-color: #222222;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 28px 24px 26px;
-  min-height: 275px;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  border-radius: 0 !important;
+  padding: clamp(32px, 5vh, 60px) clamp(24px, 5vw, 90px);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: none;
+  border-right: none;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  cursor: pointer;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, border-color 0.25s ease;
-  height: 100%;
+  margin-bottom: 0 !important;
+  will-change: transform, opacity;
+  background-image: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.012) 0px, rgba(255, 255, 255, 0.012) 60px, transparent 60px, transparent 120px);
 }
 
-.capability-card:hover {
-  transform: translateY(-6px);
-  background-color: #2a2a2a;
-  border-color: rgba(255, 255, 255, 0.18);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);
-}
+.cap-stack-card.card-1 { background-color: #243f42; z-index: 1; }
+.cap-stack-card.card-2 { background-color: #253642; z-index: 2; }
+.cap-stack-card.card-3 { background-color: #2a343d; z-index: 3; }
+.cap-stack-card.card-4 { background-color: #223c38; z-index: 4; }
+.cap-stack-card.card-5 { background-color: #2c3540; z-index: 5; margin-bottom: 0 !important; }
 
-.capability-icon-wrap {
-  width: 50px;
-  height: 50px;
-  background-color: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
+.cap-card-top-bar {
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  font-family: 'Science Gothic', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
   flex-shrink: 0;
 }
 
-.capability-card:hover .capability-icon-wrap {
-  transform: scale(1.06);
-  background-color: rgba(255, 255, 255, 0.14);
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-.capability-bottom {
-  margin-top: 36px;
-}
-
-.capability-name {
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: clamp(20px, 1.35vw, 23px);
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  color: #ffffff;
-  line-height: 1.25;
-  margin: 0 0 10px;
-}
-
-.capability-desc {
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 13.5px;
-  color: #ffffff;
-  opacity: 0.37;
-  line-height: 1.48;
-  margin: 0 0 14px;
-  font-weight: 400;
-  transition: opacity 0.25s ease;
-}
-
-.capability-link {
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  color: #ffffff;
-  opacity: 0.37;
-  display: inline-flex;
+.cap-card-body {
+  flex: 1;
+  display: flex;
   align-items: center;
-  gap: 6px;
-  text-decoration: none;
-  transition: opacity 0.25s ease;
-  width: fit-content;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.cap-card-body > .columns {
+  width: 100%;
+  margin: 0;
+}
+
+/* Left Column */
+.cap-col-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: clamp(20px, 3vw, 50px);
+}
+
+.cap-category-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(18px, 1.4vw, 22px);
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 16px;
+  line-height: 1.35;
+}
+
+.cap-large-num {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(80px, 9vw, 150px);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  margin: 8px 0 32px;
+}
+
+.cap-circle-glyph {
+  opacity: 0.9;
+}
+
+/* Right Column */
+.cap-col-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: clamp(20px, 3vw, 40px);
+}
+
+.cap-hero-statement {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(20px, 1.85vw, 32px);
+  font-weight: 400;
+  line-height: 1.48;
+  color: #ffffff;
+  margin-bottom: 28px;
+  letter-spacing: -0.01em;
+}
+
+.cap-graphic-badge {
+  background: #ffffff;
+  border-radius: 14px;
+  width: 170px;
+  height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 28px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s ease;
+}
+
+.cap-stack-card:hover .cap-graphic-badge {
+  transform: scale(1.05);
+}
+
+.cap-divider-line {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.14);
+  margin-bottom: 24px;
+}
+
+.cap-tags-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px 20px;
+  width: 100%;
+}
+
+.cap-tag-item {
+  font-family: 'Science Gothic', monospace;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (max-width: 1024px) {
+  .cap-stack-card {
+    height: auto;
+    min-height: 100vh;
+    padding: 36px 24px;
+  }
+
+  .cap-col-left {
+    padding-right: 0;
+    margin-bottom: 24px;
+  }
+
+  .cap-col-right {
+    padding-left: 0;
+  }
+
+  .cap-tags-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .cap-stack-card {
+    height: auto;
+    min-height: 100vh;
+    padding: 28px 18px;
+  }
+  .cap-tags-row {
+    grid-template-columns: 1fr;
+  }
+  .cap-large-num {
+    font-size: 64px;
+  }
+  .cap-hero-statement {
+    font-size: 18px;
+  }
 }
 
 .cap-arrow {
@@ -3280,7 +3522,7 @@ footer {
 }
 
 .legacy-stat-count {
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Montserrat';
   font-size: clamp(44px, 3.8vw, 58px);
   font-weight: 700;
   letter-spacing: -0.035em;
@@ -3368,7 +3610,7 @@ footer {
 }
 
 .impact-stat-count {
-  font-family: 'Science Gothic', monospace;
+  font-family: 'Science Gothic';
   font-size: clamp(44px, 4vw, 64px);
   font-weight: 700;
   letter-spacing: -0.03em;
@@ -3380,7 +3622,7 @@ footer {
 }
 
 .impact-stat-suffix {
-  font-family: 'Science Gothic', monospace;
+  font-family: 'Science Gothic';
   font-size: clamp(26px, 2.4vw, 38px);
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -3543,7 +3785,7 @@ footer {
   position: relative;
   z-index: 5;
   background-color: #ffffff;
-  background-image: 
+  background-image:
     radial-gradient(circle at 0% 0%, rgba(229, 145, 47, 0.18) 0%, rgba(255, 255, 255, 0) 40%),
     radial-gradient(circle at 100% 100%, rgba(229, 145, 47, 0.16) 0%, rgba(255, 255, 255, 0) 38%);
   padding-top: 90px;
@@ -3579,7 +3821,7 @@ footer {
 }
 
 .partners-pre-tag {
-  font-family: var(--font-accent, 'Science Gothic', monospace);
+  font-family: 'Science Gothic';
   font-size: 14px;
   font-weight: 800;
   letter-spacing: 3.5px;
@@ -3700,6 +3942,7 @@ footer {
   display: inline-block;
   will-change: transform, opacity;
 }
+
 /* ==========================================================================
    Section Headings Text Animation Masks
    ========================================================================== */
@@ -3807,7 +4050,7 @@ footer {
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 6px;
-  font-family: 'Science Gothic', monospace;
+  font-family: 'Science Gothic';
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -6060,6 +6303,7 @@ footer {
   justify-content: center;
   padding: 10px 24px;
 }
+
 /* Eyebrow */
 .about-ref-eyebrow {
   display: inline-flex;
@@ -6076,7 +6320,7 @@ footer {
 }
 
 .about-eyebrow-text {
-  font-family: var(--font-accent, 'Science Gothic', monospace);
+  font-family: 'Science Gothic';
   font-size: 11.5px;
   font-weight: 700;
   letter-spacing: 2.2px;
@@ -6090,7 +6334,7 @@ footer {
 }
 
 #section-about-us .section-title h2 {
-  font-family: var(--font-primary, 'Montserrat', sans-serif);
+  font-family: 'Montserrat';
   font-size: clamp(30px, 3.2vw, 48px);
   font-weight: 700;
   line-height: 1.15;
@@ -6109,7 +6353,7 @@ footer {
 
 /* Description Paragraph */
 .about-ref-paragraph {
-  font-family: var(--font-primary, 'Montserrat', sans-serif);
+  font-family: 'Montserrat';
   font-size: clamp(14px, 1.05vw, 16px);
   line-height: 1.7;
   color: #4b5563;
@@ -6157,7 +6401,7 @@ footer {
 }
 
 .about-badge-name {
-  font-family: var(--font-primary, 'Montserrat', sans-serif);
+  font-family: 'Montserrat';
   font-size: clamp(13px, 1.05vw, 14.5px);
   font-weight: 600;
   line-height: 1.35;
@@ -6173,48 +6417,213 @@ footer {
   flex-shrink: 0;
 }
 
-
-/* RESPONSIVE BREAKPOINTS */
-@media screen and (max-width: 1024px) {
-  .about-columns-layout {
-    flex-direction: column;
-    text-align: center;
-    gap: 36px;
-  }
-  .about-col-ship,
-  .about-col-content {
-    width: 100%;
-    max-width: 100%;
-    justify-content: center;
-  }
-  .about-hero-ship-img {
-    object-position: center;
-  }
-  .about-ref-center {
-    margin: 0 auto;
-  }
-  .about-ref-eyebrow {
-    justify-content: center;
-  }
-  .about-hero-ship-box {
-    max-width: 520px;
-    margin: 0 auto;
-    justify-content: center;
-  }
+.orange-bg {
+  background-color: #fbf6ee !important;
 }
 
-@media screen and (max-width: 640px) {
-  #section-about-us {
-    padding: 40px 0;
-  }
-  .about-ref-badges {
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-  .about-badge-sep {
-    display: none;
-  }
-  .about-badge-card {
-    flex: 0 0 45%;
-  }
+.anchors-top-wrap {
+  text-align: center;
+  margin-bottom: 10px;
 }
+
+.anchors-top-wrap .section-title {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.anchors-top-wrap .section-title h2 {
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+/* Our Anchors Section Background Graphics & Glows */
+#section-anchors {
+  position: relative;
+  overflow: hidden;
+  background-color: #fbf6ee !important;
+}
+
+.anchors-bg-ambient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: 
+    radial-gradient(circle at 8% 15%, rgba(229, 145, 47, 0.14) 0%, transparent 45%),
+    radial-gradient(circle at 92% 85%, rgba(229, 145, 47, 0.12) 0%, transparent 42%),
+    radial-gradient(circle at 50% 50%, rgba(229, 145, 47, 0.05) 0%, transparent 60%);
+  z-index: 1;
+}
+
+.anchors-bg-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(229, 145, 47, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(229, 145, 47, 0.04) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at 50% 50%, black 40%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, black 40%, transparent 80%);
+  z-index: 1;
+}
+
+.anchors-bg-compass {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 680px;
+  height: 680px;
+  max-width: 90vw;
+  max-height: 90vw;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.anchors-bg-compass svg {
+  width: 100%;
+  height: 100%;
+}
+
+.anchors-bg-curves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 240px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.anchors-bg-curves svg {
+  width: 100%;
+  height: 100%;
+}
+
+.anchors-top-wrap,
+.anchor-cards-scroll-wrap,
+.anchors-stats-wrap {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Proven Track Record Parallax Stats Section */
+.section-stats {
+  position: relative;
+  overflow: hidden;
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 0 !important;
+}
+
+.stats-parallax-bg-wrap {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 100%;
+  height: 140%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.stats-parallax-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  will-change: transform;
+}
+
+.stats-parallax-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(8, 12, 24, 0.82) 0%, rgba(10, 15, 29, 0.88) 100%);
+  z-index: 2;
+}
+
+.stats-content-wrap {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+
+.stats-head {
+  margin-bottom: 45px;
+}
+
+.stats-columns-grid {
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.stats-glass-card {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 20px;
+  padding: 36px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.stats-glass-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(229, 145, 47, 0.5);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.stats-stat-num {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(38px, 3.2vw, 54px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  line-height: 1.1;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 2px;
+}
+
+.stats-stat-num .stat-plus,
+.stats-stat-num .stat-unit {
+  font-family: 'Science Gothic', monospace;
+  font-size: clamp(22px, 2vw, 32px);
+  color: #e5912f;
+  font-weight: 700;
+}
+
+.stats-stat-label {
+  font-family: 'Science Gothic', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+  margin-top: 12px;
+  line-height: 1.4;
+}
+
