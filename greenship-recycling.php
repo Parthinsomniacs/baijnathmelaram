@@ -73,24 +73,6 @@ $utm = "yes";
       <!-- Architectural Dot Matrix Grid with Radial Fade -->
       <div class="bm-env-dot-grid"></div>
 
-      <!-- Top-Right Topographic Maritime Contour Waves -->
-      <svg class="bm-env-contour bm-env-contour-top" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M50 0 C150 80, 280 40, 420 140 C520 220, 580 320, 600 400" stroke="#e5912f" stroke-width="1.2" stroke-opacity="0.14" stroke-dasharray="6 4" />
-        <path d="M120 0 C220 90, 340 60, 470 170 C560 250, 590 340, 600 370" stroke="#e5912f" stroke-width="1" stroke-opacity="0.1" />
-        <path d="M200 0 C300 110, 400 90, 510 200 C580 270, 600 330, 600 340" stroke="#10b981" stroke-width="1" stroke-opacity="0.08" />
-        <path d="M300 0 C380 90, 470 120, 560 220 C600 270, 600 300, 600 300" stroke="#64748b" stroke-width="1" stroke-opacity="0.07" stroke-dasharray="3 3" />
-      </svg>
-
-      <!-- Bottom-Left Maritime Wave & Geometric Compass Arc -->
-      <svg class="bm-env-contour bm-env-contour-bottom" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="100" cy="400" r="120" stroke="#64748b" stroke-width="1" stroke-opacity="0.06" stroke-dasharray="4 6" />
-        <circle cx="100" cy="400" r="220" stroke="#e5912f" stroke-width="1" stroke-opacity="0.08" />
-        <circle cx="100" cy="400" r="320" stroke="#10b981" stroke-width="1" stroke-opacity="0.05" />
-        <path d="M0 250 C120 220, 200 280, 320 260 C400 240, 460 290, 500 270" stroke="#10b981" stroke-width="1.2" stroke-opacity="0.1" />
-        <path d="M0 320 C140 300, 220 360, 340 330 C420 310, 480 350, 500 340" stroke="#e5912f" stroke-width="1" stroke-opacity="0.08" stroke-dasharray="5 5" />
-        <path d="M90 400 H110 M100 390 V410" stroke="#e5912f" stroke-width="1.2" stroke-opacity="0.3" />
-      </svg>
-
       <!-- Minimal Geometric Plus Markers -->
       <div class="bm-env-plus bm-env-plus-1">+</div>
       <div class="bm-env-plus bm-env-plus-2">+</div>
@@ -227,22 +209,6 @@ $utm = "yes";
 
       <!-- Architectural Dot Matrix Grid with Center Radial Fade -->
       <div class="bm-welfare-dot-grid"></div>
-
-      <!-- Top-Left Flowing Welfare Contour Waves -->
-      <svg class="bm-welfare-contour bm-welfare-contour-top" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 80 C120 40, 240 120, 360 80 C480 40, 540 140, 600 120" stroke="#e5912f" stroke-width="1.2" stroke-opacity="0.14" stroke-dasharray="6 4" />
-        <path d="M0 160 C140 120, 260 200, 390 160 C500 120, 560 210, 600 190" stroke="#e5912f" stroke-width="1" stroke-opacity="0.09" />
-        <path d="M0 240 C160 200, 280 270, 420 240 C520 210, 570 290, 600 270" stroke="#0284c7" stroke-width="1" stroke-opacity="0.08" />
-      </svg>
-
-      <!-- Bottom-Right Human-Centric Compass Arc & Ripple -->
-      <svg class="bm-welfare-contour bm-welfare-contour-bottom" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="400" cy="400" r="140" stroke="#64748b" stroke-width="1" stroke-opacity="0.06" stroke-dasharray="4 6" />
-        <circle cx="400" cy="400" r="240" stroke="#e5912f" stroke-width="1" stroke-opacity="0.08" />
-        <circle cx="400" cy="400" r="340" stroke="#0284c7" stroke-width="1" stroke-opacity="0.05" />
-        <path d="M100 500 C180 380, 300 420, 420 340 C460 310, 480 320, 500 300" stroke="#e5912f" stroke-width="1.2" stroke-opacity="0.1" stroke-dasharray="5 5" />
-        <path d="M390 400 H410 M400 390 V410" stroke="#e5912f" stroke-width="1.2" stroke-opacity="0.3" />
-      </svg>
 
       <!-- Minimal Geometric Plus Markers -->
       <div class="bm-welfare-plus bm-welfare-plus-1">+</div>
@@ -432,6 +398,22 @@ $utm = "yes";
 
   <!-- We Value Safety Section -->
   <section id="section-safety" class="section section-safety">
+    <!-- Minimal Background Design Elements -->
+    <div class="bm-safety-bg-decor" aria-hidden="true">
+      <!-- Ambient Atmospheric Light Blooms -->
+      <div class="bm-safety-glow bm-safety-glow-1"></div>
+      <div class="bm-safety-glow bm-safety-glow-2"></div>
+      <div class="bm-safety-glow bm-safety-glow-3"></div>
+
+      <!-- Architectural Dot Matrix Grid with Center Radial Fade -->
+      <div class="bm-safety-dot-grid"></div>
+
+      <!-- Minimal Geometric Plus Markers -->
+      <div class="bm-safety-plus bm-safety-plus-1">+</div>
+      <div class="bm-safety-plus bm-safety-plus-2">+</div>
+      <div class="bm-safety-plus bm-safety-plus-3">+</div>
+    </div>
+
     <div class="theme-padding">
       <!-- Centered Header: Big Title & Lead Description -->
       <div class="safety-header-wrap">
@@ -461,7 +443,9 @@ $utm = "yes";
           <div class="safety-reveal-icon-wrap">
             <img src="<?php echo $imagesurl; ?>greenship-recycling/icon-certificate1.svg" width="84" height="84" alt="Tested and Certified Equipment" class="safety-reveal-icon safety-icon-svg" />
           </div>
+          <div class="safety-card-watermark" aria-hidden="true">01</div>
           <div class="safety-reveal-content">
+            <div class="safety-card-kicker">STANDARDS</div>
             <h3 class="safety-reveal-title">Tested and Certified Equipment</h3>
             <p class="safety-reveal-desc">All heavy machinery, lifting tackle, wire ropes, and gas apparatus undergo mandatory testing and certification by Government Approved and recognized 3rd party inspection agencies before deployment.</p>
           </div>
@@ -472,7 +456,9 @@ $utm = "yes";
           <div class="safety-reveal-icon-wrap">
             <img src="<?php echo $imagesurl; ?>greenship-recycling/icon-certificate1.svg" width="84" height="84" alt="Flashback arrestor" class="safety-reveal-icon safety-icon-svg" />
           </div>
+          <div class="safety-card-watermark" aria-hidden="true">02</div>
           <div class="safety-reveal-content">
+            <div class="safety-card-kicker">PREVENTION</div>
             <h3 class="safety-reveal-title">Flashback arrestor</h3>
             <p class="safety-reveal-desc">Installed on all cylinders and torch manifolds to mitigate explosion and fire hazards during cutting operations.</p>
           </div>
@@ -483,7 +469,9 @@ $utm = "yes";
           <div class="safety-reveal-icon-wrap">
             <img src="<?php echo $imagesurl; ?>greenship-recycling/icon-certificate1.svg" width="84" height="84" alt="Three-way Gas Torches" class="safety-reveal-icon safety-icon-svg" />
           </div>
+          <div class="safety-card-watermark" aria-hidden="true">03</div>
           <div class="safety-reveal-content">
+            <div class="safety-card-kicker">GAS CUTTING</div>
             <h3 class="safety-reveal-title">Three-way Gas Torches</h3>
             <p class="safety-reveal-desc">Long and short specialized torches for easy, controlled, and secure gas cutting on vessel shell plates.</p>
           </div>
@@ -494,7 +482,9 @@ $utm = "yes";
           <div class="safety-reveal-icon-wrap">
             <img src="<?php echo $imagesurl; ?>greenship-recycling/icon-certificate1.svg" width="84" height="84" alt="Asbestos Removal" class="safety-reveal-icon safety-icon-svg" />
           </div>
+          <div class="safety-card-watermark" aria-hidden="true">04</div>
           <div class="safety-reveal-content">
+            <div class="safety-card-kicker">HAZMAT</div>
             <h3 class="safety-reveal-title">Asbestos Removal</h3>
             <p class="safety-reveal-desc">Certified Hazmat specialists assist approved vendors to safely remove, package, and dispose of asbestos.</p>
           </div>
@@ -505,7 +495,9 @@ $utm = "yes";
           <div class="safety-reveal-icon-wrap">
             <img src="<?php echo $imagesurl; ?>greenship-recycling/icon-certificate1.svg" width="84" height="84" alt="NEBOSH Approved PPE" class="safety-reveal-icon safety-icon-svg" />
           </div>
+          <div class="safety-card-watermark" aria-hidden="true">05</div>
           <div class="safety-reveal-content">
+            <div class="safety-card-kicker">PROTECTION</div>
             <h3 class="safety-reveal-title">NEBOSH Approved PPE</h3>
             <p class="safety-reveal-desc">3M Masks 6300 with 2091 filters, fire-retardant boiler suits, safety helmets, protective boots, and gloves.</p>
           </div>
@@ -516,7 +508,9 @@ $utm = "yes";
           <div class="safety-reveal-icon-wrap">
             <img src="<?php echo $imagesurl; ?>greenship-recycling/icon-certificate1.svg" width="84" height="84" alt="HSE Training Programs" class="safety-reveal-icon safety-icon-svg" />
           </div>
+          <div class="safety-card-watermark" aria-hidden="true">06</div>
           <div class="safety-reveal-content">
+            <div class="safety-card-kicker">EMPOWERMENT</div>
             <h3 class="safety-reveal-title">HSE Training Programs</h3>
             <p class="safety-reveal-desc">A scheduled blend of internal drills and certified external modules given to all employees and yard workers.</p>
           </div>
@@ -527,7 +521,9 @@ $utm = "yes";
           <div class="safety-reveal-icon-wrap">
             <img src="<?php echo $imagesurl; ?>greenship-recycling/icon-certificate1.svg" width="84" height="84" alt="Emergency Preparedness & Mock Drills" class="safety-reveal-icon safety-icon-svg" />
           </div>
+          <div class="safety-card-watermark" aria-hidden="true">07</div>
           <div class="safety-reveal-content">
+            <div class="safety-card-kicker">READINESS</div>
             <h3 class="safety-reveal-title">Emergency Preparedness &amp; Mock Drills</h3>
             <p class="safety-reveal-desc">Dedicated rescue boats, certified firefighting stations, and medical first-aid stations are permanently deployed across the yard. Periodic live mock drills ensure rapid response readiness in any critical scenario.</p>
           </div>
@@ -538,7 +534,9 @@ $utm = "yes";
           <div class="safety-reveal-icon-wrap">
             <img src="<?php echo $imagesurl; ?>greenship-recycling/icon-certificate1.svg" width="84" height="84" alt="Gas-Free & Confined Space Entry" class="safety-reveal-icon safety-icon-svg" />
           </div>
+          <div class="safety-card-watermark" aria-hidden="true">08</div>
           <div class="safety-reveal-content">
+            <div class="safety-card-kicker">COMPLIANCE</div>
             <h3 class="safety-reveal-title">Gas-Free &amp; Confined Space Entry</h3>
             <p class="safety-reveal-desc">Mandatory atmospheric gas testing and certification by approved marine chemists prior to hot work or entry into enclosed compartments.</p>
           </div>
@@ -664,6 +662,22 @@ $utm = "yes";
        Policy and Training Section (Architectural Staggered Layout)
        ========================================================================== -->
   <section id="section-policy" class="section section-policy section-policy-option2">
+    <!-- Minimal Background Design Elements -->
+    <div class="bm-policy-bg-decor" aria-hidden="true">
+      <!-- Ambient Atmospheric Light Blooms -->
+      <div class="bm-policy-glow bm-policy-glow-1"></div>
+      <div class="bm-policy-glow bm-policy-glow-2"></div>
+      <div class="bm-policy-glow bm-policy-glow-3"></div>
+
+      <!-- Architectural Dot Matrix Grid with Center Radial Fade -->
+      <div class="bm-policy-dot-grid"></div>
+
+      <!-- Minimal Geometric Plus Markers -->
+      <div class="bm-policy-plus bm-policy-plus-1">+</div>
+      <div class="bm-policy-plus bm-policy-plus-2">+</div>
+      <div class="bm-policy-plus bm-policy-plus-3">+</div>
+    </div>
+
     <div class="theme-padding">
       
       <!-- Header -->
@@ -794,12 +808,20 @@ $utm = "yes";
 
   <!-- Our Yard Section (Custom Orange Themed Showcase matching Reference Mockup) -->
   <section id="section-yard" class="section section-yard">
-    <!-- Subtle Coastal Background Ambient Elements -->
-    <div class="yard-bg-curves" aria-hidden="true">
-      <svg class="yard-bg-arc" viewBox="0 0 600 600" fill="none">
-        <circle cx="300" cy="300" r="280" stroke="rgba(229, 145, 47, 0.07)" stroke-width="1.5" />
-        <circle cx="300" cy="300" r="230" stroke="rgba(229, 145, 47, 0.04)" stroke-width="1" />
-      </svg>
+    <!-- Minimal Background Design Elements -->
+    <div class="bm-yard-bg-decor" aria-hidden="true">
+      <!-- Ambient Atmospheric Light Blooms -->
+      <div class="bm-yard-glow bm-yard-glow-1"></div>
+      <div class="bm-yard-glow bm-yard-glow-2"></div>
+      <div class="bm-yard-glow bm-yard-glow-3"></div>
+
+      <!-- Architectural Dot Matrix Grid with Center Radial Fade -->
+      <div class="bm-yard-dot-grid"></div>
+
+      <!-- Minimal Geometric Plus Markers -->
+      <div class="bm-yard-plus bm-yard-plus-1">+</div>
+      <div class="bm-yard-plus bm-yard-plus-2">+</div>
+      <div class="bm-yard-plus bm-yard-plus-3">+</div>
     </div>
 
     <div class="theme-padding">
@@ -1099,7 +1121,7 @@ $utm = "yes";
               duration: 0.7,
               stagger: 0.06,
               ease: 'power2.out',
-              clearProps: 'opacity',
+              clearProps: 'all',
               scrollTrigger: {
                 trigger: '.safety-reveal-grid',
                 start: 'top 82%',
@@ -1382,6 +1404,7 @@ $utm = "yes";
           pagination: false,
           speed: 650,
           easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
+          updateOnMove: true,
           breakpoints: {
             1300: {
               perPage: 3,

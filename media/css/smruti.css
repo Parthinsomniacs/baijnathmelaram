@@ -1113,15 +1113,115 @@ section#section-safety,
   font-weight: 600;
 }
 
+#section-safety > .theme-padding {
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================================================================
+   Minimal Background Decorative Vectors for We Value Safety Section
+   ========================================================================== */
+.bm-safety-bg-decor {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Soft Atmospheric Safety Light Blooms */
+.bm-safety-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.bm-safety-glow-1 {
+  top: 5%;
+  left: -6%;
+  width: clamp(300px, 32vw, 540px);
+  height: clamp(300px, 32vw, 540px);
+  background: radial-gradient(circle, rgba(229, 145, 47, 0.08) 0%, rgba(229, 145, 47, 0) 70%);
+}
+
+.bm-safety-glow-2 {
+  bottom: 5%;
+  right: -5%;
+  width: clamp(320px, 34vw, 560px);
+  height: clamp(320px, 34vw, 560px);
+  background: radial-gradient(circle, rgba(229, 145, 47, 0.07) 0%, rgba(229, 145, 47, 0) 70%);
+}
+
+.bm-safety-glow-3 {
+  top: 45%;
+  right: 12%;
+  width: clamp(240px, 26vw, 420px);
+  height: clamp(240px, 26vw, 420px);
+  background: radial-gradient(circle, rgba(100, 116, 139, 0.05) 0%, rgba(100, 116, 139, 0) 70%);
+}
+
+/* Architectural Dot Matrix Grid with Center Radial Fade */
+.bm-safety-dot-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(100, 116, 139, 0.12) 1.2px, transparent 1.2px);
+  background-size: 32px 32px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 20%, transparent 80%);
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 20%, transparent 80%);
+  opacity: 0.65;
+}
+
+/* Minimalist Precision Technical Vector Accents (Blueprint Safety Reticles) */
+.bm-safety-vector {
+  position: absolute;
+  pointer-events: none;
+}
+
+.bm-safety-vector-top {
+  top: -2%;
+  right: 1%;
+  width: clamp(260px, 28vw, 440px);
+  height: auto;
+  opacity: 0.75;
+}
+
+.bm-safety-vector-bottom {
+  bottom: -4%;
+  left: -2%;
+  width: clamp(280px, 30vw, 460px);
+  height: auto;
+  opacity: 0.7;
+}
+
+/* Minimal Geometric Plus Markers */
+.bm-safety-plus {
+  position: absolute;
+  font-family: 'Fragment Mono', monospace;
+  font-size: 16px;
+  font-weight: 600;
+  color: #e5912f;
+  opacity: 0.28;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.bm-safety-plus-1 { top: 12%; left: 8%; }
+.bm-safety-plus-2 { top: 22%; right: 7%; }
+.bm-safety-plus-3 { bottom: 15%; right: 12%; }
+
 /* ==========================================================================
    Section: We Value Safety - Minimalist Architectural Grid with Hover Reveal
    ========================================================================== */
 .safety-reveal-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Exactly 4 equal columns: All cards same width */
-  background-color: #ede8e1; /* Crisp 1px interior boundary lines */
-  gap: 1px;
-  border: 1px solid #ede8e1;
+  background-color: transparent;
+  gap: 0;
+  border: 1px solid #ded7cc;
   border-radius: 20px;
   overflow: hidden;
   margin-bottom: 0;
@@ -1138,7 +1238,34 @@ section#section-safety,
   position: relative;
   cursor: pointer;
   overflow: hidden;
+  box-sizing: border-box;
+  border-right: 1px solid #ded7cc;
+  border-bottom: 1px solid #ded7cc;
   transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s ease;
+}
+
+/* 4-column layout: eliminate outer right border and bottom border */
+.safety-reveal-card:nth-child(4n) {
+  border-right: none;
+}
+
+.safety-reveal-card:nth-child(n+5) {
+  border-bottom: none;
+}
+
+/* Card Top Bar: Icon + Top-Right Metadata Pill */
+.safety-card-top-bar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 24px;
+}
+
+.safety-card-top-bar .safety-reveal-icon-wrap {
+  margin-bottom: 0;
 }
 
 /* Icon Showcase at the Top */
@@ -1146,6 +1273,72 @@ section#section-safety,
   display: flex;
   align-items: flex-start;
   margin-bottom: 24px;
+}
+
+.safety-card-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(248, 250, 252, 0.9);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  padding: 5px 11px;
+  border-radius: 999px;
+  transition: all 0.35s ease;
+}
+
+.safety-card-num {
+  font-family: 'Fragment Mono', monospace, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  transition: color 0.35s ease;
+}
+
+.safety-card-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  line-height: 1;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), color 0.35s ease;
+}
+
+.safety-card-arrow svg {
+  display: block;
+}
+
+/* Subtle Architectural Large Watermark Number */
+.safety-card-watermark {
+  position: absolute;
+  right: 16px;
+  bottom: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(80px, 7vw, 120px);
+  font-weight: 600;
+  line-height: 0.8;
+  color: #0f172a;
+  opacity: 0.035;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+  transition: opacity 0.4s ease, color 0.4s ease, transform 0.45s ease;
+}
+
+/* Minimal Protocol Kicker above Title */
+.safety-card-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Fragment Mono', monospace, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #e5912f;
+  margin-bottom: 9px;
+  transition: color 0.35s ease;
 }
 
 .safety-reveal-icon {
@@ -1166,12 +1359,14 @@ img.safety-reveal-icon,
 .safety-reveal-icon .icon-accent-ray {
   stroke: #e5912f;
   stroke-width: 2.5px;
-  transition: stroke 0.35s ease;
+  transition: stroke 0.35s ease, fill 0.35s ease;
 }
 
 /* Content Container at the Bottom */
 .safety-reveal-content {
   margin-top: auto;
+  position: relative;
+  z-index: 2;
 }
 
 .safety-reveal-title {
@@ -1206,6 +1401,39 @@ img.safety-reveal-icon,
   background-color: #e5912f !important;
 }
 
+.safety-reveal-card:hover .safety-card-meta,
+.safety-reveal-card.is-active .safety-card-meta {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.safety-reveal-card:hover .safety-card-num,
+.safety-reveal-card.is-active .safety-card-num {
+  color: #ffffff;
+}
+
+.safety-reveal-card:hover .safety-card-arrow,
+.safety-reveal-card.is-active .safety-card-arrow {
+  color: #ffffff;
+  transform: translate(2px, -2px);
+}
+
+.safety-reveal-card:hover .safety-card-watermark,
+.safety-reveal-card.is-active .safety-card-watermark {
+  color: #ffffff;
+  opacity: 0.10;
+  transform: translateY(-6px);
+}
+
+#greenship-recycling .safety-reveal-card:hover .safety-card-kicker,
+#greenship-recycling .safety-reveal-card.is-active .safety-card-kicker,
+.safety-reveal-card:hover .safety-card-kicker,
+.safety-reveal-card.is-active .safety-card-kicker {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  opacity: 1 !important;
+}
+
 .safety-reveal-card:hover .safety-reveal-icon,
 .safety-reveal-card.is-active .safety-reveal-icon {
   stroke: #ffffff !important;
@@ -1222,6 +1450,7 @@ img.safety-reveal-icon,
 .safety-reveal-card:hover .safety-reveal-icon .icon-accent-ray,
 .safety-reveal-card.is-active .safety-reveal-icon .icon-accent-ray {
   stroke: #ffffff !important;
+  fill: #ffffff !important;
 }
 
 .safety-reveal-card:hover .safety-reveal-title,
@@ -1245,6 +1474,24 @@ img.safety-reveal-icon,
 
   .safety-reveal-card {
     min-height: clamp(390px, 36vw, 430px);
+    border-right: 1px solid #ded7cc;
+    border-bottom: 1px solid #ded7cc;
+  }
+
+  .safety-reveal-card:nth-child(4n) {
+    border-right: 1px solid #ded7cc;
+  }
+
+  .safety-reveal-card:nth-child(2n) {
+    border-right: none;
+  }
+
+  .safety-reveal-card:nth-child(n+5) {
+    border-bottom: 1px solid #ded7cc;
+  }
+
+  .safety-reveal-card:nth-child(n+7) {
+    border-bottom: none;
   }
 }
 
@@ -1257,6 +1504,12 @@ img.safety-reveal-icon,
   .safety-reveal-card {
     min-height: 320px;
     padding: 26px 20px;
+    border-right: none !important;
+    border-bottom: 1px solid #ded7cc;
+  }
+
+  .safety-reveal-card:last-child {
+    border-bottom: none;
   }
 
   .safety-reveal-icon {
@@ -1278,6 +1531,79 @@ section#section-policy,
   overflow: hidden;
   box-sizing: border-box;
 }
+
+#section-policy > .theme-padding {
+  position: relative;
+  z-index: 2;
+}
+
+/* Minimal Background Decorative Elements for Policy and Training Section */
+.bm-policy-bg-decor {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bm-policy-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(85px);
+  pointer-events: none;
+}
+
+.bm-policy-glow-1 {
+  top: 4%;
+  left: -5%;
+  width: clamp(280px, 30vw, 520px);
+  height: clamp(280px, 30vw, 520px);
+  background: radial-gradient(circle, rgba(229, 145, 47, 0.08) 0%, rgba(229, 145, 47, 0) 70%);
+}
+
+.bm-policy-glow-2 {
+  bottom: 6%;
+  right: -5%;
+  width: clamp(300px, 32vw, 540px);
+  height: clamp(300px, 32vw, 540px);
+  background: radial-gradient(circle, rgba(229, 145, 47, 0.07) 0%, rgba(229, 145, 47, 0) 70%);
+}
+
+.bm-policy-glow-3 {
+  top: 50%;
+  right: 14%;
+  width: clamp(220px, 24vw, 380px);
+  height: clamp(220px, 24vw, 380px);
+  background: radial-gradient(circle, rgba(100, 116, 139, 0.05) 0%, rgba(100, 116, 139, 0) 70%);
+}
+
+.bm-policy-dot-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(100, 116, 139, 0.12) 1.2px, transparent 1.2px);
+  background-size: 32px 32px;
+  -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 50%, black 25%, transparent 80%);
+  mask-image: radial-gradient(ellipse 85% 75% at 50% 50%, black 25%, transparent 80%);
+  opacity: 0.65;
+}
+
+.bm-policy-plus {
+  position: absolute;
+  font-family: 'Fragment Mono', monospace;
+  font-size: 16px;
+  font-weight: 600;
+  color: #e5912f;
+  opacity: 0.28;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.bm-policy-plus-1 { top: 8%; left: 6%; }
+.bm-policy-plus-2 { top: 18%; right: 7%; }
+.bm-policy-plus-3 { bottom: 12%; left: 8%; }
 
 .bm-policy-header {
   max-width: 100%;
@@ -1351,22 +1677,78 @@ section#section-yard,
   padding-bottom: clamp(70px, 7.5vw, 110px);
 }
 
-/* Background Ambient Decorative Curves */
-.yard-bg-curves {
-  position: absolute;
-  top: -80px;
-  right: -80px;
-  width: 520px;
-  height: 520px;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0.85;
+#section-yard > .theme-padding {
+  position: relative;
+  z-index: 2;
 }
 
-.yard-bg-arc {
+/* Minimal Background Decorative Elements for Our Yard Section */
+.bm-yard-bg-decor {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
 }
+
+.bm-yard-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.bm-yard-glow-1 {
+  top: 5%;
+  left: -5%;
+  width: clamp(280px, 30vw, 500px);
+  height: clamp(280px, 30vw, 500px);
+  background: radial-gradient(circle, rgba(229, 145, 47, 0.08) 0%, rgba(229, 145, 47, 0) 70%);
+}
+
+.bm-yard-glow-2 {
+  bottom: 5%;
+  right: -4%;
+  width: clamp(300px, 32vw, 520px);
+  height: clamp(300px, 32vw, 520px);
+  background: radial-gradient(circle, rgba(229, 145, 47, 0.07) 0%, rgba(229, 145, 47, 0) 70%);
+}
+
+.bm-yard-glow-3 {
+  top: 42%;
+  right: 18%;
+  width: clamp(200px, 22vw, 360px);
+  height: clamp(200px, 22vw, 360px);
+  background: radial-gradient(circle, rgba(100, 116, 139, 0.05) 0%, rgba(100, 116, 139, 0) 70%);
+}
+
+.bm-yard-dot-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(100, 116, 139, 0.12) 1.2px, transparent 1.2px);
+  background-size: 32px 32px;
+  -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 50%, black 25%, transparent 80%);
+  mask-image: radial-gradient(ellipse 85% 75% at 50% 50%, black 25%, transparent 80%);
+  opacity: 0.65;
+}
+
+.bm-yard-plus {
+  position: absolute;
+  font-family: 'Fragment Mono', monospace;
+  font-size: 16px;
+  font-weight: 600;
+  color: #e5912f;
+  opacity: 0.28;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.bm-yard-plus-1 { top: 12%; left: 6%; }
+.bm-yard-plus-2 { top: 20%; right: 8%; }
+.bm-yard-plus-3 { bottom: 14%; left: 7%; }
 
 /* Centered Section Header Bar (Keyword above Title) */
 .yard-header-wrap {
@@ -1850,7 +2232,7 @@ section#section-yard,
 }
 
 #greenship-recycling .safety-reveal-card:hover {
-  transform: translateY(-4px);
+  transform: none;
 }
 
 #greenship-recycling .safety-reveal-icon-wrap {
