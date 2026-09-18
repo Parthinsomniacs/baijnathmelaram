@@ -5,8 +5,8 @@ $pagetype = "onepage";
 $pagename = "Greenship Recycling";
 /**JS & CSS**/
 $onepagemenu = "yes";
-$slider = "no";
-$sliderautoscroll = "no";
+$slider = "yes";
+$sliderautoscroll = "yes";
 $swiperjs = "no";
 $popup = "yes";
 $counter = "yes";
@@ -39,15 +39,19 @@ $utm = "yes";
       <div class="theme-padding">
         <div class="section-kicker">
           <span class="section-kicker-line"></span>
-          <span class="section-kicker-text">GREENSHIP RECYCLING</span>
+          <span class="section-kicker-text" style="color: #ffffff !important;">GREENSHIP RECYCLING</span>
         </div>
         <div class="banner-divider"></div>
         <div class="banner-content-row columns is-vcentered">
           <div class="column is-12-mobile is-12-tablet is-10-desktop">
             <div class="section-title">
               <h1 class="banner-title">
-                A Commitment to<br>
-                <span class="text-secondary">Green Ship</span> Recycling
+                <span class="banner-word-mask"><span class="banner-word-inner">A</span></span>
+                <span class="banner-word-mask"><span class="banner-word-inner">Commitment</span></span>
+                <span class="banner-word-mask"><span class="banner-word-inner">to</span></span><br>
+                <span class="banner-word-mask"><span class="banner-word-inner text-secondary">Green</span></span>
+                <span class="banner-word-mask"><span class="banner-word-inner text-secondary">Ship</span></span>
+                <span class="banner-word-mask"><span class="banner-word-inner">Recycling</span></span>
               </h1>
             </div>
           </div>
@@ -58,6 +62,41 @@ $utm = "yes";
 
   <!-- We Value Our Environment Section (Sticky Stacking Cards Showcase matching Priya Blue) -->
   <section id="section-environment" class="section section-environment">
+    
+    <!-- Minimal Background Design Elements -->
+    <div class="bm-env-bg-decor" aria-hidden="true">
+      <!-- Ambient Atmospheric Light Blooms -->
+      <div class="bm-env-glow bm-env-glow-1"></div>
+      <div class="bm-env-glow bm-env-glow-2"></div>
+      <div class="bm-env-glow bm-env-glow-3"></div>
+
+      <!-- Architectural Dot Matrix Grid with Radial Fade -->
+      <div class="bm-env-dot-grid"></div>
+
+      <!-- Top-Right Topographic Maritime Contour Waves -->
+      <svg class="bm-env-contour bm-env-contour-top" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 0 C150 80, 280 40, 420 140 C520 220, 580 320, 600 400" stroke="#e5912f" stroke-width="1.2" stroke-opacity="0.14" stroke-dasharray="6 4" />
+        <path d="M120 0 C220 90, 340 60, 470 170 C560 250, 590 340, 600 370" stroke="#e5912f" stroke-width="1" stroke-opacity="0.1" />
+        <path d="M200 0 C300 110, 400 90, 510 200 C580 270, 600 330, 600 340" stroke="#10b981" stroke-width="1" stroke-opacity="0.08" />
+        <path d="M300 0 C380 90, 470 120, 560 220 C600 270, 600 300, 600 300" stroke="#64748b" stroke-width="1" stroke-opacity="0.07" stroke-dasharray="3 3" />
+      </svg>
+
+      <!-- Bottom-Left Maritime Wave & Geometric Compass Arc -->
+      <svg class="bm-env-contour bm-env-contour-bottom" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="400" r="120" stroke="#64748b" stroke-width="1" stroke-opacity="0.06" stroke-dasharray="4 6" />
+        <circle cx="100" cy="400" r="220" stroke="#e5912f" stroke-width="1" stroke-opacity="0.08" />
+        <circle cx="100" cy="400" r="320" stroke="#10b981" stroke-width="1" stroke-opacity="0.05" />
+        <path d="M0 250 C120 220, 200 280, 320 260 C400 240, 460 290, 500 270" stroke="#10b981" stroke-width="1.2" stroke-opacity="0.1" />
+        <path d="M0 320 C140 300, 220 360, 340 330 C420 310, 480 350, 500 340" stroke="#e5912f" stroke-width="1" stroke-opacity="0.08" stroke-dasharray="5 5" />
+        <path d="M90 400 H110 M100 390 V410" stroke="#e5912f" stroke-width="1.2" stroke-opacity="0.3" />
+      </svg>
+
+      <!-- Minimal Geometric Plus Markers -->
+      <div class="bm-env-plus bm-env-plus-1">+</div>
+      <div class="bm-env-plus bm-env-plus-2">+</div>
+      <div class="bm-env-plus bm-env-plus-3">+</div>
+    </div>
+
     <div class="theme-padding">
       
       <!-- Top Title & Description Header -->
@@ -67,7 +106,12 @@ $utm = "yes";
           <span class="section-kicker-text">SUSTAINABLE MARITIME RECYCLING</span>
         </div>
         <div class="section-title">
-          <h2 class="bm-env-main-heading">We value <span class="bm-env-highlight">our Environment</span></h2>
+          <h2 class="bm-env-main-heading">
+            <span class="bm-word-mask"><span class="bm-word-inner">We</span></span>
+            <span class="bm-word-mask"><span class="bm-word-inner">value</span></span>
+            <span class="bm-word-mask"><span class="bm-word-inner bm-env-highlight">our</span></span>
+            <span class="bm-word-mask"><span class="bm-word-inner bm-env-highlight">Environment</span></span>
+          </h2>
         </div>
         <p class="bm-env-main-desc">
           By accomplishing <strong>SOC for HKC, COC for EU SRR from Class NK and AP-Moller Maersk RSRS Compliance</strong>, Baijnath Melaram has made a critical stride towards moving up to the perfect Green Ship Recycling Yard.
@@ -82,6 +126,8 @@ $utm = "yes";
           <div class="bm-env-card-grid">
             <div class="bm-env-card-content">
               <div class="bm-env-card-meta">
+                <span class="bm-env-card-index">01</span>
+                <span class="bm-env-card-dot">&bull;</span>
                 <span class="bm-env-card-tag">Containment &amp; Clean Zone</span>
               </div>
               <h3 class="bm-env-card-title">Zero Intertidal Spillage</h3>
@@ -98,6 +144,8 @@ $utm = "yes";
           <div class="bm-env-card-grid">
             <div class="bm-env-card-content">
               <div class="bm-env-card-meta">
+                <span class="bm-env-card-index">02</span>
+                <span class="bm-env-card-dot">&bull;</span>
                 <span class="bm-env-card-tag">Yard Infrastructure</span>
               </div>
               <h3 class="bm-env-card-title">Impermeable Floor</h3>
@@ -114,6 +162,8 @@ $utm = "yes";
           <div class="bm-env-card-grid">
             <div class="bm-env-card-content">
               <div class="bm-env-card-meta">
+                <span class="bm-env-card-index">03</span>
+                <span class="bm-env-card-dot">&bull;</span>
                 <span class="bm-env-card-tag">Marine Protection</span>
               </div>
               <h3 class="bm-env-card-title">Metal Slag Collector</h3>
@@ -130,6 +180,8 @@ $utm = "yes";
           <div class="bm-env-card-grid">
             <div class="bm-env-card-content">
               <div class="bm-env-card-meta">
+                <span class="bm-env-card-index">04</span>
+                <span class="bm-env-card-dot">&bull;</span>
                 <span class="bm-env-card-tag">3rd Party Audits</span>
               </div>
               <h3 class="bm-env-card-title">Environmental Impact Assessment</h3>
@@ -146,6 +198,8 @@ $utm = "yes";
           <div class="bm-env-card-grid">
             <div class="bm-env-card-content">
               <div class="bm-env-card-meta">
+                <span class="bm-env-card-index">05</span>
+                <span class="bm-env-card-dot">&bull;</span>
                 <span class="bm-env-card-tag">Heavy-Duty Operations</span>
               </div>
               <h3 class="bm-env-card-title">100% lifting</h3>
@@ -163,6 +217,39 @@ $utm = "yes";
 
   <!-- We Value Our Worker's Welfare Section (With Matching Header) -->
   <section id="section-welfare" class="section section-welfare">
+    
+    <!-- Minimal Background Design Elements -->
+    <div class="bm-welfare-bg-decor" aria-hidden="true">
+      <!-- Ambient Atmospheric Light Blooms -->
+      <div class="bm-welfare-glow bm-welfare-glow-1"></div>
+      <div class="bm-welfare-glow bm-welfare-glow-2"></div>
+      <div class="bm-welfare-glow bm-welfare-glow-3"></div>
+
+      <!-- Architectural Dot Matrix Grid with Center Radial Fade -->
+      <div class="bm-welfare-dot-grid"></div>
+
+      <!-- Top-Left Flowing Welfare Contour Waves -->
+      <svg class="bm-welfare-contour bm-welfare-contour-top" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 80 C120 40, 240 120, 360 80 C480 40, 540 140, 600 120" stroke="#e5912f" stroke-width="1.2" stroke-opacity="0.14" stroke-dasharray="6 4" />
+        <path d="M0 160 C140 120, 260 200, 390 160 C500 120, 560 210, 600 190" stroke="#e5912f" stroke-width="1" stroke-opacity="0.09" />
+        <path d="M0 240 C160 200, 280 270, 420 240 C520 210, 570 290, 600 270" stroke="#0284c7" stroke-width="1" stroke-opacity="0.08" />
+      </svg>
+
+      <!-- Bottom-Right Human-Centric Compass Arc & Ripple -->
+      <svg class="bm-welfare-contour bm-welfare-contour-bottom" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="400" cy="400" r="140" stroke="#64748b" stroke-width="1" stroke-opacity="0.06" stroke-dasharray="4 6" />
+        <circle cx="400" cy="400" r="240" stroke="#e5912f" stroke-width="1" stroke-opacity="0.08" />
+        <circle cx="400" cy="400" r="340" stroke="#0284c7" stroke-width="1" stroke-opacity="0.05" />
+        <path d="M100 500 C180 380, 300 420, 420 340 C460 310, 480 320, 500 300" stroke="#e5912f" stroke-width="1.2" stroke-opacity="0.1" stroke-dasharray="5 5" />
+        <path d="M390 400 H410 M400 390 V410" stroke="#e5912f" stroke-width="1.2" stroke-opacity="0.3" />
+      </svg>
+
+      <!-- Minimal Geometric Plus Markers -->
+      <div class="bm-welfare-plus bm-welfare-plus-1">+</div>
+      <div class="bm-welfare-plus bm-welfare-plus-2">+</div>
+      <div class="bm-welfare-plus bm-welfare-plus-3">+</div>
+    </div>
+
     <div class="theme-padding">
       
       <!-- Top Title & Description Header (Matching We value our Environment) -->
@@ -172,135 +259,172 @@ $utm = "yes";
           <span class="section-kicker-text">WORKFORCE EMPOWERMENT &amp; WELFARE</span>
         </div>
         <div class="section-title">
-          <h2 class="bm-env-main-heading">We value <span class="bm-env-highlight">our Worker's Welfare</span></h2>
+          <h2 class="bm-env-main-heading">
+            <span class="bm-word-mask"><span class="bm-word-inner">We</span></span>
+            <span class="bm-word-mask"><span class="bm-word-inner">value</span></span>
+            <span class="bm-word-mask"><span class="bm-word-inner bm-env-highlight">our</span></span>
+            <span class="bm-word-mask"><span class="bm-word-inner bm-env-highlight">Worker's</span></span>
+            <span class="bm-word-mask"><span class="bm-word-inner bm-env-highlight">Welfare</span></span>
+          </h2>
         </div>
         <p class="bm-env-main-desc">
           At our Baijnath Melaram Ship Recycling Yard, we deeply value the welfare of our workers at the ship recycling yard. Ensuring their well-being is our top priority. <span class="bm-welfare-line-break"><strong>Our commitment to our workers' welfare is integral to our organisation, as their satisfaction directly contributes to our overall success.</strong></span>
         </p>
       </div>
 
-      <div class="bm-welfare-cards-grid-v3">
+      <!-- Worker's Welfare Carousel Slider (Matching Reference Design) -->
+      <div class="welfare-slider-wrap">
+        <div id="welfare-slider" class="splide welfare-slider" aria-label="Worker's Welfare Carousel">
+          <div class="splide__track">
+            <ul class="splide__list">
 
-        <!-- Card 1: Medical Facility -->
-        <div class="bm-welfare-tilt-card">
-          <div class="bm-welfare-card-glow"></div>
-          <div class="bm-welfare-card-inner">
-            <div class="bm-welfare-card-body">
-              <h3 class="bm-welfare-card-title">Medical Facility</h3>
-              <p class="bm-welfare-card-desc">First Aid Room, Ambulance and First Aid Kits in case of Emergencies.</p>
-            </div>
-            <div class="bm-welfare-card-media">
-              <img src="<?php echo $imagesurl; ?>greenship-recycling/workers-welfare.jpg" alt="Medical Facility - Baijnath Melaram" class="bm-welfare-card-img" loading="lazy" />
-              <div class="bm-welfare-media-overlay"></div>
-            </div>
+              <!-- Slide 1: Medical Facility -->
+              <li class="splide__slide">
+                <div class="bm-welfare-slide-card">
+                  <div class="bm-welfare-slide-top">
+                    <div class="bm-welfare-slide-header">
+                      <span class="bm-welfare-slide-index">01</span>
+                      <h3 class="bm-welfare-slide-title">Medical Facility</h3>
+                    </div>
+                    <p class="bm-welfare-slide-desc">First Aid Room, Ambulance and First Aid Kits ready in case of emergencies.</p>
+                  </div>
+                  <div class="bm-welfare-slide-media">
+                    <img src="<?php echo $imagesurl; ?>greenship-recycling/workers-welfare.jpg" alt="Medical Facility - Baijnath Melaram" class="bm-welfare-slide-img" loading="lazy" />
+                  </div>
+                </div>
+              </li>
+
+              <!-- Slide 2: Policies and Agreements -->
+              <li class="splide__slide">
+                <div class="bm-welfare-slide-card">
+                  <div class="bm-welfare-slide-top">
+                    <div class="bm-welfare-slide-header">
+                      <span class="bm-welfare-slide-index">02</span>
+                      <h3 class="bm-welfare-slide-title">Policies and Agreements</h3>
+                    </div>
+                    <p class="bm-welfare-slide-desc">The yard manager ensures workers complete CMB training with certified credentials.</p>
+                  </div>
+                  <div class="bm-welfare-slide-media">
+                    <img src="<?php echo $imagesurl; ?>greenship-recycling/policy-training.jpg" alt="Policies and Agreements" class="bm-welfare-slide-img" loading="lazy" />
+                  </div>
+                </div>
+              </li>
+
+              <!-- Slide 3: Inward & Exit Forms -->
+              <li class="splide__slide">
+                <div class="bm-welfare-slide-card">
+                  <div class="bm-welfare-slide-top">
+                    <div class="bm-welfare-slide-header">
+                      <span class="bm-welfare-slide-index">03</span>
+                      <h3 class="bm-welfare-slide-title">Inward &amp; Exit Forms</h3>
+                    </div>
+                    <p class="bm-welfare-slide-desc">Clear departure processes with structured resignation letters and final exit forms.</p>
+                  </div>
+                  <div class="bm-welfare-slide-media">
+                    <img src="<?php echo $imagesurl; ?>greenship-recycling/our-yard.jpg" alt="Inward and Exit Forms" class="bm-welfare-slide-img" loading="lazy" />
+                  </div>
+                </div>
+              </li>
+
+              <!-- Slide 4: Induction of Workers -->
+              <li class="splide__slide">
+                <div class="bm-welfare-slide-card">
+                  <div class="bm-welfare-slide-top">
+                    <div class="bm-welfare-slide-header">
+                      <span class="bm-welfare-slide-index">04</span>
+                      <h3 class="bm-welfare-slide-title">Induction of Workers</h3>
+                    </div>
+                    <p class="bm-welfare-slide-desc">Comprehensive mandatory safety induction provided before yard operations begin.</p>
+                  </div>
+                  <div class="bm-welfare-slide-media">
+                    <img src="<?php echo $imagesurl; ?>greenship-recycling/safety-standards.jpg" alt="Induction of Workers" class="bm-welfare-slide-img" loading="lazy" />
+                  </div>
+                </div>
+              </li>
+
+              <!-- Slide 5: Issuing Certified PPE -->
+              <li class="splide__slide">
+                <div class="bm-welfare-slide-card">
+                  <div class="bm-welfare-slide-top">
+                    <div class="bm-welfare-slide-header">
+                      <span class="bm-welfare-slide-index">05</span>
+                      <h3 class="bm-welfare-slide-title">Issuing Certified PPE</h3>
+                    </div>
+                    <p class="bm-welfare-slide-desc">Every worker receives complete NEBOSH-approved personal protective equipment.</p>
+                  </div>
+                  <div class="bm-welfare-slide-media">
+                    <img src="<?php echo $imagesurl; ?>greenship-recycling/workers-welfare-cage.jpg" alt="Issuing Certified PPE" class="bm-welfare-slide-img" loading="lazy" />
+                  </div>
+                </div>
+              </li>
+
+              <!-- Slide 6: Modern Dormitory -->
+              <li class="splide__slide">
+                <div class="bm-welfare-slide-card">
+                  <div class="bm-welfare-slide-top">
+                    <div class="bm-welfare-slide-header">
+                      <span class="bm-welfare-slide-index">06</span>
+                      <h3 class="bm-welfare-slide-title">Modern Dormitory</h3>
+                    </div>
+                    <p class="bm-welfare-slide-desc">Clean living facilities fully adhering to international ILO standards.</p>
+                  </div>
+                  <div class="bm-welfare-slide-media">
+                    <img src="<?php echo $imagesurl; ?>banner/showcase-tech.jpg" alt="Modern Dormitory" class="bm-welfare-slide-img" loading="lazy" />
+                  </div>
+                </div>
+              </li>
+
+              <!-- Slide 7: Dedicated Transport -->
+              <li class="splide__slide">
+                <div class="bm-welfare-slide-card">
+                  <div class="bm-welfare-slide-top">
+                    <div class="bm-welfare-slide-header">
+                      <span class="bm-welfare-slide-index">07</span>
+                      <h3 class="bm-welfare-slide-title">Dedicated Transport</h3>
+                    </div>
+                    <p class="bm-welfare-slide-desc">Daily bus service for workers traveling safely between dormitory and yard.</p>
+                  </div>
+                  <div class="bm-welfare-slide-media">
+                    <img src="<?php echo $imagesurl; ?>greenship-recycling/environment-green.jpg" alt="Dedicated Transport" class="bm-welfare-slide-img" loading="lazy" />
+                  </div>
+                </div>
+              </li>
+
+              <!-- Slide 8: Emergency Preparedness -->
+              <li class="splide__slide">
+                <div class="bm-welfare-slide-card">
+                  <div class="bm-welfare-slide-top">
+                    <div class="bm-welfare-slide-header">
+                      <span class="bm-welfare-slide-index">08</span>
+                      <h3 class="bm-welfare-slide-title">Emergency Preparedness</h3>
+                    </div>
+                    <p class="bm-welfare-slide-desc">Fire alarms, evacuation plans, emergency lights and muster points strategically placed.</p>
+                  </div>
+                  <div class="bm-welfare-slide-media">
+                    <img src="<?php echo $imagesurl; ?>banner/showcase-steel.jpg" alt="Emergency Preparedness" class="bm-welfare-slide-img" loading="lazy" />
+                  </div>
+                </div>
+              </li>
+
+            </ul>
           </div>
         </div>
 
-        <!-- Card 2: Policies and Agreements -->
-        <div class="bm-welfare-tilt-card">
-          <div class="bm-welfare-card-glow"></div>
-          <div class="bm-welfare-card-inner">
-            <div class="bm-welfare-card-body">
-              <h3 class="bm-welfare-card-title">Policies and Agreements</h3>
-              <p class="bm-welfare-card-desc">The yard manager will ensure that the worker has undergone training at CMB as per his designation and possesses a GMB Certificate.</p>
-            </div>
-            <div class="bm-welfare-card-media">
-              <img src="<?php echo $imagesurl; ?>greenship-recycling/policy-training.jpg" alt="Policies and Agreements" class="bm-welfare-card-img" loading="lazy" />
-              <div class="bm-welfare-media-overlay"></div>
-            </div>
-          </div>
+        <!-- Centered Navigation Arrows (Reference Design Match) -->
+        <div class="bm-welfare-slider-nav">
+          <button type="button" class="bm-welfare-nav-arrow bm-welfare-nav-arrow--prev" aria-label="Previous Slide">
+            <svg width="34" height="20" viewBox="0 0 34 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="32" y1="10" x2="3" y2="10"></line>
+              <polyline points="11 3 3 10 11 17"></polyline>
+            </svg>
+          </button>
+          <button type="button" class="bm-welfare-nav-arrow bm-welfare-nav-arrow--next" aria-label="Next Slide">
+            <svg width="34" height="20" viewBox="0 0 34 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="2" y1="10" x2="31" y2="10"></line>
+              <polyline points="23 3 31 10 23 17"></polyline>
+            </svg>
+          </button>
         </div>
-
-        <!-- Card 3: Inward/Exit forms -->
-        <div class="bm-welfare-tilt-card">
-          <div class="bm-welfare-card-glow"></div>
-          <div class="bm-welfare-card-inner">
-            <div class="bm-welfare-card-body">
-              <h3 class="bm-welfare-card-title">Inward/Exit forms</h3>
-              <p class="bm-welfare-card-desc">If the worker wants to leave, he has to fill resignation letter and get the full and final exit form.</p>
-            </div>
-            <div class="bm-welfare-card-media">
-              <img src="<?php echo $imagesurl; ?>greenship-recycling/our-yard.jpg" alt="Inward/Exit forms" class="bm-welfare-card-img" loading="lazy" />
-              <div class="bm-welfare-media-overlay"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4: Induction of Workers -->
-        <div class="bm-welfare-tilt-card">
-          <div class="bm-welfare-card-glow"></div>
-          <div class="bm-welfare-card-inner">
-            <div class="bm-welfare-card-body">
-              <h3 class="bm-welfare-card-title">Induction of Workers</h3>
-              <p class="bm-welfare-card-desc">Workers are provided with induction training before they start working in the yard.</p>
-            </div>
-            <div class="bm-welfare-card-media">
-              <img src="<?php echo $imagesurl; ?>greenship-recycling/safety-standards.jpg" alt="Induction of Workers" class="bm-welfare-card-img" loading="lazy" />
-              <div class="bm-welfare-media-overlay"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 5: Issuing PPE to Workers -->
-        <div class="bm-welfare-tilt-card">
-          <div class="bm-welfare-card-glow"></div>
-          <div class="bm-welfare-card-inner">
-            <div class="bm-welfare-card-body">
-              <h3 class="bm-welfare-card-title">Issuing PPE to Workers</h3>
-              <p class="bm-welfare-card-desc">After induction as well as the appointment, all workers are handed proper NEBOSH-approved PPE.</p>
-            </div>
-            <div class="bm-welfare-card-media">
-              <img src="<?php echo $imagesurl; ?>greenship-recycling/workers-welfare-cage.jpg" alt="Issuing PPE to Workers" class="bm-welfare-card-img" loading="lazy" />
-              <div class="bm-welfare-media-overlay"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 6: Dormitory -->
-        <div class="bm-welfare-tilt-card">
-          <div class="bm-welfare-card-glow"></div>
-          <div class="bm-welfare-card-inner">
-            <div class="bm-welfare-card-body">
-              <h3 class="bm-welfare-card-title">Dormitory</h3>
-              <p class="bm-welfare-card-desc">A dormitory, fulfilling all ILO Standards, has been provided for all the workers working for the organisation.</p>
-            </div>
-            <div class="bm-welfare-card-media">
-              <img src="<?php echo $imagesurl; ?>banner/showcase-tech.jpg" alt="Dormitory" class="bm-welfare-card-img" loading="lazy" />
-              <div class="bm-welfare-media-overlay"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 7: Transport -->
-        <div class="bm-welfare-tilt-card">
-          <div class="bm-welfare-card-glow"></div>
-          <div class="bm-welfare-card-inner">
-            <div class="bm-welfare-card-body">
-              <h3 class="bm-welfare-card-title">Transport</h3>
-              <p class="bm-welfare-card-desc">Bus Service has been provided for all the workers staying in the dormitory to travel to and fro from the Yard.</p>
-            </div>
-            <div class="bm-welfare-card-media">
-              <img src="<?php echo $imagesurl; ?>greenship-recycling/environment-green.jpg" alt="Transport" class="bm-welfare-card-img" loading="lazy" />
-              <div class="bm-welfare-media-overlay"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 8: Emergency Preparedness for Dormitory -->
-        <div class="bm-welfare-tilt-card">
-          <div class="bm-welfare-card-glow"></div>
-          <div class="bm-welfare-card-inner">
-            <div class="bm-welfare-card-body">
-              <h3 class="bm-welfare-card-title">Emergency Preparedness for Dormitory</h3>
-              <p class="bm-welfare-card-desc">Fire Alarms are placed to intimate others. Evacuation Plan, Emergency lights, Muster point and Emergency exits strategically placed.</p>
-            </div>
-            <div class="bm-welfare-card-media">
-              <img src="<?php echo $imagesurl; ?>banner/showcase-steel.jpg" alt="Emergency Preparedness for Dormitory" class="bm-welfare-card-img" loading="lazy" />
-              <div class="bm-welfare-media-overlay"></div>
-            </div>
-          </div>
-        </div>
-
       </div>
 
     </div>
@@ -314,9 +438,14 @@ $utm = "yes";
         <div class="section-kicker is-centered">
           <span class="section-kicker-line"></span>
           <span class="section-kicker-text">SAFETY PROTOCOLS &amp; COMPLIANCE</span>
+          <span class="section-kicker-line"></span>
         </div>
         <div class="section-title">
-          <h2 class="safety-main-heading">We value <span class="text-orange">Safety</span></h2>
+          <h2 class="safety-main-heading">
+            <span class="bm-word-mask"><span class="bm-word-inner">We</span></span>
+            <span class="bm-word-mask"><span class="bm-word-inner">value</span></span>
+            <span class="bm-word-mask"><span class="bm-word-inner text-orange">Safety</span></span>
+          </h2>
         </div>
 
         <p class="safety-lead-desc">
@@ -419,119 +548,247 @@ $utm = "yes";
     </div>
   </section>
 
-  <!-- Policy and Training Section (Wallem Split Sticky Timeline Pattern) -->
-  <section id="section-policy" class="section section-policy">
+  <!-- ==========================================================================
+       [COMMENTED OUT] Policy and Training Section - Option 1
+       ========================================================================== -->
+  <?php /*
+  <section id="section-policy-opt1" class="section section-policy">
     <div class="theme-padding">
-      <div class="policy-wallem-wrap">
-        
-        <!-- Left Column: Sticky Showcase Card -->
-        <div class="policy-sticky-card">
-          <div class="policy-sticky-card-inner">
-            <div class="policy-sticky-media">
-              <img src="<?php echo $imagesurl; ?>greenship-recycling/policy-training.jpg" alt="Policy and Training - Baijnath Melaram" class="policy-sticky-img" />
-              <div class="policy-sticky-media-overlay"></div>
+      
+      <!-- Top Title & Description Header -->
+      <div class="bm-env-header bm-policy-header">
+        <div class="section-kicker">
+          <span class="section-kicker-line"></span>
+          <span class="section-kicker-text">POLICY &amp; COMPLIANCE</span>
+        </div>
+        <div class="section-title">
+          <h2 class="bm-env-main-heading">
+            <span class="bm-word-mask"><span class="bm-word-inner">Policy</span></span>
+            <span class="bm-word-mask"><span class="bm-word-inner">and</span></span>
+            <span class="bm-word-mask"><span class="bm-word-inner bm-env-highlight">Training</span></span>
+          </h2>
+        </div>
+        <p class="bm-env-main-desc">
+          Fostering an ethical, transparent, and legally safeguarded workplace through strict compliance, international maritime conventions, and continuous workforce empowerment at Baijnath Melaram.
+        </p>
+      </div>
+
+      <!-- 6 Policy Cards in Worker's Welfare Style (Balanced 3-Column Grid) -->
+      <div class="bm-policy-cards-grid">
+
+        <!-- Card 1: 200% over time -->
+        <div class="bm-welfare-slide-card bm-policy-card">
+          <div class="bm-welfare-slide-top">
+            <div class="bm-welfare-slide-header">
+              <h3 class="bm-welfare-slide-title">200% over time</h3>
             </div>
-            <div class="policy-sticky-body">
-              <div class="section-kicker">
-                <span class="section-kicker-line"></span>
-                <span class="section-kicker-text">POLICY &amp; COMPLIANCE</span>
-              </div>
-              <h2 class="policy-sticky-title">Policy and <span class="policy-highlight">Training</span></h2>
-              <p class="policy-sticky-desc">
-                Fostering an ethical, transparent, and legally safeguarded workplace through strict compliance, international maritime conventions, and continuous workforce empowerment at Baijnath Melaram.
-              </p>
-            </div>
+            <p class="bm-welfare-slide-desc">“200% over time” means working or earning twice the usual rate during overtime or surpassing expectations with exceptional effort.</p>
+          </div>
+          <div class="bm-welfare-slide-media">
+            <img src="<?php echo $imagesurl; ?>greenship-recycling/policy-training.jpg" alt="200% over time - Baijnath Melaram" class="bm-welfare-slide-img" loading="lazy" />
           </div>
         </div>
 
-        <!-- Right Column: Scrolling Cards with Connected Progress Timeline -->
-        <div class="policy-scroll-col">
-          <div class="policy-timeline-container">
-            <!-- Vertical Timeline Tracker Line -->
-            <div class="policy-timeline-track" aria-hidden="true">
-              <div class="policy-timeline-fill"></div>
+        <!-- Card 2: Employee leave benefits -->
+        <div class="bm-welfare-slide-card bm-policy-card">
+          <div class="bm-welfare-slide-top">
+            <div class="bm-welfare-slide-header">
+              <h3 class="bm-welfare-slide-title">Employee leave benefits</h3>
             </div>
+            <p class="bm-welfare-slide-desc">Employee leave benefits are provisions that allow employees to take time off work for personal reasons, vacations, illness, or family obligations.</p>
+          </div>
+          <div class="bm-welfare-slide-media">
+            <img src="<?php echo $imagesurl; ?>greenship-recycling/workers-welfare.jpg" alt="Employee leave benefits - Baijnath Melaram" class="bm-welfare-slide-img" loading="lazy" />
+          </div>
+        </div>
 
-            <!-- List of Policy Step Cards -->
-            <div class="policy-step-cards-list">
-
-              <!-- Card 1 -->
-              <div class="policy-step-card is-active" data-step="1">
-                <div class="policy-timeline-node">
-                  <div class="policy-node-ring"></div>
-                  <div class="policy-node-dot"></div>
-                </div>
-                <div class="policy-card-box">
-                  <h3 class="policy-step-title">200% over time</h3>
-                  <p class="policy-step-desc">“200% over time” means working or earning twice the usual rate during overtime or surpassing expectations with exceptional effort.</p>
-                </div>
-              </div>
-
-              <!-- Card 2 -->
-              <div class="policy-step-card" data-step="2">
-                <div class="policy-timeline-node">
-                  <div class="policy-node-ring"></div>
-                  <div class="policy-node-dot"></div>
-                </div>
-                <div class="policy-card-box">
-                  <h3 class="policy-step-title">Employee leave benefits</h3>
-                  <p class="policy-step-desc">Employee leave benefits are provisions that allow employees to take time off work for personal reasons, such as vacations, illness, or family obligations, ensuring work-life balance and job security.</p>
-                </div>
-              </div>
-
-              <!-- Card 3 -->
-              <div class="policy-step-card" data-step="3">
-                <div class="policy-timeline-node">
-                  <div class="policy-node-ring"></div>
-                  <div class="policy-node-dot"></div>
-                </div>
-                <div class="policy-card-box">
-                  <h3 class="policy-step-title">Employee provident fund</h3>
-                  <p class="policy-step-desc">Employee Provident Fund (EPF) is a government-mandated savings scheme where employees and employers contribute regularly. The funds accumulate with interest and provide employees financial security and retirement benefits.</p>
-                </div>
-              </div>
-
-              <!-- Card 4 -->
-              <div class="policy-step-card" data-step="4">
-                <div class="policy-timeline-node">
-                  <div class="policy-node-ring"></div>
-                  <div class="policy-node-dot"></div>
-                </div>
-                <div class="policy-card-box">
-                  <h3 class="policy-step-title">Weekly off (6-W, 1-O)</h3>
-                  <p class="policy-step-desc">All workers enjoy a weekly off, ensuring work-life balance and promoting employee well-being.</p>
-                </div>
-              </div>
-
-              <!-- Card 5 -->
-              <div class="policy-step-card" data-step="5">
-                <div class="policy-timeline-node">
-                  <div class="policy-node-ring"></div>
-                  <div class="policy-node-dot"></div>
-                </div>
-                <div class="policy-card-box">
-                  <h3 class="policy-step-title">Zero child labour</h3>
-                  <p class="policy-step-desc">We are firmly against child labour in our yard, promoting a safe and ethical work environment.</p>
-                </div>
-              </div>
-
-              <!-- Card 6 -->
-              <div class="policy-step-card" data-step="6">
-                <div class="policy-timeline-node">
-                  <div class="policy-node-ring"></div>
-                  <div class="policy-node-dot"></div>
-                </div>
-                <div class="policy-card-box">
-                  <h3 class="policy-step-title">Worker's needs and complaints</h3>
-                  <p class="policy-step-desc">Worker's committees, formed through open elections, connect management, HSE, and workers to improve the working environment. They meet monthly, addressing suggestions and complaints from the yard and dormitory to find solutions.</p>
-                </div>
-              </div>
-
+        <!-- Card 3: Employee provident fund -->
+        <div class="bm-welfare-slide-card bm-policy-card">
+          <div class="bm-welfare-slide-top">
+            <div class="bm-welfare-slide-header">
+              <h3 class="bm-welfare-slide-title">Employee provident fund</h3>
             </div>
+            <p class="bm-welfare-slide-desc">Employee Provident Fund (EPF) is a government-mandated savings scheme ensuring continuous financial security and retirement benefits.</p>
+          </div>
+          <div class="bm-welfare-slide-media">
+            <img src="<?php echo $imagesurl; ?>greenship-recycling/safety-standards.jpg" alt="Employee provident fund - Baijnath Melaram" class="bm-welfare-slide-img" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Card 4: Weekly off (6-W, 1-O) -->
+        <div class="bm-welfare-slide-card bm-policy-card">
+          <div class="bm-welfare-slide-top">
+            <div class="bm-welfare-slide-header">
+              <h3 class="bm-welfare-slide-title">Weekly off (6-W, 1-O)</h3>
+            </div>
+            <p class="bm-welfare-slide-desc">All workers enjoy a weekly off, ensuring optimal work-life balance, adequate rest, and promoting holistic employee well-being.</p>
+          </div>
+          <div class="bm-welfare-slide-media">
+            <img src="<?php echo $imagesurl; ?>greenship-recycling/our-yard.jpg" alt="Weekly off (6-W, 1-O) - Baijnath Melaram" class="bm-welfare-slide-img" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Card 5: Zero child labour -->
+        <div class="bm-welfare-slide-card bm-policy-card">
+          <div class="bm-welfare-slide-top">
+            <div class="bm-welfare-slide-header">
+              <h3 class="bm-welfare-slide-title">Zero child labour</h3>
+            </div>
+            <p class="bm-welfare-slide-desc">We are firmly committed against child labour in our yard, maintaining strict age verification and promoting a safe, ethical work environment.</p>
+          </div>
+          <div class="bm-welfare-slide-media">
+            <img src="<?php echo $imagesurl; ?>greenship-recycling/environment-green.jpg" alt="Zero child labour - Baijnath Melaram" class="bm-welfare-slide-img" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Card 6: Worker's needs & complaints -->
+        <div class="bm-welfare-slide-card bm-policy-card">
+          <div class="bm-welfare-slide-top">
+            <div class="bm-welfare-slide-header">
+              <h3 class="bm-welfare-slide-title">Worker's needs &amp; complaints</h3>
+            </div>
+            <p class="bm-welfare-slide-desc">Worker committees formed through open elections meet monthly with management and HSE, addressing suggestions and complaints transparently.</p>
+          </div>
+          <div class="bm-welfare-slide-media">
+            <img src="<?php echo $imagesurl; ?>greenship-recycling/workers-welfare-cage.jpg" alt="Worker's needs and complaints - Baijnath Melaram" class="bm-welfare-slide-img" loading="lazy" />
           </div>
         </div>
 
       </div>
+
+    </div>
+  </section>
+  */ ?>
+
+  <!-- ==========================================================================
+       Policy and Training Section (Architectural Staggered Layout)
+       ========================================================================== -->
+  <section id="section-policy" class="section section-policy section-policy-option2">
+    <div class="theme-padding">
+      
+      <!-- Header -->
+      <div class="bm-env-header bm-policy-header">
+        <div class="section-kicker">
+          <span class="section-kicker-line"></span>
+          <span class="section-kicker-text">POLICY &amp; COMPLIANCE</span>
+        </div>
+        <div class="section-title">
+          <h2 class="bm-env-main-heading">
+            <span class="bm-word-mask"><span class="bm-word-inner">Policy</span></span>
+            <span class="bm-word-mask"><span class="bm-word-inner">and</span></span>
+            <span class="bm-word-mask"><span class="bm-word-inner bm-env-highlight">Training</span></span>
+          </h2>
+        </div>
+        <p class="bm-env-main-desc">
+          Fostering an ethical, transparent, and legally safeguarded workplace through strict compliance, international maritime conventions, and continuous workforce empowerment at Baijnath Melaram.
+        </p>
+      </div>
+
+      <!-- Sarip Architectural Showcase: Top 3 Cards + Middle Image + Bottom 3 Cards -->
+      <div class="sarip-showcase-wrap">
+
+        <!-- Top 3 Staggered Cards (Almond - Orange - Almond) -->
+        <div class="sarip-cards-row sarip-cards-top">
+          
+          <!-- Card 1 (Almond) -->
+          <div class="sarip-box sarip-box-almond sarip-box-01">
+            <div class="sarip-box-top">
+              <span class="sarip-kicker">OVERTIME POLICY</span>
+              <p class="sarip-box-desc">“200% over time” means working or earning twice the usual rate during overtime or surpassing expectations with exceptional effort.</p>
+            </div>
+            <div class="sarip-box-bottom">
+              <div class="sarip-num-wrap">
+                <span class="sarip-num">200%</span>
+              </div>
+              <div class="sarip-num-label">Overtime Pay Rate</div>
+            </div>
+          </div>
+
+          <!-- Card 2 (Orange - Extended Down) -->
+          <div class="sarip-box sarip-box-orange sarip-box-02">
+            <div class="sarip-box-top">
+              <span class="sarip-kicker" style="color: #ffffff !important;">EMPLOYEE BENEFITS</span>
+              <p class="sarip-box-desc">Comprehensive leave provisions allowing employees to take time off work for personal reasons, vacations, illness, or family obligations.</p>
+            </div>
+            <div class="sarip-box-bottom">
+              <div class="sarip-num-wrap">
+                <span class="sarip-num">100%</span>
+              </div>
+              <div class="sarip-num-label">Paid Leave Provisions</div>
+            </div>
+          </div>
+
+          <!-- Card 3 (Almond - Elevated Up) -->
+          <div class="sarip-box sarip-box-almond sarip-box-03">
+            <div class="sarip-box-top">
+              <span class="sarip-kicker">SOCIAL SECURITY</span>
+              <p class="sarip-box-desc">Government-mandated savings scheme ensuring continuous financial security and retirement benefits for all yard workers.</p>
+            </div>
+            <div class="sarip-box-bottom">
+              <div class="sarip-num-wrap">
+                <span class="sarip-num">EPF+</span>
+              </div>
+              <div class="sarip-num-label">Provident Fund Guarantee</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Middle Full-Width Cinematic Yard Image -->
+        <div class="sarip-main-img-wrap">
+          <img src="<?php echo $imagesurl; ?>greenship-recycling/our-yard.jpg" alt="Baijnath Melaram Ship Recycling Yard" class="sarip-main-img" loading="lazy" />
+          <div class="sarip-img-overlay"></div>
+        </div>
+
+        <!-- Bottom 3 Staggered Cards (Orange - Almond - Orange) -->
+        <div class="sarip-cards-row sarip-cards-bottom">
+          
+          <!-- Card 4 (Orange - Extended into Image) -->
+          <div class="sarip-box sarip-box-orange sarip-box-04">
+            <div class="sarip-box-top">
+              <span class="sarip-kicker" style="color: #ffffff !important;">WORK-LIFE BALANCE</span>
+              <p class="sarip-box-desc">Guaranteed weekly rest day (6 days working, 1 day off) ensuring optimal physical recovery, rest, and holistic employee well-being.</p>
+            </div>
+            <div class="sarip-box-bottom">
+              <div class="sarip-num-wrap">
+                <span class="sarip-num">6:1</span>
+              </div>
+              <div class="sarip-num-label">Weekly Rest Schedule</div>
+            </div>
+          </div>
+
+          <!-- Card 5 (Almond - Lower Level) -->
+          <div class="sarip-box sarip-box-almond sarip-box-05">
+            <div class="sarip-box-top">
+              <span class="sarip-kicker">ETHICAL STANDARDS</span>
+              <p class="sarip-box-desc">Firm zero-tolerance commitment against child labour in our yard, maintaining strict age verification and ethical standards.</p>
+            </div>
+            <div class="sarip-box-bottom">
+              <div class="sarip-num-wrap">
+                <span class="sarip-num">0%</span>
+              </div>
+              <div class="sarip-num-label">Child Labour Tolerance</div>
+            </div>
+          </div>
+
+          <!-- Card 6 (Orange - Extended into Image) -->
+          <div class="sarip-box sarip-box-orange sarip-box-06">
+            <div class="sarip-box-top">
+              <span class="sarip-kicker" style="color: #ffffff !important;">WORKER COMMITTEE</span>
+              <p class="sarip-box-desc">Democratic worker committees meeting monthly with management and HSE, addressing suggestions and complaints transparently.</p>
+            </div>
+            <div class="sarip-box-bottom">
+              <div class="sarip-num-wrap">
+                <span class="sarip-num">24/7</span>
+              </div>
+              <div class="sarip-num-label">Grievance Redressal</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
   </section>
 
@@ -550,13 +807,17 @@ $utm = "yes";
       <!-- Centered Section Header Bar -->
       <div class="yard-header-wrap">
         <!-- Keyword above Title -->
-        <div class="section-kicker">
+        <div class="section-kicker is-centered">
           <span class="section-kicker-line"></span>
           <span class="section-kicker-text">FACILITY &amp; LOCATION</span>
+          <span class="section-kicker-line"></span>
         </div>
 
         <!-- Main Heading & Sub-motto -->
-        <h2 class="yard-main-heading">Our <span class="yard-highlight">Yard</span></h2>
+        <h2 class="yard-main-heading">
+          <span class="bm-word-mask"><span class="bm-word-inner">Our</span></span>
+          <span class="bm-word-mask"><span class="bm-word-inner yard-highlight">Yard</span></span>
+        </h2>
         <p class="yard-sub-motto">WHERE RESPONSIBLE RECYCLING BEGINS</p>
       </div>
 
@@ -624,16 +885,455 @@ $utm = "yes";
     </div>
   </section>
 
+
+
   <?php require_once $footer; ?>
   <?php require_once $footscripts; ?>
 
-  <!-- Interactive 3D Tilt & Spotlight Glow Script (Pure Vanilla JS) -->
+  <!-- GSAP ScrollTrigger & Interactive Experience Scripts (Strictly at End of Page) -->
   <script>
     (function() {
-      const isTouch = window.matchMedia('(pointer: coarse)').matches;
-      if (isTouch) return;
+      // 1. Accessibility: Check for reduced motion
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      // 1. Safety Cards Hover & Touch Reveal Interaction
+      // 2. Initialize GSAP & ScrollTrigger Animations
+      function initGreenshipAnimations() {
+        if (typeof gsap === "undefined") return;
+        if (typeof ScrollTrigger !== "undefined") {
+          gsap.registerPlugin(ScrollTrigger);
+        }
+
+        if (prefersReducedMotion) {
+          // If reduced motion is preferred, immediately ensure everything is visible
+          document.querySelectorAll('.banner-word-inner, .bm-word-inner').forEach(el => {
+            el.style.opacity = '1';
+            el.style.transform = 'none';
+          });
+          return;
+        }
+
+        /* ------------------------------------------------------------------------
+           A. Hero Banner Animation (On Load)
+        ------------------------------------------------------------------------ */
+        const banner = document.querySelector('#greenship-banner');
+        if (banner) {
+          const bannerImg = banner.querySelector('.greenship-banner-img');
+          const kicker = banner.querySelector('.section-kicker');
+          const bannerWords = banner.querySelectorAll('.banner-word-inner');
+
+          const heroTl = gsap.timeline({ delay: 0.15 });
+
+          if (bannerImg) {
+            heroTl.fromTo(bannerImg, {
+              scale: 1.08,
+              opacity: 0.75
+            }, {
+              scale: 1,
+              opacity: 1,
+              duration: 1.4,
+              ease: 'power2.out',
+              clearProps: 'transform'
+            }, 0);
+          }
+
+          if (kicker) {
+            heroTl.fromTo(kicker, {
+              y: 15,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.6,
+              ease: 'power2.out'
+            }, 0.1);
+          }
+
+          if (bannerWords.length) {
+            heroTl.fromTo(bannerWords, {
+              y: '115%',
+              opacity: 0
+            }, {
+              y: '0%',
+              opacity: 1,
+              duration: 0.95,
+              stagger: 0.07,
+              ease: 'power3.out'
+            }, 0.2);
+          }
+        }
+
+        /* ------------------------------------------------------------------------
+           B. Environment Section Animation
+        ------------------------------------------------------------------------ */
+        const envSec = document.querySelector('#section-environment');
+        if (envSec) {
+          const envKicker = envSec.querySelector('.section-kicker');
+          const envWords = envSec.querySelectorAll('.bm-word-inner');
+          const envDesc = envSec.querySelector('.bm-env-main-desc');
+          const envCards = envSec.querySelectorAll('.bm-env-sticky-card');
+
+          const envTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: envSec,
+              start: 'top 80%',
+              once: true
+            }
+          });
+
+          if (envKicker) {
+            envTl.fromTo(envKicker, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' }, 0);
+          }
+          if (envWords.length) {
+            envTl.fromTo(envWords, { y: '115%', opacity: 0 }, { y: '0%', opacity: 1, duration: 0.85, stagger: 0.06, ease: 'power3.out' }, 0.1);
+          }
+          if (envDesc) {
+            envTl.fromTo(envDesc, { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: 'power2.out' }, 0.25);
+          }
+
+          // Individual sticky card entrance
+          if (envCards.length) {
+            envCards.forEach((card) => {
+              gsap.fromTo(card, {
+                y: 50,
+                opacity: 0,
+                scale: 0.97
+              }, {
+                y: 0,
+                opacity: 1,
+                scale: 1,
+                duration: 0.8,
+                ease: 'power2.out',
+                clearProps: 'transform,opacity',
+                scrollTrigger: {
+                  trigger: card,
+                  start: 'top 86%',
+                  once: true
+                }
+              });
+            });
+          }
+        }
+
+        /* ------------------------------------------------------------------------
+           C. Worker's Welfare Section Animation
+        ------------------------------------------------------------------------ */
+        const welfareSec = document.querySelector('#section-welfare');
+        if (welfareSec) {
+          const welfareKicker = welfareSec.querySelector('.section-kicker');
+          const welfareWords = welfareSec.querySelectorAll('.bm-word-inner');
+          const welfareDesc = welfareSec.querySelector('.bm-env-main-desc');
+          const welfareSlider = welfareSec.querySelector('.welfare-slider-wrap');
+
+          const welfareTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: welfareSec,
+              start: 'top 80%',
+              once: true
+            }
+          });
+
+          if (welfareKicker) {
+            welfareTl.fromTo(welfareKicker, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' }, 0);
+          }
+          if (welfareWords.length) {
+            welfareTl.fromTo(welfareWords, { y: '115%', opacity: 0 }, { y: '0%', opacity: 1, duration: 0.85, stagger: 0.06, ease: 'power3.out' }, 0.1);
+          }
+          if (welfareDesc) {
+            welfareTl.fromTo(welfareDesc, { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: 'power2.out' }, 0.25);
+          }
+
+          if (welfareSlider) {
+            gsap.fromTo(welfareSlider, {
+              y: 40,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.85,
+              ease: 'power2.out',
+              clearProps: 'transform,opacity',
+              scrollTrigger: {
+                trigger: welfareSlider,
+                start: 'top 85%',
+                once: true
+              }
+            });
+          }
+        }
+
+        /* ------------------------------------------------------------------------
+           D. Safety Section Animation
+        ------------------------------------------------------------------------ */
+        const safetySec = document.querySelector('#section-safety');
+        if (safetySec) {
+          const safetyKicker = safetySec.querySelector('.section-kicker');
+          const safetyWords = safetySec.querySelectorAll('.bm-word-inner');
+          const safetyDesc = safetySec.querySelector('.safety-lead-desc');
+          const safetyCards = safetySec.querySelectorAll('.safety-reveal-card');
+
+          const safetyTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: safetySec,
+              start: 'top 80%',
+              once: true
+            }
+          });
+
+          if (safetyKicker) {
+            safetyTl.fromTo(safetyKicker, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' }, 0);
+          }
+          if (safetyWords.length) {
+            safetyTl.fromTo(safetyWords, { y: '115%', opacity: 0 }, { y: '0%', opacity: 1, duration: 0.85, stagger: 0.06, ease: 'power3.out' }, 0.1);
+          }
+          if (safetyDesc) {
+            safetyTl.fromTo(safetyDesc, { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: 'power2.out' }, 0.25);
+          }
+
+          if (safetyCards.length) {
+            gsap.fromTo(safetyCards, {
+              y: 35,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.7,
+              stagger: 0.06,
+              ease: 'power2.out',
+              clearProps: 'opacity',
+              scrollTrigger: {
+                trigger: '.safety-reveal-grid',
+                start: 'top 82%',
+                once: true
+              }
+            });
+          }
+        }
+
+        /* ------------------------------------------------------------------------
+           E. Policy and Training Section Animation
+        ------------------------------------------------------------------------ */
+        const policySec = document.querySelector('#section-policy');
+        if (policySec) {
+          const policyKicker = policySec.querySelector('.section-kicker');
+          const policyWords = policySec.querySelectorAll('.bm-word-inner');
+          const policyDesc = policySec.querySelector('.bm-env-main-desc');
+          const policyCards = policySec.querySelectorAll('.bm-policy-card');
+
+          const policyTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: policySec,
+              start: 'top 80%',
+              once: true
+            }
+          });
+
+          if (policyKicker) {
+            policyTl.fromTo(policyKicker, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' }, 0);
+          }
+          if (policyWords.length) {
+            policyTl.fromTo(policyWords, { y: '115%', opacity: 0 }, { y: '0%', opacity: 1, duration: 0.85, stagger: 0.06, ease: 'power3.out' }, 0.1);
+          }
+          if (policyDesc) {
+            policyTl.fromTo(policyDesc, { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: 'power2.out' }, 0.25);
+          }
+
+          if (policyCards.length) {
+            gsap.fromTo(policyCards, {
+              y: 40,
+              opacity: 0,
+              scale: 0.96
+            }, {
+              y: 0,
+              opacity: 1,
+              scale: 1,
+              duration: 0.75,
+              stagger: 0.08,
+              ease: 'power2.out',
+              clearProps: 'transform,opacity',
+              scrollTrigger: {
+                trigger: '.bm-policy-cards-grid',
+                start: 'top 82%',
+                once: true
+              }
+            });
+          }
+        }
+
+        /* ------------------------------------------------------------------------
+           E. Policy & Training Section (Sarip Staggered) Animation
+        ------------------------------------------------------------------------ */
+        const policyOpt2Sec = document.querySelector('.section-policy-option2') || document.querySelector('#section-policy');
+        if (policyOpt2Sec) {
+          const p2Kicker = policyOpt2Sec.querySelector('.section-kicker');
+          const p2Words = policyOpt2Sec.querySelectorAll('.bm-word-inner');
+          const p2Desc = policyOpt2Sec.querySelector('.bm-env-main-desc');
+          const topBoxes = policyOpt2Sec.querySelectorAll('.sarip-cards-top .sarip-box');
+          const bottomBoxes = policyOpt2Sec.querySelectorAll('.sarip-cards-bottom .sarip-box');
+          const mainImg = policyOpt2Sec.querySelector('.sarip-main-img');
+
+          const p2Tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: policyOpt2Sec,
+              start: 'top 80%',
+              once: true
+            }
+          });
+
+          if (p2Kicker) p2Tl.fromTo(p2Kicker, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' }, 0);
+          if (p2Words.length) p2Tl.fromTo(p2Words, { y: '115%', opacity: 0 }, { y: '0%', opacity: 1, duration: 0.85, stagger: 0.06, ease: 'power3.out' }, 0.1);
+          if (p2Desc) p2Tl.fromTo(p2Desc, { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: 'power2.out' }, 0.25);
+
+          if (topBoxes.length) {
+            gsap.fromTo(topBoxes, {
+              y: 45,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.8,
+              stagger: 0.1,
+              ease: 'power2.out',
+              clearProps: 'transform,opacity',
+              scrollTrigger: {
+                trigger: '.sarip-cards-top',
+                start: 'top 85%',
+                once: true
+              }
+            });
+          }
+
+          const mainImgWrap = policyOpt2Sec.querySelector('.sarip-main-img-wrap');
+          if (mainImgWrap && mainImg) {
+            /* Container entrance animation */
+            gsap.fromTo(mainImgWrap, {
+              opacity: 0,
+              y: 40,
+              scale: 0.97
+            }, {
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              duration: 1,
+              ease: 'power2.out',
+              scrollTrigger: {
+                trigger: mainImgWrap,
+                start: 'top 85%',
+                once: true
+              }
+            });
+
+            /* Continuous Parallax & Depth Zoom on Scroll - Zero Gap Safe */
+            gsap.fromTo(mainImg, {
+              scale: 1.12
+            }, {
+              scale: 1.0,
+              ease: 'none',
+              scrollTrigger: {
+                trigger: mainImgWrap,
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: 1.2
+              }
+            });
+          }
+
+          if (bottomBoxes.length) {
+            gsap.fromTo(bottomBoxes, {
+              y: 45,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.8,
+              stagger: 0.1,
+              ease: 'power2.out',
+              clearProps: 'transform,opacity',
+              scrollTrigger: {
+                trigger: '.sarip-cards-bottom',
+                start: 'top 85%',
+                once: true
+              }
+            });
+          }
+        }
+
+        /* ------------------------------------------------------------------------
+           F. Our Yard Section Animation
+        ------------------------------------------------------------------------ */
+        const yardSec = document.querySelector('#section-yard');
+        if (yardSec) {
+          const yardKicker = yardSec.querySelector('.section-kicker');
+          const yardWords = yardSec.querySelectorAll('.bm-word-inner');
+          const yardMotto = yardSec.querySelector('.yard-sub-motto');
+          const photoCard = yardSec.querySelector('.yard-photo-card-wrap');
+          const masterCard = yardSec.querySelector('.yard-light-master-card');
+
+          const yardTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: yardSec,
+              start: 'top 78%',
+              once: true
+            }
+          });
+
+          if (yardKicker) {
+            yardTl.fromTo(yardKicker, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' }, 0);
+          }
+          if (yardWords.length) {
+            yardTl.fromTo(yardWords, { y: '115%', opacity: 0 }, { y: '0%', opacity: 1, duration: 0.85, stagger: 0.06, ease: 'power3.out' }, 0.1);
+          }
+          if (yardMotto) {
+            yardTl.fromTo(yardMotto, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power2.out' }, 0.2);
+          }
+
+          if (photoCard) {
+            gsap.fromTo(photoCard, {
+              x: -45,
+              opacity: 0
+            }, {
+              x: 0,
+              opacity: 1,
+              duration: 0.9,
+              ease: 'power3.out',
+              clearProps: 'transform,opacity',
+              scrollTrigger: {
+                trigger: '.yard-showcase-grid',
+                start: 'top 82%',
+                once: true
+              }
+            });
+          }
+
+          if (masterCard) {
+            gsap.fromTo(masterCard, {
+              x: 45,
+              opacity: 0
+            }, {
+              x: 0,
+              opacity: 1,
+              duration: 0.9,
+              ease: 'power3.out',
+              clearProps: 'transform,opacity',
+              scrollTrigger: {
+                trigger: '.yard-showcase-grid',
+                start: 'top 82%',
+                once: true
+              }
+            });
+          }
+        }
+
+        // Refresh ScrollTrigger after elements settle
+        setTimeout(() => {
+          if (typeof ScrollTrigger !== "undefined") {
+            ScrollTrigger.refresh();
+          }
+        }, 150);
+      }
+
+      /* ------------------------------------------------------------------------
+         3. Safety Cards Hover & Touch Reveal Interaction
+      ------------------------------------------------------------------------ */
       const safetyCards = document.querySelectorAll('.safety-reveal-card');
       const safetyGrid = document.querySelector('.safety-reveal-grid');
 
@@ -644,7 +1344,6 @@ $utm = "yes";
             card.classList.add('is-active');
           });
 
-          // Touch device support
           card.addEventListener('click', () => {
             const wasActive = card.classList.contains('is-active');
             safetyCards.forEach(c => c.classList.remove('is-active'));
@@ -656,80 +1355,81 @@ $utm = "yes";
 
         if (safetyGrid) {
           safetyGrid.addEventListener('mouseleave', () => {
-            // Keep card 1 active on desktop mouse leave matching reference design
             safetyCards.forEach(c => c.classList.remove('is-active'));
             if (safetyCards[0]) safetyCards[0].classList.add('is-active');
           });
         }
       }
 
-      // 3. Policy and Training Wallem-Style Scroll Progress & Card Activation
-      const policySection = document.querySelector('#section-policy');
-      const policyCards = document.querySelectorAll('.policy-step-card');
-      const policyFill = document.querySelector('.policy-timeline-fill');
 
-      if (policySection && policyCards.length) {
-        let isPolicyTicking = false;
 
-        const updatePolicyTimeline = () => {
-          const viewportHeight = window.innerHeight;
-          const focusPoint = viewportHeight * 0.42;
+      /* ------------------------------------------------------------------------
+         4. Worker's Welfare Splide Slider Initialization (Reference Design)
+      ------------------------------------------------------------------------ */
+      function initWelfareSlider() {
+        const sliderEl = document.querySelector('#welfare-slider');
+        if (!sliderEl || typeof Splide === 'undefined') return;
 
-          let activeIndex = 0;
-          let minDistance = Infinity;
-
-          policyCards.forEach((card, index) => {
-            const rect = card.getBoundingClientRect();
-            const cardCenter = rect.top + (rect.height / 2);
-            const dist = Math.abs(cardCenter - focusPoint);
-
-            if (dist < minDistance && rect.bottom > 60 && rect.top < viewportHeight - 60) {
-              minDistance = dist;
-              activeIndex = index;
-            }
-          });
-
-          policyCards.forEach((card, index) => {
-            if (index === activeIndex) {
-              card.classList.add('is-active');
-            } else {
-              card.classList.remove('is-active');
-            }
-          });
-
-          // Update timeline fill height
-          if (policyFill) {
-            const trackContainer = document.querySelector('.policy-timeline-container');
-            const activeNode = policyCards[activeIndex].querySelector('.policy-timeline-node');
-            if (trackContainer && activeNode) {
-              const containerTop = trackContainer.getBoundingClientRect().top;
-              const activeNodeTop = activeNode.getBoundingClientRect().top;
-              const fillHeight = Math.max(16, (activeNodeTop - containerTop) + 21);
-              policyFill.style.height = `${fillHeight}px`;
+        const welfareSplide = new Splide('#welfare-slider', {
+          type: 'loop',
+          perPage: 3,
+          perMove: 1,
+          focus: 'center',
+          trimSpace: false,
+          gap: '30px',
+          padding: { left: 0, right: 0 },
+          arrows: false,
+          pagination: false,
+          speed: 650,
+          easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
+          breakpoints: {
+            1300: {
+              perPage: 3,
+              gap: '24px',
+              focus: 'center'
+            },
+            992: {
+              perPage: 2,
+              gap: '20px',
+              focus: 0
+            },
+            768: {
+              perPage: 1,
+              gap: '16px',
+              focus: 'center'
             }
           }
-
-          isPolicyTicking = false;
-        };
-
-        window.addEventListener('scroll', () => {
-          if (!isPolicyTicking) {
-            window.requestAnimationFrame(updatePolicyTimeline);
-            isPolicyTicking = true;
-          }
-        }, { passive: true });
-
-        // Click on node/card to smoothly scroll to focal center
-        policyCards.forEach((card) => {
-          card.addEventListener('click', () => {
-            const rect = card.getBoundingClientRect();
-            const targetY = window.pageYOffset + rect.top - (window.innerHeight * 0.28);
-            window.scrollTo({ top: targetY, behavior: 'smooth' });
-          });
         });
 
-        // Initial setup
-        updatePolicyTimeline();
+        welfareSplide.mount();
+
+        // Frevanta Interaction: Clicking any side card immediately slides it into center
+        welfareSplide.on('click', (slide) => {
+          if (slide && typeof slide.index === 'number') {
+            welfareSplide.go(slide.index);
+          }
+        });
+
+        const prevBtn = document.querySelector('.bm-welfare-nav-arrow--prev');
+        const nextBtn = document.querySelector('.bm-welfare-nav-arrow--next');
+
+        if (prevBtn) {
+          prevBtn.addEventListener('click', () => welfareSplide.go('<'));
+        }
+        if (nextBtn) {
+          nextBtn.addEventListener('click', () => welfareSplide.go('>'));
+        }
+      }
+
+      // Initialize all animations & sliders when document is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+          initGreenshipAnimations();
+          initWelfareSlider();
+        });
+      } else {
+        initGreenshipAnimations();
+        initWelfareSlider();
       }
     })();
   </script>

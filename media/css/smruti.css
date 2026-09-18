@@ -53,18 +53,37 @@ body#greenship-recycling,
   margin-bottom: 12px;
 }
 
-.section-kicker.is-centered {
-  display: inline-flex;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+.section-kicker.is-centered,
+.safety-header-wrap .section-kicker,
+.yard-header-wrap .section-kicker,
+.text-center .section-kicker,
+[class*="-header-wrap"].text-center .section-kicker {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
 }
 
 .section-kicker-line,
 .banner-tag-plus {
   display: inline-block;
-  width: 26px;
-  height: 2.5px;
+  width: 22px;
+  height: 2px;
+  background-color: #e5912f !important;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* Fallback: if centered kicker has only 1 line span in HTML, auto-render second dash on right */
+.section-kicker.is-centered:not(:has(.section-kicker-line ~ .section-kicker-line))::after,
+.yard-header-wrap .section-kicker:not(:has(.section-kicker-line ~ .section-kicker-line))::after {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 2px;
   background-color: #e5912f !important;
   border-radius: 2px;
   flex-shrink: 0;
@@ -73,20 +92,22 @@ body#greenship-recycling,
 .banner-tag-plus {
   font-size: 0 !important;
   line-height: 0 !important;
-  height: 2.5px !important;
+  height: 2px !important;
 }
 
 .section-kicker-text,
 .banner-tag-text,
+.yard-kicker-text,
 #greenship-recycling .section-kicker-text,
 #greenship-recycling .banner-tag-text,
+#greenship-recycling .yard-kicker-text,
 #greenship-recycling [class*="-kicker"] {
   font-family: 'Science Gothic', sans-serif !important;
   font-size: 12px !important;
   font-weight: 700 !important;
   letter-spacing: 0.12em !important;
   text-transform: uppercase !important;
-  color: #1e293b !important;
+  color: #475569 !important;
   line-height: 1 !important;
 }
 
@@ -152,6 +173,114 @@ body#greenship-recycling,
   padding: clamp(70px, 8vw, 115px) 0 clamp(40px, 5vw, 75px);
   overflow: visible !important; /* Critical for position: sticky to stack */
   box-sizing: border-box;
+}
+
+#section-environment > .theme-padding {
+  position: relative;
+  z-index: 2;
+}
+
+/* Minimal Background Decorative Elements */
+.bm-env-bg-decor {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Soft Ambient Blooms */
+.bm-env-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.bm-env-glow-1 {
+  top: 4%;
+  right: -6%;
+  width: clamp(300px, 34vw, 540px);
+  height: clamp(300px, 34vw, 540px);
+  background: radial-gradient(circle, rgba(229, 145, 47, 0.09) 0%, rgba(229, 145, 47, 0) 70%);
+}
+
+.bm-env-glow-2 {
+  top: 38%;
+  left: -8%;
+  width: clamp(320px, 38vw, 600px);
+  height: clamp(320px, 38vw, 600px);
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, rgba(16, 185, 129, 0) 70%);
+}
+
+.bm-env-glow-3 {
+  bottom: 8%;
+  right: -4%;
+  width: clamp(280px, 32vw, 500px);
+  height: clamp(280px, 32vw, 500px);
+  background: radial-gradient(circle, rgba(229, 145, 47, 0.07) 0%, rgba(229, 145, 47, 0) 70%);
+}
+
+/* Architectural Dot Matrix Pattern with Center Mask */
+.bm-env-dot-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(100, 116, 139, 0.13) 1.2px, transparent 1.2px);
+  background-size: 32px 32px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 35%, black 20%, transparent 80%);
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 35%, black 20%, transparent 80%);
+  opacity: 0.75;
+}
+
+/* Flowing Topographic & Maritime Contours */
+.bm-env-contour {
+  position: absolute;
+  pointer-events: none;
+}
+
+.bm-env-contour-top {
+  top: 1%;
+  right: 0;
+  width: clamp(320px, 40vw, 620px);
+  height: auto;
+  opacity: 0.85;
+}
+
+.bm-env-contour-bottom {
+  bottom: 4%;
+  left: 0;
+  width: clamp(300px, 36vw, 540px);
+  height: auto;
+  opacity: 0.8;
+}
+
+/* Minimal Geometric Plus Markers */
+.bm-env-plus {
+  position: absolute;
+  font-family: 'Fragment Mono', monospace;
+  font-size: 16px;
+  font-weight: 600;
+  color: #e5912f;
+  opacity: 0.28;
+  line-height: 1;
+  user-select: none;
+}
+
+.bm-env-plus-1 {
+  top: 6%;
+  left: clamp(16px, 3vw, 50px);
+}
+
+.bm-env-plus-2 {
+  top: 48%;
+  right: clamp(16px, 3.5vw, 60px);
+}
+
+.bm-env-plus-3 {
+  bottom: 10%;
+  left: clamp(24px, 4vw, 70px);
 }
 
 /* Header Section (Title & Description) */
@@ -265,6 +394,21 @@ body#greenship-recycling,
   display: none !important;
 }
 
+.bm-env-card-index {
+  font-family: 'Science Gothic', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #e5912f !important;
+  letter-spacing: 0.08em !important;
+  line-height: 1 !important;
+}
+
+.bm-env-card-dot {
+  color: #cbd5e1;
+  font-size: 13px;
+  line-height: 1;
+}
+
 .bm-env-card-tag {
   font-family: 'Montserrat', sans-serif;
   font-size: 12.5px;
@@ -359,26 +503,135 @@ body#greenship-recycling,
 }
 
 /* ==========================================================================
-   Section: Worker's Welfare (Exact Reference Layout Match)
+   Section: Worker's Welfare (Horizontal Carousel Slider - Frevanta Look & Feel)
    ========================================================================== */
 #section-welfare.section-welfare {
-  padding: clamp(70px, 8vw, 115px) 0 clamp(70px, 8vw, 115px);
-  background-color: #ffffff !important;
+  padding: clamp(80px, 8.5vw, 120px) 0 clamp(65px, 6.5vw, 95px);
+  background-color: #ffffff !important; /* Clean pure white section background */
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
 }
 
+#section-welfare > .theme-padding {
+  position: relative;
+  z-index: 2;
+}
+
+/* Minimal Background Decorative Elements for Welfare Section */
+.bm-welfare-bg-decor {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Soft Atmospheric Light Blooms */
+.bm-welfare-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.bm-welfare-glow-1 {
+  top: 5%;
+  left: -5%;
+  width: clamp(280px, 32vw, 520px);
+  height: clamp(280px, 32vw, 520px);
+  background: radial-gradient(circle, rgba(229, 145, 47, 0.08) 0%, rgba(229, 145, 47, 0) 70%);
+}
+
+.bm-welfare-glow-2 {
+  bottom: 8%;
+  right: -5%;
+  width: clamp(300px, 35vw, 560px);
+  height: clamp(300px, 35vw, 560px);
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.06) 0%, rgba(14, 165, 233, 0) 70%);
+}
+
+.bm-welfare-glow-3 {
+  top: 48%;
+  right: 15%;
+  width: clamp(240px, 28vw, 440px);
+  height: clamp(240px, 28vw, 440px);
+  background: radial-gradient(circle, rgba(229, 145, 47, 0.05) 0%, rgba(229, 145, 47, 0) 70%);
+}
+
+/* Architectural Dot Matrix Grid with Center Radial Fade */
+.bm-welfare-dot-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(100, 116, 139, 0.12) 1.2px, transparent 1.2px);
+  background-size: 32px 32px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 20%, transparent 80%);
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 20%, transparent 80%);
+  opacity: 0.65;
+}
+
+/* Flowing Topographic & Welfare Wave Contours */
+.bm-welfare-contour {
+  position: absolute;
+  pointer-events: none;
+}
+
+.bm-welfare-contour-top {
+  top: 2%;
+  left: 0;
+  width: clamp(320px, 40vw, 620px);
+  height: auto;
+  opacity: 0.85;
+}
+
+.bm-welfare-contour-bottom {
+  bottom: 4%;
+  right: 0;
+  width: clamp(300px, 36vw, 540px);
+  height: auto;
+  opacity: 0.8;
+}
+
+/* Minimal Geometric Plus Markers */
+.bm-welfare-plus {
+  position: absolute;
+  font-family: 'Fragment Mono', monospace;
+  font-size: 16px;
+  font-weight: 600;
+  color: #e5912f;
+  opacity: 0.28;
+  line-height: 1;
+  user-select: none;
+}
+
+.bm-welfare-plus-1 {
+  top: 8%;
+  right: clamp(20px, 4vw, 60px);
+}
+
+.bm-welfare-plus-2 {
+  top: 52%;
+  left: clamp(16px, 3.5vw, 55px);
+}
+
+.bm-welfare-plus-3 {
+  bottom: 12%;
+  right: clamp(24px, 5vw, 80px);
+}
+
 .bm-welfare-header {
   max-width: 100%;
   width: 100%;
-  margin-bottom: clamp(35px, 4.5vw, 60px);
+  margin-bottom: clamp(35px, 4.5vw, 55px);
 }
 
 .bm-welfare-header .bm-env-main-desc {
   max-width: 100%;
   width: 100%;
   font-size: clamp(14px, 1.05vw, 17px);
+  color: #475569;
 }
 
 .bm-welfare-line-break {
@@ -392,218 +645,268 @@ body#greenship-recycling,
   }
 }
 
-.bm-welfare-cards-grid-v3 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 26px;
+/* Slider Outer Wrapper */
+.welfare-slider-wrap {
   width: 100%;
-  perspective: 1200px;
+  position: relative;
 }
 
-.bm-welfare-tilt-card {
+.welfare-slider {
   position: relative;
+  width: 100%;
+}
+
+.welfare-slider .splide__track {
+  overflow: hidden !important;
+  padding: 60px 0 45px 0 !important;
+}
+
+/* Welfare Slide Card (Crisp White Card with Clean Border - No Shadow) */
+.bm-welfare-slide-card {
   background: #ffffff;
-  border: 1px solid #ede8e1;
+  border: 1px solid #e2e8f0;
   border-radius: 24px;
-  padding: 26px 22px 22px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 4px 18px -4px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.02);
-  transition: border-color 0.25s ease;
-  overflow: hidden;
-  box-sizing: border-box;
-  cursor: pointer;
-  transform: none !important;
-}
-
-.bm-welfare-tilt-card:hover {
-  border-color: #e5912f !important;
-  transform: none !important;
-}
-
-/* Dynamic Interactive Spotlight Glow Layer following mouse position */
-.bm-welfare-card-glow {
-  position: absolute;
-  inset: 0;
-  border-radius: 24px;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.35s ease;
-  z-index: 1;
-}
-
-/* Big Aesthetic Number Watermark in Background (01 - 08) */
-.bm-welfare-watermark {
-  position: absolute;
-  top: 8px;
-  right: 18px;
-  font-family: 'Science Gothic', sans-serif;
-  font-size: clamp(52px, 4.2vw, 68px);
-  font-weight: 800;
-  line-height: 1;
-  color: rgba(229, 145, 47, 0.08);
-  user-select: none;
-  pointer-events: none;
-  z-index: 0;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  letter-spacing: -0.04em;
-}
-
-.bm-welfare-tilt-card:hover .bm-welfare-watermark {
-  color: rgba(229, 145, 47, 0.2);
-  transform: translateY(-4px) scale(1.05);
-}
-
-/* Inner 3D Container */
-.bm-welfare-card-inner {
-  position: relative;
-  z-index: 2;
+  padding: 32px 28px 26px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  box-sizing: border-box;
+  box-shadow: none !important;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.35s ease, opacity 0.45s ease;
+  position: relative;
+  cursor: pointer;
 }
 
-/* Floating Glassmorphic Pill Tag */
-.bm-welfare-card-top {
-  display: flex;
-  align-items: center;
-  margin-bottom: 14px;
-}
-
-.bm-welfare-glass-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: rgba(255, 248, 240, 0.92);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(229, 145, 47, 0.3);
-  color: #c27014;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  padding: 4px 12px;
-  border-radius: 999px;
-  box-shadow: 0 2px 8px rgba(229, 145, 47, 0.08);
-  transition: all 0.3s ease;
-}
-
-.bm-welfare-tilt-card:hover .bm-welfare-glass-tag {
-  background: rgba(229, 145, 47, 0.15);
-  border-color: rgba(229, 145, 47, 0.6);
-  color: #b45309;
-  transform: translateY(-1px);
-}
-
-/* Pulsing Status Dot inside Tag */
-.bm-tag-pulse-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #e5912f;
-  box-shadow: 0 0 0 0 rgba(229, 145, 47, 0.7);
-  animation: bmPulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
-  flex-shrink: 0;
-}
-
-@keyframes bmPulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(229, 145, 47, 0.7);
+/* Staggered Spatial Layout: Center Card is Higher UP, Side Cards are Positioned DOWN */
+@media screen and (min-width: 992px) {
+  /* Default: Left and Right side cards shifted DOWN */
+  .welfare-slider .splide__slide .bm-welfare-slide-card {
+    transform: translateY(44px);
+    opacity: 0.9;
+    box-shadow: none !important;
   }
-  70% {
-    box-shadow: 0 0 0 6px rgba(229, 145, 47, 0);
+
+  /* Center Active Card elevated UP */
+  .welfare-slider .splide__slide.is-active .bm-welfare-slide-card {
+    transform: translateY(-24px);
+    opacity: 1;
+    border-color: #cbd5e1;
+    box-shadow: none !important;
   }
-  100% {
-    box-shadow: 0 0 0 0 rgba(229, 145, 47, 0);
+
+  /* Hover micro-interactions maintaining staggered offsets */
+  .welfare-slider .splide__slide .bm-welfare-slide-card:hover {
+    transform: translateY(36px);
+    opacity: 1;
+    border-color: #e5912f !important;
+    box-shadow: none !important;
+  }
+
+  .welfare-slider .splide__slide.is-active .bm-welfare-slide-card:hover {
+    transform: translateY(-30px);
+    border-color: #e5912f !important;
+    box-shadow: none !important;
+  }
+
+  /* Centered Navigation Arrows in the pocket below center card */
+  .bm-welfare-slider-nav {
+    margin-top: -48px;
+    position: relative;
+    z-index: 10;
   }
 }
 
-/* Card Content: Title & Description */
-.bm-welfare-card-body {
+/* Top Section: Header with Title + Black Circle Arrow Button, and Desc */
+.bm-welfare-slide-top {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
-.bm-welfare-card-title {
+.bm-welfare-slide-header {
+  display: block;
+  min-height: 64px;
+}
+
+.bm-welfare-slide-index {
+  display: inline-block;
+  font-family: 'Science Gothic', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  color: #e5912f !important;
+  margin-bottom: 4px;
+  line-height: 1 !important;
+}
+
+.bm-welfare-slide-title {
   font-family: 'Montserrat', sans-serif !important;
-  font-size: clamp(17.5px, 1.3vw, 20.5px);
+  font-size: clamp(20px, 1.45vw, 24px);
   font-weight: 700;
-  line-height: 1.3;
-  letter-spacing: -0.02em;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
   color: #0f172a;
-  margin: 0 0 8px 0;
+  margin: 0;
   transition: color 0.3s ease;
 }
 
-#greenship-recycling .bm-welfare-tilt-card:hover .bm-welfare-card-title,
-.bm-welfare-tilt-card:hover .bm-welfare-card-title {
+.bm-welfare-slide-card:hover,
+#greenship-recycling .bm-welfare-slide-card:hover,
+.welfare-slider .splide__slide .bm-welfare-slide-card:hover {
+  border-color: #e5912f !important;
+}
+
+.bm-welfare-slide-card:hover .bm-welfare-slide-title,
+#greenship-recycling .bm-welfare-slide-card:hover .bm-welfare-slide-title,
+.welfare-slider .splide__slide .bm-welfare-slide-card:hover .bm-welfare-slide-title {
   color: #e5912f !important;
 }
 
-.bm-welfare-card-desc {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(13px, 0.92vw, 14.5px);
-  line-height: 1.6;
-  color: #64748b;
-  margin: 0;
+.bm-welfare-slide-circle-btn {
+  display: none !important;
 }
 
-/* Media Showcase with Gradient Overlay (10px radius) */
-.bm-welfare-card-media {
+/* Description Text */
+.bm-welfare-slide-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #64748b;
+  margin: 12px 0 0 0;
+  min-height: 46px;
+}
+
+/* Bottom Media Showcase (Rounded Rectangle Window) */
+.bm-welfare-slide-media {
   position: relative;
   width: 100%;
-  height: clamp(165px, 14vw, 195px);
-  border-radius: 10px !important;
+  height: clamp(215px, 16.5vw, 255px);
+  border-radius: 16px;
   overflow: hidden;
   background-color: #0f172a;
 }
 
-.bm-welfare-card-img {
+.bm-welfare-slide-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
-  border-radius: 10px !important;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 16px;
+  transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.bm-welfare-tilt-card:hover .bm-welfare-card-img {
-  transform: none !important;
+.bm-welfare-slide-card:hover .bm-welfare-slide-img {
+  transform: scale(1.06);
 }
 
-.bm-welfare-media-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.35) 100%);
-  pointer-events: none;
+/* Centered Navigation Arrows (Minimalist sleek black arrows below slider) */
+.bm-welfare-slider-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 15px;
+  position: relative;
+  z-index: 5;
 }
 
-/* Responsive Grid Adaptations */
-@media screen and (max-width: 1280px) {
-  .bm-welfare-cards-grid-v3 {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
+.bm-welfare-nav-arrow {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 8px 14px;
+  color: #0f172a;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.25s ease;
+}
+
+.bm-welfare-nav-arrow svg {
+  stroke: currentColor;
+}
+
+.bm-welfare-nav-arrow:hover {
+  color: #e5912f;
+}
+
+.bm-welfare-nav-arrow--prev:hover {
+  transform: translateX(-6px);
+}
+
+.bm-welfare-nav-arrow--next:hover {
+  transform: translateX(6px);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 991px) {
+  .welfare-slider .splide__track {
+    padding: 15px 0 !important;
+  }
+
+  .welfare-slider .splide__slide .bm-welfare-slide-card {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  .welfare-slider .splide__slide .bm-welfare-slide-card:hover {
+    transform: translateY(-4px) !important;
+  }
+
+  .bm-welfare-slider-nav {
+    margin-top: 24px;
+  }
+
+  .bm-welfare-slide-card {
+    padding: 26px 22px 22px;
+    border-radius: 20px;
+  }
+
+  .bm-welfare-slide-header {
+    min-height: auto;
+  }
+
+  .bm-welfare-slide-desc {
+    min-height: auto;
+    margin-bottom: 16px;
+  }
+
+  .bm-welfare-slide-media {
+    height: 215px;
   }
 }
 
-@media screen and (max-width: 680px) {
-  .bm-welfare-cards-grid-v3 {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .bm-welfare-tilt-card {
+@media screen and (max-width: 600px) {
+  .bm-welfare-slide-card {
     padding: 22px 18px 18px;
+    border-radius: 18px;
   }
 
-  .bm-welfare-card-media {
-    height: 185px;
+  .bm-welfare-slide-circle-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .bm-welfare-slide-circle-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .bm-welfare-slide-media {
+    height: 195px;
+    border-radius: 14px;
+  }
+
+  .bm-welfare-slide-img {
+    border-radius: 14px;
+  }
+
+  .bm-welfare-slider-nav {
+    gap: 32px;
+    margin-top: 24px;
   }
 }
 
@@ -737,8 +1040,11 @@ body#greenship-recycling,
   font-weight: 700;
 }
 
-#greenship-banner .banner-tag-text {
+#greenship-banner .section-kicker-text,
+#greenship-banner .banner-tag-text,
+#greenship-recycling #greenship-banner .section-kicker-text {
   color: #ffffff !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 #greenship-banner .banner-divider {
@@ -960,382 +1266,73 @@ img.safety-reveal-icon,
 }
 
 /* ==========================================================================
-   Section: Policy and Training - Wallem Sticky Timeline Layout
+   Section: Policy and Training (Matching Worker's Welfare Theme & Layout)
    ========================================================================== */
 #section-policy.section-policy,
 section#section-policy,
 #section-policy,
 .section.section-policy {
+  padding: clamp(70px, 8vw, 115px) 0 clamp(70px, 8vw, 115px);
+  background-color: #ffffff !important;
   position: relative;
-  background-color: #f8fafc !important;
-  z-index: 5;
-  overflow: visible !important;
-  padding-top: clamp(80px, 9vh, 120px);
-  padding-bottom: clamp(80px, 9vh, 130px);
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-#section-policy .theme-padding,
-#section-policy .policy-wallem-wrap {
-  overflow: visible !important;
+.bm-policy-header {
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: clamp(35px, 4.5vw, 60px);
 }
 
-.policy-wallem-wrap {
+.bm-policy-header .bm-env-main-desc {
+  max-width: 100%;
+  width: 100%;
+  font-size: clamp(14px, 1.05vw, 17px);
+}
+
+.bm-policy-cards-grid {
   display: grid;
-  grid-template-columns: minmax(360px, 440px) 1fr;
-  gap: clamp(40px, 5vw, 72px);
-  align-items: start !important;
-  position: relative;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* Left Column: Sticky Showcase Card */
-.policy-sticky-card {
-  position: -webkit-sticky !important;
-  position: sticky !important;
-  top: 100px !important;
-  align-self: start !important;
-  height: fit-content !important;
-  z-index: 20 !important;
-}
-
-.policy-sticky-card-inner {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 26px;
-  overflow: hidden;
-  box-shadow: 0 12px 36px -6px rgba(0, 0, 0, 0.06);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+.bm-policy-card {
+  min-height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  box-shadow: none !important;
 }
 
-.policy-sticky-card-inner:hover {
-  border-color: rgba(229, 145, 47, 0.45);
-  box-shadow: 0 20px 46px -8px rgba(229, 145, 47, 0.16);
+.bm-policy-card .bm-welfare-slide-header {
+  display: block;
+  min-height: 52px;
 }
 
-.policy-sticky-media {
-  position: relative;
-  width: 100%;
-  height: clamp(360px, 40vh, 460px);
-  overflow: hidden;
-  background: #0f172a;
-  flex-shrink: 0;
+.bm-policy-card .bm-welfare-slide-desc {
+  min-height: 68px;
+  margin: 12px 0 0;
 }
 
-.policy-sticky-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 20%;
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+.bm-policy-card .bm-welfare-slide-media {
+  height: clamp(210px, 15vw, 240px);
+  margin-top: 24px;
 }
 
-.policy-sticky-card-inner:hover .policy-sticky-img {
-  transform: scale(1.05);
+@media screen and (max-width: 1100px) {
+  .bm-policy-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
 }
 
-.policy-sticky-media-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 50%, rgba(15, 23, 42, 0.7) 100%);
-  pointer-events: none;
-}
-
-.policy-sticky-body {
-  padding: clamp(26px, 2.6vw, 36px);
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.policy-sticky-title {
-  font-family: 'Montserrat', sans-serif !important;
-  font-size: clamp(28px, 2.6vw, 38px) !important;
-  font-weight: 600 !important;
-  color: #0f172a;
-  letter-spacing: -0.02em;
-  margin: 16px 0 14px 0;
-  line-height: 1.2;
-}
-
-.policy-sticky-title .policy-highlight {
-  color: #e5912f !important;
-}
-
-.policy-sticky-desc {
-  font-family: 'Montserrat', sans-serif !important;
-  font-size: 16px !important;
-  line-height: 1.7;
-  color: #64748b;
-  margin: 0;
-}
-
-.policy-sticky-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: #0f172a;
-  color: #ffffff;
-  padding: 13px 24px;
-  border-radius: 999px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.policy-sticky-btn:hover {
-  background: #e5912f;
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(229, 145, 47, 0.35);
-}
-
-.policy-sticky-btn svg {
-  transition: transform 0.3s ease;
-}
-
-.policy-sticky-btn:hover svg {
-  transform: translateX(4px);
-}
-
-/* Right Column: Scroll Header */
-.policy-scroll-header {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin-bottom: 40px;
-}
-
-.policy-scroll-subtitle {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12.5px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #64748b;
-  white-space: nowrap;
-}
-
-.policy-scroll-divider {
-  flex: 1;
-  height: 1px;
-  background: #e2e8f0;
-}
-
-/* Timeline Track & Cards Area */
-.policy-timeline-container {
-  position: relative;
-  padding-left: 60px;
-}
-
-.policy-timeline-track {
-  position: absolute;
-  left: 22px;
-  top: 40px;
-  bottom: 40px;
-  width: 2px;
-  background: #e2e8f0;
-  border-radius: 2px;
-}
-
-.policy-timeline-fill {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 20px;
-  background: linear-gradient(180deg, #e5912f 0%, #ffad54 100%);
-  box-shadow: 0 0 8px rgba(229, 145, 47, 0.5);
-  border-radius: 2px;
-  transition: height 0.15s ease-out;
-}
-
-.policy-step-card {
-  position: relative;
-  margin-bottom: 34px;
-  cursor: pointer;
-}
-
-.policy-step-card:last-child {
-  margin-bottom: 0;
-}
-
-.policy-timeline-node {
-  position: absolute;
-  left: -60px;
-  top: 38px;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-}
-
-.policy-node-ring {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: #ffffff;
-  border: 2px solid #cbd5e1;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.policy-node-dot {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #94a3b8;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.policy-step-card.is-active .policy-node-ring {
-  border-color: #e5912f;
-  box-shadow: 0 0 0 6px rgba(229, 145, 47, 0.2);
-  transform: scale(1.2);
-}
-
-.policy-step-card.is-active .policy-node-dot {
-  background: #e5912f;
-  transform: scale(1.3);
-}
-
-/* Increased Size for Right Side Scrollable Cards */
-.policy-card-box {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 24px;
-  padding: clamp(34px, 3.4vw, 50px) clamp(30px, 3.2vw, 48px);
-  min-height: 210px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.03);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.policy-step-card:hover .policy-card-box {
-  transform: translateX(6px);
-  border-color: rgba(229, 145, 47, 0.4);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
-
-.policy-step-card.is-active .policy-card-box {
-  border-color: rgba(229, 145, 47, 0.7);
-  box-shadow: 0 18px 42px -8px rgba(229, 145, 47, 0.18), 0 0 0 1px rgba(229, 145, 47, 0.4);
-  transform: translateX(10px);
-}
-
-.policy-step-top {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 18px;
-}
-
-.policy-step-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: #f1f5f9;
-  color: #0f172a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14.5px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  border: 1px solid #e2e8f0;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  flex-shrink: 0;
-}
-
-.policy-step-card.is-active .policy-step-icon {
-  background: #e5912f;
-  color: #ffffff;
-  border-color: #e5912f;
-  transform: scale(1.08);
-  box-shadow: 0 6px 18px rgba(229, 145, 47, 0.4);
-}
-
-.policy-step-category {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12.5px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #e5912f;
-}
-
-.policy-step-title {
-  font-family: 'Montserrat', sans-serif !important;
-  font-size: clamp(23px, 1.7vw, 29px);
-  font-weight: 700;
-  color: #0f172a;
-  line-height: 1.25;
-  margin: 0 0 14px 0;
-  transition: color 0.25s ease;
-}
-
-.policy-step-card.is-active .policy-step-title,
-.policy-step-card:hover .policy-step-title {
-  color: #e5912f;
-}
-
-.policy-step-desc {
-  font-family: 'Montserrat', sans-serif !important;
-  font-size: clamp(15px, 1.05vw, 17px);
-  line-height: 1.75;
-  color: #475569;
-  margin: 0;
-}
-
-/* Responsive Rules for Policy Section */
-@media screen and (max-width: 991px) {
-  .policy-wallem-wrap {
+@media screen and (max-width: 767px) {
+  .bm-policy-cards-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .policy-sticky-card {
-    position: relative !important;
-    top: 0 !important;
-  }
-
-  .policy-timeline-container {
-    padding-left: 48px;
-  }
-
-  .policy-timeline-track {
-    left: 16px;
-  }
-
-  .policy-timeline-node {
-    left: -48px;
-  }
-
-  .policy-step-card.is-active .policy-card-box {
-    transform: none;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .policy-timeline-container {
-    padding-left: 0;
-  }
-
-  .policy-timeline-track,
-  .policy-timeline-node {
-    display: none;
-  }
-
-  .policy-card-box {
-    padding: 24px 20px;
+    gap: 20px;
   }
 }
 
@@ -1403,7 +1400,7 @@ section#section-yard,
   font-weight: 700 !important;
   letter-spacing: 0.12em !important;
   text-transform: uppercase !important;
-  color: #1e293b;
+  color: #475569 !important;
 }
 
 .yard-header-wrap .yard-main-heading {
@@ -1552,15 +1549,15 @@ section#section-yard,
   font-size: 14.5px !important;
   line-height: 1.55 !important;
   color: #475569 !important;
-  margin: 0 0 12px 0;
+  margin: 0 0 20px 0;
 }
 
 .yard-card-divider {
-  width: 32px;
+  width: 34px;
   height: 2px;
   background-color: #e5912f;
   border-radius: 2px;
-  margin-bottom: 14px;
+  margin-bottom: 22px;
 }
 
 /* Phone Block - Clear Title & Description Distinction */
@@ -1709,6 +1706,13 @@ section#section-yard,
   font-weight: 700 !important;
   letter-spacing: 0.12em !important;
   text-transform: uppercase !important;
+  color: #475569 !important;
+}
+
+#greenship-recycling #greenship-banner .section-kicker-text,
+#greenship-banner .section-kicker-text {
+  color: #ffffff !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 #greenship-recycling .section-kicker-line,
@@ -1760,3 +1764,507 @@ section#section-yard,
   font-weight: 600 !important;
   color: #000000 !important;
 }
+
+/* ==========================================================================
+   UI/UX Pro Max: Greenship Recycling Motion & Animation System
+   - Masked Text Reveals for Hero & Section Headings
+   - Micro-interactions for Cards, Badges, & Buttons
+   - Smooth Parallax & Stacking Card Elevation
+   - Radar Pulse Animation for Alang Beacon on India Map
+   - High-contrast & Reduced-motion Accessibility Compliance
+   ========================================================================== */
+
+/* 1. Masked Word Entrance (Matches Home Page & Reference Motion) */
+#greenship-recycling .banner-word-mask,
+#greenship-recycling .bm-word-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: 0.14em;
+  margin-bottom: -0.14em;
+}
+
+#greenship-recycling .banner-word-inner,
+#greenship-recycling .bm-word-inner {
+  display: inline-block;
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  will-change: transform, opacity;
+}
+
+/* 2. Banner Cinematic Entrance */
+#greenship-recycling .greenship-banner-img {
+  transform: translate3d(0, 0, 0);
+  will-change: transform, opacity;
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+#greenship-banner:hover .greenship-banner-img {
+  transform: scale(1.03);
+}
+
+/* 3. Sticky Stacking Cards Smooth Hover Elevation */
+#greenship-recycling .bm-env-sticky-card {
+  will-change: transform, box-shadow;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
+}
+
+#greenship-recycling .bm-env-sticky-card:hover {
+  box-shadow: 0 24px 50px -12px rgba(0, 0, 0, 0.22);
+}
+
+#greenship-recycling .bm-env-card-img {
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+#greenship-recycling .bm-env-sticky-card:hover .bm-env-card-img {
+  transform: scale(1.04);
+}
+
+/* 4. Worker's Welfare Slide Cards Hover Refinement */
+#greenship-recycling .bm-welfare-slide-card {
+  will-change: transform, box-shadow, border-color;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease, border-color 0.3s ease;
+}
+
+#greenship-recycling .bm-welfare-slide-card:hover {
+  border-color: #e5912f !important;
+}
+
+#greenship-recycling .bm-welfare-slide-card:hover .bm-welfare-slide-title {
+  color: #e5912f !important;
+}
+
+#greenship-recycling .bm-welfare-slide-card .bm-welfare-slide-img {
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+#greenship-recycling .bm-welfare-slide-card:hover .bm-welfare-slide-img {
+  transform: scale(1.05);
+}
+
+/* 5. Safety Reveal Grid Smooth State Transitions */
+#greenship-recycling .safety-reveal-card {
+  will-change: transform, box-shadow, border-color;
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+#greenship-recycling .safety-reveal-card:hover {
+  transform: translateY(-4px);
+}
+
+#greenship-recycling .safety-reveal-icon-wrap {
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+#greenship-recycling .safety-reveal-card:hover .safety-reveal-icon-wrap,
+#greenship-recycling .safety-reveal-card.is-active .safety-reveal-icon-wrap {
+  transform: scale(1.08);
+}
+
+/* 6. Policy & Training Cards Micro-interactions (Matching Worker's Welfare Theme) */
+#greenship-recycling .bm-policy-card {
+  box-shadow: none !important;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.35s ease;
+}
+
+#greenship-recycling .bm-policy-card:hover {
+  transform: translateY(-8px);
+  box-shadow: none !important;
+  border-color: #e5912f !important;
+}
+
+#greenship-recycling .bm-policy-card:hover .bm-welfare-slide-title {
+  color: #e5912f !important;
+}
+
+#greenship-recycling .bm-policy-card .bm-welfare-slide-img {
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+#greenship-recycling .bm-policy-card:hover .bm-welfare-slide-img {
+  transform: scale(1.06);
+}
+
+/* 7. Our Yard Section Animation & Beacon Pulsing */
+#greenship-recycling .yard-photo-card-wrap,
+#greenship-recycling .yard-light-master-card {
+  will-change: transform, opacity;
+}
+
+#greenship-recycling .yard-photo-card {
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s ease;
+}
+
+#greenship-recycling .yard-photo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px -12px rgba(0, 0, 0, 0.2);
+}
+
+#greenship-recycling .yard-photo-img {
+  transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+#greenship-recycling .yard-photo-card:hover .yard-photo-img {
+  transform: scale(1.04);
+}
+
+#greenship-recycling .yard-phone-circle-btn {
+  transition: transform 0.3s cubic-bezier(0.3, 1, 0.8, 1), background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#greenship-recycling .yard-phone-circle-btn:hover {
+  transform: scale(1.1) rotate(-8deg);
+  box-shadow: 0 8px 20px rgba(229, 145, 47, 0.4);
+}
+
+/* Radar Beacon Ripple Animation on Map Area */
+.yard-card-map-area {
+  position: relative;
+}
+
+.yard-card-map-graphic {
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+#greenship-recycling .yard-light-master-card:hover .yard-card-map-graphic {
+  transform: scale(1.03);
+}
+
+/* ==========================================================================
+   Section: Policy and Training - Option 2 (Sarip Staggered Architectural Design)
+   ========================================================================== */
+#section-policy-option2.section-policy-option2,
+section#section-policy-option2,
+#section-policy-option2 {
+  padding: clamp(70px, 8vw, 115px) 0 clamp(70px, 8vw, 115px);
+  background-color: #ffffff !important;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.text-muted-option {
+  font-size: 0.6em;
+  color: #94a3b8;
+  font-weight: 500;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.sarip-showcase-wrap {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  margin-top: clamp(35px, 4.5vw, 60px);
+}
+
+.sarip-cards-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  width: 100%;
+  box-sizing: border-box;
+  place-items: start stretch;
+}
+
+.sarip-box {
+  padding: clamp(26px, 2.6vw, 38px);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  box-shadow: none !important;
+}
+
+/* On-hover lift on cards turned OFF as requested */
+.sarip-box:hover {
+  transform: none !important;
+}
+
+/* Theme Orange 2 Shades: Light (#fbead5) & Dark (#e5912f) */
+.sarip-box-almond {
+  background-color: #fbead5;
+}
+
+.sarip-box-orange {
+  background-color: #e5912f;
+}
+
+.sarip-box-top {
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.sarip-kicker {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.sarip-box-almond .sarip-kicker {
+  color: #9a5207;
+}
+
+#greenship-recycling .sarip-box-orange .sarip-kicker,
+.sarip-box-orange .sarip-kicker,
+.sarip-box.sarip-box-orange .sarip-kicker,
+.sarip-box-orange [class*="kicker"] {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.sarip-box-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(14px, 1.05vw, 16px);
+  line-height: 1.55;
+  margin: 0;
+  font-weight: 400;
+  max-width: 78%;
+}
+
+.sarip-box-almond .sarip-box-desc {
+  color: #1e293b;
+}
+
+.sarip-box-orange .sarip-box-desc {
+  color: #0f172a;
+}
+
+.sarip-box-bottom {
+  width: 100%;
+}
+
+.sarip-num-wrap {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+
+/* Decreased font weight for card titles / stats to match Sarip reference design */
+.sarip-num {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(48px, 4.4vw, 70px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+
+.sarip-box-almond .sarip-num {
+  color: #0f172a;
+}
+
+.sarip-box-orange .sarip-num {
+  color: #000000;
+}
+
+/* Decreased width for black text at bottom of cards as requested */
+.sarip-num-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(13px, 0.95vw, 14.5px);
+  font-weight: 500;
+  line-height: 1.35;
+  max-width: 155px;
+  width: 60%;
+}
+
+.sarip-box-almond .sarip-num-label {
+  color: #475569;
+}
+
+.sarip-box-orange .sarip-num-label {
+  color: #1f2937;
+}
+
+/* Specific Staggering for Top 3 Cards (Matching Screenshot & Sarip Template) */
+@media screen and (min-width: 992px) {
+  .sarip-cards-top {
+    position: relative;
+    z-index: 2;
+  }
+
+  .sarip-box-01 {
+    border-top-left-radius: 24px;
+    min-height: 350px;
+    margin-top: 80px;
+  }
+
+  .sarip-box-02 {
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    min-height: 470px;
+    margin-top: 80px;
+    z-index: 3;
+  }
+
+  .sarip-box-03 {
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    min-height: 475px;
+    margin-top: 0;
+    z-index: 2;
+  }
+
+  /* Cinematic Middle Image Banner - Completely Gap-Free with Smooth Interactive Animations */
+  .sarip-main-img-wrap {
+    z-index: 1;
+    border-radius: 24px;
+    background: transparent;
+    width: 100%;
+    height: clamp(520px, 40vw, 640px);
+    margin-top: -120px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .sarip-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transform-origin: center center;
+    will-change: transform;
+    transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.5s ease;
+  }
+
+  .sarip-main-img-wrap:hover .sarip-main-img {
+    transform: scale(1.04);
+    filter: brightness(1.03);
+  }
+
+  .sarip-img-overlay {
+    display: none;
+  }
+
+  /* Specific Staggering for Bottom 3 Cards overlapping image bottom */
+  .sarip-cards-bottom {
+    position: relative;
+    z-index: 2;
+    margin-top: -120px;
+  }
+
+  .sarip-box-04 {
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+    min-height: 440px;
+    margin-top: 0;
+    z-index: 3;
+  }
+
+  .sarip-box-05 {
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    min-height: 350px;
+    margin-top: 80px;
+    z-index: 2;
+  }
+
+  .sarip-box-06 {
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    min-height: 420px;
+    margin-top: 25px;
+    z-index: 3;
+  }
+}
+
+/* Tablet Responsive */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .sarip-cards-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sarip-box-01,
+  .sarip-box-02,
+  .sarip-box-03,
+  .sarip-box-04,
+  .sarip-box-05,
+  .sarip-box-06 {
+    margin-top: 0 !important;
+    min-height: 320px;
+  }
+
+  .sarip-main-img-wrap {
+    height: 420px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  .sarip-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .sarip-cards-bottom {
+    margin-top: 0;
+  }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 767px) {
+  .sarip-cards-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .sarip-box {
+    border-radius: 18px !important;
+    margin-top: 0 !important;
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .sarip-main-img-wrap {
+    height: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  .sarip-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .sarip-cards-bottom {
+    margin-top: 0;
+  }
+}
+
+/* 8. Reduced Motion Accessibility Mode */
+@media (prefers-reduced-motion: reduce) {
+  #greenship-recycling .banner-word-inner,
+  #greenship-recycling .bm-word-inner,
+  #greenship-recycling .greenship-banner-img,
+  #greenship-recycling .bm-env-sticky-card,
+  #greenship-recycling .bm-welfare-slide-card,
+  #greenship-recycling .safety-reveal-card,
+  #greenship-recycling .policy-sticky-card,
+  #greenship-recycling .policy-step-card,
+  #greenship-recycling .yard-photo-card-wrap,
+  #greenship-recycling .yard-light-master-card,
+  #greenship-recycling .yard-photo-card {
+    transform: none !important;
+    opacity: 1 !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
