@@ -1,8 +1,9 @@
-﻿<?php
-$version = "1.8.7";
+<?php
+$version = "1.9.6";
 ?>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,6 +11,13 @@ $version = "1.8.7";
 
 <link rel=preload href="<?php echo $fontsurl; ?>JTUSjIg1_i6t8kCHKm459Wlhyw.woff2" as="font" type="font/woff2" crossorigin />
 
+
+<!-- Favicon Links with Cache Buster -->
+<link rel="icon" type="image/x-icon" href="<?php echo $mediaurl; ?>favicon/favicon.ico?v=<?php echo $version; ?>" />
+<link rel="shortcut icon" type="image/x-icon" href="<?php echo $mediaurl; ?>favicon/favicon.ico?v=<?php echo $version; ?>" />
+<link rel="icon" type="image/png" sizes="32x32" href="<?php echo $mediaurl; ?>favicon/favicon-32x32.png?v=<?php echo $version; ?>" />
+<link rel="icon" type="image/png" sizes="16x16" href="<?php echo $mediaurl; ?>favicon/favicon-16x16.png?v=<?php echo $version; ?>" />
+<link rel="apple-touch-icon" sizes="180x180" href="<?php echo $mediaurl; ?>favicon/apple-icon-180x180.png?v=<?php echo $version; ?>" />
 <?php require_once $stylecss; ?>
 <?php require_once $inccss; ?>
 

@@ -4,22 +4,57 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script>
+	// 1. Track and preserve scroll position across page refresh
+	var savedScrollPos = 0;
+	try {
+		savedScrollPos = parseFloat(sessionStorage.getItem('bm_scroll_pos') || '0');
+	} catch (e) {}
+
+	window.addEventListener('scroll', function() {
+		try {
+			var pos = window.scrollY || window.pageYOffset || 0;
+			sessionStorage.setItem('bm_scroll_pos', pos.toString());
+		} catch (e) {}
+	}, { passive: true });
+
+	window.addEventListener('beforeunload', function() {
+		try {
+			var pos = window.scrollY || window.pageYOffset || 0;
+			sessionStorage.setItem('bm_scroll_pos', pos.toString());
+		} catch (e) {}
+	});
+
+	// 2. GSAP & ScrollTrigger setup
 	if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
 		gsap.registerPlugin(ScrollTrigger);
+		ScrollTrigger.config({
+			autoRefreshEvents: "visibilitychange,DOMContentLoaded,load,resize",
+			ignoreMobileResize: true
+		});
 	}
 
+	// 3. Lenis Smooth Scroll Integration
 	if (typeof Lenis !== "undefined") {
 		window.lenis = new Lenis({
 			autoRaf: false,
 			duration: 1.2,
-			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+			easing: function(t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
 			orientation: 'vertical',
-			smoothWheel: true
+			smoothWheel: true,
+			touchMultiplier: 1.5,
+			infinite: false
 		});
+
+		// Restore scroll position ONCE on page load
+		if (savedScrollPos > 0) {
+			window.scrollTo(0, savedScrollPos);
+			window.lenis.scroll = savedScrollPos;
+			window.lenis.targetScroll = savedScrollPos;
+		}
 
 		if (window.lenis && typeof ScrollTrigger !== "undefined") {
 			window.lenis.on('scroll', ScrollTrigger.update);
-			gsap.ticker.add((time) => {
+			gsap.ticker.add(function(time) {
 				window.lenis.raf(time * 1000);
 			});
 			gsap.ticker.lagSmoothing(0);
@@ -52,8 +87,8 @@
 					document.removeEventListener("click", resumePlay);
 					document.removeEventListener("touchstart", resumePlay);
 				};
-				document.addEventListener("click", resumePlay, { once: true });
-				document.addEventListener("touchstart", resumePlay, { once: true });
+				document.addEventListener("click", resumePlay, { toggleActions: "play none none none" });
+				document.addEventListener("touchstart", resumePlay, { toggleActions: "play none none none" });
 			});
 		}
 
@@ -185,6 +220,12 @@
 				ease: "back.out(1.5)"
 			}, "-=0.35");
 		}
+
+		// If page is refreshed while scrolled down, immediately show banner elements
+		const currentScroll = window.scrollY || window.pageYOffset || 0;
+		if (currentScroll > 80) {
+			heroTl.progress(1);
+		}
 	}
 
 	/** About Section Animation **/
@@ -201,7 +242,7 @@
 			scrollTrigger: {
 				trigger: section,
 				start: "top 75%",
-				once: true
+				toggleActions: "play none none none"
 			}
 		});
 
@@ -257,6 +298,7 @@
 	 * 4. 4 Cards slide in horizontally from right to left 0 strictly inside theme-padding.
 	 **/
 	/** Anchors Section Animation with Word Reveal **/
+	/** Anchors Section: Title Word-Reveal & Center Fan-Out Scroll Animation **/
 	function initAnchorsInteractiveExperience() {
 		if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
 		gsap.registerPlugin(ScrollTrigger);
@@ -277,76 +319,161 @@
 				stagger: 0.06,
 				ease: "power3.out",
 				scrollTrigger: {
-					trigger: anchorSec.querySelector(".js-anchors-title") || anchorSec,
-					start: "top 85%",
-					once: true
-				}
+				trigger: anchorSec.querySelector(".js-anchors-title") || anchorSec,
+				start: "top 85%",
+				toggleActions: "play none none none"
+			}
 			});
 		}
 
-		// 2. Counter Cards Stagger Entrance & Animated Number Counting
-		const statCards = anchorSec.querySelectorAll(".anchor-card-stat");
-		if (statCards.length) {
-			gsap.fromTo(statCards, {
-				y: 35,
-				opacity: 0
-			}, {
-				y: 0,
-				opacity: 1,
-				duration: 0.75,
-				stagger: 0.1,
-				ease: "power2.out",
-				scrollTrigger: {
-					trigger: ".anchors-subgrid-stats",
-					start: "top 88%",
-					once: true
-				}
-			});
+		// 2. Center Gather & Fan Out to Left and Right on Scroll
+		const fanWrap = document.querySelector("#anchor-cards-scroll-wrap");
+		const fanColumns = document.querySelector(".anchor-cards-fan-columns");
+		const fanCols = document.querySelectorAll(".anchor-fan-col");
 
-			statCards.forEach(card => {
-				const numEl = card.querySelector(".anchor-stat-count") || card.querySelector(".purecounter");
-				if (!numEl) return;
-				const endVal = parseInt(numEl.getAttribute("data-target") || numEl.innerText.replace(/[^0-9]/g, ""), 10);
-				if (!isNaN(endVal) && endVal > 0) {
-					ScrollTrigger.create({
-						trigger: card,
-						start: "top 90%",
-						once: true,
-						onEnter: () => {
-							let obj = { val: 0 };
-							gsap.to(obj, {
-								val: endVal,
-								duration: 2.0,
-								ease: "power2.out",
-								onUpdate: () => {
-									numEl.innerText = Math.floor(obj.val);
-								}
-							});
-						}
+		if (fanWrap && fanColumns && fanCols.length === 4) {
+			let mmCards = gsap.matchMedia();
+
+			mmCards.add("(min-width: 1025px)", () => {
+				const calculateOffsets = () => {
+					const gridRect = fanColumns.getBoundingClientRect();
+					const gridCenterX = gridRect.left + gridRect.width / 2;
+
+					return Array.from(fanCols).map(col => {
+						const colRect = col.getBoundingClientRect();
+						const colCenterX = colRect.left + colRect.width / 2;
+						return gridCenterX - colCenterX;
 					});
-				}
-			});
-		}
+				};
 
-		// 3. Pillar Cards Stagger Entrance
-		const pillarCards = anchorSec.querySelectorAll(".anchor-card-pillar");
-		if (pillarCards.length) {
-			gsap.fromTo(pillarCards, {
-				y: 40,
-				opacity: 0
-			}, {
-				y: 0,
-				opacity: 1,
-				duration: 0.8,
-				stagger: 0.12,
-				ease: "power2.out",
-				scrollTrigger: {
-					trigger: ".anchors-subgrid-pillars",
-					start: "top 88%",
-					once: true
-				}
+				const initialOffsets = calculateOffsets();
+				const rotations = [-6, -2, 2, 6];
+				const scales = [1, 0.97, 0.95, 0.92];
+				const zIndexes = [4, 3, 2, 1];
+
+				fanCols.forEach((col, i) => {
+					const card = col.querySelector(".anchor-fan-card") || col;
+					gsap.set(card, {
+						x: initialOffsets[i],
+						rotation: rotations[i],
+						scale: scales[i],
+						zIndex: zIndexes[i],
+						boxShadow: "0 20px 45px rgba(0, 0, 0, 0.12)"
+					});
+				});
+
+				const fanCards = Array.from(fanCols).map(col => col.querySelector(".anchor-fan-card") || col);
+
+				const fanTl = gsap.timeline({
+					scrollTrigger: {
+						trigger: fanWrap,
+						start: "top 75%",
+						end: "center center",
+						scrub: 0.8,
+						invalidateOnRefresh: true
+					}
+				});
+
+				// Smooth Fan Out to Left and Right positions as user scrolls
+				fanTl.to(fanCards, {
+					x: 0,
+					rotation: 0,
+					scale: 1,
+					boxShadow: "0 10px 30px rgba(0, 0, 0, 0.04)",
+					duration: 1.5,
+					ease: "power2.out",
+					stagger: 0.03
+				});
+			});
+
+			mmCards.add("(max-width: 1024px)", () => {
+				// Mobile & Tablet: Clean Stagger Reveal
+				gsap.fromTo(fanCols, {
+					y: 40,
+					opacity: 0
+				}, {
+					y: 0,
+					opacity: 1,
+					stagger: 0.12,
+					duration: 0.8,
+					ease: "power2.out",
+					scrollTrigger: {
+				trigger: fanWrap,
+				start: "top 85%",
+				toggleActions: "play none none none"
+			}
+				});
 			});
 		}
+	}
+
+	/** React Bits TiltedCard 3D Tilt Physics Implementation (Vanilla JS) **/
+	function initTiltedCards() {
+		const cards = document.querySelectorAll(".js-tilted-card");
+		if (!cards.length) return;
+
+		const rotateAmplitude = 14;
+		const scaleOnHover = 1.04;
+
+		cards.forEach(card => {
+			let rafId = null;
+			let targetRotX = 0;
+			let targetRotY = 0;
+			let currentRotX = 0;
+			let currentRotY = 0;
+			let currentScale = 1;
+			let targetScale = 1;
+			let isHovered = false;
+
+			const tooltip = card.querySelector(".anchor-tilt-tooltip");
+
+			function updateSpring() {
+				currentRotX += (targetRotX - currentRotX) * 0.12;
+				currentRotY += (targetRotY - currentRotY) * 0.12;
+				currentScale += (targetScale - currentScale) * 0.12;
+
+				card.style.transform = `rotateX(${currentRotX.toFixed(2)}deg) rotateY(${currentRotY.toFixed(2)}deg) scale3d(${currentScale.toFixed(3)}, ${currentScale.toFixed(3)}, ${currentScale.toFixed(3)})`;
+
+				if (isHovered || Math.abs(targetRotX - currentRotX) > 0.05 || Math.abs(targetRotY - currentRotY) > 0.05 || Math.abs(targetScale - currentScale) > 0.005) {
+					rafId = requestAnimationFrame(updateSpring);
+				} else {
+					card.style.transform = "";
+					rafId = null;
+				}
+			}
+
+			card.addEventListener("mouseenter", () => {
+				isHovered = true;
+				targetScale = scaleOnHover;
+				if (tooltip) tooltip.style.opacity = "1";
+				if (!rafId) rafId = requestAnimationFrame(updateSpring);
+			});
+
+			card.addEventListener("mousemove", (e) => {
+				const rect = card.getBoundingClientRect();
+				const offsetX = e.clientX - rect.left - rect.width / 2;
+				const offsetY = e.clientY - rect.top - rect.height / 2;
+
+				targetRotX = (offsetY / (rect.height / 2)) * -rotateAmplitude;
+				targetRotY = (offsetX / (rect.width / 2)) * rotateAmplitude;
+
+				if (tooltip) {
+					const tooltipX = e.clientX - rect.left + 12;
+					const tooltipY = e.clientY - rect.top + 12;
+					tooltip.style.transform = `translate3d(${tooltipX}px, ${tooltipY}px, 40px)`;
+				}
+
+				if (!rafId) rafId = requestAnimationFrame(updateSpring);
+			});
+
+			card.addEventListener("mouseleave", () => {
+				isHovered = false;
+				targetRotX = 0;
+				targetRotY = 0;
+				targetScale = 1;
+				if (tooltip) tooltip.style.opacity = "0";
+			});
+		});
 	}
 
 
@@ -388,10 +515,10 @@
 				stagger: 0.06,
 				ease: "power3.out",
 				scrollTrigger: {
-					trigger: statsSec.querySelector(".js-stats-title") || statsSec,
-					start: "top 85%",
-					once: true
-				}
+				trigger: statsSec.querySelector(".js-stats-title") || statsSec,
+				start: "top 85%",
+				toggleActions: "play none none none"
+			}
 			});
 		}
 
@@ -412,7 +539,7 @@
 				scrollTrigger: {
 					trigger: statsSec.querySelector(".stats-columns-grid") || statsSec,
 					start: "top 80%",
-					once: true,
+					toggleActions: "play none none none",
 					onEnter: () => {
 						const counters = statsSec.querySelectorAll(".stats-stat-count");
 						counters.forEach(counter => {
@@ -438,60 +565,9 @@
 
 	/** Capabilities Sticky Stacking Cards & Word-Reveal Animation **/
 	/** Capabilities Sticky Full-Height Stacking Cards & Word-Reveal Animation **/
-	function initCapabilitiesAnimation() {
-		if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
-		const capSection = document.querySelector("#section-capabilities");
-		if (!capSection) return;
-
-		// 1. Title & Tagline Word-Reveal Animation
-		const titleWords = capSection.querySelectorAll(".word-inner, .cap-word-inner");
-		if (titleWords.length) {
-			gsap.fromTo(titleWords, {
-				y: "115%",
-				opacity: 0
-			}, {
-				y: "0%",
-				opacity: 1,
-				duration: 0.8,
-				stagger: 0.04,
-				ease: "power3.out",
-				scrollTrigger: {
-					trigger: capSection.querySelector(".capabilities-head-wrap") || capSection,
-					start: "top 85%",
-					once: true
-				}
-			});
-		}
-
-		// 2. Card-over-Card Stacking Scrub Animation (100vh full-height cards)
-		const cards = gsap.utils.toArray("#section-capabilities .cap-stack-card");
-		if (cards.length > 0) {
-			cards.forEach((card, index) => {
-				// When next card scrolls over this card, scale down and dim this card
-				if (index < cards.length - 1) {
-					const nextCard = cards[index + 1];
-					ScrollTrigger.create({
-						trigger: nextCard,
-						start: "top bottom",
-						end: "top top",
-						scrub: 0.5,
-						onUpdate: (self) => {
-							const progress = self.progress;
-							const scale = 1 - (progress * 0.05); // scales down to 0.95
-							const opacity = 1 - (progress * 0.25); // dims slightly to 0.75
-							const filterVal = 1 - (progress * 0.25); // brightness down
-							gsap.set(card, {
-								scale: scale,
-								opacity: opacity,
-								filter: `brightness(${filterVal})`,
-								transformOrigin: "center top"
-							});
-						}
-					});
-				}
-			});
-		}
-	}
+	/** Capabilities Sticky Full-Height Stacking Cards & Word-Reveal Animation **/
+	/** Capabilities Sticky Stacking Cards, GSAP Text Reveal & Robust Resize Handling **/
+	/** Our Capabilities: Static Clean Layout (No Animations) **/
 
 	/** Explore Extensions 4-Column Showcase GSAP Parallax & Scroll Animation **/
 	function initExtensionsShowcase() {
@@ -515,10 +591,10 @@
 				stagger: 0.06,
 				ease: "power3.out",
 				scrollTrigger: {
-					trigger: extSection,
-					start: "top 85%",
-					once: true
-				}
+				trigger: extSection,
+				start: "top 85%",
+				toggleActions: "play none none none"
+			}
 			});
 		}
 
@@ -533,10 +609,10 @@
 				duration: 0.75,
 				ease: "power2.out",
 				scrollTrigger: {
-					trigger: col,
-					start: "top 88%",
-					once: true
-				}
+				trigger: col,
+				start: "top 88%",
+				toggleActions: "play none none none"
+			}
 			});
 		});
 
@@ -739,10 +815,10 @@
 				stagger: 0.08,
 				ease: "power3.out",
 				scrollTrigger: {
-					trigger: legacySection,
-					start: "top 75%",
-					once: true
-				}
+				trigger: legacySection,
+				start: "top 75%",
+				toggleActions: "play none none none"
+			}
 			});
 		}
 
@@ -819,7 +895,7 @@
 				ScrollTrigger.create({
 					trigger: card,
 					start: "top 88%",
-					once: true,
+					toggleActions: "play none none none",
 					onEnter: () => animateCardCounter(card)
 				});
 			});
@@ -827,7 +903,7 @@
 			ScrollTrigger.create({
 				trigger: legacySection,
 				start: "top 60%",
-				once: true,
+				toggleActions: "play none none none",
 				onEnter: () => {
 					const firstStage = legacySection.querySelector(".legacy-pair-stage");
 					if (firstStage) {
@@ -864,7 +940,7 @@
 			scrollTrigger: {
 				trigger: impactSection,
 				start: "top 85%",
-				once: true
+				toggleActions: "play none none none"
 			}
 		});
 
@@ -924,10 +1000,10 @@
 				duration: 2.0,
 				ease: "power2.out",
 				scrollTrigger: {
-					trigger: impactSection,
-					start: "top 80%",
-					once: true
-				},
+				trigger: impactSection,
+				start: "top 80%",
+				toggleActions: "play none none none"
+			},
 				onUpdate: () => {
 					countEl.textContent = decimals > 0 ? counterObj.val.toFixed(decimals) : Math.round(counterObj.val);
 				}
@@ -951,7 +1027,7 @@
 			scrollTrigger: {
 				trigger: partnerSection,
 				start: "top 95%",
-				once: true
+				toggleActions: "play none none none"
 			}
 		});
 
@@ -1036,7 +1112,7 @@
 			scrollTrigger: {
 				trigger: msSection,
 				start: "top 80%",
-				once: true
+				toggleActions: "play none none none"
 			}
 		});
 
@@ -1160,7 +1236,7 @@
 			scrollTrigger: {
 				trigger: envSection,
 				start: "top 75%",
-				once: true
+				toggleActions: "play none none none"
 			}
 		});
 
@@ -1209,7 +1285,7 @@
 			scrollTrigger: {
 				trigger: welfareSection,
 				start: "top 75%",
-				once: true
+				toggleActions: "play none none none"
 			}
 		});
 
@@ -1258,7 +1334,7 @@
 			scrollTrigger: {
 				trigger: safetySection,
 				start: "top 75%",
-				once: true
+				toggleActions: "play none none none"
 			}
 		});
 
@@ -1308,7 +1384,7 @@
 			scrollTrigger: {
 				trigger: policySection,
 				start: "top 75%",
-				once: true
+				toggleActions: "play none none none"
 			}
 		});
 
@@ -1362,7 +1438,7 @@
 			scrollTrigger: {
 				trigger: yardSection,
 				start: "top 75%",
-				once: true
+				toggleActions: "play none none none"
 			}
 		});
 
@@ -1415,7 +1491,7 @@
 			scrollTrigger: {
 				trigger: timelineSection,
 				start: "top 78%",
-				once: true
+				toggleActions: "play none none none"
 			}
 		});
 
@@ -1532,10 +1608,10 @@
 
 			const qaTl = gsap.timeline({
 				scrollTrigger: {
-					trigger: qaSection,
-					start: "top 78%",
-					once: true
-				}
+				trigger: qaSection,
+				start: "top 78%",
+				toggleActions: "play none none none"
+			}
 			});
 
 			if (words.length) {
@@ -1562,8 +1638,8 @@
 			initHeroBannerAnimation,
 			initAboutSectionAnimation,
 			initAnchorsInteractiveExperience,
+			initTiltedCards,
 			initStatsParallaxAnimation,
-			initCapabilitiesAnimation,
 			initExtensionsShowcase,
 			initPartnersAnimation,
 			initLegacyStickyScrollAnimation,
@@ -1588,10 +1664,30 @@
 			}
 		});
 
+		// Debounced resize handler for DevTools/Inspect opening stability
+		let resizeDebounceTimer;
+		window.addEventListener("resize", () => {
+			clearTimeout(resizeDebounceTimer);
+			resizeDebounceTimer = setTimeout(() => {
+				if (typeof ScrollTrigger !== "undefined") {
+					ScrollTrigger.refresh();
+				}
+			}, 150);
+		});
+
 		if (typeof ScrollTrigger !== "undefined") {
+			ScrollTrigger.refresh();
+
+			// When fonts are loaded
+			if (document.fonts && document.fonts.ready) {
+				document.fonts.ready.then(() => {
+					ScrollTrigger.refresh();
+				});
+			}
+
 			setTimeout(() => {
 				ScrollTrigger.refresh();
-			}, 100);
+			}, 200);
 		}
 	}
 

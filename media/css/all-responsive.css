@@ -533,16 +533,8 @@
     font-size: 34px;
   }
 
-  .capabilities-head-wrap {
-    margin-bottom: 28px;
-  }
-
-  .capabilities-slider::before,
-  .capabilities-slider::after {
-    opacity: 0.45;
-    width: 50px;
-  }
-
+  
+  
   .capability-card {
     padding: 24px 20px 22px;
     min-height: 250px;
