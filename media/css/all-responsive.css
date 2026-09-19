@@ -28,7 +28,7 @@
   }
 
   body {
-    padding-top: 67px;
+    padding-top: 0px !important;
   }
 
   .footer-watermark-text {
@@ -1167,7 +1167,7 @@
   body {
     font-size: 14px;
     line-height: 22px;
-    padding-top: 63px;
+    padding-top: 0px !important;
   }
 
   .section-title h2 {
@@ -1350,4 +1350,32 @@
     font-size: 23px;
   }
 
+}
+
+/* Master Reset: Eliminate top space on banner across all devices */
+html,
+body,
+#section-banner,
+.section-banner {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+@media screen and (max-width: 1799px) {
+  html body, body { padding-top: 0 !important; margin-top: 0 !important; }
+}
+@media screen and (max-width: 1599px) {
+  html body, body { padding-top: 0 !important; margin-top: 0 !important; }
+}
+@media screen and (max-width: 1408px) {
+  html body, body { padding-top: 0 !important; margin-top: 0 !important; }
+}
+@media screen and (max-width: 1216px) {
+  html body, body { padding-top: 0 !important; margin-top: 0 !important; }
+}
+@media screen and (max-width: 1024px) {
+  html body, body { padding-top: 0 !important; margin-top: 0 !important; }
+}
+@media screen and (max-width: 768px) {
+  html body, body { padding-top: 0 !important; margin-top: 0 !important; }
 }

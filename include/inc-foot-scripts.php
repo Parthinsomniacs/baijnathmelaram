@@ -1,4 +1,4 @@
-﻿<!--Common JS-->
+<!--Common JS-->
 <?php require_once $alljs; ?>
 <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -15,7 +15,9 @@
 			var pos = window.scrollY || window.pageYOffset || 0;
 			sessionStorage.setItem('bm_scroll_pos', pos.toString());
 		} catch (e) {}
-	}, { passive: true });
+	}, {
+		passive: true
+	});
 
 	window.addEventListener('beforeunload', function() {
 		try {
@@ -38,7 +40,9 @@
 		window.lenis = new Lenis({
 			autoRaf: false,
 			duration: 1.2,
-			easing: function(t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
+			easing: function(t) {
+				return Math.min(1, 1.001 - Math.pow(2, -10 * t));
+			},
 			orientation: 'vertical',
 			smoothWheel: true,
 			touchMultiplier: 1.5,
@@ -87,8 +91,12 @@
 					document.removeEventListener("click", resumePlay);
 					document.removeEventListener("touchstart", resumePlay);
 				};
-				document.addEventListener("click", resumePlay, { toggleActions: "play none none none" });
-				document.addEventListener("touchstart", resumePlay, { toggleActions: "play none none none" });
+				document.addEventListener("click", resumePlay, {
+					toggleActions: "play none none none"
+				});
+				document.addEventListener("touchstart", resumePlay, {
+					toggleActions: "play none none none"
+				});
 			});
 		}
 
@@ -319,10 +327,10 @@
 				stagger: 0.06,
 				ease: "power3.out",
 				scrollTrigger: {
-				trigger: anchorSec.querySelector(".js-anchors-title") || anchorSec,
-				start: "top 85%",
-				toggleActions: "play none none none"
-			}
+					trigger: anchorSec.querySelector(".js-anchors-title") || anchorSec,
+					start: "top 85%",
+					toggleActions: "play none none none"
+				}
 			});
 		}
 
@@ -398,10 +406,10 @@
 					duration: 0.8,
 					ease: "power2.out",
 					scrollTrigger: {
-				trigger: fanWrap,
-				start: "top 85%",
-				toggleActions: "play none none none"
-			}
+						trigger: fanWrap,
+						start: "top 85%",
+						toggleActions: "play none none none"
+					}
 				});
 			});
 		}
@@ -487,19 +495,18 @@
 
 		const bg = statsSec.querySelector(".stats-bg-parallax, .stats-parallax-img");
 		if (bg) {
-			gsap.fromTo(bg, 
-				{ y: "-15%" }, 
-				{
-					y: "15%",
-					ease: "none",
-					scrollTrigger: {
-						trigger: statsSec,
-						start: "top bottom",
-						end: "bottom top",
-						scrub: true
-					}
+			gsap.fromTo(bg, {
+				y: "-15%"
+			}, {
+				y: "15%",
+				ease: "none",
+				scrollTrigger: {
+					trigger: statsSec,
+					start: "top bottom",
+					end: "bottom top",
+					scrub: true
 				}
-			);
+			});
 		}
 
 		// Title Word-Reveal Animation
@@ -515,10 +522,10 @@
 				stagger: 0.06,
 				ease: "power3.out",
 				scrollTrigger: {
-				trigger: statsSec.querySelector(".js-stats-title") || statsSec,
-				start: "top 85%",
-				toggleActions: "play none none none"
-			}
+					trigger: statsSec.querySelector(".js-stats-title") || statsSec,
+					start: "top 85%",
+					toggleActions: "play none none none"
+				}
 			});
 		}
 
@@ -546,7 +553,9 @@
 							const target = parseFloat(counter.getAttribute("data-target") || "0");
 							const decimals = parseInt(counter.getAttribute("data-decimals") || "0", 10);
 							if (target > 0) {
-								const obj = { val: 0 };
+								const obj = {
+									val: 0
+								};
 								gsap.to(obj, {
 									val: target,
 									duration: 2.2,
@@ -567,9 +576,9 @@
 	/** Capabilities Sticky Full-Height Stacking Cards & Word-Reveal Animation **/
 	/** Capabilities Sticky Full-Height Stacking Cards & Word-Reveal Animation **/
 	/** Capabilities Sticky Stacking Cards, GSAP Text Reveal & Robust Resize Handling **/
-	
 
-					/** Ship Showcase Sticky Scroll, Smooth Width Scrub & Stat Counter Animation **/
+
+	/** Ship Showcase Sticky Scroll, Smooth Width Scrub & Stat Counter Animation **/
 	function initShipShowcaseAnimation() {
 		const section = document.querySelector("#section-ship-showcase");
 		if (!section || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
@@ -586,6 +595,7 @@
 		if (!rightCol) return;
 
 		let countersAnimated = false;
+
 		function animateShipCounters() {
 			if (countersAnimated) return;
 			countersAnimated = true;
@@ -593,7 +603,9 @@
 			counterEls.forEach((counter) => {
 				const target = parseFloat(counter.getAttribute("data-target")) || 0;
 				const decimals = parseInt(counter.getAttribute("data-decimals"), 10) || 0;
-				const obj = { val: 0 };
+				const obj = {
+					val: 0
+				};
 
 				gsap.to(obj, {
 					val: target,
@@ -617,18 +629,39 @@
 
 		// Desktop & Tablet (> 1024px)
 		mm.add("(min-width: 1025px)", () => {
-			gsap.set(rightCol, { width: "100%" });
-			if (eyebrow) gsap.set(eyebrow, { opacity: 0, y: 25 });
-			if (words.length) gsap.set(words, { y: "115%", opacity: 0 });
-			if (desc) gsap.set(desc, { opacity: 0, y: 25 });
-			if (statCards.length) gsap.set(statCards, { opacity: 0, y: 30 });
+			gsap.set(rightCol, {
+				width: "100%"
+			});
+			if (eyebrow) gsap.set(eyebrow, {
+				opacity: 0,
+				y: 25
+			});
+			if (words.length) gsap.set(words, {
+				y: "115%",
+				opacity: 0
+			});
+			if (desc) gsap.set(desc, {
+				opacity: 0,
+				y: 25
+			});
+			if (statCards.length) gsap.set(statCards, {
+				opacity: 0,
+				y: 30
+			});
 
 			let textHasPlayed = false;
 
-			const textAutoTl = gsap.timeline({ paused: true });
+			const textAutoTl = gsap.timeline({
+				paused: true
+			});
 
 			if (eyebrow) {
-				textAutoTl.to(eyebrow, { opacity: 1, y: 0, duration: 0.55, ease: "power2.out" }, 0);
+				textAutoTl.to(eyebrow, {
+					opacity: 1,
+					y: 0,
+					duration: 0.55,
+					ease: "power2.out"
+				}, 0);
 			}
 
 			if (words.length) {
@@ -642,7 +675,12 @@
 			}
 
 			if (desc) {
-				textAutoTl.to(desc, { opacity: 1, y: 0, duration: 0.65, ease: "power2.out" }, 0.4);
+				textAutoTl.to(desc, {
+					opacity: 1,
+					y: 0,
+					duration: 0.65,
+					ease: "power2.out"
+				}, 0.4);
 			}
 
 			if (statCards.length) {
@@ -677,7 +715,9 @@
 				}
 			});
 
-			showcaseTl.to({}, { duration: 0.05 });
+			showcaseTl.to({}, {
+				duration: 0.05
+			});
 
 			showcaseTl.fromTo(rightCol, {
 				width: "100%"
@@ -687,7 +727,9 @@
 				duration: 0.65
 			}, 0.05);
 
-			showcaseTl.to({}, { duration: 0.30 });
+			showcaseTl.to({}, {
+				duration: 0.30
+			});
 		});
 
 		mm.add("(max-width: 1024px)", () => {
@@ -702,7 +744,7 @@
 		});
 	}
 
-									/** Our Capabilities Telha Clarke Style Pinned Scroll Showcase **/
+	/** Our Capabilities Telha Clarke Style Pinned Scroll Showcase **/
 	function initCapabilitiesHover() {
 		const capSection = document.querySelector("#section-capabilities");
 		if (!capSection) return;
@@ -759,7 +801,15 @@
 				});
 
 				if (firstQuote) {
-					stmtTl.fromTo(firstQuote, { opacity: 0, y: "100%" }, { opacity: 1, y: "0%", duration: 0.75, ease: "power3.out" }, 0);
+					stmtTl.fromTo(firstQuote, {
+						opacity: 0,
+						y: "100%"
+					}, {
+						opacity: 1,
+						y: "0%",
+						duration: 0.75,
+						ease: "power3.out"
+					}, 0);
 				}
 
 				stmtTl.to(stmtWords, {
@@ -771,7 +821,15 @@
 				}, 0.04);
 
 				if (lastQuote) {
-					stmtTl.fromTo(lastQuote, { opacity: 0, y: "100%" }, { opacity: 1, y: "0%", duration: 0.75, ease: "power3.out" }, 0.65);
+					stmtTl.fromTo(lastQuote, {
+						opacity: 0,
+						y: "100%"
+					}, {
+						opacity: 1,
+						y: "0%",
+						duration: 0.75,
+						ease: "power3.out"
+					}, 0.65);
 				}
 			}
 
@@ -818,7 +876,7 @@
 		// 1. Section Header: Eyebrow + Heading Word-Mask Scroll Animation
 		const eyebrow = extSection.querySelector(".about-ref-eyebrow");
 		const extWords = extSection.querySelectorAll(".ext-word-inner");
-		
+
 		const headTl = gsap.timeline({
 			scrollTrigger: {
 				trigger: extSection,
@@ -972,53 +1030,49 @@
 		const legacySection = document.querySelector("#section-legacy");
 		if (!legacySection) return;
 
-		// 1. Heading & Narrative entrance
-		const eyebrow = legacySection.querySelector(".about-ref-eyebrow");
+		// 1. Heading Words GSAP Roll-Up Text Reveal ("OUR", "LEGACY")
+		const stickyContent = legacySection.querySelector(".legacy-sticky-content");
 		const legacyWords = legacySection.querySelectorAll(".legacy-word-inner");
-		const legacyDesc = legacySection.querySelector(".legacy-desc");
-		const compass = legacySection.querySelector(".legacy-left-compass");
-
-		const leftTl = gsap.timeline({
-			scrollTrigger: {
-				trigger: legacySection,
-				start: "top 80%",
-				toggleActions: "play none none none"
-			}
-		});
-
-		if (eyebrow) {
-			leftTl.fromTo(eyebrow, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" }, 0);
-		}
 
 		if (legacyWords.length) {
-			leftTl.fromTo(legacyWords, { y: "115%", opacity: 0 }, { y: "0%", opacity: 1, duration: 0.85, stagger: 0.05, ease: "power3.out" }, 0.1);
+			gsap.fromTo(legacyWords, {
+				y: "120%",
+				opacity: 0,
+				rotateZ: 2
+			}, {
+				y: "0%",
+				opacity: 1,
+				rotateZ: 0,
+				duration: 1.05,
+				stagger: 0.12,
+				ease: "power4.out",
+				scrollTrigger: {
+					trigger: stickyContent || legacySection,
+					start: "top 82%",
+					toggleActions: "play none none reverse"
+				}
+			});
 		}
 
-		if (legacyDesc) {
-			leftTl.fromTo(legacyDesc, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.75, ease: "power2.out" }, 0.3);
-		}
-
-		if (compass) {
-			leftTl.fromTo(compass, { scale: 0.88, opacity: 0 }, { scale: 1, opacity: 0.75, duration: 1.0, ease: "power2.out" }, 0.2);
-		}
-
-		// 2. Right Stack Cards Scroll Trigger (Stagger Fade-In + Animated Bar & Counters)
+		// 2. Right Stack Glass Cards Scroll Trigger (Card slide + Title text reveal + Counter live count)
 		const cards = legacySection.querySelectorAll(".legacy-stack-card");
-		cards.forEach((card) => {
+		cards.forEach((card, idx) => {
 			const counter = card.querySelector(".legacy-stat-count");
-			const bar = card.querySelector(".legacy-card-bar-fill");
+			const cardTitle = card.querySelector(".legacy-card-title");
 
 			const cardTl = gsap.timeline({
 				scrollTrigger: {
 					trigger: card,
-					start: "top 85%",
+					start: "top 86%",
 					toggleActions: "play none none none",
 					onEnter: () => {
 						if (counter && !counter.dataset.animated) {
 							counter.dataset.animated = "true";
 							const target = parseFloat(counter.getAttribute("data-target")) || 0;
 							const decimals = parseInt(counter.getAttribute("data-decimals"), 10) || 0;
-							const obj = { val: 0 };
+							const obj = {
+								val: 0
+							};
 							gsap.to(obj, {
 								val: target,
 								duration: 1.8,
@@ -1033,28 +1087,31 @@
 			});
 
 			cardTl.fromTo(card, {
-				y: 35,
+				y: 45,
 				opacity: 0
 			}, {
 				y: 0,
 				opacity: 1,
-				duration: 0.8,
-				ease: "power2.out"
+				duration: 0.85,
+				delay: 0.04,
+				ease: "power3.out"
 			});
 
-			if (bar) {
-				cardTl.fromTo(bar, {
-					scaleX: 0
+			if (cardTitle) {
+				cardTl.fromTo(cardTitle, {
+					y: 16,
+					opacity: 0
 				}, {
-					scaleX: 1,
-					duration: 1.1,
-					ease: "power3.out"
-				}, 0.2);
+					y: 0,
+					opacity: 1,
+					duration: 0.65,
+					ease: "power2.out"
+				}, "-=0.5");
 			}
 		});
 	}
 
-	/** Our Impact Section: Horizontal Scroll Entrance from Right to Left **/
+	/** Our Impact Section: Horizontal Scroll & GSAP Text Reveal Animation **/
 	function initImpactHorizontalScrollAnimation() {
 		if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
 		gsap.registerPlugin(ScrollTrigger);
@@ -1064,7 +1121,7 @@
 		const impactCards = document.querySelectorAll(".impact-card");
 		if (!impactSection || !impactTrack) return;
 
-		// 1. Heading & Tagline word-mask entrance
+		// 1. Tagline text word splitting for smooth individual word reveals
 		const impactTag = impactSection.querySelector(".impact-tagline");
 		if (impactTag && !impactTag.classList.contains("split-ready")) {
 			impactTag.classList.add("split-ready");
@@ -1073,44 +1130,90 @@
 			impactTag.innerHTML = words.map(w => `<span class="impact-word-mask"><span class="impact-tag-inner">${w}</span></span>`).join(' ');
 		}
 
+		// 2. Elements for GSAP Text Animation
+		const eyebrow = impactSection.querySelector(".about-ref-eyebrow");
+		const eyebrowLines = impactSection.querySelectorAll(".about-eyebrow-line");
+		const eyebrowText = impactSection.querySelector(".about-eyebrow-text");
 		const impactWords = impactSection.querySelectorAll(".impact-word-inner");
 		const tagWords = impactSection.querySelectorAll(".impact-tag-inner");
+		const cardTitles = impactSection.querySelectorAll(".impact-card-title");
 
-		const impactTl = gsap.timeline({
+		const impactHeadTl = gsap.timeline({
 			scrollTrigger: {
 				trigger: impactSection,
-				start: "top 85%",
-				toggleActions: "play none none none"
+				start: "top 82%",
+				toggleActions: "play none none reverse"
 			}
 		});
 
-		if (impactWords.length) {
-			impactTl.fromTo(impactWords, {
-				y: "115%",
-				opacity: 0
+		// A. Eyebrow lines expand from center & text slides up
+		if (eyebrowLines.length) {
+			impactHeadTl.fromTo(eyebrowLines, {
+				scaleX: 0,
+				transformOrigin: "center"
 			}, {
-				y: "0%",
-				opacity: 1,
-				duration: 0.85,
-				stagger: 0.08,
+				scaleX: 1,
+				duration: 0.7,
 				ease: "power3.out"
 			}, 0);
 		}
+		if (eyebrowText) {
+			impactHeadTl.fromTo(eyebrowText, {
+				y: 14,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.6,
+				ease: "power2.out"
+			}, 0.1);
+		}
 
+		// B. Title Words ("Our", "Impact") Roll-Up from mask
+		if (impactWords.length) {
+			impactHeadTl.fromTo(impactWords, {
+				y: "115%",
+				opacity: 0,
+				rotateZ: 1.5
+			}, {
+				y: "0%",
+				opacity: 1,
+				rotateZ: 0,
+				duration: 0.85,
+				stagger: 0.09,
+				ease: "power4.out"
+			}, 0.15);
+		}
+
+		// C. Tagline text Roll-Up with staggered delay
 		if (tagWords.length) {
-			impactTl.fromTo(tagWords, {
+			impactHeadTl.fromTo(tagWords, {
 				y: "115%",
 				opacity: 0
 			}, {
 				y: "0%",
 				opacity: 1,
-				duration: 0.75,
-				stagger: 0.02,
+				duration: 0.65,
+				stagger: 0.022,
 				ease: "power3.out"
-			}, 0.18);
+			}, 0.28);
 		}
 
-		// 2. Horizontal slide entrance from Right to Left on scroll (Replicating exact upper section effect)
+		// D. Card descriptions/titles ("Energy", "of Co2", etc.) staggered text reveal
+		if (cardTitles.length) {
+			impactHeadTl.fromTo(cardTitles, {
+				y: 18,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.7,
+				stagger: 0.08,
+				ease: "power2.out"
+			}, 0.4);
+		}
+
+		// 3. Horizontal slide entrance from Right to Left on scroll
 		gsap.fromTo(impactTrack, {
 			x: () => (window.innerWidth <= 768 ? 120 : Math.min(window.innerWidth * 0.4, 460)),
 			opacity: 0.35
@@ -1127,23 +1230,25 @@
 			}
 		});
 
-		// 3. Counter live count-up animation
+		// 4. Counter live count-up animation
 		impactCards.forEach(card => {
 			const countEl = card.querySelector(".impact-stat-count");
 			if (!countEl) return;
 			const targetVal = parseFloat(countEl.getAttribute("data-target") || "0");
 			const decimals = parseInt(countEl.getAttribute("data-decimals") || "0");
-			const counterObj = { val: 0 };
+			const counterObj = {
+				val: 0
+			};
 
 			gsap.to(counterObj, {
 				val: targetVal,
 				duration: 2.0,
 				ease: "power2.out",
 				scrollTrigger: {
-				trigger: impactSection,
-				start: "top 80%",
-				toggleActions: "play none none none"
-			},
+					trigger: impactSection,
+					start: "top 80%",
+					toggleActions: "play none none none"
+				},
 				onUpdate: () => {
 					countEl.textContent = decimals > 0 ? counterObj.val.toFixed(decimals) : Math.round(counterObj.val);
 				}
@@ -1381,15 +1486,38 @@
 		});
 
 		if (words.length) {
-			envTl.to(words, { y: "0%", opacity: 1, duration: 0.85, stagger: 0.07, ease: "power3.out" }, 0);
+			envTl.to(words, {
+				y: "0%",
+				opacity: 1,
+				duration: 0.85,
+				stagger: 0.07,
+				ease: "power3.out"
+			}, 0);
 		}
 
 		if (leadDesc) {
-			envTl.fromTo(leadDesc, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "power2.out" }, 0.18);
+			envTl.fromTo(leadDesc, {
+				y: 30,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.7,
+				ease: "power2.out"
+			}, 0.18);
 		}
 
 		if (featureCards.length) {
-			envTl.fromTo(featureCards, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.65, stagger: 0.08, ease: "power2.out" }, 0.3);
+			envTl.fromTo(featureCards, {
+				y: 30,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.65,
+				stagger: 0.08,
+				ease: "power2.out"
+			}, 0.3);
 		}
 
 		// Full-view Image Parallax on Scroll
@@ -1430,15 +1558,38 @@
 		});
 
 		if (words.length) {
-			welfareTl.to(words, { y: "0%", opacity: 1, duration: 0.85, stagger: 0.07, ease: "power3.out" }, 0);
+			welfareTl.to(words, {
+				y: "0%",
+				opacity: 1,
+				duration: 0.85,
+				stagger: 0.07,
+				ease: "power3.out"
+			}, 0);
 		}
 
 		if (leadDesc) {
-			welfareTl.fromTo(leadDesc, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "power2.out" }, 0.18);
+			welfareTl.fromTo(leadDesc, {
+				y: 30,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.7,
+				ease: "power2.out"
+			}, 0.18);
 		}
 
 		if (featureCards.length) {
-			welfareTl.fromTo(featureCards, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.65, stagger: 0.08, ease: "power2.out" }, 0.3);
+			welfareTl.fromTo(featureCards, {
+				y: 30,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.65,
+				stagger: 0.08,
+				ease: "power2.out"
+			}, 0.3);
 		}
 
 		// Full-view Image Parallax on Scroll
@@ -1479,15 +1630,38 @@
 		});
 
 		if (words.length) {
-			safetyTl.to(words, { y: "0%", opacity: 1, duration: 0.85, stagger: 0.07, ease: "power3.out" }, 0);
+			safetyTl.to(words, {
+				y: "0%",
+				opacity: 1,
+				duration: 0.85,
+				stagger: 0.07,
+				ease: "power3.out"
+			}, 0);
 		}
 
 		if (leadDesc) {
-			safetyTl.fromTo(leadDesc, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "power2.out" }, 0.18);
+			safetyTl.fromTo(leadDesc, {
+				y: 30,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.7,
+				ease: "power2.out"
+			}, 0.18);
 		}
 
 		if (featureCards.length) {
-			safetyTl.fromTo(featureCards, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.65, stagger: 0.08, ease: "power2.out" }, 0.3);
+			safetyTl.fromTo(featureCards, {
+				y: 30,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.65,
+				stagger: 0.08,
+				ease: "power2.out"
+			}, 0.3);
 		}
 
 		// Full-view Image Parallax on Scroll
@@ -1529,19 +1703,50 @@
 		});
 
 		if (words.length) {
-			policyTl.to(words, { y: "0%", opacity: 1, duration: 0.85, stagger: 0.07, ease: "power3.out" }, 0);
+			policyTl.to(words, {
+				y: "0%",
+				opacity: 1,
+				duration: 0.85,
+				stagger: 0.07,
+				ease: "power3.out"
+			}, 0);
 		}
 
 		if (leadDesc) {
-			policyTl.fromTo(leadDesc, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "power2.out" }, 0.18);
+			policyTl.fromTo(leadDesc, {
+				y: 30,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.7,
+				ease: "power2.out"
+			}, 0.18);
 		}
 
 		if (heroCard) {
-			policyTl.fromTo(heroCard, { y: 35, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }, 0.28);
+			policyTl.fromTo(heroCard, {
+				y: 35,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.8,
+				ease: "power2.out"
+			}, 0.28);
 		}
 
 		if (policyCards.length) {
-			policyTl.fromTo(policyCards, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.65, stagger: 0.08, ease: "power2.out" }, 0.4);
+			policyTl.fromTo(policyCards, {
+				y: 30,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.65,
+				stagger: 0.08,
+				ease: "power2.out"
+			}, 0.4);
 		}
 
 		// Hero Image Parallax on Scroll
@@ -1583,19 +1788,50 @@
 		});
 
 		if (words.length) {
-			yardTl.to(words, { y: "0%", opacity: 1, duration: 0.85, stagger: 0.07, ease: "power3.out" }, 0);
+			yardTl.to(words, {
+				y: "0%",
+				opacity: 1,
+				duration: 0.85,
+				stagger: 0.07,
+				ease: "power3.out"
+			}, 0);
 		}
 
 		if (leadDesc) {
-			yardTl.fromTo(leadDesc, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "power2.out" }, 0.18);
+			yardTl.fromTo(leadDesc, {
+				y: 30,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.7,
+				ease: "power2.out"
+			}, 0.18);
 		}
 
 		if (topImageCard) {
-			yardTl.fromTo(topImageCard, { y: 35, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }, 0.28);
+			yardTl.fromTo(topImageCard, {
+				y: 35,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.8,
+				ease: "power2.out"
+			}, 0.28);
 		}
 
 		if (detailCards.length) {
-			yardTl.fromTo(detailCards, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.65, stagger: 0.08, ease: "power2.out" }, 0.4);
+			yardTl.fromTo(detailCards, {
+				y: 30,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.65,
+				stagger: 0.08,
+				ease: "power2.out"
+			}, 0.4);
 		}
 
 		// Top Image Parallax on Scroll
@@ -1636,11 +1872,25 @@
 		});
 
 		if (words.length) {
-			headerTl.to(words, { y: "0%", opacity: 1, duration: 0.85, stagger: 0.07, ease: "power3.out" }, 0);
+			headerTl.to(words, {
+				y: "0%",
+				opacity: 1,
+				duration: 0.85,
+				stagger: 0.07,
+				ease: "power3.out"
+			}, 0);
 		}
 
 		if (leadDesc) {
-			headerTl.fromTo(leadDesc, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "power2.out" }, 0.18);
+			headerTl.fromTo(leadDesc, {
+				y: 30,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.7,
+				ease: "power2.out"
+			}, 0.18);
 		}
 
 		// Spine Fill Progress Line Scrub
@@ -1748,28 +1998,224 @@
 
 			const qaTl = gsap.timeline({
 				scrollTrigger: {
-				trigger: qaSection,
-				start: "top 78%",
-				toggleActions: "play none none none"
-			}
+					trigger: qaSection,
+					start: "top 78%",
+					toggleActions: "play none none none"
+				}
 			});
 
 			if (words.length) {
-				qaTl.to(words, { y: "0%", opacity: 1, duration: 0.85, stagger: 0.07, ease: "power3.out" }, 0);
+				qaTl.to(words, {
+					y: "0%",
+					opacity: 1,
+					duration: 0.85,
+					stagger: 0.07,
+					ease: "power3.out"
+				}, 0);
 			}
 
 			if (leadDesc) {
-				qaTl.fromTo(leadDesc, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "power2.out" }, 0.18);
+				qaTl.fromTo(leadDesc, {
+					y: 30,
+					opacity: 0
+				}, {
+					y: 0,
+					opacity: 1,
+					duration: 0.7,
+					ease: "power2.out"
+				}, 0.18);
 			}
 
 			if (sliderContainer) {
-				qaTl.fromTo(sliderContainer, { y: 35, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }, 0.28);
+				qaTl.fromTo(sliderContainer, {
+					y: 35,
+					opacity: 0
+				}, {
+					y: 0,
+					opacity: 1,
+					duration: 0.8,
+					ease: "power2.out"
+				}, 0.28);
 			}
 		}
 	}
 
-	
-	
+
+
+
+	/** Global Full-Page GSAP Parallax Scroll Experience **/
+	function initGlobalParallaxExperience() {
+		if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+		gsap.registerPlugin(ScrollTrigger);
+
+		// 1. About Us Section: Floating Cargo Vessel & Atmospheric Watermark Parallax
+		const aboutSec = document.querySelector("#section-about-us");
+		if (aboutSec) {
+			const shipBox = aboutSec.querySelector(".about-hero-ship-box");
+			const mapPattern = aboutSec.querySelector(".about-bg-map-pattern");
+			const curves = aboutSec.querySelector(".about-bg-curves");
+
+			if (shipBox) {
+				gsap.fromTo(shipBox, {
+					yPercent: -10
+				}, {
+					yPercent: 10,
+					ease: "none",
+					scrollTrigger: {
+						trigger: aboutSec,
+						start: "top bottom",
+						end: "bottom top",
+						scrub: true
+					}
+				});
+			}
+			if (mapPattern) {
+				gsap.fromTo(mapPattern, {
+					yPercent: -14
+				}, {
+					yPercent: 14,
+					ease: "none",
+					scrollTrigger: {
+						trigger: aboutSec,
+						start: "top bottom",
+						end: "bottom top",
+						scrub: true
+					}
+				});
+			}
+			if (curves) {
+				gsap.fromTo(curves, {
+					yPercent: 12
+				}, {
+					yPercent: -12,
+					ease: "none",
+					scrollTrigger: {
+						trigger: aboutSec,
+						start: "top bottom",
+						end: "bottom top",
+						scrub: true
+					}
+				});
+			}
+		}
+
+		// 3. Our Anchors Section: Nautical Compass Rotation & Grid Drift
+		const anchorsSec = document.querySelector("#section-anchors");
+		if (anchorsSec) {
+			const compassSvg = anchorsSec.querySelector(".anchors-bg-compass svg");
+			const grid = anchorsSec.querySelector(".anchors-bg-grid");
+			const curves = anchorsSec.querySelector(".anchors-bg-curves");
+
+			if (compassSvg) {
+				gsap.fromTo(compassSvg, {
+					yPercent: -16,
+					rotation: -12
+				}, {
+					yPercent: 16,
+					rotation: 20,
+					ease: "none",
+					scrollTrigger: {
+						trigger: anchorsSec,
+						start: "top bottom",
+						end: "bottom top",
+						scrub: true
+					}
+				});
+			}
+			if (grid) {
+				gsap.fromTo(grid, {
+					yPercent: -8
+				}, {
+					yPercent: 8,
+					ease: "none",
+					scrollTrigger: {
+						trigger: anchorsSec,
+						start: "top bottom",
+						end: "bottom top",
+						scrub: true
+					}
+				});
+			}
+			if (curves) {
+				gsap.fromTo(curves, {
+					yPercent: 14
+				}, {
+					yPercent: -14,
+					ease: "none",
+					scrollTrigger: {
+						trigger: anchorsSec,
+						start: "top bottom",
+						end: "bottom top",
+						scrub: true
+					}
+				});
+			}
+		}
+
+		// 4. Ship Showcase Section: Compass Rotation & Floating Atmosphere
+		const shipShowcaseSec = document.querySelector("#section-ship-showcase");
+		if (shipShowcaseSec) {
+			const compassSvg = shipShowcaseSec.querySelector(".ship-showcase-bg-compass svg");
+			if (compassSvg) {
+				gsap.fromTo(compassSvg, {
+					yPercent: -14,
+					rotation: -8
+				}, {
+					yPercent: 14,
+					rotation: 16,
+					ease: "none",
+					scrollTrigger: {
+						trigger: shipShowcaseSec,
+						start: "top bottom",
+						end: "bottom top",
+						scrub: true
+					}
+				});
+			}
+		}
+
+		// 5. Capabilities Section: Nautical Compass Floating Rotation
+		const capSec = document.querySelector("#section-capabilities");
+		if (capSec) {
+			const compassSvg = capSec.querySelector(".cap-left-compass svg");
+			if (compassSvg) {
+				gsap.fromTo(compassSvg, {
+					yPercent: -15,
+					rotation: -12
+				}, {
+					yPercent: 15,
+					rotation: 18,
+					ease: "none",
+					scrollTrigger: {
+						trigger: capSec,
+						start: "top bottom",
+						end: "bottom top",
+						scrub: true
+					}
+				});
+			}
+		}
+
+		// 6. Our Impact Section: Square Grid Background 3D Depth Parallax
+		const impactSec = document.querySelector("#section-impact");
+		if (impactSec) {
+			const grid = impactSec.querySelector(".impact-bg-grid");
+			if (grid) {
+				gsap.fromTo(grid, {
+					yPercent: -12
+				}, {
+					yPercent: 12,
+					ease: "none",
+					scrollTrigger: {
+						trigger: impactSec,
+						start: "top bottom",
+						end: "bottom top",
+						scrub: true
+					}
+				});
+			}
+		}
+	}
 
 	function initAllAnimations() {
 		if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
@@ -1796,7 +2242,8 @@
 			initPolicySectionAnimation,
 			initYardSectionAnimation,
 			initTimelineSectionAnimation,
-			initQASectionAnimation
+			initQASectionAnimation,
+			initGlobalParallaxExperience
 		];
 
 		funcs.forEach(fn => {
@@ -2007,7 +2454,9 @@
 		if (fleetDrawer) {
 			fleetDrawer.addEventListener("wheel", function(e) {
 				e.stopPropagation();
-			}, { passive: true });
+			}, {
+				passive: true
+			});
 		}
 	});
 	/**End Menu Toggle**/

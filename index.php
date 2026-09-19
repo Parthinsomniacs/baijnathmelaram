@@ -1,4 +1,4 @@
-﻿<?php require_once("inc-global.php"); ?>
+<?php require_once("inc-global.php"); ?>
 <?php
 $page = "home";
 $pagetype = "onepage";
@@ -25,7 +25,7 @@ $utm = "yes";
   <?php echo $block_body_start; ?>
   <?php require_once $header; ?>
 
-  <section id="section-banner" class="section section-banner p-0">
+  <section id="section-banner" class="section-banner">
     <!-- Banner Video Background with Smooth Seamless Loop -->
     <div class="banner-video-wrap">
       <video id="banner-video-1" class="banner-video banner-video--1" autoplay muted playsinline preload="auto">
@@ -859,78 +859,108 @@ $utm = "yes";
   </section>
 
   <!-- Our Legacy Section (Sticky Split Showcase - Left Sticky / Right Cards Stack) -->
-  <section id="section-legacy" class="section section-legacy theme-padding">
-    <!-- Background Image Layer & Theme Overlays -->
-    <div class="legacy-bg-media" aria-hidden="true">
-      <img src="<?php echo $base_url; ?>media/images/legacy/legacy-banner.webp" alt="Legacy Background" class="legacy-bg-img" />
-      <div class="legacy-bg-overlay"></div>
-    </div>
-
-    <!-- Ambient Glow / Background Gradient Effects -->
-    <div class="legacy-ambient-glow" aria-hidden="true">
-      <div class="legacy-glow-blob legacy-glow-1"></div>
-      <div class="legacy-glow-blob legacy-glow-2"></div>
-      <div class="legacy-grid-overlay"></div>
-    </div>
-
-    <div class="columns is-variable is-8 legacy-columns">
-
-      <!-- Left Column: Sticky Title & Narrative -->
-      <div class="column is-5-desktop is-12-tablet legacy-col-left">
-        <div class="legacy-sticky-content">
-          <div class="about-ref-eyebrow mb-3">
-            <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
-            <span class="about-eyebrow-text" style="color: #e5912f;">OUR LEGACY</span>
-            <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
-          </div>
-
-          <h2 class="legacy-heading">
-            <span class="legacy-word-mask"><span class="legacy-word-inner">Six</span></span>
-            <span class="legacy-word-mask"><span class="legacy-word-inner">Decades</span></span>
-            <span class="legacy-word-mask"><span class="legacy-word-inner">of</span></span><br>
-            <span class="legacy-word-mask"><span class="legacy-word-inner">Maritime</span></span>
-            <span class="legacy-heading-accent" style="color: #e5912f;"><span class="legacy-word-mask"><span class="legacy-word-inner">Excellence.</span></span></span>
-          </h2>
-
-          <p class="legacy-desc">
-            Pioneering safe, sustainable ship recycling at Alang Yard 129 and expanding into circular alloy steel trading across global markets.
-          </p>
-
-          <div class="legacy-left-compass" aria-hidden="true">
-            <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="300" cy="300" r="280" stroke="rgba(229,145,47,0.18)" stroke-width="1.5" stroke-dasharray="4 8" />
-              <circle cx="300" cy="300" r="220" stroke="rgba(229,145,47,0.22)" stroke-width="1.2" />
-              <circle cx="300" cy="300" r="140" stroke="rgba(229,145,47,0.18)" stroke-width="1.5" stroke-dasharray="2 6" />
-              <circle cx="300" cy="300" r="60" stroke="rgba(229,145,47,0.25)" stroke-width="1.2" />
-              <line x1="300" y1="10" x2="300" y2="590" stroke="rgba(229,145,47,0.2)" stroke-width="1" stroke-dasharray="6 6" />
-              <line x1="10" y1="300" x2="590" y2="300" stroke="rgba(229,145,47,0.2)" stroke-width="1" stroke-dasharray="6 6" />
-              <path d="M300 20 L310 50 L300 42 L290 50 Z" fill="rgba(229,145,47,0.35)" />
-              <path d="M580 300 L550 310 L558 300 L550 290 Z" fill="rgba(229,145,47,0.28)" />
-              <path d="M300 580 L290 550 L300 558 L310 550 Z" fill="rgba(229,145,47,0.28)" />
-              <path d="M20 300 L50 290 L42 300 L50 310 Z" fill="rgba(229,145,47,0.28)" />
-              <circle cx="300" cy="300" r="4" fill="rgba(229,145,47,0.4)" />
-            </svg>
-          </div>
-        </div>
+  <section id="section-legacy" class="section section-legacy">
+    <!-- Pinned Background Backdrop (Fixed in viewport during section scroll, zero image movement) -->
+    <div class="legacy-bg-pin-wrap" aria-hidden="true">
+      <div class="legacy-bg-media">
+        <img src="<?php echo $imagesurl; ?>legacy/legacy-custom-bg.webp?v=<?php echo $version; ?>" alt="Our Legacy Background" class="legacy-bg-img" />
+        <div class="legacy-bg-overlay"></div>
       </div>
 
-      <!-- Right Column: Vertical Stack of Glass Cards (Ready for User Content) -->
-      <div class="column is-7-desktop is-12-tablet legacy-col-right">
-        <div class="legacy-cards-stack">
-          <!-- Cards content will be populated based on user input -->
-        </div>
+      <!-- Ambient Glow / Background Gradient Effects -->
+      <div class="legacy-ambient-glow">
+        <div class="legacy-glow-blob legacy-glow-1"></div>
+        <div class="legacy-glow-blob legacy-glow-2"></div>
+        <div class="legacy-grid-overlay"></div>
       </div>
+    </div>
 
+    <div class="container legacy-content-wrap">
+      <div class="columns is-variable is-8 legacy-columns">
+
+        <!-- Left Column: Sticky Title -->
+        <div class="column is-5-desktop is-12-tablet legacy-col-left">
+          <div class="legacy-sticky-content">
+            <h2 class="legacy-main-heading">
+              <span class="legacy-word-mask"><span class="legacy-word-inner">OUR</span></span><br>
+              <span class="legacy-word-mask"><span class="legacy-word-inner text-secondary">LEGACY</span></span>
+            </h2>
+          </div>
+        </div>
+
+        <!-- Right Column: Glass Counter Cards Stack -->
+        <div class="column is-7-desktop is-12-tablet legacy-col-right">
+          <div class="legacy-cards-stack">
+            <!-- Card 01: Ships Recycled -->
+            <div class="legacy-stack-card">
+              <div class="legacy-card-counter-wrap">
+                <span class="legacy-stat-count" data-target="350" data-decimals="0">0</span><span class="legacy-stat-suffix">+</span>
+              </div>
+              <h3 class="legacy-card-title">Ships recycled</h3>
+            </div>
+
+            <!-- Card 02: Years in Business -->
+            <div class="legacy-stack-card">
+              <div class="legacy-card-counter-wrap">
+                <span class="legacy-stat-count" data-target="60" data-decimals="0">0</span><span class="legacy-stat-suffix">+</span>
+              </div>
+              <h3 class="legacy-card-title">Years in business</h3>
+            </div>
+
+            <!-- Card 03: Tonnes Recycled -->
+            <div class="legacy-stack-card">
+              <div class="legacy-card-counter-wrap">
+                <span class="legacy-stat-count" data-target="2.5" data-decimals="1">0.0</span><span class="legacy-stat-suffix"> Mn</span>
+              </div>
+              <h3 class="legacy-card-title">Tonnes recycled</h3>
+            </div>
+
+            <!-- Card 04: Naval Vessels Recycled -->
+            <div class="legacy-stack-card">
+              <div class="legacy-card-counter-wrap">
+                <span class="legacy-stat-count" data-target="5" data-decimals="0">0</span><span class="legacy-stat-suffix">+</span>
+              </div>
+              <h3 class="legacy-card-title">Naval vessels recycled</h3>
+            </div>
+
+            <!-- Card 05: Years of HKC Compliance -->
+            <div class="legacy-stack-card">
+              <div class="legacy-card-counter-wrap">
+                <span class="legacy-stat-count" data-target="5" data-decimals="0">0</span><span class="legacy-stat-suffix">+</span>
+              </div>
+              <h3 class="legacy-card-title">Years of HKC Compliance</h3>
+            </div>
+
+            <!-- Card 06: FPSOs Recycled -->
+            <div class="legacy-stack-card">
+              <div class="legacy-card-counter-wrap">
+                <span class="legacy-stat-count" data-target="1" data-decimals="0">0</span>
+              </div>
+              <h3 class="legacy-card-title">FPSOs recycled</h3>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
   <!-- Our Impact Section (Horizontal Scroll from Right to Left) -->
   <section id="section-impact" class="section section-impact theme-padding">
+    <!-- Square Grid Background Pattern in the middle / background -->
+    <div class="impact-bg-grid" aria-hidden="true"></div>
+
     <div class="impact-head-wrap">
+      <div class="about-ref-eyebrow mb-2">
+        <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
+        <span class="about-eyebrow-text" style="color: #e5912f;">OUR IMPACT</span>
+        <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
+      </div>
       <div class="section-title">
         <h2>
           <span class="impact-word-mask"><span class="impact-word-inner">Our</span></span>
-          <span class="impact-word-mask"><span class="impact-word-inner">Impact</span></span>
+          <span class="impact-word-mask"><span class="impact-word-inner text-secondary">Impact</span></span>
         </h2>
         <p class="impact-tagline">Recycling steel from ships to make new steel saves (Per Tonne):</p>
       </div>
