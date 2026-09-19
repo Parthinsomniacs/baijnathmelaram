@@ -1,4 +1,4 @@
-<?php require_once("inc-global.php"); ?>
+﻿<?php require_once("inc-global.php"); ?>
 <?php
 $page = "home";
 $pagetype = "onepage";
@@ -195,7 +195,7 @@ $utm = "yes";
     </div>
 
     <div class="theme-padding pl-0">
-      <div class="columns is-vcentered is-variable is-5-desktop about-columns-layout">
+      <div class="columns is-vcentered is-variable about-columns-layout">
 
         <!-- FIRST COLUMN: Our Ship Image -->
         <div class="column is-6-widescreen is-6-desktop is-12-tablet is-12-mobile about-col-ship">
@@ -208,7 +208,7 @@ $utm = "yes";
         </div>
 
         <!-- SECOND COLUMN: Content (Section Title H2, Description, 4 Badges) -->
-        <div class="column is-6-widescreen is-6-desktop is-12-tablet is-12-mobile about-col-content">
+        <div class="column is-12-mobile is-12-tablet is-6-widescreen is-6-desktop about-col-content">
           <div class="about-ref-center">
             <!-- Eyebrow Tag -->
             <div class="about-ref-eyebrow">
@@ -294,7 +294,7 @@ $utm = "yes";
     <!-- Rich Background Maritime & Ambient Elements -->
     <div class="anchors-bg-ambient" aria-hidden="true"></div>
     <div class="anchors-bg-grid" aria-hidden="true"></div>
-    
+
     <!-- Nautical Compass & Coordinate Watermark -->
     <div class="anchors-bg-compass" aria-hidden="true">
       <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -427,257 +427,500 @@ $utm = "yes";
     </div>
   </section>
 
-  <!-- Proven Track Record Parallax Stats Section -->
-  <section id="section-stats" class="section section-stats p-0">
-    <!-- Parallax Background Image with Cinematic Overlay -->
-    <div class="stats-parallax-bg-wrap" aria-hidden="true">
-      <img src="<?php echo $imagesurl; ?>about/shipyard-crane-ref.jpg" class="stats-parallax-img" alt="Baijnath Melaram Shipyard Operations" loading="lazy">
-      <div class="stats-parallax-overlay"></div>
-    </div>
 
-    <div class="theme-padding stats-content-wrap">
-      <div class="stats-head text-center">
-        <div class="about-ref-eyebrow" style="justify-content: center; margin-bottom: 12px;">
-          <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
-          <span class="about-eyebrow-text" style="color: #e5912f;">PROVEN TRACK RECORD</span>
-          <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
-        </div>
-        <div class="section-title js-stats-title text-center">
-          <h2 style="color: #ffffff;">
-            <span class="word-mask"><span class="word-inner">Decades</span></span>
-            <span class="word-mask"><span class="word-inner">of</span></span>
-            <span class="word-mask"><span class="word-inner">Leadership</span></span>
-            <span class="word-mask"><span class="word-inner">in</span></span>
-            <span class="word-mask"><span class="word-inner text-secondary">Green</span></span>
-            <span class="word-mask"><span class="word-inner text-secondary">Recycling</span></span>
-          </h2>
-        </div>
-      </div>
 
-      <div class="columns is-variable is-4-desktop stats-columns-grid">
-        <!-- Stat 1 -->
-        <div class="column is-3-desktop is-6-tablet is-12-mobile">
-          <div class="stats-glass-card">
-            <span class="stats-stat-num">
-              <span data-target="350" class="stats-stat-count">0</span><span class="stat-plus">+</span>
-            </span>
-            <span class="stats-stat-label">Ships Recycled</span>
+
+  <!-- Telha Clarke Inspired Dynamic Ship Showcase Section (Sticky Width-Shrink Scrub) -->
+  <section id="section-ship-showcase" class="section section-ship-showcase">
+    <div class="ship-showcase-stage">
+      <div class="ship-showcase-container">
+
+        <!-- Left Editorial Content Column (Revealed on Scrub) -->
+        <div class="ship-showcase-left-col">
+
+          <!-- Nautical Compass Element Centered in Left Column -->
+          <div class="ship-showcase-bg-compass" aria-hidden="true">
+            <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="300" cy="300" r="280" stroke="rgba(229,145,47,0.18)" stroke-width="1.5" stroke-dasharray="4 8" />
+              <circle cx="300" cy="300" r="220" stroke="rgba(229,145,47,0.22)" stroke-width="1.2" />
+              <circle cx="300" cy="300" r="140" stroke="rgba(229,145,47,0.18)" stroke-width="1.5" stroke-dasharray="2 6" />
+              <circle cx="300" cy="300" r="60" stroke="rgba(229,145,47,0.25)" stroke-width="1.2" />
+              <!-- Compass Crosshairs & Navigation Marks -->
+              <line x1="300" y1="10" x2="300" y2="590" stroke="rgba(229,145,47,0.2)" stroke-width="1" stroke-dasharray="6 6" />
+              <line x1="10" y1="300" x2="590" y2="300" stroke="rgba(229,145,47,0.2)" stroke-width="1" stroke-dasharray="6 6" />
+              <path d="M300 20 L310 50 L300 42 L290 50 Z" fill="rgba(229,145,47,0.35)" />
+              <path d="M580 300 L550 310 L558 300 L550 290 Z" fill="rgba(229,145,47,0.28)" />
+              <path d="M300 580 L290 550 L300 558 L310 550 Z" fill="rgba(229,145,47,0.28)" />
+              <path d="M20 300 L50 290 L42 300 L50 310 Z" fill="rgba(229,145,47,0.28)" />
+              <g stroke="rgba(229,145,47,0.25)" stroke-width="1">
+                <line x1="300" y1="70" x2="300" y2="85" />
+                <line x1="300" y1="515" x2="300" y2="530" />
+                <line x1="70" y1="300" x2="85" y2="300" />
+                <line x1="515" y1="300" x2="530" y2="300" />
+                <line x1="137" y1="137" x2="148" y2="148" />
+                <line x1="463" y1="463" x2="452" y2="452" />
+                <line x1="463" y1="137" x2="452" y2="148" />
+                <line x1="137" y1="463" x2="148" y2="452" />
+              </g>
+              <circle cx="300" cy="300" r="4" fill="rgba(229,145,47,0.4)" />
+            </svg>
+          </div>
+
+          <div class="ship-showcase-content-inner">
+            <div class="about-ref-eyebrow ship-eyebrow mb-2">
+              <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
+              <span class="about-eyebrow-text" style="color: #e5912f;">PROVEN TRACK RECORD</span>
+              <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
+            </div>
+
+            <h2 class="ship-showcase-heading">
+              <span class="ship-word-mask"><span class="ship-word-inner">Decades</span></span>
+              <span class="ship-word-mask"><span class="ship-word-inner">of</span></span>
+              <span class="ship-word-mask"><span class="ship-word-inner">Leadership</span></span>
+              <span class="ship-word-mask"><span class="ship-word-inner">in</span></span>
+              <span class="ship-word-mask"><span class="ship-word-inner" style="color: #e5912f;">Green</span></span>
+              <span class="ship-word-mask"><span class="ship-word-inner" style="color: #e5912f;">Recycling</span></span>
+            </h2>
+
+            <p class="ship-showcase-desc">
+              Pioneering sustainable maritime decommissioning, ethical steel reclamation, and world-class environmental compliance at Alang Yard 129.
+            </p>
+
+            <div class="ship-showcase-stats-grid">
+              <div class="ship-stat-card">
+                <div class="ship-stat-num">
+                  <span class="ship-stat-count" data-target="350">0</span><span class="ship-stat-plus">+</span>
+                </div>
+                <div class="ship-stat-label">Ships Recycled</div>
+              </div>
+
+              <div class="ship-stat-card">
+                <div class="ship-stat-num">
+                  <span class="ship-stat-count" data-target="2.5" data-decimals="1">0</span><span class="ship-stat-unit">M</span>
+                </div>
+                <div class="ship-stat-label">Tonnes Steel Recycled</div>
+              </div>
+
+              <div class="ship-stat-card">
+                <div class="ship-stat-num">
+                  <span class="ship-stat-count" data-target="5">0</span><span class="ship-stat-plus">+</span>
+                </div>
+                <div class="ship-stat-label">Navy Ships Recycled</div>
+              </div>
+
+              <div class="ship-stat-card">
+                <div class="ship-stat-num">
+                  <span class="ship-stat-count" data-target="2">0</span>
+                </div>
+                <div class="ship-stat-label">Submarines Recycled</div>
+              </div>
+            </div>
+
+
           </div>
         </div>
 
-        <!-- Stat 2 -->
-        <div class="column is-3-desktop is-6-tablet is-12-mobile">
-          <div class="stats-glass-card">
-            <span class="stats-stat-num">
-              <span data-target="2.5" data-decimals="1" class="stats-stat-count">0</span><span class="stat-unit">M</span>
-            </span>
-            <span class="stats-stat-label">Tonnes Steel Recycled</span>
+        <!-- Right Dynamic Shrinking Ship Image Column -->
+        <div class="ship-showcase-right-col">
+          <div class="ship-showcase-image-frame">
+            <img src="<?php echo $imagesurl; ?>about/ship-yard-showcase.jpg?v=<?php echo $version; ?>" alt="Vessel Recycling Operations - Baijnath Melaram" class="ship-showcase-img" />
+            <div class="ship-showcase-img-overlay"></div>
+
           </div>
         </div>
 
-        <!-- Stat 3 -->
-        <div class="column is-3-desktop is-6-tablet is-12-mobile">
-          <div class="stats-glass-card">
-            <span class="stats-stat-num">
-              <span data-target="5" class="stats-stat-count">0</span><span class="stat-plus">+</span>
-            </span>
-            <span class="stats-stat-label">Navy Ships Recycled</span>
-          </div>
-        </div>
-
-        <!-- Stat 4 -->
-        <div class="column is-3-desktop is-6-tablet is-12-mobile">
-          <div class="stats-glass-card">
-            <span class="stats-stat-num">
-              <span data-target="2" class="stats-stat-count">0</span>
-            </span>
-            <span class="stats-stat-label">Submarines Recycled</span>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
+
+  <!-- Our Capabilities Section (Telha Clarke Inspired Sticky Showcase) -->
+  <section id="section-capabilities" class="section section-capabilities pb-0">
+
+    <!-- Top Large Editorial Statement Quote -->
+    <div class="cap-statement-wrapper">
+      <div class="cap-statement-inner">
+        <h2 class="cap-statement-text">
+          <span class="cap-quote-mark">&ldquo;</span><span class="cap-stmt-word-mask"><span class="cap-stmt-word-inner">Each</span></span> <span class="cap-stmt-word-mask"><span class="cap-stmt-word-inner">project</span></span> <span class="cap-stmt-word-mask"><span class="cap-stmt-word-inner">reflects</span></span> <span class="cap-stmt-word-mask"><span class="cap-stmt-word-inner">the</span></span> <span class="cap-stmt-word-mask"><span class="cap-stmt-word-inner">vision</span></span> <span class="cap-stmt-word-mask"><span class="cap-stmt-word-inner">and</span></span> <span class="cap-stmt-word-mask"><span class="cap-stmt-word-inner">expertise</span></span> <span class="cap-stmt-word-mask"><span class="cap-stmt-word-inner">of</span></span> <span class="cap-stmt-word-mask"><span class="cap-stmt-word-inner">our</span></span> <span class="cap-stmt-word-mask"><span class="cap-stmt-word-inner">team,</span></span> <span class="cap-stmt-word-mask"><span class="cap-stmt-word-inner">transforming</span></span> <span class="cap-stmt-word-mask"><span class="cap-stmt-word-inner">maritime</span></span> <span class="cap-stmt-word-mask"><span class="cap-stmt-word-inner">giants</span></span> <span class="cap-stmt-word-mask"><span class="cap-stmt-word-inner">into</span></span> <span class="cap-stmt-word-mask"><span class="cap-stmt-word-inner">sustainable</span></span> <span class="cap-stmt-word-mask"><span class="cap-stmt-word-inner">green</span></span> <span class="cap-stmt-word-mask"><span class="cap-stmt-word-inner">steel</span></span> <span class="cap-stmt-word-mask"><span class="cap-stmt-word-inner">with</span></span> <span class="cap-stmt-word-mask"><span class="cap-stmt-word-inner">precision</span></span> <span class="cap-stmt-word-mask"><span class="cap-stmt-word-inner">and</span></span> <span class="cap-stmt-word-mask"><span class="cap-stmt-word-inner">purpose.</span></span><span class="cap-quote-mark">&rdquo;</span>
+        </h2>
+      </div>
+    </div>
+
+    <!-- 3-Column Showcase Track -->
+    <div class="cap-three-col-wrapper">
+      <div class="columns">
+
+        <!-- Left Column: Section Indicator (Sticky) -->
+        <div class="column is-3-widescreen is-3-desktop is-12-tablet is-12-mobile cap-col-meta">
+          <div class="cap-meta-header-wrap">
+            <span class="cap-meta-index">01</span>
+            <span class="cap-meta-label">OUR CAPABILITIES</span>
+          </div>
+
+          <!-- Nautical Compass in Left Column -->
+          <div class="cap-left-compass" aria-hidden="true">
+            <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="300" cy="300" r="280" stroke="rgba(229,145,47,0.22)" stroke-width="1.5" stroke-dasharray="4 8" />
+              <circle cx="300" cy="300" r="220" stroke="rgba(229,145,47,0.28)" stroke-width="1.2" />
+              <circle cx="300" cy="300" r="140" stroke="rgba(229,145,47,0.22)" stroke-width="1.5" stroke-dasharray="2 6" />
+              <circle cx="300" cy="300" r="60" stroke="rgba(229,145,47,0.32)" stroke-width="1.2" />
+              <!-- Compass Crosshairs & Navigation Marks -->
+              <line x1="300" y1="10" x2="300" y2="590" stroke="rgba(229,145,47,0.25)" stroke-width="1" stroke-dasharray="6 6" />
+              <line x1="10" y1="300" x2="590" y2="300" stroke="rgba(229,145,47,0.25)" stroke-width="1" stroke-dasharray="6 6" />
+              <path d="M300 20 L310 50 L300 42 L290 50 Z" fill="rgba(229,145,47,0.45)" />
+              <path d="M580 300 L550 310 L558 300 L550 290 Z" fill="rgba(229,145,47,0.35)" />
+              <path d="M300 580 L290 550 L300 558 L310 550 Z" fill="rgba(229,145,47,0.35)" />
+              <path d="M20 300 L50 290 L42 300 L50 310 Z" fill="rgba(229,145,47,0.35)" />
+              <!-- Dial ticks -->
+              <g stroke="rgba(229,145,47,0.28)" stroke-width="1">
+                <line x1="300" y1="70" x2="300" y2="85" />
+                <line x1="300" y1="515" x2="300" y2="530" />
+                <line x1="70" y1="300" x2="85" y2="300" />
+                <line x1="515" y1="300" x2="530" y2="300" />
+                <line x1="137" y1="137" x2="148" y2="148" />
+                <line x1="463" y1="463" x2="452" y2="452" />
+                <line x1="463" y1="137" x2="452" y2="148" />
+                <line x1="137" y1="463" x2="148" y2="452" />
+              </g>
+              <circle cx="300" cy="300" r="4" fill="rgba(229,145,47,0.55)" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Center Column: Vertical Capability List (Scrolls) -->
+        <div class="column is-5-widescreen is-5-desktop is-7-tablet is-12-mobile cap-col-list">
+          <ul class="cap-items-list">
+            <li class="cap-item is-active" data-index="0">
+              <span class="cap-item-text">Bulk Carrier</span>
+            </li>
+            <li class="cap-item" data-index="1">
+              <span class="cap-item-text">General Cargo</span>
+            </li>
+            <li class="cap-item" data-index="2">
+              <span class="cap-item-text">Container</span>
+            </li>
+            <li class="cap-item" data-index="3">
+              <span class="cap-item-text">Tanker</span>
+            </li>
+            <li class="cap-item" data-index="4">
+              <span class="cap-item-text">Roro &amp; Crew</span>
+            </li>
+            <li class="cap-item" data-index="5">
+              <span class="cap-item-text">FPSO</span>
+            </li>
+            <li class="cap-item" data-index="6">
+              <span class="cap-item-text">Military</span>
+            </li>
+            <li class="cap-item" data-index="7">
+              <span class="cap-item-text">Research Vessel</span>
+            </li>
+            <li class="cap-item" data-index="8">
+              <span class="cap-item-text">Others</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Column: Vessel Photos Stack (Sticky) -->
+        <div class="column is-4-widescreen is-4-desktop is-5-tablet is-12-mobile cap-col-visual">
+          <div class="cap-sticky-visual-holder">
+            <div class="cap-visual-frame">
+              <img src="<?php echo $imagesurl; ?>capabilities/bulk-carrier.jpg" alt="Bulk Carrier" class="cap-visual-img is-active" data-index="0" />
+              <img src="<?php echo $imagesurl; ?>capabilities/general-cargo.jpg" alt="General Cargo" class="cap-visual-img" data-index="1" />
+              <img src="<?php echo $imagesurl; ?>capabilities/container.jpg" alt="Container" class="cap-visual-img" data-index="2" />
+              <img src="<?php echo $imagesurl; ?>capabilities/tanker.jpg" alt="Tanker" class="cap-visual-img" data-index="3" />
+              <img src="<?php echo $imagesurl; ?>capabilities/roro-crew.jpg" alt="Roro &amp; Crew" class="cap-visual-img" data-index="4" />
+              <img src="<?php echo $imagesurl; ?>capabilities/fpso.jpg" alt="FPSO" class="cap-visual-img" data-index="5" />
+              <img src="<?php echo $imagesurl; ?>capabilities/military.jpg" alt="Military" class="cap-visual-img" data-index="6" />
+              <img src="<?php echo $imagesurl; ?>capabilities/research-vessel.jpg" alt="Research Vessel" class="cap-visual-img" data-index="7" />
+              <img src="<?php echo $imagesurl; ?>capabilities/others.jpg" alt="Others" class="cap-visual-img" data-index="8" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+  </section>
+
   <!-- Explore Extensions Section -->
   <section id="section-extensions" class="section section-extensions theme-padding">
-    <div class="extensions-head-wrap">
-      <div class="section-title">
-        <h2 class="extensions-heading">
+    <div class="extensions-head-wrap has-text-centered">
+      <div class="about-ref-eyebrow mb-2" style="justify-content: center; display: inline-flex;">
+        <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
+        <span class="about-eyebrow-text" style="color: #e5912f;">OUR EXTENSIONS</span>
+        <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
+      </div>
+      <div class="section-title has-text-centered">
+        <h2 class="extensions-heading has-text-centered">
           <span class="ext-word-mask"><span class="ext-word-inner">Explore</span></span>
           <span class="ext-word-mask"><span class="ext-word-inner">the</span></span>
           <span class="ext-word-mask"><span class="ext-word-inner">various</span></span>
           <span class="ext-word-mask"><span class="ext-word-inner">extensions</span></span>
           <span class="ext-word-mask"><span class="ext-word-inner">of</span></span><br>
-          <span class="ext-heading-accent"><span class="ext-word-mask"><span class="ext-word-inner">Baijnath</span></span> <span class="ext-word-mask"><span class="ext-word-inner">Melaram.</span></span></span>
+          <span class="ext-heading-accent" style="color: #e5912f;"><span class="ext-word-mask"><span class="ext-word-inner">Baijnath</span></span> <span class="ext-word-mask"><span class="ext-word-inner">Melaram.</span></span></span>
         </h2>
       </div>
     </div>
 
-    <!-- 4 Columns Showcase Grid -->
-    <div class="extensions-columns-grid">
-      <!-- Column 01: Alloys -->
-      <div class="ext-column-item" data-col="0">
-        <div class="ext-col-bg" style="background-image: url('<?php echo $imagesurl; ?>extensions/1.webp');"></div>
-        <div class="ext-col-overlay"></div>
-        <div class="ext-col-content ext-pos-1">
-          <div class="ext-col-badge"><span>01</span></div>
-          <h3 class="ext-col-title">Baijnath Melaram Alloys</h3>
-          <p class="ext-col-desc">Pioneering circular economy solutions, trading high-grade alloy metals and processed scrap.</p>
+    <!-- Extensions Alternating 2-Column Showcase -->
+    <!-- Extensions Alternating 2-Column Showcase -->
+    <div class="extensions-rows-container">
+
+      <!-- Item 01: Left Image + Right Content -->
+      <div class="ext-row-item">
+        <div class="columns is-vcentered is-variable is-6">
+          <div class="column is-6 ext-col-media">
+            <div class="ext-image-card">
+              <img src="<?php echo $imagesurl; ?>extensions/1.jpg?v=<?php echo $version; ?>" alt="Baijnath Melaram Alloys Pvt Ltd" class="ext-card-img" />
+              <div class="ext-image-overlay"></div><div class="ext-image-curtain"></div>
+            </div>
+          </div>
+          <div class="column is-6 ext-col-info">
+            <div class="ext-info-card">
+              <div class="ext-info-compass" aria-hidden="true">
+                <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="300" cy="300" r="280" stroke="rgba(229,145,47,0.35)" stroke-width="1.5" stroke-dasharray="4 8" />
+                  <circle cx="300" cy="300" r="220" stroke="rgba(229,145,47,0.45)" stroke-width="1.2" />
+                  <circle cx="300" cy="300" r="140" stroke="rgba(229,145,47,0.35)" stroke-width="1.5" stroke-dasharray="2 6" />
+                  <circle cx="300" cy="300" r="60" stroke="rgba(229,145,47,0.50)" stroke-width="1.2" />
+                  <line x1="300" y1="10" x2="300" y2="590" stroke="rgba(229,145,47,0.4)" stroke-width="1" stroke-dasharray="6 6" />
+                  <line x1="10" y1="300" x2="590" y2="300" stroke="rgba(229,145,47,0.4)" stroke-width="1" stroke-dasharray="6 6" />
+                  <path d="M300 20 L310 50 L300 42 L290 50 Z" fill="rgba(229,145,47,0.6)" />
+                  <path d="M580 300 L550 310 L558 300 L550 290 Z" fill="rgba(229,145,47,0.5)" />
+                  <path d="M300 580 L290 550 L300 558 L310 550 Z" fill="rgba(229,145,47,0.5)" />
+                  <path d="M20 300 L50 290 L42 300 L50 310 Z" fill="rgba(229,145,47,0.5)" />
+                  <g stroke="rgba(229,145,47,0.45)" stroke-width="1">
+                    <line x1="300" y1="70" x2="300" y2="85" />
+                    <line x1="300" y1="515" x2="300" y2="530" />
+                    <line x1="70" y1="300" x2="85" y2="300" />
+                    <line x1="515" y1="300" x2="530" y2="300" />
+                    <line x1="137" y1="137" x2="148" y2="148" />
+                    <line x1="463" y1="463" x2="452" y2="452" />
+                    <line x1="463" y1="137" x2="452" y2="148" />
+                    <line x1="137" y1="463" x2="148" y2="452" />
+                  </g>
+                  <circle cx="300" cy="300" r="4" fill="rgba(229,145,47,0.7)" />
+                </svg>
+              </div>
+              <div class="ext-info-accent-line"></div>
+              <h3 class="ext-item-title"><span class="ext-title-word-mask"><span class="ext-title-word-inner">Baijnath</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">Melaram</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">Alloys</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">Pvt</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">Ltd</span></span></h3>
+              <p class="ext-item-desc">With over 50 years of experience in scrap processing, primarily ship recycling, Baijnath Melaram is thrilled to introduce its newly established sister company, Baijnath Melaram Alloys Pvt Ltd. Our new recycling plant, located in Mamsa, Bhavnagar, Gujarat, boasts an 18,000 MTPA production capacity. Committed to sustainability and innovative recycling solutions, we aim to create a circular economy that benefits both our clients and the environment.</p>
+              <div class="ext-item-btn-wrap">
+                <a href="<?php echo $siteurl; ?>alloy-manufacturing.php" class="ext-item-btn"><span>Visit <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Column 02: B Melaram & Sons -->
-      <div class="ext-column-item" data-col="1">
-        <div class="ext-col-bg" style="background-image: url('<?php echo $imagesurl; ?>extensions/2.webp');"></div>
-        <div class="ext-col-overlay"></div>
-        <div class="ext-col-content ext-pos-2">
-          <div class="ext-col-badge"><span>02</span></div>
-          <h3 class="ext-col-title">B Melaram &amp; Sons</h3>
-          <p class="ext-col-desc">Strategic trading of finished steel products, acting as a prime importer and stockist across India.</p>
+      <!-- Item 02: Left Content + Right Image -->
+      <div class="ext-row-item is-reversed">
+        <div class="columns is-vcentered is-variable is-6">
+          <div class="column is-6 ext-col-info">
+            <div class="ext-info-card">
+              <div class="ext-info-compass" aria-hidden="true">
+                <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="300" cy="300" r="280" stroke="rgba(229,145,47,0.35)" stroke-width="1.5" stroke-dasharray="4 8" />
+                  <circle cx="300" cy="300" r="220" stroke="rgba(229,145,47,0.45)" stroke-width="1.2" />
+                  <circle cx="300" cy="300" r="140" stroke="rgba(229,145,47,0.35)" stroke-width="1.5" stroke-dasharray="2 6" />
+                  <circle cx="300" cy="300" r="60" stroke="rgba(229,145,47,0.50)" stroke-width="1.2" />
+                  <line x1="300" y1="10" x2="300" y2="590" stroke="rgba(229,145,47,0.4)" stroke-width="1" stroke-dasharray="6 6" />
+                  <line x1="10" y1="300" x2="590" y2="300" stroke="rgba(229,145,47,0.4)" stroke-width="1" stroke-dasharray="6 6" />
+                  <path d="M300 20 L310 50 L300 42 L290 50 Z" fill="rgba(229,145,47,0.6)" />
+                  <path d="M580 300 L550 310 L558 300 L550 290 Z" fill="rgba(229,145,47,0.5)" />
+                  <path d="M300 580 L290 550 L300 558 L310 550 Z" fill="rgba(229,145,47,0.5)" />
+                  <path d="M20 300 L50 290 L42 300 L50 310 Z" fill="rgba(229,145,47,0.5)" />
+                  <g stroke="rgba(229,145,47,0.45)" stroke-width="1">
+                    <line x1="300" y1="70" x2="300" y2="85" />
+                    <line x1="300" y1="515" x2="300" y2="530" />
+                    <line x1="70" y1="300" x2="85" y2="300" />
+                    <line x1="515" y1="300" x2="530" y2="300" />
+                    <line x1="137" y1="137" x2="148" y2="148" />
+                    <line x1="463" y1="463" x2="452" y2="452" />
+                    <line x1="463" y1="137" x2="452" y2="148" />
+                    <line x1="137" y1="463" x2="148" y2="452" />
+                  </g>
+                  <circle cx="300" cy="300" r="4" fill="rgba(229,145,47,0.7)" />
+                </svg>
+              </div>
+              <div class="ext-info-accent-line"></div>
+              <h3 class="ext-item-title"><span class="ext-title-word-mask"><span class="ext-title-word-inner">B</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">Melaram</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">&amp;</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">Sons</span></span></h3>
+              <p class="ext-item-desc">We originally started as a ship-breaking company located in Mumbai. However, in light of rising operational expenses and the industry's diminishing feasibility, we made a strategic shift in 2008 and transitioned into the trading of finished steel products.</p>
+              <div class="ext-item-btn-wrap">
+                <a href="javascript:void(0)" class="ext-item-btn" onclick="openForm('enquire')"><span>Visit <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="column is-6 ext-col-media">
+            <div class="ext-image-card">
+              <img src="<?php echo $imagesurl; ?>extensions/2.jpg?v=<?php echo $version; ?>" alt="B Melaram & Sons" class="ext-card-img" />
+              <div class="ext-image-overlay"></div><div class="ext-image-curtain"></div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Column 03: Friends Corp -->
-      <div class="ext-column-item" data-col="2">
-        <div class="ext-col-bg" style="background-image: url('<?php echo $imagesurl; ?>extensions/3.webp');"></div>
-        <div class="ext-col-overlay"></div>
-        <div class="ext-col-content ext-pos-3">
-          <div class="ext-col-badge"><span>03</span></div>
-          <h3 class="ext-col-title">Friends Corp.</h3>
-          <p class="ext-col-desc">Specialising in alloy metals and scrap sourced from certified green ship recycling operations.</p>
+      <!-- Item 03: Left Image + Right Content -->
+      <div class="ext-row-item">
+        <div class="columns is-vcentered is-variable is-6">
+          <div class="column is-6 ext-col-media">
+            <div class="ext-image-card">
+              <img src="<?php echo $imagesurl; ?>extensions/3.jpg?v=<?php echo $version; ?>" alt="Friends Corp." class="ext-card-img" />
+              <div class="ext-image-overlay"></div><div class="ext-image-curtain"></div>
+            </div>
+          </div>
+          <div class="column is-6 ext-col-info">
+            <div class="ext-info-card">
+              <div class="ext-info-compass" aria-hidden="true">
+                <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="300" cy="300" r="280" stroke="rgba(229,145,47,0.35)" stroke-width="1.5" stroke-dasharray="4 8" />
+                  <circle cx="300" cy="300" r="220" stroke="rgba(229,145,47,0.45)" stroke-width="1.2" />
+                  <circle cx="300" cy="300" r="140" stroke="rgba(229,145,47,0.35)" stroke-width="1.5" stroke-dasharray="2 6" />
+                  <circle cx="300" cy="300" r="60" stroke="rgba(229,145,47,0.50)" stroke-width="1.2" />
+                  <line x1="300" y1="10" x2="300" y2="590" stroke="rgba(229,145,47,0.4)" stroke-width="1" stroke-dasharray="6 6" />
+                  <line x1="10" y1="300" x2="590" y2="300" stroke="rgba(229,145,47,0.4)" stroke-width="1" stroke-dasharray="6 6" />
+                  <path d="M300 20 L310 50 L300 42 L290 50 Z" fill="rgba(229,145,47,0.6)" />
+                  <path d="M580 300 L550 310 L558 300 L550 290 Z" fill="rgba(229,145,47,0.5)" />
+                  <path d="M300 580 L290 550 L300 558 L310 550 Z" fill="rgba(229,145,47,0.5)" />
+                  <path d="M20 300 L50 290 L42 300 L50 310 Z" fill="rgba(229,145,47,0.5)" />
+                  <g stroke="rgba(229,145,47,0.45)" stroke-width="1">
+                    <line x1="300" y1="70" x2="300" y2="85" />
+                    <line x1="300" y1="515" x2="300" y2="530" />
+                    <line x1="70" y1="300" x2="85" y2="300" />
+                    <line x1="515" y1="300" x2="530" y2="300" />
+                    <line x1="137" y1="137" x2="148" y2="148" />
+                    <line x1="463" y1="463" x2="452" y2="452" />
+                    <line x1="463" y1="137" x2="452" y2="148" />
+                    <line x1="137" y1="463" x2="148" y2="452" />
+                  </g>
+                  <circle cx="300" cy="300" r="4" fill="rgba(229,145,47,0.7)" />
+                </svg>
+              </div>
+              <div class="ext-info-accent-line"></div>
+              <h3 class="ext-item-title"><span class="ext-title-word-mask"><span class="ext-title-word-inner">Friends</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">Corp.</span></span></h3>
+              <p class="ext-item-desc">We are a scrap trading firm headquartered in Bhavnagar, primarily specialising in the trade of alloy metals and various grades of scrap sourced from ship-breaking operations.</p>
+              <div class="ext-item-btn-wrap">
+                <a href="javascript:void(0)" class="ext-item-btn" onclick="openForm('enquire')"><span>Visit <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Column 04: BM Educon LLP -->
-      <div class="ext-column-item" data-col="3">
-        <div class="ext-col-bg" style="background-image: url('<?php echo $imagesurl; ?>extensions/4.webp');"></div>
-        <div class="ext-col-overlay"></div>
-        <div class="ext-col-content ext-pos-4">
-          <div class="ext-col-badge"><span>04</span></div>
-          <h3 class="ext-col-title">BM Educon LLP (TED)</h3>
-          <p class="ext-col-desc">Toddlers Entertainment Den, educational venture for early learning, creative play, and cognitive growth.</p>
+      <!-- Item 04: Left Content + Right Image -->
+      <div class="ext-row-item is-reversed">
+        <div class="columns is-vcentered is-variable is-6">
+          <div class="column is-6 ext-col-info">
+            <div class="ext-info-card">
+              <div class="ext-info-compass" aria-hidden="true">
+                <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="300" cy="300" r="280" stroke="rgba(229,145,47,0.35)" stroke-width="1.5" stroke-dasharray="4 8" />
+                  <circle cx="300" cy="300" r="220" stroke="rgba(229,145,47,0.45)" stroke-width="1.2" />
+                  <circle cx="300" cy="300" r="140" stroke="rgba(229,145,47,0.35)" stroke-width="1.5" stroke-dasharray="2 6" />
+                  <circle cx="300" cy="300" r="60" stroke="rgba(229,145,47,0.50)" stroke-width="1.2" />
+                  <line x1="300" y1="10" x2="300" y2="590" stroke="rgba(229,145,47,0.4)" stroke-width="1" stroke-dasharray="6 6" />
+                  <line x1="10" y1="300" x2="590" y2="300" stroke="rgba(229,145,47,0.4)" stroke-width="1" stroke-dasharray="6 6" />
+                  <path d="M300 20 L310 50 L300 42 L290 50 Z" fill="rgba(229,145,47,0.6)" />
+                  <path d="M580 300 L550 310 L558 300 L550 290 Z" fill="rgba(229,145,47,0.5)" />
+                  <path d="M300 580 L290 550 L300 558 L310 550 Z" fill="rgba(229,145,47,0.5)" />
+                  <path d="M20 300 L50 290 L42 300 L50 310 Z" fill="rgba(229,145,47,0.5)" />
+                  <g stroke="rgba(229,145,47,0.45)" stroke-width="1">
+                    <line x1="300" y1="70" x2="300" y2="85" />
+                    <line x1="300" y1="515" x2="300" y2="530" />
+                    <line x1="70" y1="300" x2="85" y2="300" />
+                    <line x1="515" y1="300" x2="530" y2="300" />
+                    <line x1="137" y1="137" x2="148" y2="148" />
+                    <line x1="463" y1="463" x2="452" y2="452" />
+                    <line x1="463" y1="137" x2="452" y2="148" />
+                    <line x1="137" y1="463" x2="148" y2="452" />
+                  </g>
+                  <circle cx="300" cy="300" r="4" fill="rgba(229,145,47,0.7)" />
+                </svg>
+              </div>
+              <div class="ext-info-accent-line"></div>
+              <h3 class="ext-item-title"><span class="ext-title-word-mask"><span class="ext-title-word-inner">BM</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">Educon</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">LLP</span></span></h3>
+              <p class="ext-item-desc">Toddlers Entertainment Den (TED), an educational venture by BM Educon LLP, is a Play Arena &amp; a Toy Library. It is a world where laughter echoes, creativity flows, and imagination knows no bounds. Our fully air conditioned indoor play area boasts of a myriad of activities and attractions that cater to children\'s physical, cognitive, and social development.</p>
+              <div class="ext-item-btn-wrap">
+                <a href="javascript:void(0)" class="ext-item-btn" onclick="openForm('enquire')"><span>Visit <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="column is-6 ext-col-media">
+            <div class="ext-image-card">
+              <img src="<?php echo $imagesurl; ?>extensions/4.webp?v=<?php echo $version; ?>" alt="BM Educon LLP (TED)" class="ext-card-img" />
+              <div class="ext-image-overlay"></div><div class="ext-image-curtain"></div>
+            </div>
+          </div>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- Our Legacy Section -->
-  <section id="section-legacy" class="section section-legacy">
-    <div class="legacy-sticky-stage">
-      <!-- Full Screen Aerial Drone Image -->
-      <div class="legacy-bg-frame">
-        <img src="<?php echo $imagesurl; ?>legacy/legacy-banner.webp" alt="Baijnath Melaram Ship Recycling Yard No. 13 Alang" class="legacy-bg-img" />
-        <!-- Black Overlay -->
-        <div class="legacy-black-overlay"></div>
-      </div>
+  <!-- Our Legacy Section (Sticky Split Showcase - Left Sticky / Right Cards Stack) -->
+  <section id="section-legacy" class="section section-legacy theme-padding">
+    <!-- Background Image Layer & Theme Overlays -->
+    <div class="legacy-bg-media" aria-hidden="true">
+      <img src="<?php echo $base_url; ?>media/images/legacy/legacy-banner.webp" alt="Legacy Background" class="legacy-bg-img" />
+      <div class="legacy-bg-overlay"></div>
+    </div>
 
-      <!-- Title on top of overlay -->
-      <div class="legacy-title-layer theme-padding">
-        <div class="section-title has-text-centered">
-          <h2 class="white-text">
-            <span class="legacy-word-mask"><span class="legacy-word-inner">Our</span></span>
-            <span class="legacy-word-mask"><span class="legacy-word-inner">Legacy</span></span>
+    <!-- Ambient Glow / Background Gradient Effects -->
+    <div class="legacy-ambient-glow" aria-hidden="true">
+      <div class="legacy-glow-blob legacy-glow-1"></div>
+      <div class="legacy-glow-blob legacy-glow-2"></div>
+      <div class="legacy-grid-overlay"></div>
+    </div>
+
+    <div class="columns is-variable is-8 legacy-columns">
+
+      <!-- Left Column: Sticky Title & Narrative -->
+      <div class="column is-5-desktop is-12-tablet legacy-col-left">
+        <div class="legacy-sticky-content">
+          <div class="about-ref-eyebrow mb-3">
+            <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
+            <span class="about-eyebrow-text" style="color: #e5912f;">OUR LEGACY</span>
+            <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
+          </div>
+
+          <h2 class="legacy-heading">
+            <span class="legacy-word-mask"><span class="legacy-word-inner">Six</span></span>
+            <span class="legacy-word-mask"><span class="legacy-word-inner">Decades</span></span>
+            <span class="legacy-word-mask"><span class="legacy-word-inner">of</span></span><br>
+            <span class="legacy-word-mask"><span class="legacy-word-inner">Maritime</span></span>
+            <span class="legacy-heading-accent" style="color: #e5912f;"><span class="legacy-word-mask"><span class="legacy-word-inner">Excellence.</span></span></span>
           </h2>
-        </div>
-      </div>
 
-      <!-- Inner Scroll Content: Diagonal Pairs (Top-Left & Bottom-Right) -->
-      <div class="legacy-inner-scroll-wrap">
-        <div class="legacy-diagonal-track">
-          <!-- Pair 01: Top-Left & Bottom-Right -->
-          <div class="legacy-pair-stage legacy-pair-1">
-            <!-- Card 01: Top-Left -->
-            <div class="legacy-card legacy-card-top-left">
-              <div class="legacy-card-badge">
-                <span class="legacy-card-dot"></span>
-                <span class="legacy-card-tag">Ship Recycling</span>
-              </div>
-              <div class="legacy-card-counter-wrap">
-                <span class="legacy-stat-count" data-target="350" data-decimals="0">0</span><span class="legacy-stat-suffix">+</span>
-              </div>
-              <div class="legacy-card-body">
-                <h3 class="legacy-card-title">Ships recycled</h3>
-              </div>
-            </div>
+          <p class="legacy-desc">
+            Pioneering safe, sustainable ship recycling at Alang Yard 129 and expanding into circular alloy steel trading across global markets.
+          </p>
 
-            <!-- Card 02: Bottom-Right -->
-            <div class="legacy-card legacy-card-bottom-right">
-              <div class="legacy-card-badge">
-                <span class="legacy-card-dot"></span>
-                <span class="legacy-card-tag">Experience</span>
-              </div>
-              <div class="legacy-card-counter-wrap">
-                <span class="legacy-stat-count" data-target="60" data-decimals="0">0</span><span class="legacy-stat-suffix">+</span>
-              </div>
-              <div class="legacy-card-body">
-                <h3 class="legacy-card-title">Years in business</h3>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pair 02: Top-Left & Bottom-Right -->
-          <div class="legacy-pair-stage legacy-pair-2">
-            <!-- Card 03: Top-Left -->
-            <div class="legacy-card legacy-card-top-left">
-              <div class="legacy-card-badge">
-                <span class="legacy-card-dot"></span>
-                <span class="legacy-card-tag">Gross Volume</span>
-              </div>
-              <div class="legacy-card-counter-wrap">
-                <span class="legacy-stat-count" data-target="2.5" data-decimals="1">0.0</span><span class="legacy-stat-suffix"> Mn</span>
-              </div>
-              <div class="legacy-card-body">
-                <h3 class="legacy-card-title">Tonnes recycled</h3>
-              </div>
-            </div>
-
-            <!-- Card 04: Bottom-Right -->
-            <div class="legacy-card legacy-card-bottom-right">
-              <div class="legacy-card-badge">
-                <span class="legacy-card-dot"></span>
-                <span class="legacy-card-tag">Defense Sector</span>
-              </div>
-              <div class="legacy-card-counter-wrap">
-                <span class="legacy-stat-count" data-target="5" data-decimals="0">0</span><span class="legacy-stat-suffix">+</span>
-              </div>
-              <div class="legacy-card-body">
-                <h3 class="legacy-card-title">Naval vessels recycled</h3>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pair 03: Top-Left & Bottom-Right -->
-          <div class="legacy-pair-stage legacy-pair-3">
-            <!-- Card 05: Top-Left -->
-            <div class="legacy-card legacy-card-top-left">
-              <div class="legacy-card-badge">
-                <span class="legacy-card-dot"></span>
-                <span class="legacy-card-tag">Green Standards</span>
-              </div>
-              <div class="legacy-card-counter-wrap">
-                <span class="legacy-stat-count" data-target="5" data-decimals="0">0</span><span class="legacy-stat-suffix">+</span>
-              </div>
-              <div class="legacy-card-body">
-                <h3 class="legacy-card-title">Years of HKC Compliance</h3>
-              </div>
-            </div>
-
-            <!-- Card 06: Bottom-Right -->
-            <div class="legacy-card legacy-card-bottom-right">
-              <div class="legacy-card-badge">
-                <span class="legacy-card-dot"></span>
-                <span class="legacy-card-tag">Offshore Assets</span>
-              </div>
-              <div class="legacy-card-counter-wrap">
-                <span class="legacy-stat-count" data-target="1" data-decimals="0">0</span>
-              </div>
-              <div class="legacy-card-body">
-                <h3 class="legacy-card-title">FPSOs recycled</h3>
-              </div>
-            </div>
+          <div class="legacy-left-compass" aria-hidden="true">
+            <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="300" cy="300" r="280" stroke="rgba(229,145,47,0.18)" stroke-width="1.5" stroke-dasharray="4 8" />
+              <circle cx="300" cy="300" r="220" stroke="rgba(229,145,47,0.22)" stroke-width="1.2" />
+              <circle cx="300" cy="300" r="140" stroke="rgba(229,145,47,0.18)" stroke-width="1.5" stroke-dasharray="2 6" />
+              <circle cx="300" cy="300" r="60" stroke="rgba(229,145,47,0.25)" stroke-width="1.2" />
+              <line x1="300" y1="10" x2="300" y2="590" stroke="rgba(229,145,47,0.2)" stroke-width="1" stroke-dasharray="6 6" />
+              <line x1="10" y1="300" x2="590" y2="300" stroke="rgba(229,145,47,0.2)" stroke-width="1" stroke-dasharray="6 6" />
+              <path d="M300 20 L310 50 L300 42 L290 50 Z" fill="rgba(229,145,47,0.35)" />
+              <path d="M580 300 L550 310 L558 300 L550 290 Z" fill="rgba(229,145,47,0.28)" />
+              <path d="M300 580 L290 550 L300 558 L310 550 Z" fill="rgba(229,145,47,0.28)" />
+              <path d="M20 300 L50 290 L42 300 L50 310 Z" fill="rgba(229,145,47,0.28)" />
+              <circle cx="300" cy="300" r="4" fill="rgba(229,145,47,0.4)" />
+            </svg>
           </div>
         </div>
       </div>
+
+      <!-- Right Column: Vertical Stack of Glass Cards (Ready for User Content) -->
+      <div class="column is-7-desktop is-12-tablet legacy-col-right">
+        <div class="legacy-cards-stack">
+          <!-- Cards content will be populated based on user input -->
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -912,23 +1155,7 @@ $utm = "yes";
       }).mount();
     }
 
-    ,
-        breakpoints: {
-          1400: {
-            perPage: 3,
-            gap: '20px',
-          },
-          1024: {
-            perPage: 2.2,
-            gap: '16px',
-          },
-          768: {
-            perPage: 1.3,
-            gap: '14px',
-          },
-        },
-      }).mount(window.splide?.Extensions || {});
-    }
+
 
     if (document.querySelector('#partners-slider')) {
       new Splide('#partners-slider', {

@@ -1,4 +1,4 @@
-<!--Common JS-->
+﻿<!--Common JS-->
 <?php require_once $alljs; ?>
 <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -567,222 +567,400 @@
 	/** Capabilities Sticky Full-Height Stacking Cards & Word-Reveal Animation **/
 	/** Capabilities Sticky Full-Height Stacking Cards & Word-Reveal Animation **/
 	/** Capabilities Sticky Stacking Cards, GSAP Text Reveal & Robust Resize Handling **/
-	/** Our Capabilities: Static Clean Layout (No Animations) **/
+	
 
-	/** Explore Extensions 4-Column Showcase GSAP Parallax & Scroll Animation **/
+					/** Ship Showcase Sticky Scroll, Smooth Width Scrub & Stat Counter Animation **/
+	function initShipShowcaseAnimation() {
+		const section = document.querySelector("#section-ship-showcase");
+		if (!section || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+		gsap.registerPlugin(ScrollTrigger);
+
+		const rightCol = section.querySelector(".ship-showcase-right-col");
+		const leftCol = section.querySelector(".ship-showcase-left-col");
+		const eyebrow = section.querySelector(".ship-eyebrow");
+		const words = section.querySelectorAll(".ship-word-inner");
+		const desc = section.querySelector(".ship-showcase-desc");
+		const statCards = section.querySelectorAll(".ship-stat-card");
+		const counterEls = section.querySelectorAll(".ship-stat-count");
+
+		if (!rightCol) return;
+
+		let countersAnimated = false;
+		function animateShipCounters() {
+			if (countersAnimated) return;
+			countersAnimated = true;
+
+			counterEls.forEach((counter) => {
+				const target = parseFloat(counter.getAttribute("data-target")) || 0;
+				const decimals = parseInt(counter.getAttribute("data-decimals"), 10) || 0;
+				const obj = { val: 0 };
+
+				gsap.to(obj, {
+					val: target,
+					duration: 1.8,
+					ease: "power2.out",
+					onUpdate: () => {
+						counter.textContent = decimals > 0 ? obj.val.toFixed(decimals) : Math.round(obj.val);
+					}
+				});
+			});
+		}
+
+		function resetShipCounters() {
+			countersAnimated = false;
+			counterEls.forEach((counter) => {
+				counter.textContent = "0";
+			});
+		}
+
+		const mm = gsap.matchMedia();
+
+		// Desktop & Tablet (> 1024px)
+		mm.add("(min-width: 1025px)", () => {
+			gsap.set(rightCol, { width: "100%" });
+			if (eyebrow) gsap.set(eyebrow, { opacity: 0, y: 25 });
+			if (words.length) gsap.set(words, { y: "115%", opacity: 0 });
+			if (desc) gsap.set(desc, { opacity: 0, y: 25 });
+			if (statCards.length) gsap.set(statCards, { opacity: 0, y: 30 });
+
+			let textHasPlayed = false;
+
+			const textAutoTl = gsap.timeline({ paused: true });
+
+			if (eyebrow) {
+				textAutoTl.to(eyebrow, { opacity: 1, y: 0, duration: 0.55, ease: "power2.out" }, 0);
+			}
+
+			if (words.length) {
+				textAutoTl.to(words, {
+					y: "0%",
+					opacity: 1,
+					duration: 0.8,
+					stagger: 0.045,
+					ease: "power3.out"
+				}, 0.1);
+			}
+
+			if (desc) {
+				textAutoTl.to(desc, { opacity: 1, y: 0, duration: 0.65, ease: "power2.out" }, 0.4);
+			}
+
+			if (statCards.length) {
+				textAutoTl.to(statCards, {
+					opacity: 1,
+					y: 0,
+					duration: 0.65,
+					stagger: 0.09,
+					ease: "power2.out",
+					onStart: animateShipCounters
+				}, 0.5);
+			}
+
+			const showcaseTl = gsap.timeline({
+				scrollTrigger: {
+					trigger: section,
+					start: "top top",
+					end: "bottom bottom",
+					scrub: 0.8,
+					invalidateOnRefresh: true,
+					onUpdate: (self) => {
+						if (self.progress >= 0.40 && !textHasPlayed) {
+							textHasPlayed = true;
+							textAutoTl.play();
+						}
+					},
+					onLeaveBack: () => {
+						textHasPlayed = false;
+						textAutoTl.reverse();
+						resetShipCounters();
+					}
+				}
+			});
+
+			showcaseTl.to({}, { duration: 0.05 });
+
+			showcaseTl.fromTo(rightCol, {
+				width: "100%"
+			}, {
+				width: "54%",
+				ease: "power1.out",
+				duration: 0.65
+			}, 0.05);
+
+			showcaseTl.to({}, { duration: 0.30 });
+		});
+
+		mm.add("(max-width: 1024px)", () => {
+			if (counterEls.length) {
+				ScrollTrigger.create({
+					trigger: section,
+					start: "top 75%",
+					onEnter: animateShipCounters,
+					once: true
+				});
+			}
+		});
+	}
+
+									/** Our Capabilities Telha Clarke Style Pinned Scroll Showcase **/
+	function initCapabilitiesHover() {
+		const capSection = document.querySelector("#section-capabilities");
+		if (!capSection) return;
+
+		const wrapper = capSection.querySelector(".cap-three-col-wrapper") || capSection;
+		const items = capSection.querySelectorAll(".cap-item");
+		const images = capSection.querySelectorAll(".cap-visual-img");
+
+		if (!items.length || !images.length) return;
+
+		let currentActiveIdx = -1;
+
+		function setActiveCapability(idx) {
+			if (idx < 0 || idx >= items.length) return;
+			if (currentActiveIdx === idx && items[idx].classList.contains("is-active")) return;
+			currentActiveIdx = idx;
+
+			items.forEach((item, i) => {
+				if (i === idx) {
+					item.classList.add("is-active");
+				} else {
+					item.classList.remove("is-active");
+				}
+			});
+
+			images.forEach((img, i) => {
+				if (i === idx) {
+					img.classList.add("is-active");
+				} else {
+					img.classList.remove("is-active");
+				}
+			});
+		}
+
+		// Initial activation (first item active by default)
+		setActiveCapability(0);
+
+		// GSAP ScrollTrigger
+		if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+			gsap.registerPlugin(ScrollTrigger);
+
+			// 1. Top Statement Quote Reveal
+			const stmtWords = capSection.querySelectorAll(".cap-stmt-word-inner");
+			const firstQuote = capSection.querySelector(".cap-quote-mark:first-child");
+			const lastQuote = capSection.querySelector(".cap-quote-mark:last-child");
+
+			if (stmtWords.length) {
+				const stmtTl = gsap.timeline({
+					scrollTrigger: {
+						trigger: capSection.querySelector(".cap-statement-wrapper") || capSection,
+						start: "top 82%",
+						toggleActions: "play none none none"
+					}
+				});
+
+				if (firstQuote) {
+					stmtTl.fromTo(firstQuote, { opacity: 0, y: "100%" }, { opacity: 1, y: "0%", duration: 0.75, ease: "power3.out" }, 0);
+				}
+
+				stmtTl.to(stmtWords, {
+					y: "0%",
+					opacity: 1,
+					duration: 0.85,
+					stagger: 0.035,
+					ease: "power3.out"
+				}, 0.04);
+
+				if (lastQuote) {
+					stmtTl.fromTo(lastQuote, { opacity: 0, y: "100%" }, { opacity: 1, y: "0%", duration: 0.75, ease: "power3.out" }, 0.65);
+				}
+			}
+
+			// 2. Desktop Pinned Scroll
+			const mm = gsap.matchMedia();
+			mm.add("(min-width: 1025px)", () => {
+				ScrollTrigger.create({
+					trigger: wrapper,
+					start: "top 110px",
+					end: "+=260%",
+					pin: true,
+					pinSpacing: true,
+					scrub: 0.3,
+					anticipatePin: 1,
+					invalidateOnRefresh: true,
+					onUpdate: (self) => {
+						const total = items.length;
+						const idx = Math.min(total - 1, Math.max(0, Math.floor(self.progress * total)));
+						setActiveCapability(idx);
+					}
+				});
+			});
+
+			// Mobile fallback
+			mm.add("(max-width: 1024px)", () => {
+				items.forEach((item, i) => {
+					ScrollTrigger.create({
+						trigger: item,
+						start: "top 55%",
+						end: "bottom 55%",
+						onEnter: () => setActiveCapability(i),
+						onEnterBack: () => setActiveCapability(i)
+					});
+				});
+			});
+		}
+	}
+
 	function initExtensionsShowcase() {
 		const extSection = document.querySelector("#section-extensions");
 		if (!extSection || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
 		gsap.registerPlugin(ScrollTrigger);
 
-		const colItems = extSection.querySelectorAll(".ext-column-item");
-		if (!colItems.length) return;
-
-		// 1. Heading word-mask entrance
+		// 1. Section Header: Eyebrow + Heading Word-Mask Scroll Animation
+		const eyebrow = extSection.querySelector(".about-ref-eyebrow");
 		const extWords = extSection.querySelectorAll(".ext-word-inner");
+		
+		const headTl = gsap.timeline({
+			scrollTrigger: {
+				trigger: extSection,
+				start: "top 85%",
+				toggleActions: "play none none none"
+			}
+		});
+
+		if (eyebrow) {
+			headTl.fromTo(eyebrow, {
+				y: 25,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.65,
+				ease: "power2.out"
+			}, 0);
+		}
+
 		if (extWords.length) {
-			gsap.fromTo(extWords, {
+			headTl.fromTo(extWords, {
 				y: "115%",
 				opacity: 0
 			}, {
 				y: "0%",
 				opacity: 1,
 				duration: 0.85,
-				stagger: 0.06,
-				ease: "power3.out",
-				scrollTrigger: {
-				trigger: extSection,
-				start: "top 85%",
-				toggleActions: "play none none none"
-			}
-			});
+				stagger: 0.05,
+				ease: "power3.out"
+			}, 0.1);
 		}
 
-		// 2. Initial entrance animation for columns (per-card/row trigger)
-		colItems.forEach(col => {
-			gsap.fromTo(col, {
-				y: 35,
-				opacity: 0
-			}, {
-				y: 0,
-				opacity: 1,
-				duration: 0.75,
-				ease: "power2.out",
+		// 2. Individual Rows Scroll-Driven GSAP Word-Mask Reveal & Image Sweep
+		const rows = extSection.querySelectorAll(".ext-row-item");
+		rows.forEach((row) => {
+			const curtain = row.querySelector(".ext-image-curtain");
+			const img = row.querySelector(".ext-card-img");
+			const accentLine = row.querySelector(".ext-info-accent-line");
+			const titleWords = row.querySelectorAll(".ext-title-word-inner");
+			const infoDesc = row.querySelector(".ext-item-desc");
+			const compass = row.querySelector(".ext-info-compass");
+			const btnWrap = row.querySelector(".ext-item-btn-wrap");
+			const isReversed = row.classList.contains("is-reversed");
+
+			const rowTl = gsap.timeline({
 				scrollTrigger: {
-				trigger: col,
-				start: "top 88%",
-				toggleActions: "play none none none"
-			}
-			});
-		});
-
-		// 3. Staggered Downward Scroll Scrub using gsap.matchMedia
-		let mm = gsap.matchMedia();
-		const landingRatios = [0.88, 0.72, 0.76, 0.84];
-
-		// Mode A: Desktop (> 1216px) - 4 Columns in 1 Row
-		mm.add("(min-width: 1217px)", () => {
-			const scrubTl = gsap.timeline({
-				scrollTrigger: {
-					trigger: extSection,
-					start: "top 72%",
-					end: "bottom 28%",
-					scrub: 1.0
+					trigger: row,
+					start: "top 78%",
+					toggleActions: "play none none none"
 				}
 			});
 
-			colItems.forEach((col, idx) => {
-				const content = col.querySelector(".ext-col-content");
-				const bg = col.querySelector(".ext-col-bg");
-				if (!content) return;
-
-				const colHeight = col.offsetHeight || 680;
-				const contentHeight = content.offsetHeight || 160;
-				const maxAvailableTravel = Math.max(160, colHeight - contentHeight - 65);
-				const travelDistance = Math.round(maxAvailableTravel * (landingRatios[idx] || 0.76));
-				const startTime = idx * 0.10;
-
-				scrubTl.fromTo(content, {
-					y: 0
+			// A. Image #000 Black Shutter Sweep
+			if (curtain) {
+				const targetX = isReversed ? -101 : 101;
+				rowTl.fromTo(curtain, {
+					xPercent: 0
 				}, {
-					y: travelDistance,
-					ease: "none",
-					duration: 0.70
-				}, startTime);
-
-				if (bg) {
-					scrubTl.fromTo(bg, {
-						y: -25
-					}, {
-						y: 25,
-						ease: "none",
-						duration: 1.0
-					}, 0);
-				}
-			});
-		});
-
-		// Mode B: 2-Column Grid (576px to 1216px) - 2 Columns x 2 Rows
-		mm.add("(min-width: 576px) and (max-width: 1216px)", () => {
-			// Row 1: Cols 0 & 1
-			const row1 = [colItems[0], colItems[1]].filter(Boolean);
-			if (row1.length) {
-				const row1Tl = gsap.timeline({
-					scrollTrigger: {
-						trigger: row1[0],
-						start: "top 78%",
-						end: "bottom 25%",
-						scrub: 1.0
-					}
-				});
-
-				row1.forEach((col, i) => {
-					const content = col.querySelector(".ext-col-content");
-					const bg = col.querySelector(".ext-col-bg");
-					if (!content) return;
-
-					const colHeight = col.offsetHeight || 520;
-					const contentHeight = content.offsetHeight || 160;
-					const travelDistance = Math.round(Math.max(100, colHeight - contentHeight - 50) * (i === 0 ? 0.84 : 0.72));
-
-					row1Tl.fromTo(content, {
-						y: 0
-					}, {
-						y: travelDistance,
-						ease: "none",
-						duration: 0.75
-					}, i * 0.12);
-
-					if (bg) {
-						row1Tl.fromTo(bg, {
-							y: -20
-						}, {
-							y: 20,
-							ease: "none",
-							duration: 1.0
-						}, 0);
-					}
-				});
+					xPercent: targetX,
+					duration: 1.25,
+					ease: "expo.inOut"
+				}, 0);
 			}
 
-			// Row 2: Cols 2 & 3
-			const row2 = [colItems[2], colItems[3]].filter(Boolean);
-			if (row2.length) {
-				const row2Tl = gsap.timeline({
-					scrollTrigger: {
-						trigger: row2[0],
-						start: "top 78%",
-						end: "bottom 25%",
-						scrub: 1.0
-					}
-				});
-
-				row2.forEach((col, i) => {
-					const content = col.querySelector(".ext-col-content");
-					const bg = col.querySelector(".ext-col-bg");
-					if (!content) return;
-
-					const colHeight = col.offsetHeight || 520;
-					const contentHeight = content.offsetHeight || 160;
-					const travelDistance = Math.round(Math.max(100, colHeight - contentHeight - 50) * (i === 0 ? 0.72 : 0.84));
-
-					row2Tl.fromTo(content, {
-						y: 0
-					}, {
-						y: travelDistance,
-						ease: "none",
-						duration: 0.75
-					}, i * 0.12);
-
-					if (bg) {
-						row2Tl.fromTo(bg, {
-							y: -20
-						}, {
-							y: 20,
-							ease: "none",
-							duration: 1.0
-						}, 0);
-					}
-				});
-			}
-		});
-
-		// Mode C: Mobile Stacked (<= 575px) - 1 Column
-		mm.add("(max-width: 575px)", () => {
-			colItems.forEach(col => {
-				const content = col.querySelector(".ext-col-content");
-				const bg = col.querySelector(".ext-col-bg");
-				if (!content) return;
-
-				const colHeight = col.offsetHeight || 420;
-				const contentHeight = content.offsetHeight || 140;
-				const travelDistance = Math.round(Math.max(60, colHeight - contentHeight - 45) * 0.76);
-
-				const mobileTl = gsap.timeline({
-					scrollTrigger: {
-						trigger: col,
-						start: "top 80%",
-						end: "bottom 30%",
-						scrub: 1.0
-					}
-				});
-
-				mobileTl.fromTo(content, {
-					y: 0
+			if (img) {
+				const startShift = isReversed ? 8 : -8;
+				rowTl.fromTo(img, {
+					scale: 1.18,
+					xPercent: startShift
 				}, {
-					y: travelDistance,
-					ease: "none"
-				});
+					scale: 1.0,
+					xPercent: 0,
+					duration: 1.35,
+					ease: "expo.out"
+				}, 0.1);
+			}
 
-				if (bg) {
-					mobileTl.fromTo(bg, {
-						y: -15
-					}, {
-						y: 15,
-						ease: "none"
-					}, 0);
-				}
-			});
+			// B. Accent Line Draw
+			if (accentLine) {
+				rowTl.fromTo(accentLine, {
+					scaleX: 0,
+					transformOrigin: "left center"
+				}, {
+					scaleX: 1,
+					duration: 0.65,
+					ease: "power3.out"
+				}, 0.15);
+			}
+
+			// C. Title Word-Mask Roll Up (GSAP Text Reveal)
+			if (titleWords.length) {
+				rowTl.fromTo(titleWords, {
+					y: "115%",
+					opacity: 0
+				}, {
+					y: "0%",
+					opacity: 1,
+					duration: 0.75,
+					stagger: 0.04,
+					ease: "power3.out"
+				}, 0.22);
+			}
+
+			// D. Description Text Entrance
+			if (infoDesc) {
+				rowTl.fromTo(infoDesc, {
+					y: 22,
+					opacity: 0
+				}, {
+					y: 0,
+					opacity: 1,
+					duration: 0.8,
+					ease: "power2.out"
+				}, 0.38);
+			}
+
+			// E. Visit Button Entrance
+			if (btnWrap) {
+				rowTl.fromTo(btnWrap, {
+					y: 18,
+					opacity: 0
+				}, {
+					y: 0,
+					opacity: 1,
+					duration: 0.7,
+					ease: "power2.out"
+				}, 0.48);
+			}
+
+			// F. Nautical Compass Watermark
+			if (compass) {
+				rowTl.fromTo(compass, {
+					scale: 0.85,
+					opacity: 0
+				}, {
+					scale: 1,
+					opacity: 0.85,
+					duration: 1.0,
+					ease: "power2.out"
+				}, 0.2);
+			}
 		});
 	}
 
@@ -792,126 +970,88 @@
 		gsap.registerPlugin(ScrollTrigger);
 
 		const legacySection = document.querySelector("#section-legacy");
-		const stickyStage = document.querySelector(".legacy-sticky-stage");
-		if (!legacySection || !stickyStage) return;
+		if (!legacySection) return;
 
-		const heading = legacySection.querySelector(".section-title h2");
-		const titleLayer = legacySection.querySelector(".legacy-title-layer");
-		const diagonalTrack = legacySection.querySelector(".legacy-diagonal-track");
-		const legacyCards = legacySection.querySelectorAll(".legacy-card");
-		const bgImg = legacySection.querySelector(".legacy-bg-img");
-		const isMobile = window.innerWidth <= 768;
-
-		// 1. Heading word-mask entrance
+		// 1. Heading & Narrative entrance
+		const eyebrow = legacySection.querySelector(".about-ref-eyebrow");
 		const legacyWords = legacySection.querySelectorAll(".legacy-word-inner");
-		if (legacyWords.length) {
-			gsap.fromTo(legacyWords, {
-				y: "115%",
-				opacity: 0
-			}, {
-				y: "0%",
-				opacity: 1,
-				duration: 0.85,
-				stagger: 0.08,
-				ease: "power3.out",
-				scrollTrigger: {
+		const legacyDesc = legacySection.querySelector(".legacy-desc");
+		const compass = legacySection.querySelector(".legacy-left-compass");
+
+		const leftTl = gsap.timeline({
+			scrollTrigger: {
 				trigger: legacySection,
-				start: "top 75%",
+				start: "top 80%",
 				toggleActions: "play none none none"
 			}
-			});
+		});
+
+		if (eyebrow) {
+			leftTl.fromTo(eyebrow, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" }, 0);
 		}
 
-		// 2. Sticky Pin & Inner Scroll (Desktop)
-		if (diagonalTrack && !isMobile) {
-			const pinTl = gsap.timeline({
+		if (legacyWords.length) {
+			leftTl.fromTo(legacyWords, { y: "115%", opacity: 0 }, { y: "0%", opacity: 1, duration: 0.85, stagger: 0.05, ease: "power3.out" }, 0.1);
+		}
+
+		if (legacyDesc) {
+			leftTl.fromTo(legacyDesc, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.75, ease: "power2.out" }, 0.3);
+		}
+
+		if (compass) {
+			leftTl.fromTo(compass, { scale: 0.88, opacity: 0 }, { scale: 1, opacity: 0.75, duration: 1.0, ease: "power2.out" }, 0.2);
+		}
+
+		// 2. Right Stack Cards Scroll Trigger (Stagger Fade-In + Animated Bar & Counters)
+		const cards = legacySection.querySelectorAll(".legacy-stack-card");
+		cards.forEach((card) => {
+			const counter = card.querySelector(".legacy-stat-count");
+			const bar = card.querySelector(".legacy-card-bar-fill");
+
+			const cardTl = gsap.timeline({
 				scrollTrigger: {
-					trigger: legacySection,
-					start: "top top",
-					end: "+=150%",
-					pin: stickyStage,
-					pinSpacing: true,
-					anticipatePin: 1,
-					scrub: 0.8,
-					invalidateOnRefresh: true,
-					onUpdate: (self) => {
-						const p = self.progress;
-						const stages = legacySection.querySelectorAll(".legacy-pair-stage");
-						stages.forEach((stage, idx) => {
-							const threshold = idx === 0 ? 0 : (idx === 1 ? 0.20 : 0.50);
-							if (p >= threshold) {
-								stage.querySelectorAll(".legacy-card").forEach(card => animateCardCounter(card));
-							}
-						});
-					}
-				}
-			});
-
-			// Title scrolls up and exits screen smoothly
-			if (titleLayer) {
-				pinTl.to(titleLayer, {
-					y: -100,
-					opacity: 0,
-					ease: "power1.out",
-					duration: 0.18
-				}, 0);
-			}
-
-			// Master track upward scrub: smoothly scrolls to Pair 2, then Pair 3, and holds Pair 3 in full view
-			pinTl.fromTo(diagonalTrack, {
-				y: 0
-			}, {
-				y: () => - (2 * (window.innerHeight * 0.52)),
-				ease: "none",
-				duration: 0.82
-			}, 0.08);
-
-			// Clean hold on Pair 3 (last 2 cards) so user can comfortably view them and counters finish
-			pinTl.to({}, { duration: 0.10 });
-		}
-
-		// Helper function for smooth live counter count-up
-		function animateCardCounter(card) {
-			const countEl = card.querySelector(".legacy-stat-count");
-			if (!countEl || countEl.dataset.counted === "true") return;
-			countEl.dataset.counted = "true";
-			const targetVal = parseFloat(countEl.getAttribute("data-target") || "0");
-			const decimals = parseInt(countEl.getAttribute("data-decimals") || "0");
-			const counterObj = { val: 0 };
-
-			gsap.to(counterObj, {
-				val: targetVal,
-				duration: 1.2,
-				ease: "power1.out",
-				onUpdate: () => {
-					countEl.textContent = decimals > 0 ? counterObj.val.toFixed(decimals) : Math.round(counterObj.val);
-				}
-			});
-		}
-
-		// Counter triggers on arrival (each card on mobile, or Pair 1 on desktop)
-		if (isMobile) {
-			legacyCards.forEach(card => {
-				ScrollTrigger.create({
 					trigger: card,
-					start: "top 88%",
+					start: "top 85%",
 					toggleActions: "play none none none",
-					onEnter: () => animateCardCounter(card)
-				});
-			});
-		} else {
-			ScrollTrigger.create({
-				trigger: legacySection,
-				start: "top 60%",
-				toggleActions: "play none none none",
-				onEnter: () => {
-					const firstStage = legacySection.querySelector(".legacy-pair-stage");
-					if (firstStage) {
-						firstStage.querySelectorAll(".legacy-card").forEach(card => animateCardCounter(card));
+					onEnter: () => {
+						if (counter && !counter.dataset.animated) {
+							counter.dataset.animated = "true";
+							const target = parseFloat(counter.getAttribute("data-target")) || 0;
+							const decimals = parseInt(counter.getAttribute("data-decimals"), 10) || 0;
+							const obj = { val: 0 };
+							gsap.to(obj, {
+								val: target,
+								duration: 1.8,
+								ease: "power2.out",
+								onUpdate: () => {
+									counter.textContent = decimals > 0 ? obj.val.toFixed(decimals) : Math.round(obj.val);
+								}
+							});
+						}
 					}
 				}
 			});
-		}
+
+			cardTl.fromTo(card, {
+				y: 35,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.8,
+				ease: "power2.out"
+			});
+
+			if (bar) {
+				cardTl.fromTo(bar, {
+					scaleX: 0
+				}, {
+					scaleX: 1,
+					duration: 1.1,
+					ease: "power3.out"
+				}, 0.2);
+			}
+		});
 	}
 
 	/** Our Impact Section: Horizontal Scroll Entrance from Right to Left **/
@@ -1628,6 +1768,9 @@
 		}
 	}
 
+	
+	
+
 	function initAllAnimations() {
 		if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
 			gsap.registerPlugin(ScrollTrigger);
@@ -1640,6 +1783,8 @@
 			initAnchorsInteractiveExperience,
 			initTiltedCards,
 			initStatsParallaxAnimation,
+			initShipShowcaseAnimation,
+			initCapabilitiesHover,
 			initExtensionsShowcase,
 			initPartnersAnimation,
 			initLegacyStickyScrollAnimation,
