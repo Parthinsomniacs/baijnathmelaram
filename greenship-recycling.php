@@ -61,7 +61,7 @@ $utm = "yes";
   </section>
 
   <!-- We Value Our Environment Section (Sticky Stacking Cards Showcase matching Priya Blue) -->
-  <section id="section-environment" class="section section-environment">
+  <section id="section-environment" class="section section-environment section-stacked">
     
     <!-- Minimal Background Design Elements -->
     <div class="bm-env-bg-decor" aria-hidden="true">
@@ -198,7 +198,7 @@ $utm = "yes";
   </section>
 
   <!-- We Value Our Worker's Welfare Section (With Matching Header) -->
-  <section id="section-welfare" class="section section-welfare">
+  <section id="section-welfare" class="section section-welfare section-stacked">
     
     <!-- Minimal Background Design Elements -->
     <div class="bm-welfare-bg-decor" aria-hidden="true">
@@ -397,7 +397,7 @@ $utm = "yes";
   </section>
 
   <!-- We Value Safety Section -->
-  <section id="section-safety" class="section section-safety">
+  <section id="section-safety" class="section section-safety section-stacked">
     <!-- Minimal Background Design Elements -->
     <div class="bm-safety-bg-decor" aria-hidden="true">
       <!-- Ambient Atmospheric Light Blooms -->
@@ -661,7 +661,7 @@ $utm = "yes";
   <!-- ==========================================================================
        Policy and Training Section (Architectural Staggered Layout)
        ========================================================================== -->
-  <section id="section-policy" class="section section-policy section-policy-option2">
+  <section id="section-policy" class="section section-policy section-policy-option2 section-stacked">
     <!-- Minimal Background Design Elements -->
     <div class="bm-policy-bg-decor" aria-hidden="true">
       <!-- Ambient Atmospheric Light Blooms -->
@@ -807,7 +807,7 @@ $utm = "yes";
   </section>
 
   <!-- Our Yard Section (Custom Orange Themed Showcase matching Reference Mockup) -->
-  <section id="section-yard" class="section section-yard">
+  <section id="section-yard" class="section section-yard section-stacked">
     <!-- Minimal Background Design Elements -->
     <div class="bm-yard-bg-decor" aria-hidden="true">
       <!-- Ambient Atmospheric Light Blooms -->

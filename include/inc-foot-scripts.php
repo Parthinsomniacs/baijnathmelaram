@@ -1,30 +1,23 @@
 <!--Common JS-->
 <?php require_once $alljs; ?>
-<script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
+<script src="<?php echo $jsurl; ?>lenis.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script>
-	// 1. Track and preserve scroll position across page refresh
+	// 1. Track and preserve scroll position across page refresh (without continuous scroll overhead)
 	var savedScrollPos = 0;
 	try {
 		savedScrollPos = parseFloat(sessionStorage.getItem('bm_scroll_pos') || '0');
 	} catch (e) {}
 
-	window.addEventListener('scroll', function() {
+	function saveBmScrollPosition() {
 		try {
 			var pos = window.scrollY || window.pageYOffset || 0;
 			sessionStorage.setItem('bm_scroll_pos', pos.toString());
 		} catch (e) {}
-	}, {
-		passive: true
-	});
-
-	window.addEventListener('beforeunload', function() {
-		try {
-			var pos = window.scrollY || window.pageYOffset || 0;
-			sessionStorage.setItem('bm_scroll_pos', pos.toString());
-		} catch (e) {}
-	});
+	}
+	window.addEventListener('pagehide', saveBmScrollPosition);
+	window.addEventListener('beforeunload', saveBmScrollPosition);
 
 	// 2. GSAP & ScrollTrigger setup
 	if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
@@ -2040,7 +2033,78 @@
 		}
 	}
 
+	/** Alloy Manufacturing: Raw Materials Pinned Horizontal Scroll Section **/
+	function initRawMaterialsSectionAnimation() {
+		const rawSection = document.querySelector("#section-raw-materials");
+		if (!rawSection) return;
 
+		if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+		gsap.registerPlugin(ScrollTrigger);
+
+		const words = rawSection.querySelectorAll(".word-inner");
+		const leadDesc = rawSection.querySelector(".raw-materials-lead-desc");
+		const eyebrow = rawSection.querySelector(".c-eyebrow");
+		const cardsTrack = rawSection.querySelector(".raw-materials-cards-track");
+		const cards = rawSection.querySelectorAll(".raw-material-card");
+
+		if (!cardsTrack || !cards.length) return;
+
+		// 1. Subtle, safe header entrance that never leaves text blank or hidden
+		const headerElements = [eyebrow, ...words, leadDesc].filter(Boolean);
+		if (headerElements.length) {
+			gsap.from(headerElements, {
+				y: 20,
+				opacity: 0.6,
+				duration: 0.7,
+				stagger: 0.05,
+				ease: "power2.out",
+				scrollTrigger: {
+					trigger: rawSection,
+					start: "top 85%",
+					toggleActions: "play none none none"
+				}
+			});
+		}
+
+		// 2. Pinned Horizontal Scroll
+		// Distance calculation ensuring all 9 cards scroll across with generous right padding
+		const getScrollDistance = () => {
+			const trackWidth = cardsTrack.scrollWidth;
+			const viewportWidth = window.innerWidth;
+			const endPadding = viewportWidth <= 768 ? 40 : 120;
+			return Math.max(0, trackWidth - viewportWidth + endPadding);
+		};
+
+		// Subtle initial right offset (never pushes cards off-screen, never blank!)
+		const getInitialOffset = () => (window.innerWidth <= 768 ? 60 : 120);
+
+		// Single smooth GSAP tween pinned to viewport with zero jerk
+		gsap.fromTo(cardsTrack, {
+			x: () => getInitialOffset()
+		}, {
+			x: () => -getScrollDistance(),
+			ease: "none",
+			scrollTrigger: {
+				trigger: rawSection,
+				pin: true,
+				pinSpacing: true,
+				start: "top top",
+				end: () => "+=" + Math.round(getScrollDistance() + getInitialOffset()),
+				scrub: 0.8,
+				invalidateOnRefresh: true,
+				anticipatePin: 0
+			}
+		});
+
+		// Refresh ScrollTrigger when images load to ensure precise scrollWidth
+		const rawImages = rawSection.querySelectorAll("img");
+		rawImages.forEach(img => {
+			if (img.complete) return;
+			img.addEventListener("load", () => {
+				ScrollTrigger.refresh();
+			});
+		});
+	}
 
 
 	/** Global Full-Page GSAP Parallax Scroll Experience **/
@@ -2215,6 +2279,48 @@
 				});
 			}
 		}
+
+		// 7. Our Timeline Section: Square Grid Drift Parallax
+		const timelineSec = document.querySelector("#section-timeline");
+		if (timelineSec) {
+			const grid = timelineSec.querySelector(".timeline-bg-grid");
+			if (grid) {
+				gsap.fromTo(grid, {
+					yPercent: -12
+				}, {
+					yPercent: 12,
+					ease: "none",
+					scrollTrigger: {
+						trigger: timelineSec,
+						start: "top bottom",
+						end: "bottom top",
+						scrub: true
+					}
+				});
+			}
+		}
+
+		// 8. Technical Files Download Section: Nautical Compass Parallax Rotation
+		const filesSec = document.querySelector("#section-files");
+		if (filesSec) {
+			const compassSvg = filesSec.querySelector(".files-bg-compass svg");
+			if (compassSvg) {
+				gsap.fromTo(compassSvg, {
+					yPercent: -12,
+					rotation: -10
+				}, {
+					yPercent: 12,
+					rotation: 16,
+					ease: "none",
+					scrollTrigger: {
+						trigger: filesSec,
+						start: "top bottom",
+						end: "bottom top",
+						scrub: true
+					}
+				});
+			}
+		}
 	}
 
 	function initAllAnimations() {
@@ -2243,6 +2349,7 @@
 			initYardSectionAnimation,
 			initTimelineSectionAnimation,
 			initQASectionAnimation,
+			initRawMaterialsSectionAnimation,
 			initGlobalParallaxExperience
 		];
 

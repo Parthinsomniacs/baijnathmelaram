@@ -68,7 +68,7 @@ $utm = "yes";
   </section>
 
   <!-- Our Partners Section -->
-  <section id="section-partners" class="section section-partners theme-padding">
+  <section id="section-partners" class="section section-partners white-bg section-stacked theme-padding">
 
     <!-- Header Wrap -->
     <div class="partners-head-wrap text-center">
@@ -181,7 +181,7 @@ $utm = "yes";
 
 
 
-  <section id="section-about-us" class="section section-about-us pb-0">
+  <section id="section-about-us" class="section section-about-us white-bg section-stacked pb-0">
     <!-- Subtle Background World Map Watermark -->
     <div class="about-bg-map-pattern" aria-hidden="true"></div>
 
@@ -290,7 +290,7 @@ $utm = "yes";
   </section>
 
   <!-- Our Anchors Section -->
-  <section id="section-anchors" class="section section-anchors orange-bg">
+  <section id="section-anchors" class="section section-anchors white-bg section-stacked">
     <!-- Rich Background Maritime & Ambient Elements -->
     <div class="anchors-bg-ambient" aria-hidden="true"></div>
     <div class="anchors-bg-grid" aria-hidden="true"></div>
@@ -431,7 +431,7 @@ $utm = "yes";
 
 
   <!-- Telha Clarke Inspired Dynamic Ship Showcase Section (Sticky Width-Shrink Scrub) -->
-  <section id="section-ship-showcase" class="section section-ship-showcase">
+  <section id="section-ship-showcase" class="section section-ship-showcase section-stacked">
     <div class="ship-showcase-stage">
       <div class="ship-showcase-container">
 
@@ -535,7 +535,7 @@ $utm = "yes";
 
 
   <!-- Our Capabilities Section (Telha Clarke Inspired Sticky Showcase) -->
-  <section id="section-capabilities" class="section section-capabilities pb-0">
+  <section id="section-capabilities" class="section section-capabilities section-stacked pb-0">
 
     <!-- Top Large Editorial Statement Quote -->
     <div class="cap-statement-wrapper">
@@ -644,7 +644,7 @@ $utm = "yes";
   </section>
 
   <!-- Explore Extensions Section -->
-  <section id="section-extensions" class="section section-extensions theme-padding">
+  <section id="section-extensions" class="section section-extensions white-bg section-stacked theme-padding">
     <div class="extensions-head-wrap has-text-centered">
       <div class="about-ref-eyebrow mb-2" style="justify-content: center; display: inline-flex;">
         <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
@@ -859,7 +859,7 @@ $utm = "yes";
   </section>
 
   <!-- Our Legacy Section (Sticky Split Showcase - Left Sticky / Right Cards Stack) -->
-  <section id="section-legacy" class="section section-legacy">
+  <section id="section-legacy" class="section section-legacy section-stacked">
     <!-- Pinned Background Backdrop (Fixed in viewport during section scroll, zero image movement) -->
     <div class="legacy-bg-pin-wrap" aria-hidden="true">
       <div class="legacy-bg-media">
@@ -947,7 +947,7 @@ $utm = "yes";
   </section>
 
   <!-- Our Impact Section (Horizontal Scroll from Right to Left) -->
-  <section id="section-impact" class="section section-impact theme-padding">
+  <section id="section-impact" class="section section-impact white-bg section-stacked theme-padding">
     <!-- Square Grid Background Pattern in the middle / background -->
     <div class="impact-bg-grid" aria-hidden="true"></div>
 
@@ -1022,7 +1022,7 @@ $utm = "yes";
   </section>
 
   <!-- Milestones Achieved & Certificates Section -->
-  <section id="section-milestones" class="section section-milestones p-0">
+  <section id="section-milestones" class="section section-milestones section-stacked p-0">
     <!-- Cinematic Landscape Background Image with Overlay -->
     <div class="milestones-bg-wrap">
       <img src="<?php echo $imagesurl; ?>milestones/milestones-bg.jpg" alt="Baijnath Melaram Milestones & Environmental Certifications" class="milestones-bg-img" />

@@ -1,4 +1,4 @@
-<footer class="footer footer-modern" id="footer">
+<footer class="footer footer-modern section-stacked" id="footer">
   <div class="footer-inner theme-padding">
     <!-- Top Grid: 3 Columns -->
     <div class="footer-top-grid">
