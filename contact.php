@@ -21,7 +21,7 @@ $utm = "yes";
   <?php require_once $head; ?>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Science+Gothic:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..900;1,300..900&family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="<?php echo $cssurl; ?>smruti.css?v=<?php echo time(); ?>">
 </head>
 
@@ -175,7 +175,11 @@ $utm = "yes";
               <span class="bm-touch-kicker-line"></span>
               <span class="bm-touch-kicker-text">Contact Us</span>
             </div>
-            <h2 class="bm-touch-heading">Get in Touch</h2>
+            <h2 class="bm-touch-heading">
+              <span class="word-mask"><span class="word-inner">Get</span></span>
+              <span class="word-mask"><span class="word-inner text-secondary">in</span></span>
+              <span class="word-mask"><span class="word-inner">Touch</span></span>
+            </h2>
 
             <form id="contact-page-form" class="bm-touch-form" action="<?php echo $siteurl; ?>include/inc-leads.php" method="POST" autocomplete="off" novalidate>
               <!-- System Hidden Fields for inc-leads.php -->
@@ -248,7 +252,9 @@ $utm = "yes";
               <span class="bm-touch-kicker-line"></span>
               <span class="bm-touch-kicker-text">DIRECTORY</span>
             </div>
-            <h2 class="contacts-heading">Contacts</h2>
+            <h2 class="contacts-heading">
+              <span class="word-mask"><span class="word-inner">Contacts</span></span>
+            </h2>
             <p class="contacts-sub-desc">
               Direct communication lines for our registered offices, corporate headquarters, ship recycling yards, and key executive leadership.
             </p>
@@ -606,6 +612,212 @@ $utm = "yes";
             }
           });
         });
+      }
+
+      // 3. GSAP Text & ScrollTrigger Animations (Matching index.php)
+      function initContactGsapAnimations() {
+        if (typeof gsap === 'undefined') return;
+        if (typeof ScrollTrigger !== 'undefined') {
+          gsap.registerPlugin(ScrollTrigger);
+        }
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReducedMotion) {
+          document.querySelectorAll('.banner-word-inner, .word-inner').forEach(function(el) {
+            el.style.opacity = '1';
+            el.style.transform = 'none';
+          });
+          return;
+        }
+
+        /* ------------------------------------------------------------------------
+           A. Hero Banner Text Animation on Load (Matches index.php)
+        ------------------------------------------------------------------------ */
+        const banner = document.querySelector('#contact-banner');
+        if (banner) {
+          const wordInners = banner.querySelectorAll('.banner-word-inner');
+          const kicker = banner.querySelector('.section-kicker');
+          const divider = banner.querySelector('.banner-divider');
+          const bannerImg = banner.querySelector('.contact-banner-img');
+
+          const heroTl = gsap.timeline({ delay: 0.15 });
+
+          if (bannerImg) {
+            heroTl.fromTo(bannerImg, {
+              scale: 1.07,
+              opacity: 0.8
+            }, {
+              scale: 1,
+              opacity: 1,
+              duration: 1.4,
+              ease: 'power2.out',
+              clearProps: 'transform'
+            }, 0);
+          }
+
+          if (kicker) {
+            heroTl.fromTo(kicker, {
+              y: 20,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.6,
+              ease: 'power2.out',
+              clearProps: 'all'
+            }, 0.12);
+          }
+
+          if (divider) {
+            heroTl.fromTo(divider, {
+              scaleX: 0,
+              transformOrigin: 'left center'
+            }, {
+              scaleX: 1,
+              duration: 0.8,
+              ease: 'power2.out'
+            }, '-=0.35');
+          }
+
+          // Title words reveal with mask stagger (Matches index.php)
+          if (wordInners.length) {
+            heroTl.fromTo(wordInners, {
+              y: '115%',
+              opacity: 0
+            }, {
+              y: '0%',
+              opacity: 1,
+              duration: 0.95,
+              stagger: 0.08,
+              ease: 'power3.out'
+            });
+          }
+
+          // Fast-forward if scrolled down on page refresh
+          const currentScroll = window.scrollY || window.pageYOffset || 0;
+          if (currentScroll > 80) {
+            heroTl.progress(1);
+          }
+        }
+
+        /* ------------------------------------------------------------------------
+           B. Section 1: Contact Highlight Cards Stagger Reveal
+        ------------------------------------------------------------------------ */
+        if (typeof ScrollTrigger !== 'undefined') {
+          const infoCards = document.querySelectorAll('.section-contact-cards .bm-info-card');
+          if (infoCards.length) {
+            gsap.fromTo(infoCards, {
+              y: 35,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.8,
+              stagger: 0.12,
+              ease: 'power2.out',
+              clearProps: 'all',
+              scrollTrigger: {
+                trigger: '.section-contact-cards',
+                start: 'top 85%',
+                once: true
+              }
+            });
+          }
+
+          /* ------------------------------------------------------------------------
+             C. Section 2: Get in Touch Heading & Columns Reveal
+          ------------------------------------------------------------------------ */
+          const touchHeading = document.querySelector('.bm-touch-heading');
+          const touchWords = touchHeading ? touchHeading.querySelectorAll('.word-inner') : [];
+          if (touchWords.length) {
+            gsap.fromTo(touchWords, {
+              y: '115%',
+              opacity: 0
+            }, {
+              y: '0%',
+              opacity: 1,
+              duration: 0.85,
+              stagger: 0.06,
+              ease: 'power3.out',
+              scrollTrigger: {
+                trigger: touchHeading,
+                start: 'top 85%',
+                once: true
+              }
+            });
+          }
+
+          const mapCard = document.querySelector('.bm-map-card');
+          const touchForm = document.querySelector('.bm-touch-form-col');
+          if (mapCard && touchForm) {
+            gsap.fromTo([mapCard, touchForm], {
+              y: 35,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.9,
+              stagger: 0.15,
+              ease: 'power2.out',
+              clearProps: 'all',
+              scrollTrigger: {
+                trigger: '.section-touch-interactive',
+                start: 'top 82%',
+                once: true
+              }
+            });
+          }
+
+          /* ------------------------------------------------------------------------
+             D. Section 3: Directory Heading & Columns Reveal
+          ------------------------------------------------------------------------ */
+          const dirHeading = document.querySelector('.contacts-heading');
+          const dirWords = dirHeading ? dirHeading.querySelectorAll('.word-inner') : [];
+          if (dirWords.length) {
+            gsap.fromTo(dirWords, {
+              y: '115%',
+              opacity: 0
+            }, {
+              y: '0%',
+              opacity: 1,
+              duration: 0.85,
+              stagger: 0.06,
+              ease: 'power3.out',
+              scrollTrigger: {
+                trigger: dirHeading,
+                start: 'top 85%',
+                once: true
+              }
+            });
+          }
+
+          const dirCols = document.querySelectorAll('.contacts-grid .contacts-col');
+          if (dirCols.length) {
+            gsap.fromTo(dirCols, {
+              y: 30,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.8,
+              stagger: 0.12,
+              ease: 'power2.out',
+              clearProps: 'all',
+              scrollTrigger: {
+                trigger: '.contacts-grid',
+                start: 'top 82%',
+                once: true
+              }
+            });
+          }
+        }
+      }
+
+      // Initialize GSAP animations
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initContactGsapAnimations);
+      } else {
+        initContactGsapAnimations();
       }
     })();
   </script>

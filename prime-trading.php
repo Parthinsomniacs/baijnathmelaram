@@ -21,7 +21,7 @@ $utm = "yes";
   <?php require_once $head; ?>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Science+Gothic:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..900;1,300..900&family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="<?php echo $cssurl; ?>smruti.css?v=<?php echo time(); ?>">
 </head>
 
@@ -89,7 +89,13 @@ $utm = "yes";
               </div>
 
               <!-- Main Section Title Matching Screenshot & Greenship Typography -->
-              <h2 class="prime-about-heading">About B Melaram &amp; Sons</h2>
+              <h2 class="prime-about-heading">
+                <span class="word-mask"><span class="word-inner">About</span></span>
+                <span class="word-mask"><span class="word-inner">B</span></span>
+                <span class="word-mask"><span class="word-inner">Melaram</span></span>
+                <span class="word-mask"><span class="word-inner">&amp;</span></span>
+                <span class="word-mask"><span class="word-inner text-secondary">Sons</span></span>
+              </h2>
 
               <!-- Prominent Lead Paragraph Matching Screenshot Exactly -->
               <p class="prime-about-lead">
@@ -157,7 +163,11 @@ $utm = "yes";
             </div>
 
             <!-- Main Heading -->
-            <h2 class="prime-expertise-heading">Fields of Expertise</h2>
+            <h2 class="prime-expertise-heading">
+              <span class="word-mask"><span class="word-inner">Fields</span></span>
+              <span class="word-mask"><span class="word-inner">of</span></span>
+              <span class="word-mask"><span class="word-inner text-secondary">Expertise</span></span>
+            </h2>
           </div>
 
           <!-- Interactive Tab Navigation (Swapped: Red Box on Top) -->
@@ -387,7 +397,8 @@ $utm = "yes";
             </div>
             <div class="prime-products-heading-row">
               <h2 class="prime-products-heading">
-                Our <span class="text-secondary">Products</span>
+                <span class="word-mask"><span class="word-inner">Our</span></span>
+                <span class="word-mask"><span class="word-inner text-secondary">Products</span></span>
               </h2>
               <p class="prime-products-subtext">
                 Explore our versatile inventory of prime iron and steel products engineered to meet demanding industrial specifications across automotive, infrastructure, pressure vessels, and architectural applications.
@@ -483,8 +494,11 @@ $utm = "yes";
 
             <!-- Main Heading with Brand Color Accent -->
             <h2 class="prime-corp-heading">
-              Association with India’s<br>
-              <span class="text-secondary">biggest corporations</span>
+              <span class="word-mask"><span class="word-inner">Association</span></span>
+              <span class="word-mask"><span class="word-inner">with</span></span>
+              <span class="word-mask"><span class="word-inner">India’s</span></span><br>
+              <span class="word-mask"><span class="word-inner text-secondary">biggest</span></span>
+              <span class="word-mask"><span class="word-inner text-secondary">corporations</span></span>
             </h2>
 
             <!-- Lead Paragraph directly under Heading -->
@@ -581,12 +595,13 @@ $utm = "yes";
         if (prefersReducedMotion) return;
 
         /* ======================================================================
-           1. Hero Banner On-Load Smooth Entrance
+           1. Hero Banner On-Load Smooth Entrance (Matches index.php GSAP Animation)
            ====================================================================== */
         const banner = document.querySelector('#prime-banner');
         if (banner) {
           const bannerKicker = banner.querySelector('.section-kicker');
-          const bannerTitle = banner.querySelector('.prime-banner-title');
+          const bannerDivider = banner.querySelector('.banner-divider');
+          const wordInners = banner.querySelectorAll('.banner-word-inner');
           const bannerImg = banner.querySelector('.prime-banner-img');
 
           const heroTl = gsap.timeline({ delay: 0.15 });
@@ -614,20 +629,37 @@ $utm = "yes";
               duration: 0.6,
               ease: 'power2.out',
               clearProps: 'all'
-            }, 0.2);
+            }, 0.12);
           }
 
-          if (bannerTitle) {
-            heroTl.fromTo(bannerTitle, {
-              y: 35,
+          if (bannerDivider) {
+            heroTl.fromTo(bannerDivider, {
+              scaleX: 0,
+              transformOrigin: 'left center'
+            }, {
+              scaleX: 1,
+              duration: 0.8,
+              ease: 'power2.out'
+            }, '-=0.35');
+          }
+
+          if (wordInners.length) {
+            heroTl.fromTo(wordInners, {
+              y: '115%',
               opacity: 0
             }, {
-              y: 0,
+              y: '0%',
               opacity: 1,
-              duration: 0.9,
-              ease: 'power3.out',
-              clearProps: 'all'
-            }, 0.35);
+              duration: 0.95,
+              stagger: 0.08,
+              ease: 'power3.out'
+            });
+          }
+
+          // Fast-forward if scrolled down on page refresh
+          const currentScroll = window.scrollY || window.pageYOffset || 0;
+          if (currentScroll > 80) {
+            heroTl.progress(1);
           }
         }
 
@@ -665,7 +697,19 @@ $utm = "yes";
             }, 0);
           }
 
-          if (heading) {
+          const headingWords = heading ? heading.querySelectorAll('.word-inner') : [];
+          if (headingWords.length) {
+            headerTl.fromTo(headingWords, {
+              y: '115%',
+              opacity: 0
+            }, {
+              y: '0%',
+              opacity: 1,
+              duration: 0.85,
+              stagger: 0.06,
+              ease: 'power3.out'
+            }, 0.1);
+          } else if (heading) {
             headerTl.fromTo(heading, {
               y: 35,
               opacity: 0
@@ -755,7 +799,19 @@ $utm = "yes";
           if (expKicker) {
             expTl.fromTo(expKicker, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out', clearProps: 'all' }, 0);
           }
-          if (expHeading) {
+          const expWords = expHeading ? expHeading.querySelectorAll('.word-inner') : [];
+          if (expWords.length) {
+            expTl.fromTo(expWords, {
+              y: '115%',
+              opacity: 0
+            }, {
+              y: '0%',
+              opacity: 1,
+              duration: 0.85,
+              stagger: 0.06,
+              ease: 'power3.out'
+            }, 0.1);
+          } else if (expHeading) {
             expTl.fromTo(expHeading, { y: 35, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', clearProps: 'all' }, 0.1);
           }
           if (tabsNav) {
@@ -800,7 +856,19 @@ $utm = "yes";
           if (prodKicker) {
             prodTl.fromTo(prodKicker, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out', clearProps: 'all' }, 0);
           }
-          if (prodHeading) {
+          const prodWords = prodHeading ? prodHeading.querySelectorAll('.word-inner') : [];
+          if (prodWords.length) {
+            prodTl.fromTo(prodWords, {
+              y: '115%',
+              opacity: 0
+            }, {
+              y: '0%',
+              opacity: 1,
+              duration: 0.85,
+              stagger: 0.06,
+              ease: 'power3.out'
+            }, 0.1);
+          } else if (prodHeading) {
             prodTl.fromTo(prodHeading, { y: 35, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', clearProps: 'all' }, 0.1);
           }
           if (prodSubtext) {
@@ -868,7 +936,19 @@ $utm = "yes";
             }, 0.1);
           }
 
-          if (corpHeading) {
+          const corpWords = corpHeading ? corpHeading.querySelectorAll('.word-inner') : [];
+          if (corpWords.length) {
+            corpTl.fromTo(corpWords, {
+              y: '115%',
+              opacity: 0
+            }, {
+              y: '0%',
+              opacity: 1,
+              duration: 0.85,
+              stagger: 0.06,
+              ease: 'power3.out'
+            }, 0.18);
+          } else if (corpHeading) {
             corpTl.fromTo(corpHeading, {
               y: 32,
               opacity: 0
