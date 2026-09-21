@@ -143,30 +143,24 @@ $utm = "yes";
         <div class="bm-expertise-grid-lines"></div>
         <div class="bm-expertise-plus bm-expertise-plus-1">+</div>
         <div class="bm-expertise-plus bm-expertise-plus-2">+</div>
-        <div class="bm-expertise-axis-tag">SPEC // EN 10025 &bull; ASTM A36 &bull; IS 2062</div>
       </div>
 
       <div class="bm-prime-fullwidth-wrap">
         <div class="prime-expertise-container">
 
           <!-- Section Header Block -->
-          <div class="prime-expertise-header">
+          <div class="prime-expertise-header text-center">
             <!-- Eyebrow / Kicker -->
-            <div class="section-kicker" style="margin-bottom: 16px;">
+            <div class="section-kicker is-centered" style="margin-bottom: 16px;">
               <span class="section-kicker-line"></span>
               <span class="section-kicker-text">FIELDS OF EXPERTISE</span>
             </div>
 
             <!-- Main Heading -->
             <h2 class="prime-expertise-heading">Fields of Expertise</h2>
-
-            <!-- Intro Description Paragraph -->
-            <p class="prime-expertise-desc">
-              B Melaram &amp; Sons have a comprehensive range of hot rolled, cold rolled, metallic coated, direct rolled, pre-finished and electro-plated steels for use in the automotive and transport industries, construction, consumer packaging and general industry &amp; Pipe Factory.
-            </p>
           </div>
 
-          <!-- Interactive Tab Navigation -->
+          <!-- Interactive Tab Navigation (Swapped: Red Box on Top) -->
           <div class="prime-tabs-nav-wrapper">
             <div class="prime-tabs-nav" role="tablist" aria-label="Steel Product Categories">
               <button type="button" class="prime-tab-btn active" data-tab="flat-products" role="tab" aria-selected="true" aria-controls="panel-flat-products" id="tab-btn-flat">
@@ -180,6 +174,13 @@ $utm = "yes";
             </div>
           </div>
 
+          <!-- Dynamic Category Description (Swapped: Blue Box below Tabs) -->
+          <div class="prime-expertise-desc-wrapper">
+            <p class="prime-expertise-desc" id="prime-expertise-dynamic-desc">
+              B Melaram &amp; Sons have a comprehensive range of hot rolled, cold rolled, metallic coated, direct rolled, pre-finished and electro-plated steels for use in the automotive and transport industries, construction, consumer packaging and general industry &amp; Pipe Factory.
+            </p>
+          </div>
+
           <!-- Tab Content Panels Container -->
           <div class="prime-tab-panels-container">
 
@@ -187,25 +188,22 @@ $utm = "yes";
             <div class="prime-tab-panel active" id="panel-flat-products" role="tabpanel" aria-labelledby="tab-btn-flat">
               <div class="prime-accordion-strip">
                 
-                <!-- Card 1: Hot Rolled Coils & Sheets (Active by default) -->
+                <!-- Card 1: H.R Coils (Active by default) -->
                 <article class="prime-acc-card is-active" data-index="0">
                   <div class="acc-card-top">
-                    <div class="acc-card-spec">
-                      <span class="acc-spec-dot"></span>
-                      <span class="acc-spec-code">HR &bull; HEAVY</span>
-                    </div>
-                    <h3 class="acc-card-title">Hot Rolled Coils &amp; Sheets</h3>
+                    <h3 class="acc-card-title">H.R Coils</h3>
                     <p class="acc-card-desc">
-                      Heavy-gauge structural steel with high tensile strength, ideal for automotive chassis, welded pipes, and heavy structural engineering.
+                      <strong>Thickness:</strong> 1.5 mm to 16 mm<br>
+                      <strong>Grades / Specs:</strong> E250 / E350 / IS 2062 / SPHT / IS 10748 CRI API Grades. Used in Automobile, Pipe Manufacturing, Railway, and Bicycle Industries.
                     </p>
                   </div>
 
                   <div class="acc-card-bottom">
                     <div class="acc-card-media">
-                      <img src="<?php echo $imagesurl; ?>prime-trading/flat-hr-coils.jpg?v=<?php echo $version; ?>" alt="Hot Rolled Coils and Sheets" class="acc-card-img" loading="lazy" />
+                      <img src="<?php echo $imagesurl; ?>prime-trading/1Hot-Rolled-Steel-Coil-1200x675.avif?v=<?php echo $version; ?>" alt="H.R Coils" class="acc-card-img" loading="lazy" />
                       <div class="acc-card-media-overlay"></div>
                     </div>
-                    <a href="#contact" class="acc-card-action-btn" aria-label="Explore Hot Rolled Coils & Sheets">
+                    <a href="#contact" class="acc-card-action-btn" aria-label="Explore H.R Coils">
                       <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="7" y1="17" x2="17" y2="7"></line>
                         <polyline points="7 7 17 7 17 17"></polyline>
@@ -214,25 +212,22 @@ $utm = "yes";
                   </div>
                 </article>
 
-                <!-- Card 2: Cold Rolled Coils & Sheets -->
+                <!-- Card 2: H.R Plates -->
                 <article class="prime-acc-card" data-index="1">
                   <div class="acc-card-top">
-                    <div class="acc-card-spec">
-                      <span class="acc-spec-dot"></span>
-                      <span class="acc-spec-code">CR &bull; PRECISION</span>
-                    </div>
-                    <h3 class="acc-card-title">Cold Rolled Coils &amp; Sheets</h3>
+                    <h3 class="acc-card-title">H.R Plates</h3>
                     <p class="acc-card-desc">
-                      Superior surface finish and tight dimensional tolerances engineered for automotive skin panels, white goods, and precision stamping.
+                      <strong>Thickness:</strong> 5 mm to 120 mm<br>
+                      <strong>Grades / Specs:</strong> E250 / IS 2062 / A588 GR A. Heavy structural and boiler quality plates essential for high-pressure vessels, construction, and fabrication.
                     </p>
                   </div>
 
                   <div class="acc-card-bottom">
                     <div class="acc-card-media">
-                      <img src="<?php echo $imagesurl; ?>prime-trading/flat-cr-coils.jpg?v=<?php echo $version; ?>" alt="Cold Rolled Coils and Sheets" class="acc-card-img" loading="lazy" />
+                      <img src="<?php echo $imagesurl; ?>prime-trading/2.%20HR%20Plates%20A588%20GR%20A_.avif?v=<?php echo $version; ?>" alt="H.R Plates" class="acc-card-img" loading="lazy" />
                       <div class="acc-card-media-overlay"></div>
                     </div>
-                    <a href="#contact" class="acc-card-action-btn" aria-label="Explore Cold Rolled Coils & Sheets">
+                    <a href="#contact" class="acc-card-action-btn" aria-label="Explore H.R Plates">
                       <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="7" y1="17" x2="17" y2="7"></line>
                         <polyline points="7 7 17 7 17 17"></polyline>
@@ -241,25 +236,22 @@ $utm = "yes";
                   </div>
                 </article>
 
-                <!-- Card 3: Metallic Coated & Galvanized -->
+                <!-- Card 3: Round Bars -->
                 <article class="prime-acc-card" data-index="2">
                   <div class="acc-card-top">
-                    <div class="acc-card-spec">
-                      <span class="acc-spec-dot"></span>
-                      <span class="acc-spec-code">GI &bull; ANTI-CORROSION</span>
-                    </div>
-                    <h3 class="acc-card-title">Metallic Coated &amp; Galvanized</h3>
+                    <h3 class="acc-card-title">Round Bars</h3>
                     <p class="acc-card-desc">
-                      High-adhesion zinc and galvalume protective coating offering lasting weather durability for roofing, structural decking, and HVAC ductwork.
+                      <strong>Thickness:</strong> 12 mm to 300 mm<br>
+                      <strong>Grades / Specs:</strong> C45 / 4140. High-integrity rounds for forging industries, bright bar units, auto-ancillaries, foundation bolts, pins, and rollers.
                     </p>
                   </div>
 
                   <div class="acc-card-bottom">
                     <div class="acc-card-media">
-                      <img src="<?php echo $imagesurl; ?>prime-trading/flat-galvanized.jpg?v=<?php echo $version; ?>" alt="Galvanized and Metallic Coated Steel" class="acc-card-img" loading="lazy" />
+                      <img src="<?php echo $imagesurl; ?>prime-trading/3.%20Round%20Bars%20kleins-recycling-aluminum.avif?v=<?php echo $version; ?>" alt="Round Bars" class="acc-card-img" loading="lazy" />
                       <div class="acc-card-media-overlay"></div>
                     </div>
-                    <a href="#contact" class="acc-card-action-btn" aria-label="Explore Metallic Coated & Galvanized">
+                    <a href="#contact" class="acc-card-action-btn" aria-label="Explore Round Bars">
                       <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="7" y1="17" x2="17" y2="7"></line>
                         <polyline points="7 7 17 7 17 17"></polyline>
@@ -268,25 +260,22 @@ $utm = "yes";
                   </div>
                 </article>
 
-                <!-- Card 4: Pre-Finished & Color Coated -->
+                <!-- Card 4: PPGI -->
                 <article class="prime-acc-card" data-index="3">
                   <div class="acc-card-top">
-                    <div class="acc-card-spec">
-                      <span class="acc-spec-dot"></span>
-                      <span class="acc-spec-code">PPGI &bull; ARCHITECTURAL</span>
-                    </div>
-                    <h3 class="acc-card-title">Pre-Finished &amp; Color Coated</h3>
+                    <h3 class="acc-card-title">PPGI</h3>
                     <p class="acc-card-desc">
-                      Factory-cured thermoset polymer coatings in tailored finishes, combining modern aesthetics with extreme UV and chemical resistance.
+                      <strong>Thickness:</strong> 0.42 mm to 1 mm<br>
+                      <strong>Grades / Specs:</strong> JIS G3322 CG LCC. Pre-painted galvanized steel coils ideal for modern roofing solutions, providing durability and vibrant colours.
                     </p>
                   </div>
 
                   <div class="acc-card-bottom">
                     <div class="acc-card-media">
-                      <img src="<?php echo $imagesurl; ?>prime-trading/flat-prefinished.jpg?v=<?php echo $version; ?>" alt="Pre-Finished and Color Coated Steels" class="acc-card-img" loading="lazy" />
+                      <img src="<?php echo $imagesurl; ?>prime-trading/4.PPGI-coils-1200x675.avif?v=<?php echo $version; ?>" alt="PPGI Coils" class="acc-card-img" loading="lazy" />
                       <div class="acc-card-media-overlay"></div>
                     </div>
-                    <a href="#contact" class="acc-card-action-btn" aria-label="Explore Pre-Finished & Color Coated Steels">
+                    <a href="#contact" class="acc-card-action-btn" aria-label="Explore PPGI">
                       <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="7" y1="17" x2="17" y2="7"></line>
                         <polyline points="7 7 17 7 17 17"></polyline>
@@ -295,25 +284,22 @@ $utm = "yes";
                   </div>
                 </article>
 
-                <!-- Card 5: Electro-Plated & Tinplate Steels -->
+                <!-- Card 5: Cold Roll / Sheets / Coils -->
                 <article class="prime-acc-card" data-index="4">
                   <div class="acc-card-top">
-                    <div class="acc-card-spec">
-                      <span class="acc-spec-dot"></span>
-                      <span class="acc-spec-code">ETP &bull; SPECULAR</span>
-                    </div>
-                    <h3 class="acc-card-title">Electro-Plated &amp; Tinplate</h3>
+                    <h3 class="acc-card-title">Cold Roll / Sheets / Coils</h3>
                     <p class="acc-card-desc">
-                      Ultra-thin specular electro-tin coated sheets with pristine formability, optimal for food canning, consumer packaging, and electrical parts.
+                      <strong>Thickness:</strong> 0.5 mm to 2 mm<br>
+                      <strong>Grades / Specs:</strong> SPGHT. Precision cold-rolled coils for furniture, automobile panels, container manufacturing, and value-add sheet processing.
                     </p>
                   </div>
 
                   <div class="acc-card-bottom">
                     <div class="acc-card-media">
-                      <img src="<?php echo $imagesurl; ?>prime-trading/flat-tinplate.jpg?v=<?php echo $version; ?>" alt="Electro-Plated and Tinplate Steels" class="acc-card-img" loading="lazy" />
+                      <img src="<?php echo $imagesurl; ?>prime-trading/5.cold-rolled-Sheets-Coils.avif?v=<?php echo $version; ?>" alt="Cold Roll Sheets and Coils" class="acc-card-img" loading="lazy" />
                       <div class="acc-card-media-overlay"></div>
                     </div>
-                    <a href="#contact" class="acc-card-action-btn" aria-label="Explore Electro-Plated & Tinplate Steels">
+                    <a href="#contact" class="acc-card-action-btn" aria-label="Explore Cold Roll / Sheets / Coils">
                       <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="7" y1="17" x2="17" y2="7"></line>
                         <polyline points="7 7 17 7 17 17"></polyline>
@@ -329,25 +315,22 @@ $utm = "yes";
             <div class="prime-tab-panel" id="panel-long-products" role="tabpanel" aria-labelledby="tab-btn-long">
               <div class="prime-accordion-strip prime-accordion-strip-duo">
 
-                <!-- Card 1: TMT Rebars & Deformed Bars -->
-                <article class="prime-acc-card" data-index="0">
+                <!-- Card 1: Wire Rods (Active by default) -->
+                <article class="prime-acc-card is-active" data-index="0">
                   <div class="acc-card-top">
-                    <div class="acc-card-spec">
-                      <span class="acc-spec-dot"></span>
-                      <span class="acc-spec-code">FE 500D / 550D &bull; HIGH-YIELD</span>
-                    </div>
-                    <h3 class="acc-card-title">TMT Rebars &amp; Deformed Bars</h3>
+                    <h3 class="acc-card-title">Wire Rods</h3>
                     <p class="acc-card-desc">
-                      Thermo-mechanically treated reinforcement bars with superior rib-bonding, high bendability, and thermal resistance for bridges, high-rises, and marine foundations.
+                      <strong>Thickness:</strong> 5.5 mm to 22 mm<br>
+                      <strong>Grades / Specs:</strong> SAE 1008. High-ductility steel wire rods for wire drawing, fasteners, nails, welding electrodes, and industrial mesh.
                     </p>
                   </div>
 
                   <div class="acc-card-bottom">
                     <div class="acc-card-media">
-                      <img src="<?php echo $imagesurl; ?>prime-trading/long-tmt-rebars.jpg?v=<?php echo $version; ?>" alt="TMT Rebars and Deformed Bars" class="acc-card-img" loading="lazy" />
+                      <img src="<?php echo $imagesurl; ?>prime-trading/long-wire-rods.jpg?v=<?php echo $version; ?>" alt="Wire Rods" class="acc-card-img" loading="lazy" />
                       <div class="acc-card-media-overlay"></div>
                     </div>
-                    <a href="#contact" class="acc-card-action-btn" aria-label="Explore TMT Rebars & Deformed Bars">
+                    <a href="#contact" class="acc-card-action-btn" aria-label="Explore Wire Rods">
                       <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="7" y1="17" x2="17" y2="7"></line>
                         <polyline points="7 7 17 7 17 17"></polyline>
@@ -356,25 +339,22 @@ $utm = "yes";
                   </div>
                 </article>
 
-                <!-- Card 2: Wire Rods & Structural Sections -->
+                <!-- Card 2: TMT Bars (Rebars) -->
                 <article class="prime-acc-card" data-index="1">
                   <div class="acc-card-top">
-                    <div class="acc-card-spec">
-                      <span class="acc-spec-dot"></span>
-                      <span class="acc-spec-code">STRUCTURAL &bull; BEAMS &amp; RODS</span>
-                    </div>
-                    <h3 class="acc-card-title">Wire Rods &amp; Structural Sections</h3>
+                    <h3 class="acc-card-title">TMT Bars (Rebars)</h3>
                     <p class="acc-card-desc">
-                      Comprehensive inventory of high-ductility wire rod coils, universal columns, I-beams, angles, and channels for industrial fabrication and heavy infrastructure.
+                      <strong>Thickness:</strong> 6 mm to 40 mm<br>
+                      <strong>Grades / Specs:</strong> FE500D. High-yield thermo-mechanically treated reinforcement bars engineered for bridges, high-rises, and capital infrastructure.
                     </p>
                   </div>
 
                   <div class="acc-card-bottom">
                     <div class="acc-card-media">
-                      <img src="<?php echo $imagesurl; ?>prime-trading/long-wire-rods.jpg?v=<?php echo $version; ?>" alt="Wire Rods and Structural Sections" class="acc-card-img" loading="lazy" />
+                      <img src="<?php echo $imagesurl; ?>prime-trading/long-tmt-rebars.jpg?v=<?php echo $version; ?>" alt="TMT Bars Rebars" class="acc-card-img" loading="lazy" />
                       <div class="acc-card-media-overlay"></div>
                     </div>
-                    <a href="#contact" class="acc-card-action-btn" aria-label="Explore Wire Rods & Structural Sections">
+                    <a href="#contact" class="acc-card-action-btn" aria-label="Explore TMT Bars Rebars">
                       <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="7" y1="17" x2="17" y2="7"></line>
                         <polyline points="7 7 17 7 17 17"></polyline>
@@ -384,6 +364,195 @@ $utm = "yes";
                 </article>
 
               </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section: Our Products (Creative 6-Product Showcase)
+         ========================================================================== -->
+    <section id="section-our-products" class="section-prime-our-products">
+      <div class="bm-prime-fullwidth-wrap">
+        <div class="prime-products-container">
+          
+          <!-- Section Header Block -->
+          <div class="prime-products-header">
+            <div class="section-kicker" style="margin-bottom: 16px;">
+              <span class="section-kicker-line"></span>
+              <span class="section-kicker-text">PRODUCT CATALOG</span>
+            </div>
+            <div class="prime-products-heading-row">
+              <h2 class="prime-products-heading">
+                Our <span class="text-secondary">Products</span>
+              </h2>
+              <p class="prime-products-subtext">
+                Explore our versatile inventory of prime iron and steel products engineered to meet demanding industrial specifications across automotive, infrastructure, pressure vessels, and architectural applications.
+              </p>
+            </div>
+          </div>
+
+          <!-- Products Grid (Hover: Warm Amber Gradient Overlay with Bold White Title) -->
+          <div class="prime-products-grid">
+
+            <!-- Card 1: Hot Rolled Steel Coil/Sheets -->
+            <div class="prime-product-card" data-card="0">
+              <div class="product-card-media">
+                <img src="<?php echo $imagesurl; ?>prime-trading/3.1Hot-Rolled-Steel-Coil-1200x675.avif?v=<?php echo $version; ?>" alt="Hot Rolled Steel Coil/Sheets" class="product-img" loading="lazy" />
+                <div class="product-media-overlay"></div>
+                <h3 class="product-card-hover-title">Hot Rolled Steel Coil/Sheets</h3>
+              </div>
+            </div>
+
+            <!-- Card 2: Cold Rolled Steel Coil/Sheets -->
+            <div class="prime-product-card" data-card="1">
+              <div class="product-card-media">
+                <img src="<?php echo $imagesurl; ?>prime-trading/3.2closeup-photo-metal-tile-roof-metallic-forming-machine-production-line-factory-cold-rolled.avif?v=<?php echo $version; ?>" alt="Cold Rolled Steel Coil/Sheets" class="product-img" loading="lazy" />
+                <div class="product-media-overlay"></div>
+                <h3 class="product-card-hover-title">Cold Rolled Steel Coil/Sheets</h3>
+              </div>
+            </div>
+
+            <!-- Card 3: Boiler Quality Plates -->
+            <div class="prime-product-card" data-card="2">
+              <div class="product-card-media">
+                <img src="<?php echo $imagesurl; ?>prime-trading/3.5A588%20GR%20A_.avif?v=<?php echo $version; ?>" alt="Boiler Quality Plates" class="product-img" loading="lazy" />
+                <div class="product-media-overlay"></div>
+                <h3 class="product-card-hover-title">Boiler Quality Plates</h3>
+              </div>
+            </div>
+
+            <!-- Card 4: Galvanized Coils -->
+            <div class="prime-product-card" data-card="3">
+              <div class="product-card-media">
+                <img src="<?php echo $imagesurl; ?>prime-trading/3.3galvanized-coils-sheets-banner.avif?v=<?php echo $version; ?>" alt="Galvanized Coils" class="product-img" loading="lazy" />
+                <div class="product-media-overlay"></div>
+                <h3 class="product-card-hover-title">Galvanized Coils</h3>
+              </div>
+            </div>
+
+            <!-- Card 5: PPGI Coils -->
+            <div class="prime-product-card" data-card="4">
+              <div class="product-card-media">
+                <img src="<?php echo $imagesurl; ?>prime-trading/3.4amns-ppgi-coils.avif?v=<?php echo $version; ?>" alt="PPGI Coils" class="product-img" loading="lazy" />
+                <div class="product-media-overlay"></div>
+                <h3 class="product-card-hover-title">PPGI Coils</h3>
+              </div>
+            </div>
+
+            <!-- Card 6: MS Rounds -->
+            <div class="prime-product-card" data-card="5">
+              <div class="product-card-media">
+                <img src="<?php echo $imagesurl; ?>prime-trading/3.64-Advantages-of-Round-Bars.avif?v=<?php echo $version; ?>" alt="MS Rounds" class="product-img" loading="lazy" />
+                <div class="product-media-overlay"></div>
+                <h3 class="product-card-hover-title">MS Rounds</h3>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section 4: Association with India's biggest corporations
+         ========================================================================== -->
+    <section id="section-corporate-associations" class="section-prime-corporations">
+      <!-- Background Image with Light-Theme Gradient Overlay -->
+      <div class="prime-corp-bg-layer" aria-hidden="true">
+        <picture>
+          <img src="<?php echo $imagesurl; ?>prime-trading/corp-alliances-bg.jpg" alt="Maritime Vessels & Trading Cargo" class="prime-corp-bg-img" loading="lazy" />
+        </picture>
+        <div class="prime-corp-overlay"></div>
+      </div>
+
+      <div class="bm-prime-fullwidth-wrap">
+        <div class="prime-corp-container">
+          
+          <!-- Left-Aligned Header Block matching Screenshot Structure -->
+          <div class="prime-corp-content-block">
+            <!-- Eyebrow / Kicker with Line on the Right -->
+            <div class="section-kicker prime-corp-kicker">
+              <span class="section-kicker-text">TRUSTED ALLIANCES</span>
+              <span class="section-kicker-line"></span>
+            </div>
+
+            <!-- Main Heading with Brand Color Accent -->
+            <h2 class="prime-corp-heading">
+              Association with India’s<br>
+              <span class="text-secondary">biggest corporations</span>
+            </h2>
+
+            <!-- Lead Paragraph directly under Heading -->
+            <p class="prime-corp-desc">
+              Association with India's biggest corporation offers access to a vast customer base, strategic collaborations, enhanced credibility, and valuable resources for business growth and success.
+            </p>
+          </div>
+
+          <!-- 4 Corporate Logos Grid at Bottom -->
+          <div class="prime-corp-grid">
+            
+            <!-- Card 1: JSW -->
+            <div class="prime-corp-card" title="JSW Steel">
+              <svg class="prime-corp-logo-svg" viewBox="0 0 170 65" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="JSW">
+                <path d="M72 21 C85 10 115 9 146 19 C130 14 104 13.5 86 21.5 Z" fill="#E2211C" />
+                <path d="M78 19 C92 7.5 125 7 155 18 C135 12.5 106 12 84 19.5 Z" fill="#E2211C" />
+                <path d="M19 50 C26 50 30.5 46.5 32.5 41.5 L36.2 24.5 H27.2 L24.8 35.5 C24 39 22 41 18.2 41 C15.2 41 13.5 39.5 13.5 36.8 C13.5 35.5 14 33.5 15.2 30.5 L16.5 24.5 H7.5 L5.8 31.5 C4.2 37.8 5.2 43 8.8 46.5 C11.5 48.8 15 50 19 50 Z" fill="#0E3875"/>
+                <path d="M38 44 C41.2 48 46.8 50 54.2 50 C62.8 50 68 45.8 68 39.5 C68 35 65.2 32.2 57.8 29.5 L55.2 28.5 C50.5 26.8 49 25.2 49 23.2 C49 21 51.2 19.2 55.5 19.2 C59.8 19.2 63 21 65 24.5 L73 22 C70.2 16.5 63.8 13.5 55.2 13.5 C46.8 13.5 40.8 17.5 40.8 24 C40.8 28.5 43.8 31.2 51 34 L53.8 35 C58.5 36.8 60 38.5 60 40.8 C60 43.2 57.5 44.8 53.2 44.8 C48 44.8 44.2 42 42.2 37.2 L38 44 Z" fill="#0E3875"/>
+                <path d="M74 49.5 H82.5 L87.5 30 L94.2 49.5 H101.8 L108.5 30 L113.5 49.5 H122 L129.5 24.5 H120.5 L116 40.5 L109.2 24.5 H101.8 L95 40.5 L90.5 24.5 H68.5 L74 49.5 Z" fill="#0E3875"/>
+              </svg>
+            </div>
+
+            <!-- Card 2: Welspun -->
+            <div class="prime-corp-card" title="Welspun - Dare to Commit">
+              <svg class="prime-corp-logo-svg" viewBox="0 0 200 68" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Welspun - Dare to Commit">
+                <text x="100" y="16" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="14.5" font-weight="900" letter-spacing="4.5" fill="#000000">WELSPUN</text>
+                <g transform="translate(68, 22)">
+                  <path d="M5 2 C12 8, 19 19, 21 24 C20 18, 14 6, 8 0 Z" fill="#00AEEF"/>
+                  <path d="M1 4 C7 11, 20 25, 23 26 C23 23, 15 11, 9 2 Z" fill="#0090D0"/>
+                  <path d="M21 24 C24 18, 33 5, 41 1 C35 6, 26 18, 23 26 Z" fill="#00B8F5"/>
+                  <path d="M37 2 C44 9, 56 22, 63 26 C57 19, 45 7, 39 0 Z" fill="#0090D0"/>
+                  <path d="M43 25 C45 20, 55 7, 62 1 C56 7, 47 18, 44 26 Z" fill="#00AEEF"/>
+                </g>
+                <text x="100" y="61" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="10" font-weight="600" letter-spacing="0.4" fill="#222222">Dare to Commit</text>
+              </svg>
+            </div>
+
+            <!-- Card 3: Panchmahal Steel Limited -->
+            <div class="prime-corp-card" title="Panchmahal Steel Limited Stainless Steel">
+              <svg class="prime-corp-logo-svg" viewBox="0 0 210 65" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Panchmahal Steel Limited Stainless Steel">
+                <g transform="translate(14, 11)">
+                  <circle cx="20" cy="20" r="16" stroke="#007F86" stroke-width="2.6" fill="none" stroke-dasharray="82 18" stroke-linecap="round" />
+                  <path d="M13 22 C13 16 19 12 24 15 C28 17 28 23 24 26 C21 28 17 26 18 22 C18 20 21 19 23 20" stroke="#007F86" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                </g>
+                <g transform="translate(64, 8)">
+                  <text x="0" y="16" font-family="'Montserrat', sans-serif" font-size="14.5" font-weight="700" fill="#0B2B48">Panchmahal</text>
+                  <text x="0" y="29" font-family="'Montserrat', sans-serif" font-size="11.5" font-weight="500" fill="#0B2B48">Steel Limited</text>
+                  <line x1="0" y1="34" x2="132" y2="34" stroke="#007F86" stroke-width="1.2" />
+                  <text x="66" y="44" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="8.2" font-weight="700" letter-spacing="2.2" fill="#222222">STAINLESS STEEL</text>
+                  <text x="66" y="51" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="5" font-weight="600" letter-spacing="1.2" fill="#666666">SEAMLESS BARS &bull; WIRES</text>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Card 4: IRM Offshore & Marine Engineers -->
+            <div class="prime-corp-card" title="IRM Offshore and Marine Engineers Pvt. Ltd.">
+              <svg class="prime-corp-logo-svg" viewBox="0 0 210 65" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="IRM Offshore and Marine Engineers Pvt. Ltd.">
+                <g transform="translate(12, 10)">
+                  <path d="M72 8 C80 3, 90 3, 98 8 C106 13, 116 13, 124 8 C118 12, 106 12, 98 7 C90 2, 80 2, 72 8 Z" fill="#0077B6"/>
+                  <path d="M70 14 C78 9, 88 9, 96 14 C104 19, 114 19, 122 14 C116 18, 104 18, 96 13 C88 8, 78 8, 70 14 Z" fill="#48CAE4"/>
+                </g>
+                <g transform="translate(10, 20)">
+                  <text x="0" y="27" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="29" font-weight="900" font-style="italic" letter-spacing="-0.5" fill="#181818">IRM</text>
+                  <line x1="-2" y1="18" x2="68" y2="18" stroke="#ffffff" stroke-width="2.5" />
+                  <text x="74" y="16" font-family="'Montserrat', sans-serif" font-size="7.5" font-weight="800" letter-spacing="0.6" fill="#181818">OFFSHORE AND MARINE</text>
+                  <text x="74" y="26" font-family="'Montserrat', sans-serif" font-size="6.8" font-weight="700" letter-spacing="0.5" fill="#282828">ENGINEERS PVT. LTD.</text>
+                </g>
+              </svg>
             </div>
 
           </div>
@@ -589,11 +758,11 @@ $utm = "yes";
           if (expHeading) {
             expTl.fromTo(expHeading, { y: 35, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', clearProps: 'all' }, 0.1);
           }
-          if (expDesc) {
-            expTl.fromTo(expDesc, { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.75, ease: 'power3.out', clearProps: 'all' }, 0.22);
-          }
           if (tabsNav) {
-            expTl.fromTo(tabsNav, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power2.out', clearProps: 'all' }, 0.3);
+            expTl.fromTo(tabsNav, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power2.out', clearProps: 'all' }, 0.2);
+          }
+          if (expDesc) {
+            expTl.fromTo(expDesc, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.65, ease: 'power3.out', clearProps: 'all' }, 0.28);
           }
           if (initialCards.length) {
             expTl.fromTo(initialCards, {
@@ -607,6 +776,138 @@ $utm = "yes";
               ease: 'power2.out',
               clearProps: 'all'
             }, 0.35);
+          }
+        }
+
+        /* ======================================================================
+           Section: Our Products Staggered Scroll Entrance Animation
+           ====================================================================== */
+        const ourProductsSec = document.querySelector('#section-our-products');
+        if (ourProductsSec) {
+          const prodKicker = ourProductsSec.querySelector('.section-kicker');
+          const prodHeading = ourProductsSec.querySelector('.prime-products-heading');
+          const prodSubtext = ourProductsSec.querySelector('.prime-products-subtext');
+          const prodCards = ourProductsSec.querySelectorAll('.prime-product-card');
+
+          const prodTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: ourProductsSec,
+              start: 'top 75%',
+              once: true
+            }
+          });
+
+          if (prodKicker) {
+            prodTl.fromTo(prodKicker, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out', clearProps: 'all' }, 0);
+          }
+          if (prodHeading) {
+            prodTl.fromTo(prodHeading, { y: 35, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', clearProps: 'all' }, 0.1);
+          }
+          if (prodSubtext) {
+            prodTl.fromTo(prodSubtext, { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.75, ease: 'power3.out', clearProps: 'all' }, 0.2);
+          }
+          if (prodCards.length) {
+            prodTl.fromTo(prodCards, {
+              y: 40,
+              opacity: 0,
+              scale: 0.98
+            }, {
+              y: 0,
+              opacity: 1,
+              scale: 1,
+              duration: 0.75,
+              stagger: 0.1,
+              ease: 'power3.out',
+              clearProps: 'all'
+            }, 0.3);
+          }
+        }
+
+        /* ======================================================================
+           Section 4: Corporate Associations On-Scroll Animation
+           ====================================================================== */
+        const corpSec = document.querySelector('#section-corporate-associations');
+        if (corpSec) {
+          const corpBgImg = corpSec.querySelector('.prime-corp-bg-img');
+          const corpKicker = corpSec.querySelector('.prime-corp-kicker');
+          const corpHeading = corpSec.querySelector('.prime-corp-heading');
+          const corpCards = corpSec.querySelectorAll('.prime-corp-card');
+          const corpDesc = corpSec.querySelector('.prime-corp-desc');
+
+          const corpTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: corpSec,
+              start: 'top 75%',
+              once: true
+            }
+          });
+
+          if (corpBgImg) {
+            corpTl.fromTo(corpBgImg, {
+              scale: 1.08,
+              opacity: 0.85
+            }, {
+              scale: 1,
+              opacity: 1,
+              duration: 1.5,
+              ease: 'power2.out',
+              clearProps: 'transform'
+            }, 0);
+          }
+
+          if (corpKicker) {
+            corpTl.fromTo(corpKicker, {
+              y: 20,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.6,
+              ease: 'power2.out',
+              clearProps: 'all'
+            }, 0.1);
+          }
+
+          if (corpHeading) {
+            corpTl.fromTo(corpHeading, {
+              y: 32,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.85,
+              ease: 'power3.out',
+              clearProps: 'all'
+            }, 0.2);
+          }
+
+          if (corpDesc) {
+            corpTl.fromTo(corpDesc, {
+              y: 20,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.7,
+              ease: 'power2.out',
+              clearProps: 'all'
+            }, 0.35);
+          }
+
+          if (corpCards.length) {
+            corpTl.fromTo(corpCards, {
+              y: 40,
+              opacity: 0,
+              scale: 0.94
+            }, {
+              y: 0,
+              opacity: 1,
+              scale: 1,
+              duration: 0.75,
+              stagger: 0.1,
+              ease: 'power3.out',
+              clearProps: 'all'
+            }, 0.45);
           }
         }
       }
@@ -632,7 +933,7 @@ $utm = "yes";
           });
         }
 
-        // Tab 2: Long Products (Fixed Width 50/50, Image Reveal Strictly on Hover)
+        // Tab 2: Long Products (Duo Strip: 1st card active by default, hover switch)
         const duoStrip = document.querySelector('#panel-long-products .prime-accordion-strip-duo');
         if (duoStrip) {
           const duoCards = duoStrip.querySelectorAll('.prime-acc-card');
@@ -641,14 +942,10 @@ $utm = "yes";
               duoCards.forEach(c => c.classList.remove('is-active'));
               this.classList.add('is-active');
             });
-            card.addEventListener('mouseleave', function() {
-              this.classList.remove('is-active');
-            });
             card.addEventListener('click', function(e) {
               if (e.target.closest('.acc-card-action-btn')) return;
-              const wasActive = this.classList.contains('is-active');
               duoCards.forEach(c => c.classList.remove('is-active'));
-              if (!wasActive) this.classList.add('is-active');
+              this.classList.add('is-active');
             });
           });
         }
@@ -660,6 +957,12 @@ $utm = "yes";
          ====================================================================== */
       const tabButtons = document.querySelectorAll('.prime-tab-btn');
       const tabPanels = document.querySelectorAll('.prime-tab-panel');
+      const dynamicDesc = document.getElementById('prime-expertise-dynamic-desc');
+
+      const tabDescriptions = {
+        'flat-products': 'B Melaram & Sons have a comprehensive range of hot rolled, cold rolled, metallic coated, direct rolled, pre-finished and electro-plated steels for use in the automotive and transport industries, construction, consumer packaging and general industry & Pipe Factory.',
+        'long-products': 'Long products refers to steel products including wire, rod, rail, and bars as well as types of steel structural sections and girders. Long products find general use in construction industries, and in capital goods sectors.'
+      };
 
       tabButtons.forEach(btn => {
         btn.addEventListener('click', function(e) {
@@ -678,6 +981,30 @@ $utm = "yes";
           this.classList.add('active');
           this.setAttribute('aria-selected', 'true');
 
+          // Smoothly animate & update dynamic description text
+          if (dynamicDesc && tabDescriptions[targetTabId]) {
+            if (typeof gsap !== 'undefined') {
+              gsap.to(dynamicDesc, {
+                opacity: 0,
+                y: -4,
+                duration: 0.16,
+                ease: 'power2.in',
+                onComplete: function() {
+                  dynamicDesc.textContent = tabDescriptions[targetTabId];
+                  gsap.to(dynamicDesc, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.3,
+                    ease: 'power2.out',
+                    clearProps: 'all'
+                  });
+                }
+              });
+            } else {
+              dynamicDesc.textContent = tabDescriptions[targetTabId];
+            }
+          }
+
           // Find currently active panel
           const currentActivePanel = document.querySelector('.prime-tab-panel.active');
 
@@ -695,16 +1022,12 @@ $utm = "yes";
                 targetPanel.style.display = 'block';
                 targetPanel.classList.add('active');
 
-                // If Flat Products, set first card active; if Long Products, leave closed until hover
+                // For both tabs, set first card active by default
                 const cards = targetPanel.querySelectorAll('.prime-acc-card');
-                if (targetTabId === 'flat-products') {
-                  cards.forEach((c, idx) => {
-                    if (idx === 0) c.classList.add('is-active');
-                    else c.classList.remove('is-active');
-                  });
-                } else {
-                  cards.forEach(c => c.classList.remove('is-active'));
-                }
+                cards.forEach((c, idx) => {
+                  if (idx === 0) c.classList.add('is-active');
+                  else c.classList.remove('is-active');
+                });
 
                 gsap.fromTo(targetPanel, {
                   opacity: 0,
@@ -746,14 +1069,10 @@ $utm = "yes";
             targetPanel.classList.add('active');
 
             const cards = targetPanel.querySelectorAll('.prime-acc-card');
-            if (targetTabId === 'flat-products') {
-              cards.forEach((c, idx) => {
-                if (idx === 0) c.classList.add('is-active');
-                else c.classList.remove('is-active');
-              });
-            } else {
-              cards.forEach(c => c.classList.remove('is-active'));
-            }
+            cards.forEach((c, idx) => {
+              if (idx === 0) c.classList.add('is-active');
+              else c.classList.remove('is-active');
+            });
           }
         });
       });

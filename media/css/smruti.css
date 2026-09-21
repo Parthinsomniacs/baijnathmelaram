@@ -3900,16 +3900,7 @@ section#section-policy-option2,
 .bm-expertise-plus-2 { bottom: 14%; right: 7%; }
 
 .bm-expertise-axis-tag {
-  position: absolute;
-  top: 36px;
-  right: clamp(24px, 5vw, 70px);
-  font-family: 'Science Gothic', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: #94a3b8;
-  text-transform: uppercase;
-  user-select: none;
+  display: none !important;
 }
 
 .prime-expertise-container {
@@ -3921,8 +3912,13 @@ section#section-policy-option2,
 
 /* Header Typography */
 .prime-expertise-header {
-  max-width: 860px;
-  margin-bottom: clamp(36px, 4vw, 52px);
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-bottom: clamp(24px, 2.5vw, 36px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
 }
 
 .prime-expertise-heading {
@@ -3933,6 +3929,7 @@ section#section-policy-option2,
   line-height: 1.2 !important;
   letter-spacing: -0.02em !important;
   margin: 0 0 20px 0 !important;
+  text-align: center !important;
   will-change: transform, opacity;
 }
 
@@ -3942,17 +3939,20 @@ section#section-policy-option2,
   font-weight: 400 !important;
   color: #475569 !important;
   line-height: 1.7 !important;
-  margin: 0 !important;
-  max-width: 840px;
+  margin: 0 auto !important;
+  width: 100% !important;
+  max-width: 900px !important;
+  text-align: center !important;
   will-change: transform, opacity;
 }
 
 /* Interactive Tab Navigation Bar */
 .prime-tabs-nav-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: clamp(32px, 3.5vw, 48px);
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: clamp(20px, 2.2vw, 28px) !important;
+  width: 100% !important;
 }
 
 .prime-tabs-nav {
@@ -4099,16 +4099,7 @@ section#section-policy-option2,
 .bm-expertise-plus-2 { bottom: 14%; right: 7%; }
 
 .bm-expertise-axis-tag {
-  position: absolute;
-  top: 36px;
-  right: clamp(24px, 5vw, 70px);
-  font-family: 'Science Gothic', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: #94a3b8;
-  text-transform: uppercase;
-  user-select: none;
+  display: none !important;
 }
 
 .prime-expertise-container {
@@ -4120,8 +4111,19 @@ section#section-policy-option2,
 
 /* Header Typography */
 .prime-expertise-header {
-  max-width: 860px;
-  margin-bottom: clamp(36px, 4vw, 52px);
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-bottom: clamp(24px, 2.5vw, 32px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.prime-expertise-header .section-kicker {
+  justify-content: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .prime-expertise-heading {
@@ -4131,8 +4133,26 @@ section#section-policy-option2,
   color: #000000 !important;
   line-height: 1.2 !important;
   letter-spacing: -0.02em !important;
-  margin: 0 0 20px 0 !important;
+  margin: 0 !important;
+  text-align: center !important;
   will-change: transform, opacity;
+}
+
+/* Interactive Tab Navigation Bar (Swapped: above description) */
+.prime-tabs-nav-wrapper {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: clamp(20px, 2.2vw, 28px) !important;
+  width: 100% !important;
+}
+
+.prime-expertise-desc-wrapper {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  margin-bottom: clamp(32px, 3.5vw, 44px) !important;
+  text-align: center !important;
 }
 
 .prime-expertise-desc {
@@ -4141,17 +4161,11 @@ section#section-policy-option2,
   font-weight: 400 !important;
   color: #475569 !important;
   line-height: 1.7 !important;
-  margin: 0 !important;
-  max-width: 840px;
+  margin: 0 auto !important;
+  width: 100% !important;
+  max-width: 900px !important;
+  text-align: center !important;
   will-change: transform, opacity;
-}
-
-/* Interactive Tab Navigation Bar */
-.prime-tabs-nav-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: clamp(32px, 3.5vw, 48px);
 }
 
 .prime-tabs-nav {
@@ -4320,17 +4334,6 @@ section#section-policy-option2,
   transform: translateY(0);
 }
 
-.prime-accordion-strip-duo .prime-acc-card:hover .acc-card-action-btn,
-.prime-accordion-strip-duo .prime-acc-card.is-active .acc-card-action-btn {
-  position: absolute;
-  bottom: 18px;
-  left: 18px;
-  background: #e5912f;
-  border-color: #e5912f;
-  color: #ffffff;
-  box-shadow: 0 8px 24px rgba(229, 145, 47, 0.4);
-}
-
 /* Card Top Information */
 .acc-card-top {
   display: flex;
@@ -4341,17 +4344,7 @@ section#section-policy-option2,
 }
 
 .acc-card-spec {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  margin-bottom: 14px;
-  font-family: 'Science Gothic', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: #e5912f;
-  text-transform: uppercase;
-  user-select: none;
+  display: none !important;
 }
 
 .acc-spec-dot {
@@ -4380,6 +4373,11 @@ section#section-policy-option2,
   color: #64748b !important;
   line-height: 1.65 !important;
   margin: 0 !important;
+}
+
+.acc-card-desc strong {
+  font-weight: 600 !important;
+  color: #1e293b !important;
 }
 
 /* Card Bottom Media & Action Button */
@@ -4449,15 +4447,20 @@ section#section-policy-option2,
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-/* Floating Active State on Image in Tab 1 */
-#panel-flat-products .prime-acc-card.is-active .acc-card-action-btn {
-  position: absolute;
-  bottom: 18px;
-  left: 18px;
-  background: #e5912f;
-  border-color: #e5912f;
-  color: #ffffff;
-  box-shadow: 0 8px 24px rgba(229, 145, 47, 0.4);
+/* When card is hovered / active and image is displayed, remove/hide arrow button */
+.prime-acc-card.is-active .acc-card-action-btn,
+.prime-acc-card:hover .acc-card-action-btn,
+#panel-flat-products .prime-acc-card.is-active .acc-card-action-btn,
+#panel-flat-products .prime-acc-card:hover .acc-card-action-btn,
+.prime-accordion-strip-duo .prime-acc-card.is-active .acc-card-action-btn,
+.prime-accordion-strip-duo .prime-acc-card:hover .acc-card-action-btn {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  transform: scale(0.6) translateY(8px) !important;
+  transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease !important;
 }
 
 .acc-card-action-btn:hover {
@@ -4517,4 +4520,410 @@ section#section-policy-option2,
   }
 }
 
+/* ==========================================================================
+   Section 4: Corporate Associations (Alliances with Light Theme Maritime Visual)
+   ========================================================================== */
+.section-prime-corporations {
+  position: relative !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  padding: clamp(80px, 8vw, 120px) 0 clamp(75px, 7vw, 105px) 0 !important;
+  background-color: #f1e5d4 !important;
+  border-top: 1px solid #e2d2ba !important;
+}
+
+.prime-corp-bg-layer {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
+  z-index: 1 !important;
+}
+
+.prime-corp-bg-img {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center right !important;
+  display: block !important;
+}
+
+/* Warm Golden-Amber Gradient Overlay: Rich color on left side with maritime background visibility */
+.prime-corp-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(
+    90deg,
+    rgba(238, 222, 200, 0.86) 0%,
+    rgba(240, 226, 206, 0.80) 42%,
+    rgba(236, 218, 192, 0.62) 68%,
+    rgba(229, 145, 47, 0.22) 100%
+  ) !important;
+  pointer-events: none !important;
+}
+
+.section-prime-corporations .bm-prime-fullwidth-wrap {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.prime-corp-container {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.prime-corp-content-block {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  max-width: 650px !important;
+  margin-bottom: clamp(48px, 5.5vw, 76px) !important;
+}
+
+/* Kicker with Line on the Right as shown in Screenshot */
+.prime-corp-kicker {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  margin-bottom: 16px !important;
+}
+
+.prime-corp-kicker .section-kicker-text {
+  font-family: 'Science Gothic', sans-serif !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: #e5912f !important;
+  line-height: 1 !important;
+}
+
+.prime-corp-kicker .section-kicker-line {
+  display: inline-block !important;
+  width: 38px !important;
+  height: 2px !important;
+  background-color: #e5912f !important;
+  border-radius: 2px !important;
+  flex-shrink: 0 !important;
+}
+
+/* Main Heading with Brand Color Accent */
+.prime-corp-heading {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: clamp(34px, 3.8vw, 54px) !important;
+  font-weight: 600 !important;
+  color: #000000 !important;
+  line-height: 1.18 !important;
+  letter-spacing: -0.02em !important;
+  margin: 0 0 20px 0 !important;
+}
+
+.prime-corp-heading .text-secondary {
+  color: #e5912f !important;
+}
+
+/* Description Text directly under Heading */
+.prime-corp-desc {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: clamp(14.5px, 1.1vw, 16px) !important;
+  font-weight: 400 !important;
+  color: #4b5768 !important;
+  line-height: 1.72 !important;
+  margin: 0 !important;
+  letter-spacing: -0.005em !important;
+}
+
+/* 4 Corporate Logo Cards Grid at Bottom */
+.prime-corp-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: clamp(16px, 2vw, 28px) !important;
+  width: 100% !important;
+  align-items: stretch !important;
+}
+
+/* Defined Cards for Corporate Alliances */
+.prime-corp-card {
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(222, 205, 180, 0.85) !important;
+  box-shadow: 0 10px 28px rgba(11, 21, 35, 0.08), 0 2px 6px rgba(0, 0, 0, 0.03) !important;
+  height: clamp(110px, 9vw, 134px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 18px 24px !important;
+  position: relative !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, background 0.3s ease !important;
+  user-select: none !important;
+}
+
+.prime-corp-card:hover {
+  transform: translateY(-6px) !important;
+  background: #ffffff !important;
+  border-color: #e5912f !important;
+  box-shadow: 0 18px 40px rgba(229, 145, 47, 0.16), 0 6px 14px rgba(0, 0, 0, 0.04) !important;
+}
+
+.prime-corp-logo-svg {
+  width: 100% !important;
+  max-width: 220px !important;
+  height: auto !important;
+  max-height: 64px !important;
+  display: block !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.prime-corp-card:hover .prime-corp-logo-svg {
+  transform: scale(1.04) !important;
+}
+
+/* Responsive Rules */
+@media screen and (max-width: 1199px) {
+  .prime-corp-content-block {
+    max-width: 580px !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .prime-corp-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(238, 222, 200, 0.90) 0%,
+      rgba(240, 226, 206, 0.82) 55%,
+      rgba(235, 216, 188, 0.66) 100%
+    ) !important;
+  }
+
+  .prime-corp-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .prime-corp-card {
+    height: 114px !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section-prime-corporations {
+    padding: 60px 0 65px 0 !important;
+  }
+
+  .prime-corp-content-block {
+    margin-bottom: 36px !important;
+  }
+
+  .prime-corp-heading {
+    font-size: 28px !important;
+  }
+
+  .prime-corp-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .prime-corp-card {
+    height: 100px !important;
+  }
+}
+
+/* ==========================================================================
+   Section: Our Products (Creative Modern 6-Product Showcase)
+   ========================================================================== */
+.section-prime-our-products {
+  position: relative !important;
+  width: 100% !important;
+  padding: clamp(80px, 8vw, 120px) 0 clamp(85px, 8.5vw, 125px) 0 !important;
+  background-color: #f7f4ee !important;
+  border-top: 1px solid #ede5d8 !important;
+  overflow: hidden !important;
+}
+
+.prime-products-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Products Header */
+.prime-products-header {
+  margin-bottom: clamp(40px, 4.5vw, 60px) !important;
+}
+
+.prime-products-heading-row {
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: space-between !important;
+  gap: clamp(24px, 3vw, 50px) !important;
+  flex-wrap: wrap !important;
+}
+
+.prime-products-heading {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: clamp(34px, 3.8vw, 48px) !important;
+  font-weight: 600 !important;
+  color: #000000 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.02em !important;
+  margin: 0 !important;
+  flex: 1 1 350px !important;
+}
+
+.prime-products-subtext {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 15.5px !important;
+  font-weight: 400 !important;
+  color: #526071 !important;
+  line-height: 1.7 !important;
+  margin: 0 !important;
+  max-width: 580px !important;
+  flex: 1 1 400px !important;
+}
+
+/* Products Grid */
+.prime-products-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: clamp(24px, 2.5vw, 36px) !important;
+  width: 100% !important;
+}
+
+/* Individual Product Card (Image with Floating Tag) */
+.prime-product-card {
+  position: relative !important;
+  background: #ffffff !important;
+  border-radius: 18px !important;
+  border: 1px solid #ede5d8 !important;
+  box-shadow: 0 8px 24px rgba(11, 21, 35, 0.05) !important;
+  overflow: hidden !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease !important;
+  cursor: pointer !important;
+}
+
+.prime-product-card:hover {
+  transform: translateY(-7px) !important;
+  border-color: rgba(229, 145, 47, 0.5) !important;
+  box-shadow: 0 20px 42px -10px rgba(11, 21, 35, 0.14), 0 0 0 1px rgba(229, 145, 47, 0.25) !important;
+}
+
+/* Card Media Image Container (Increased Height) */
+.product-card-media {
+  position: relative !important;
+  width: 100% !important;
+  height: clamp(340px, 30vw, 420px) !important;
+  overflow: hidden !important;
+  background-color: #f1ede6 !important;
+  display: flex !important;
+  align-items: flex-end !important;
+}
+
+.product-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.prime-product-card:hover .product-img {
+  transform: scale(1.08) !important;
+}
+
+.product-media-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(
+    to top,
+    rgba(175, 82, 10, 0.92) 0%,
+    rgba(195, 98, 18, 0.58) 38%,
+    rgba(229, 145, 47, 0.18) 70%,
+    transparent 100%
+  ) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.prime-product-card:hover .product-media-overlay {
+  opacity: 1 !important;
+}
+
+/* Product Title on Hover (Clean white text) */
+.product-card-hover-title {
+  position: absolute !important;
+  bottom: clamp(20px, 2vw, 30px) !important;
+  left: clamp(20px, 2vw, 30px) !important;
+  right: clamp(20px, 2vw, 30px) !important;
+  margin: 0 !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 26px !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.01em !important;
+  z-index: 3 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4) !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(12px) !important;
+  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s ease !important;
+  pointer-events: none !important;
+}
+
+.prime-product-card:hover .product-card-hover-title {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+
+/* Responsive Breakpoints for Our Products */
+@media screen and (max-width: 1199px) {
+  .prime-products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-prime-our-products {
+    padding: 60px 0 70px 0 !important;
+  }
+
+  .prime-products-header {
+    margin-bottom: 32px !important;
+  }
+
+  .prime-products-heading-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+
+  .prime-products-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .product-card-media {
+    height: 300px !important;
+  }
+
+  .product-card-hover-title {
+    bottom: 18px !important;
+    left: 18px !important;
+    right: 18px !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+  }
+}
 
