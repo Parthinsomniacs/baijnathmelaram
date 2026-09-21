@@ -86,7 +86,7 @@ if (!$crmintegration || !$trackercodeintegration) { ?>
                       <div class="fleet-nav-link-wrap"><a class="fleet-nav-link" href="<?php echo $siteurl; ?>prime-trading.php" onclick="menuresponsiveclose()">Prime Trading</a></div>
                     </li>
                     <li class="fleet-nav-item">
-                      <div class="fleet-nav-link-wrap"><a class="fleet-nav-link" href="<?php echo $siteurl; ?>#section-extensions" onclick="menuresponsiveclose()">Secondary Scrap Trading</a></div>
+                      <div class="fleet-nav-link-wrap"><a class="fleet-nav-link" href="<?php echo $siteurl; ?>secondary-scrap-trading.php" onclick="menuresponsiveclose()">Secondary Scrap Trading</a></div>
                     </li>
                     <li class="fleet-nav-item">
                       <div class="fleet-nav-link-wrap"><a class="fleet-nav-link" href="<?php echo $siteurl; ?>contact.php" onclick="menuresponsiveclose()">Contact Us</a></div>

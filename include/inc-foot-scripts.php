@@ -146,7 +146,9 @@
 		if (typeof gsap === "undefined") return;
 
 		const wordInners = document.querySelectorAll("#section-banner .banner-word-inner");
-		const divider = document.querySelector(".banner-ref-divider");
+		const divider = document.querySelector("#section-banner .banner-ref-divider, #section-banner .banner-divider");
+		const eyebrowText = document.querySelector("#section-banner .about-eyebrow-text");
+		const eyebrowLine = document.querySelector("#section-banner .about-eyebrow-line");
 		const scrollLabel = document.querySelector(".banner-scroll-label");
 		const refDesc = document.querySelector(".banner-ref-desc");
 		const refBtn = document.querySelector(".banner-ref-btn");
@@ -155,7 +157,31 @@
 			delay: 0.15
 		});
 
-		// 1. Title words reveal with mask stagger
+		// 1. Eyebrow line & text reveal
+		if (eyebrowLine) {
+			heroTl.fromTo(eyebrowLine, {
+				scaleX: 0,
+				transformOrigin: "left center"
+			}, {
+				scaleX: 1,
+				duration: 0.6,
+				ease: "power2.out"
+			}, 0);
+		}
+
+		if (eyebrowText) {
+			heroTl.fromTo(eyebrowText, {
+				y: 12,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.5,
+				ease: "power2.out"
+			}, 0.05);
+		}
+
+		// 2. Title words reveal with mask stagger
 		if (wordInners.length) {
 			heroTl.fromTo(wordInners, {
 				y: "115%",
@@ -166,10 +192,10 @@
 				duration: 0.95,
 				stagger: 0.08,
 				ease: "power3.out"
-			});
+			}, 0.08);
 		}
 
-		// 2. Horizontal divider scales out smoothly
+		// 3. Horizontal divider scales out smoothly
 		if (divider) {
 			heroTl.fromTo(divider, {
 				scaleX: 0,

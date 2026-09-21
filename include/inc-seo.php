@@ -31,6 +31,14 @@ if ($page == "alloy-manufacturing") {
 	$type = "website";
 	$canurl = $siteurl . "alloy-manufacturing.php";
 }
+if ($page == "secondary-scrap-trading") {
+	$title = "Secondary Scrap Trading - Friends Corp. | Baijnath Melaram";
+	$description = "Leading scrap trading firm in Bhavnagar specialising in high-grade ferrous, non-ferrous, and alloy metal scrap sourced from green ship recycling.";
+	$keywords = 'Secondary Scrap Trading, Friends Corp Bhavnagar, HMS Scrap Alang, Ship Scrap Trading, Alloy Metal Scrap';
+	$image = "seo";
+	$type = "website";
+	$canurl = $siteurl . "secondary-scrap-trading.php";
+}
 if ($page == "privacy-policy") {
 	$title = "Privacy Policy - Baijnath Melaram";
 	$description = "";

@@ -26,7 +26,7 @@
           <li><a href="<?php echo $siteurl; ?>greenship-recycling.php" class="footer-nav-link">Greenship Recycling</a></li>
           <li><a href="<?php echo $siteurl; ?>alloy-manufacturing.php" class="footer-nav-link">Alloy Manufacturing</a></li>
           <li><a href="<?php echo $siteurl; ?>prime-trading.php" class="footer-nav-link">Prime Trading</a></li>
-          <li><a href="<?php echo $siteurl; ?>#section-extensions" class="footer-nav-link">Secondary Scrap Trading</a></li>
+          <li><a href="<?php echo $siteurl; ?>secondary-scrap-trading.php" class="footer-nav-link">Secondary Scrap Trading</a></li>
           <li><a href="<?php echo $siteurl; ?>#section-milestones" class="footer-nav-link">Certificates & Milestones</a></li>
           <li><a href="javascript:void(0);" onclick="openForm('enquire')" class="footer-nav-link">Connect</a></li>
         </ul>

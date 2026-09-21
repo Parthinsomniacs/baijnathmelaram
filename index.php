@@ -535,7 +535,7 @@ $utm = "yes";
 
 
   <!-- Our Capabilities Section (Telha Clarke Inspired Sticky Showcase) -->
-  <section id="section-capabilities" class="section section-capabilities section-stacked pb-0">
+  <section id="section-capabilities" class="section section-capabilities section-stacked">
 
     <!-- Top Large Editorial Statement Quote -->
     <div class="cap-statement-wrapper">
@@ -644,7 +644,7 @@ $utm = "yes";
   </section>
 
   <!-- Explore Extensions Section -->
-  <section id="section-extensions" class="section section-extensions white-bg section-stacked theme-padding">
+  <section id="section-extensions" class="section section-extensions cream-bg section-stacked theme-padding">
     <div class="extensions-head-wrap has-text-centered">
       <div class="about-ref-eyebrow mb-2" style="justify-content: center; display: inline-flex;">
         <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
@@ -673,41 +673,20 @@ $utm = "yes";
           <div class="column is-6 ext-col-media">
             <div class="ext-image-card">
               <img src="<?php echo $imagesurl; ?>extensions/1.jpg?v=<?php echo $version; ?>" alt="Baijnath Melaram Alloys Pvt Ltd" class="ext-card-img" />
-              <div class="ext-image-overlay"></div><div class="ext-image-curtain"></div>
+              <div class="ext-image-overlay"></div>
+              <div class="ext-image-curtain"></div>
             </div>
           </div>
           <div class="column is-6 ext-col-info">
             <div class="ext-info-card">
-              <div class="ext-info-compass" aria-hidden="true">
-                <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="300" cy="300" r="280" stroke="rgba(229,145,47,0.35)" stroke-width="1.5" stroke-dasharray="4 8" />
-                  <circle cx="300" cy="300" r="220" stroke="rgba(229,145,47,0.45)" stroke-width="1.2" />
-                  <circle cx="300" cy="300" r="140" stroke="rgba(229,145,47,0.35)" stroke-width="1.5" stroke-dasharray="2 6" />
-                  <circle cx="300" cy="300" r="60" stroke="rgba(229,145,47,0.50)" stroke-width="1.2" />
-                  <line x1="300" y1="10" x2="300" y2="590" stroke="rgba(229,145,47,0.4)" stroke-width="1" stroke-dasharray="6 6" />
-                  <line x1="10" y1="300" x2="590" y2="300" stroke="rgba(229,145,47,0.4)" stroke-width="1" stroke-dasharray="6 6" />
-                  <path d="M300 20 L310 50 L300 42 L290 50 Z" fill="rgba(229,145,47,0.6)" />
-                  <path d="M580 300 L550 310 L558 300 L550 290 Z" fill="rgba(229,145,47,0.5)" />
-                  <path d="M300 580 L290 550 L300 558 L310 550 Z" fill="rgba(229,145,47,0.5)" />
-                  <path d="M20 300 L50 290 L42 300 L50 310 Z" fill="rgba(229,145,47,0.5)" />
-                  <g stroke="rgba(229,145,47,0.45)" stroke-width="1">
-                    <line x1="300" y1="70" x2="300" y2="85" />
-                    <line x1="300" y1="515" x2="300" y2="530" />
-                    <line x1="70" y1="300" x2="85" y2="300" />
-                    <line x1="515" y1="300" x2="530" y2="300" />
-                    <line x1="137" y1="137" x2="148" y2="148" />
-                    <line x1="463" y1="463" x2="452" y2="452" />
-                    <line x1="463" y1="137" x2="452" y2="148" />
-                    <line x1="137" y1="463" x2="148" y2="452" />
-                  </g>
-                  <circle cx="300" cy="300" r="4" fill="rgba(229,145,47,0.7)" />
-                </svg>
-              </div>
               <div class="ext-info-accent-line"></div>
               <h3 class="ext-item-title"><span class="ext-title-word-mask"><span class="ext-title-word-inner">Baijnath</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">Melaram</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">Alloys</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">Pvt</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">Ltd</span></span></h3>
               <p class="ext-item-desc">With over 50 years of experience in scrap processing, primarily ship recycling, Baijnath Melaram is thrilled to introduce its newly established sister company, Baijnath Melaram Alloys Pvt Ltd. Our new recycling plant, located in Mamsa, Bhavnagar, Gujarat, boasts an 18,000 MTPA production capacity. Committed to sustainability and innovative recycling solutions, we aim to create a circular economy that benefits both our clients and the environment.</p>
               <div class="ext-item-btn-wrap">
-                <a href="<?php echo $siteurl; ?>alloy-manufacturing.php" class="ext-item-btn"><span>Visit <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a>
+                <a href="<?php echo $siteurl; ?>alloy-manufacturing.php" class="ext-item-btn"><span>Visit <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg></span></a>
               </div>
             </div>
           </div>
@@ -719,43 +698,22 @@ $utm = "yes";
         <div class="columns is-vcentered is-variable is-6">
           <div class="column is-6 ext-col-info">
             <div class="ext-info-card">
-              <div class="ext-info-compass" aria-hidden="true">
-                <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="300" cy="300" r="280" stroke="rgba(229,145,47,0.35)" stroke-width="1.5" stroke-dasharray="4 8" />
-                  <circle cx="300" cy="300" r="220" stroke="rgba(229,145,47,0.45)" stroke-width="1.2" />
-                  <circle cx="300" cy="300" r="140" stroke="rgba(229,145,47,0.35)" stroke-width="1.5" stroke-dasharray="2 6" />
-                  <circle cx="300" cy="300" r="60" stroke="rgba(229,145,47,0.50)" stroke-width="1.2" />
-                  <line x1="300" y1="10" x2="300" y2="590" stroke="rgba(229,145,47,0.4)" stroke-width="1" stroke-dasharray="6 6" />
-                  <line x1="10" y1="300" x2="590" y2="300" stroke="rgba(229,145,47,0.4)" stroke-width="1" stroke-dasharray="6 6" />
-                  <path d="M300 20 L310 50 L300 42 L290 50 Z" fill="rgba(229,145,47,0.6)" />
-                  <path d="M580 300 L550 310 L558 300 L550 290 Z" fill="rgba(229,145,47,0.5)" />
-                  <path d="M300 580 L290 550 L300 558 L310 550 Z" fill="rgba(229,145,47,0.5)" />
-                  <path d="M20 300 L50 290 L42 300 L50 310 Z" fill="rgba(229,145,47,0.5)" />
-                  <g stroke="rgba(229,145,47,0.45)" stroke-width="1">
-                    <line x1="300" y1="70" x2="300" y2="85" />
-                    <line x1="300" y1="515" x2="300" y2="530" />
-                    <line x1="70" y1="300" x2="85" y2="300" />
-                    <line x1="515" y1="300" x2="530" y2="300" />
-                    <line x1="137" y1="137" x2="148" y2="148" />
-                    <line x1="463" y1="463" x2="452" y2="452" />
-                    <line x1="463" y1="137" x2="452" y2="148" />
-                    <line x1="137" y1="463" x2="148" y2="452" />
-                  </g>
-                  <circle cx="300" cy="300" r="4" fill="rgba(229,145,47,0.7)" />
-                </svg>
-              </div>
               <div class="ext-info-accent-line"></div>
               <h3 class="ext-item-title"><span class="ext-title-word-mask"><span class="ext-title-word-inner">B</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">Melaram</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">&amp;</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">Sons</span></span></h3>
               <p class="ext-item-desc">We originally started as a ship-breaking company located in Mumbai. However, in light of rising operational expenses and the industry's diminishing feasibility, we made a strategic shift in 2008 and transitioned into the trading of finished steel products.</p>
               <div class="ext-item-btn-wrap">
-                <a href="javascript:void(0)" class="ext-item-btn" onclick="openForm('enquire')"><span>Visit <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a>
+                <a href="javascript:void(0)" class="ext-item-btn" onclick="openForm('enquire')"><span>Visit <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg></span></a>
               </div>
             </div>
           </div>
           <div class="column is-6 ext-col-media">
             <div class="ext-image-card">
               <img src="<?php echo $imagesurl; ?>extensions/2.jpg?v=<?php echo $version; ?>" alt="B Melaram & Sons" class="ext-card-img" />
-              <div class="ext-image-overlay"></div><div class="ext-image-curtain"></div>
+              <div class="ext-image-overlay"></div>
+              <div class="ext-image-curtain"></div>
             </div>
           </div>
         </div>
@@ -767,41 +725,20 @@ $utm = "yes";
           <div class="column is-6 ext-col-media">
             <div class="ext-image-card">
               <img src="<?php echo $imagesurl; ?>extensions/3.jpg?v=<?php echo $version; ?>" alt="Friends Corp." class="ext-card-img" />
-              <div class="ext-image-overlay"></div><div class="ext-image-curtain"></div>
+              <div class="ext-image-overlay"></div>
+              <div class="ext-image-curtain"></div>
             </div>
           </div>
           <div class="column is-6 ext-col-info">
             <div class="ext-info-card">
-              <div class="ext-info-compass" aria-hidden="true">
-                <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="300" cy="300" r="280" stroke="rgba(229,145,47,0.35)" stroke-width="1.5" stroke-dasharray="4 8" />
-                  <circle cx="300" cy="300" r="220" stroke="rgba(229,145,47,0.45)" stroke-width="1.2" />
-                  <circle cx="300" cy="300" r="140" stroke="rgba(229,145,47,0.35)" stroke-width="1.5" stroke-dasharray="2 6" />
-                  <circle cx="300" cy="300" r="60" stroke="rgba(229,145,47,0.50)" stroke-width="1.2" />
-                  <line x1="300" y1="10" x2="300" y2="590" stroke="rgba(229,145,47,0.4)" stroke-width="1" stroke-dasharray="6 6" />
-                  <line x1="10" y1="300" x2="590" y2="300" stroke="rgba(229,145,47,0.4)" stroke-width="1" stroke-dasharray="6 6" />
-                  <path d="M300 20 L310 50 L300 42 L290 50 Z" fill="rgba(229,145,47,0.6)" />
-                  <path d="M580 300 L550 310 L558 300 L550 290 Z" fill="rgba(229,145,47,0.5)" />
-                  <path d="M300 580 L290 550 L300 558 L310 550 Z" fill="rgba(229,145,47,0.5)" />
-                  <path d="M20 300 L50 290 L42 300 L50 310 Z" fill="rgba(229,145,47,0.5)" />
-                  <g stroke="rgba(229,145,47,0.45)" stroke-width="1">
-                    <line x1="300" y1="70" x2="300" y2="85" />
-                    <line x1="300" y1="515" x2="300" y2="530" />
-                    <line x1="70" y1="300" x2="85" y2="300" />
-                    <line x1="515" y1="300" x2="530" y2="300" />
-                    <line x1="137" y1="137" x2="148" y2="148" />
-                    <line x1="463" y1="463" x2="452" y2="452" />
-                    <line x1="463" y1="137" x2="452" y2="148" />
-                    <line x1="137" y1="463" x2="148" y2="452" />
-                  </g>
-                  <circle cx="300" cy="300" r="4" fill="rgba(229,145,47,0.7)" />
-                </svg>
-              </div>
               <div class="ext-info-accent-line"></div>
               <h3 class="ext-item-title"><span class="ext-title-word-mask"><span class="ext-title-word-inner">Friends</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">Corp.</span></span></h3>
               <p class="ext-item-desc">We are a scrap trading firm headquartered in Bhavnagar, primarily specialising in the trade of alloy metals and various grades of scrap sourced from ship-breaking operations.</p>
               <div class="ext-item-btn-wrap">
-                <a href="javascript:void(0)" class="ext-item-btn" onclick="openForm('enquire')"><span>Visit <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a>
+                <a href="<?php echo $siteurl; ?>secondary-scrap-trading.php" class="ext-item-btn"><span>Visit <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg></span></a>
               </div>
             </div>
           </div>
@@ -813,43 +750,22 @@ $utm = "yes";
         <div class="columns is-vcentered is-variable is-6">
           <div class="column is-6 ext-col-info">
             <div class="ext-info-card">
-              <div class="ext-info-compass" aria-hidden="true">
-                <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="300" cy="300" r="280" stroke="rgba(229,145,47,0.35)" stroke-width="1.5" stroke-dasharray="4 8" />
-                  <circle cx="300" cy="300" r="220" stroke="rgba(229,145,47,0.45)" stroke-width="1.2" />
-                  <circle cx="300" cy="300" r="140" stroke="rgba(229,145,47,0.35)" stroke-width="1.5" stroke-dasharray="2 6" />
-                  <circle cx="300" cy="300" r="60" stroke="rgba(229,145,47,0.50)" stroke-width="1.2" />
-                  <line x1="300" y1="10" x2="300" y2="590" stroke="rgba(229,145,47,0.4)" stroke-width="1" stroke-dasharray="6 6" />
-                  <line x1="10" y1="300" x2="590" y2="300" stroke="rgba(229,145,47,0.4)" stroke-width="1" stroke-dasharray="6 6" />
-                  <path d="M300 20 L310 50 L300 42 L290 50 Z" fill="rgba(229,145,47,0.6)" />
-                  <path d="M580 300 L550 310 L558 300 L550 290 Z" fill="rgba(229,145,47,0.5)" />
-                  <path d="M300 580 L290 550 L300 558 L310 550 Z" fill="rgba(229,145,47,0.5)" />
-                  <path d="M20 300 L50 290 L42 300 L50 310 Z" fill="rgba(229,145,47,0.5)" />
-                  <g stroke="rgba(229,145,47,0.45)" stroke-width="1">
-                    <line x1="300" y1="70" x2="300" y2="85" />
-                    <line x1="300" y1="515" x2="300" y2="530" />
-                    <line x1="70" y1="300" x2="85" y2="300" />
-                    <line x1="515" y1="300" x2="530" y2="300" />
-                    <line x1="137" y1="137" x2="148" y2="148" />
-                    <line x1="463" y1="463" x2="452" y2="452" />
-                    <line x1="463" y1="137" x2="452" y2="148" />
-                    <line x1="137" y1="463" x2="148" y2="452" />
-                  </g>
-                  <circle cx="300" cy="300" r="4" fill="rgba(229,145,47,0.7)" />
-                </svg>
-              </div>
               <div class="ext-info-accent-line"></div>
               <h3 class="ext-item-title"><span class="ext-title-word-mask"><span class="ext-title-word-inner">BM</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">Educon</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">LLP</span></span></h3>
               <p class="ext-item-desc">Toddlers Entertainment Den (TED), an educational venture by BM Educon LLP, is a Play Arena &amp; a Toy Library. It is a world where laughter echoes, creativity flows, and imagination knows no bounds. Our fully air conditioned indoor play area boasts of a myriad of activities and attractions that cater to children\'s physical, cognitive, and social development.</p>
               <div class="ext-item-btn-wrap">
-                <a href="javascript:void(0)" class="ext-item-btn" onclick="openForm('enquire')"><span>Visit <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a>
+                <a href="javascript:void(0)" class="ext-item-btn" onclick="openForm('enquire')"><span>Visit <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg></span></a>
               </div>
             </div>
           </div>
           <div class="column is-6 ext-col-media">
             <div class="ext-image-card">
               <img src="<?php echo $imagesurl; ?>extensions/4.webp?v=<?php echo $version; ?>" alt="BM Educon LLP (TED)" class="ext-card-img" />
-              <div class="ext-image-overlay"></div><div class="ext-image-curtain"></div>
+              <div class="ext-image-overlay"></div>
+              <div class="ext-image-curtain"></div>
             </div>
           </div>
         </div>
@@ -947,7 +863,7 @@ $utm = "yes";
   </section>
 
   <!-- Our Impact Section (Horizontal Scroll from Right to Left) -->
-  <section id="section-impact" class="section section-impact white-bg section-stacked theme-padding">
+  <section id="section-impact" class="section section-impact cream-bg section-stacked theme-padding">
     <!-- Square Grid Background Pattern in the middle / background -->
     <div class="impact-bg-grid" aria-hidden="true"></div>
 

@@ -63,7 +63,7 @@ $utm = "yes";
   </section>
 
   <!-- Our Timeline Section -->
-  <section id="section-timeline" class="section section-timeline white-bg section-stacked">
+  <section id="section-timeline" class="section section-timeline cream-bg section-stacked">
     <!-- Square Grid Background (Matching Our Impact Grid) -->
     <div class="timeline-bg-grid" aria-hidden="true"></div>
 
@@ -377,7 +377,7 @@ $utm = "yes";
   </section>
 
   <!-- Automotive Die Casting (Sticky Split Section) -->
-  <section id="section-die-casting" class="section section-die-casting white-bg section-stacked theme-padding pt-0">
+  <section id="section-die-casting" class="section section-die-casting cream-bg section-stacked theme-padding">
     <!-- Square Grid Background (Moved from Files Section) -->
     <div class="die-casting-bg-grid" aria-hidden="true"></div>
 
@@ -389,7 +389,11 @@ $utm = "yes";
           <span>APPLICATION &amp; CAPABILITY</span>
         </div>
         <div class="section-title">
-          <h2 class="die-casting-heading">Automotive <span class="text-secondary">Die Casting</span></h2>
+          <h2 class="die-casting-heading">
+            <span class="word-mask"><span class="word-inner">Automotive</span></span>
+            <span class="word-mask"><span class="word-inner text-secondary">Die</span></span>
+            <span class="word-mask"><span class="word-inner text-secondary">Casting</span></span>
+          </h2>
         </div>
       </div>
 
@@ -503,7 +507,7 @@ $utm = "yes";
   </section>
 
   <!-- Technical Files Download Section -->
-  <section id="section-files" class="section section-files white-bg section-stacked theme-padding pt-0">
+  <section id="section-files" class="section section-files white-bg section-stacked theme-padding">
     <!-- Nautical Compass Background Watermark (Top Right Corner) -->
     <div class="files-bg-compass" aria-hidden="true">
       <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -528,7 +532,10 @@ $utm = "yes";
           <span>DOWNLOADS &amp; SPECIFICATIONS</span>
         </div>
         <div class="section-title">
-          <h2 class="files-heading">Download <span class="text-secondary">Files</span></h2>
+          <h2 class="files-heading">
+            <span class="word-mask"><span class="word-inner">Download</span></span>
+            <span class="word-mask"><span class="word-inner text-secondary">Files</span></span>
+          </h2>
         </div>
       </div>
 
@@ -583,7 +590,7 @@ $utm = "yes";
 </section>
 
   <!-- Raw Materials Pinned Horizontal Scroll Section -->
-  <section id="section-raw-materials" class="section section-raw-materials white-bg section-stacked pt-0">
+  <section id="section-raw-materials" class="section section-raw-materials cream-bg section-stacked pt-0">
     <!-- Orange Squares Grid Background -->
     <div class="raw-materials-bg-grid" aria-hidden="true"></div>
 
