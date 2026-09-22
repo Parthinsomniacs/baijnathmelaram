@@ -414,21 +414,13 @@
 			});
 
 			mmCards.add("(max-width: 1024px)", () => {
-				// Mobile & Tablet: Clean Stagger Reveal
-				gsap.fromTo(fanCols, {
-					y: 40,
-					opacity: 0
-				}, {
-					y: 0,
-					opacity: 1,
-					stagger: 0.12,
-					duration: 0.8,
-					ease: "power2.out",
-					scrollTrigger: {
-						trigger: fanWrap,
-						start: "top 85%",
-						toggleActions: "play none none none"
-					}
+				// Animation disabled on screens <= 1024px
+				const fanCards = Array.from(fanCols).map(col => col.querySelector(".anchor-fan-card") || col);
+				gsap.set(fanCols, {
+					clearProps: "all"
+				});
+				gsap.set(fanCards, {
+					clearProps: "all"
 				});
 			});
 		}
@@ -436,6 +428,7 @@
 
 	/** React Bits TiltedCard 3D Tilt Physics Implementation (Vanilla JS) **/
 	function initTiltedCards() {
+		if (typeof window !== "undefined" && window.innerWidth <= 1024) return;
 		const cards = document.querySelectorAll(".js-tilted-card");
 		if (!cards.length) return;
 
@@ -1073,25 +1066,78 @@
 			});
 		}
 
-		// 2. Right Stack Glass Cards Scroll Trigger (Card slide + Title text reveal + Counter live count)
+		// 2. Right Stack Glass Cards Scroll Trigger
 		const cards = legacySection.querySelectorAll(".legacy-stack-card");
-		cards.forEach((card, idx) => {
-			const counter = card.querySelector(".legacy-stat-count");
-			const cardTitle = card.querySelector(".legacy-card-title");
+		const mm = gsap.matchMedia();
 
-			const cardTl = gsap.timeline({
-				scrollTrigger: {
-					trigger: card,
-					start: "top 86%",
-					toggleActions: "play none none none",
-					onEnter: () => {
+		// Desktop (> 1024px)
+		mm.add("(min-width: 1025px)", () => {
+			cards.forEach((card) => {
+				const counter = card.querySelector(".legacy-stat-count");
+				const cardTitle = card.querySelector(".legacy-card-title");
+
+				const cardTl = gsap.timeline({
+					scrollTrigger: {
+						trigger: card,
+						start: "top 86%",
+						toggleActions: "play none none none",
+						onEnter: () => {
+							if (counter && !counter.dataset.animated) {
+								counter.dataset.animated = "true";
+								const target = parseFloat(counter.getAttribute("data-target")) || 0;
+								const decimals = parseInt(counter.getAttribute("data-decimals"), 10) || 0;
+								const obj = { val: 0 };
+								gsap.to(obj, {
+									val: target,
+									duration: 1.8,
+									ease: "power2.out",
+									onUpdate: () => {
+										counter.textContent = decimals > 0 ? obj.val.toFixed(decimals) : Math.round(obj.val);
+									}
+								});
+							}
+						}
+					}
+				});
+
+				cardTl.fromTo(card, {
+					y: 45,
+					opacity: 0
+				}, {
+					y: 0,
+					opacity: 1,
+					duration: 0.85,
+					delay: 0.04,
+					ease: "power3.out"
+				});
+
+				if (cardTitle) {
+					cardTl.fromTo(cardTitle, {
+						y: 16,
+						opacity: 0
+					}, {
+						y: 0,
+						opacity: 1,
+						duration: 0.65,
+						ease: "power2.out"
+					}, "-=0.5");
+				}
+			});
+		});
+
+		// Mobile & Tablet (<= 1024px) - Normal clean animation & counter trigger
+		mm.add("(max-width: 1024px)", () => {
+			ScrollTrigger.create({
+				trigger: legacySection,
+				start: "top 85%",
+				onEnter: () => {
+					cards.forEach((card) => {
+						const counter = card.querySelector(".legacy-stat-count");
 						if (counter && !counter.dataset.animated) {
 							counter.dataset.animated = "true";
 							const target = parseFloat(counter.getAttribute("data-target")) || 0;
 							const decimals = parseInt(counter.getAttribute("data-decimals"), 10) || 0;
-							const obj = {
-								val: 0
-							};
+							const obj = { val: 0 };
 							gsap.to(obj, {
 								val: target,
 								duration: 1.8,
@@ -1101,32 +1147,21 @@
 								}
 							});
 						}
-					}
-				}
-			});
+					});
 
-			cardTl.fromTo(card, {
-				y: 45,
-				opacity: 0
-			}, {
-				y: 0,
-				opacity: 1,
-				duration: 0.85,
-				delay: 0.04,
-				ease: "power3.out"
+					gsap.fromTo(cards, {
+						y: 20,
+						opacity: 0
+					}, {
+						y: 0,
+						opacity: 1,
+						duration: 0.6,
+						stagger: 0.06,
+						ease: "power2.out"
+					});
+				},
+				once: true
 			});
-
-			if (cardTitle) {
-				cardTl.fromTo(cardTitle, {
-					y: 16,
-					opacity: 0
-				}, {
-					y: 0,
-					opacity: 1,
-					duration: 0.65,
-					ease: "power2.out"
-				}, "-=0.5");
-			}
 		});
 	}
 

@@ -65,9 +65,9 @@ if (!$crmintegration || !$trackercodeintegration) { ?>
           <div class="fleet-menu-container">
 
             <!-- Top Area: Main Links & Contact Action -->
-            <div class="fleet-menu-top columns is-multiline">
+            <div class="fleet-menu-top columns is-multiline is-mobile">
               <!-- Main Links Section -->
-              <div class="fleet-menu-main column is-12-mobile is-12-tablet is-7-desktop is-8-widescreen">
+              <div class="fleet-menu-main column is-7-mobile is-7-tablet is-7-desktop is-8-widescreen">
                 <span class="fleet-menu-label">MAIN</span>
                 <div class="fleet-nav-grid">
                   <ul class="fleet-nav-col">
@@ -96,7 +96,7 @@ if (!$crmintegration || !$trackercodeintegration) { ?>
               </div>
 
               <!-- Right: Contact CTA Buttons & Information -->
-              <div class="fleet-menu-contact column is-12-mobile is-12-tablet is-5-desktop is-4-widescreen">
+              <div class="fleet-menu-contact column is-5-mobile is-5-tablet is-5-desktop is-4-widescreen">
                 <span class="fleet-menu-label">CONTACT</span>
                 <div class="fleet-contact-details">
                   <div class="fleet-contact-item">

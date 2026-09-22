@@ -10,6 +10,7 @@ ob_start();
 
 $server = "local";                      /*live/paypride/local*/
 
+
 if ($server == "live") {
     $host = "localhost";
     $database = "inso-theme";
@@ -22,14 +23,13 @@ if ($server == "live") {
     $password = "Inso12345!@#$%";
 } else if ($server == "local") {
     $host = "localhost";
-    $database = "inso-theme";
+    $database = "baijnathmelaram";
     $user = "root";
     $password = "";
 } else {
     echo "Global Configuration Error";
     exit();
 }
-
 
 /* Crete DB Connection */
 $connection = new mysqli($host, $user, $password, $database) or die("Cannot Connect to Database. Please try again later.");
@@ -43,7 +43,7 @@ while ($row = mysqli_fetch_assoc($res)) {
 }
 
 if ($site == "live") {
-    $localpath = $_SERVER['DOCUMENT_ROOT'] . "/inso-default-microsite/";
+    $localpath = $_SERVER['DOCUMENT_ROOT'] . "/baijnathmelaram/";
     $cdn = $cdn;
     $url = $url;
 } else {

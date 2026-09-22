@@ -11,11 +11,21 @@
   .anchor-stat-num {
     font-size: 50px;
   }
+
+  html body,
+  body {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
 }
 
 @media screen and (max-width: 1599px) {
-  .fleet-nav-link {
-    font-size: clamp(26px, 2.8vw, 35px);
+  .cap-statement-text {
+    font-size: 48px;
+  }
+
+  .fleet-menu-label {
+    font-size: 14px;
   }
 
   .theme-padding {
@@ -37,17 +47,25 @@
 }
 
 @media screen and (max-width: 1408px) {
-  .fleet-nav-link {
-    font-size: clamp(22px, 2.3vw, 34px);
+  .ext-item-title {
+    font-size: 32px;
+  }
+
+  .cap-statement-text {
+    font-size: 42px;
+  }
+
+  .anchor-card-watermark {
+    font-size: 42px;
+  }
+
+  .anchor-fan-card,
+  .anchor-card {
+    padding: 24px 22px 24px;
   }
 
   .fleet-nav-grid {
     gap: 60px;
-  }
-
-  .fleet-menu-container {
-    padding: 48px 0px 40px;
-    min-height: auto;
   }
 
   .fleet-menu-footer {
@@ -104,8 +122,59 @@
 }
 
 @media screen and (max-width: 1216px) {
+  .extensions-rows-container {
+    gap: 50px;
+  }
+
+  .ext-item-title {
+    font-size: 28px;
+  }
+
+  #section-capabilities,
+  .section-capabilities {
+    padding: 40px 0 30px;
+  }
+
+  .cap-statement-wrapper {
+    padding-bottom: 25px;
+  }
+
+  .cap-col-meta {
+    min-height: unset;
+  }
+
+  .cap-meta-label,
+  .cap-meta-index {
+    font-size: 16px;
+  }
+
+  .cap-items-list {
+    gap: 15px;
+  }
+
+  .cap-statement-text {
+    font-size: 36px;
+  }
+
+  .cap-visual-frame {
+    height: 420px;
+    max-height: 420px;
+  }
+
+  header {
+    max-width: 1000px;
+  }
+
+  .fleet-watermark-logo {
+    max-width: 140px;
+  }
+
+  .fleet-menu-label {
+    font-size: 12px;
+  }
+
   .fleet-menu-container {
-    padding: 44px 0px 36px;
+    padding: 40px 30px;
     min-height: auto;
   }
 
@@ -113,12 +182,8 @@
     gap: 45px;
   }
 
-  .fleet-nav-link {
-    font-size: 26px;
-  }
-
   .fleet-menu-footer {
-    margin-top: 36px;
+    margin-top: 0px;
   }
 
   .fleet-menu-divider {
@@ -207,31 +272,207 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .fleet-menu-container {
-    padding: 40px 0px 36px;
+
+  .legacy-main-heading br {
+    display: none !important;
+  }
+
+  .legacy-col-right,
+  .legacy-col-left {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .row-ext-item {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+
+  .ext-item-desc {
+    max-width: 100%;
+  }
+
+  .ext-info-card {
+    max-height: 100%;
+    justify-content: start;
+  }
+
+  .extensions-rows-container {
+    gap: 0px;
+  }
+
+  .ext-info-accent-line {
+    margin-bottom: 5px;
+  }
+
+  .row-ext-item.is-variable .column {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .legacy-content-wrap {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .legacy-columns {
+    align-items: flex-start !important;
+  }
+
+  .legacy-col-left,
+  .legacy-col-right {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  .legacy-sticky-content {
+    position: static !important;
+    top: auto !important;
+    padding-right: 0 !important;
+    margin-bottom: 0px !important;
+  }
+
+  .legacy-main-heading {
+    font-size: 38px !important;
+  }
+
+  .legacy-cards-stack {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    width: 100% !important;
+  }
+
+  .legacy-stack-card {
+    width: 100% !important;
+    padding: 20px 18px !important;
+  }
+
+  .legacy-stat-count {
+    font-size: 34px !important;
+  }
+
+  .legacy-card-title {
+    font-size: 14px !important;
+  }
+
+  .cap-statement-text {
+    font-size: 26px;
+  }
+
+  .cap-statement-wrapper {
+    padding-bottom: 20px;
+  }
+
+  #section-ship-showcase,
+  .section-ship-showcase {
+    height: auto !important;
+  }
+
+  .ship-showcase-stage {
+    position: relative !important;
+    top: auto !important;
+    height: auto !important;
     min-height: auto;
+  }
+
+  .ship-showcase-container {
+    flex-direction: column-reverse;
+  }
+
+  .ship-showcase-left-col {
+    width: 100%;
+    padding: 30px 24px 0;
+  }
+
+  .ship-word-inner {
+    transform: none !important;
+  }
+
+  .ship-eyebrow,
+  .ship-showcase-desc,
+  .ship-stat-card,
+  .ship-showcase-btn-wrap {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .ship-showcase-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .ship-showcase-right-col {
+    position: relative;
+    width: 100% !important;
+    height: 440px;
+    padding: 0 !important;
+    right: 0 !important;
+  }
+
+  .ship-showcase-image-frame {
+    border-radius: 0 !important;
+  }
+
+  .anchors-subgrid-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .section-about-us .theme-padding {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+
+  .about-col-ship,
+  .about-col-content {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  .about-hero-ship-box {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    justify-content: center;
+  }
+
+  .anchor-cards-fan-columns {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+
+  .anchor-cards-fan-columns .anchor-fan-col {
+    margin-bottom: 0;
+  }
+
+  .anchor-fan-card,
+  .anchor-card {
+    min-height: 280px;
+  }
+
+  .anchor-fan-card,
+  .anchor-card {
+    transform: none !important;
+    width: 100% !important;
+    opacity: 1 !important;
+  }
+
+  .fleet-menu-container {
+    padding: 30px 20px;
+    min-height: auto;
+  }
+
+  .fleet-contact-link {
+    font-size: 12px;
   }
 
   .fleet-nav-grid {
     gap: 36px;
   }
 
-  .fleet-nav-link {
-    font-size: 24px;
-  }
-
   .fleet-menu-contact {
     margin-top: 28px;
-  }
-
-  .fleet-contact-details {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px 24px;
-  }
-
-  .fleet-menu-footer {
-    margin-top: 32px;
   }
 
   .fleet-menu-divider {
@@ -455,42 +696,133 @@
 }
 
 @media screen and (max-width: 768px) {
-  .fleet-menu-container {
-    padding: 35px 0px 32px;
+
+  .ext-row-item .columns,
+  .ext-row-item.is-reversed .columns {
+    display: flex;
+    flex-direction: column !important;
+    gap: 0px;
+  }
+
+  .ext-item-title {
+    font-size: 24px;
+  }
+
+  .ext-image-card {
+    height: 260px;
+    border-radius: 0 !important;
+  }
+
+  .ext-info-card {
+    padding: 0;
     min-height: auto;
   }
 
+  .cap-col-visual {
+    padding: 0;
+  }
+
+  .cap-col-list {
+    display: none !important;
+  }
+
+  .cap-visual-frame {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    height: auto;
+    max-height: none;
+    aspect-ratio: auto;
+    overflow: visible;
+    background: transparent;
+  }
+
+  .cap-visual-card {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cap-card-title {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+  }
+
+  .cap-visual-img {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    display: block;
+  }
+
+  #section-about-us .section-title h2 {
+    font-size: 28px;
+  }
+
+  .anchor-fan-card,
+  .anchor-card {
+    min-height: 300px;
+  }
+
+  .about-eyebrow-text {
+    font-size: 10px;
+  }
+
+  .anchor-card-watermark {
+    font-size: 36px;
+  }
+
+  .partners-slider {
+    margin-top: 20px;
+    padding: 0;
+  }
+
   .fleet-menu-label {
-    font-size: 14px;
-    margin-bottom: 14px;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  header {
+    max-width: 100%;
+    top: 0;
   }
 
   .fleet-nav-grid {
-    display: flex;
-    gap: 24px;
-  }
-
-  .fleet-nav-link {
-    font-size: 21px;
-    line-height: 1.35;
+    gap: 10px;
+    flex-direction: column;
   }
 
   .fleet-menu-contact {
-    margin-top: 24px;
+    margin-top: 0px;
   }
 
   .fleet-contact-details {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto;
     gap: 10px 16px;
   }
 
   .fleet-contact-link {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .fleet-menu-footer {
-    margin-top: 28px;
+    margin-top: 0px;
   }
 
   .fleet-menu-divider {
@@ -526,15 +858,18 @@
   }
 
   .impact-stat-count {
-    font-size: 35px;
+    font-size: 26px;
   }
 
   .legacy-stat-count {
-    font-size: 34px;
+    font-size: 30px !important;
   }
 
-  
-  
+  .legacy-main-heading {
+    font-size: 34px !important;
+  }
+
+
   .capability-card {
     padding: 24px 20px 22px;
     min-height: 250px;
@@ -565,10 +900,45 @@
 
   .banner-overlay-wrap {
     bottom: 24px;
+    text-align: center;
   }
 
-  .section-title h1 br {
-    display: none;
+  .banner-hero-main {
+    text-align: center;
+  }
+
+  #section-banner .banner-title {
+    text-align: center;
+  }
+
+  .banner-ref-divider {
+    margin: 16px auto;
+  }
+
+  .banner-bottom-row {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .banner-ref-right {
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .banner-ref-desc {
+    text-align: center;
+  }
+
+  .banner-ref-cta {
+    display: flex;
+    justify-content: center;
+  }
+
+  .banner-scroll-label {
+    text-align: center;
   }
 
   .banner-desc {
@@ -635,6 +1005,38 @@
     padding: 25px;
   }
 
+  .section-about-us .theme-padding {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .about-hero-ship-box {
+    max-width: 460px;
+    margin: 0 auto 24px;
+  }
+
+  .about-ref-badges {
+    gap: 10px;
+  }
+
+  .about-badge-circle {
+    width: 48px;
+    height: 48px;
+  }
+
+  .about-badge-circle svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .about-badge-name {
+    font-size: 12px;
+  }
+
+  .about-badge-sep {
+    height: 44px;
+  }
+
   .about-ship-wrapper {
     margin-top: 30px;
   }
@@ -650,11 +1052,6 @@
 
   .anchor-stat-num {
     font-size: 34px;
-  }
-
-  .anchor-cards-scroll-wrap {
-    padding-top: 36px;
-    padding-bottom: 60px;
   }
 
   .anchor-cards-horizontal-outer {
@@ -745,6 +1142,8 @@
   .partner-logo-item {
     height: 70px;
     padding: 8px 14px;
+    min-width: auto;
+    width: 100%;
   }
 
   .partner-logo-img {
@@ -840,12 +1239,72 @@
   .footer-watermark-text {
     font-size: 54px;
   }
+
+  .legacy-stack-card {
+    border-radius: 14px;
+  }
+
+  .impact-cards-outer {
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 575px) {
-  .fleet-menu-container {
-    padding: 24px 0px 24px;
-    min-height: auto;
+  .legacy-main-heading {
+    font-size: 24px !important;
+  }
+
+  .legacy-content-wrap {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+
+  #section-impact .section-title h2 {
+    font-size: 24px;
+  }
+
+  .legacy-stack-card {
+    width: 100% !important;
+    padding: 15px 15px !important;
+  }
+
+  .legacy-stat-count {
+    font-size: 26px !important;
+  }
+
+  .legacy-cards-stack {
+    grid-template-columns: 1fr !important;
+  }
+
+  .ship-stat-num {
+    font-size: 26px;
+  }
+
+  #section-about-us .section-title h2 {
+    font-size: 24px;
+  }
+
+  .partners-slider {
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  .partner-logo-item {
+    height: 62px;
+    min-width: auto;
+    width: 100%;
+    padding: 6px 14px;
+    border-radius: 12px;
+  }
+
+  .partner-logo-img {
+    max-height: 34px;
+    max-width: 110px;
+  }
+
+  #section-banner .banner-title {
+    font-size: 35px;
+    line-height: 1.2;
   }
 
   .theme-menu,
@@ -858,6 +1317,11 @@
     top: 64px;
   }
 
+  .anchor-cards-fan-columns .anchor-fan-col {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
   .fleet-nav-grid {
     flex-direction: column;
     gap: 10px;
@@ -867,12 +1331,9 @@
     gap: 10px;
   }
 
-  .fleet-nav-link {
-    font-size: 19px;
-  }
-
-  .fleet-menu-contact {
-    margin-top: 18px;
+  .fleet-menu-main.column,
+  .fleet-menu-contact.column {
+    width: 100%;
   }
 
   .fleet-contact-details {
@@ -900,6 +1361,56 @@
 
   .fleet-watermark-logo {
     max-width: 120px;
+  }
+
+  .section-about-us .theme-padding {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .about-hero-ship-box {
+    max-width: 360px;
+    margin: 0 auto 20px;
+  }
+
+  .about-ref-paragraph {
+    font-size: 14px;
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+
+  .about-ref-badges {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 12px;
+  }
+
+  .about-badge-sep {
+    display: none;
+  }
+
+  .about-badge-card {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 10px;
+  }
+
+  .about-badge-circle {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+  }
+
+  .about-badge-circle svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .about-badge-name {
+    margin-top: 0;
+    font-size: 12px;
+    line-height: 1.3;
   }
 
   .impact-tagline {
@@ -974,7 +1485,7 @@
   }
 
   .legacy-stat-suffix {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .legacy-card-title {
@@ -1178,6 +1689,21 @@
 
 @media screen and (max-width: 480px) {
 
+  #section-banner .banner-title {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .theme-logo img {
+    max-height: 35px;
+    width: 100%;
+  }
+
+  .fleet-menu-container {
+    padding: 20px 20px;
+    min-height: auto;
+  }
+
   .legacy-pair-stage,
   .legacy-pair-stage.legacy-pair-3 {
     grid-template-columns: repeat(1, 1fr);
@@ -1185,8 +1711,8 @@
 
   .theme-menu,
   .theme-menu.fleet-menu-drawer {
-    top: 61px;
-    max-height: calc(100vh - 61px);
+    top: 60px;
+    max-height: calc(100vh - 60px);
   }
 
   .fleet-menu-backdrop {
@@ -1217,8 +1743,60 @@
 }
 
 @media screen and (max-width: 420px) {
+  .ext-item-title {
+    font-size: 22px;
+  }
+
+  .ext-item-btn {
+    font-size: 12px;
+  }
+
+  .ext-item-title {
+    margin-bottom: 10px;
+    padding: 10px 0px;
+  }
+
+  .ship-stat-num {
+    font-size: 22px;
+  }
+
+  .anchor-card-desc {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  #section-about-us .section-title h2 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  #section-banner .banner-title {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .banner-ref-divider {
+    margin: 0 auto;
+  }
+
+  .banner-bottom-row {
+    margin-top: 10px;
+  }
+
+  .header-contact-btn {
+    font-size: 12px;
+  }
+
   .footer-bottom-bar {
     padding: 20px 0 40px;
+  }
+
+  .about-hero-ship-box {
+    max-width: 100%;
+  }
+
+  .about-badge-name {
+    font-size: 11px;
   }
 
   .ext-column-item {
@@ -1306,11 +1884,14 @@
 }
 
 @media screen and (max-width: 380px) {
+  .ship-showcase-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 
-  .theme-menu,
-  .theme-menu.fleet-menu-drawer {
-    top: 61px;
-    max-height: calc(100vh - 61px);
+  .theme-logo img {
+    max-height: 30px;
+    width: 100%;
   }
 
   .fleet-menu-backdrop {
@@ -1340,6 +1921,9 @@
 }
 
 @media screen and (max-width: 360px) {
+  .header-contact-btn {
+    font-size: 10px;
+  }
 
   .section-title h2 {
     font-size: 22px;
@@ -1350,32 +1934,4 @@
     font-size: 23px;
   }
 
-}
-
-/* Master Reset: Eliminate top space on banner across all devices */
-html,
-body,
-#section-banner,
-.section-banner {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-@media screen and (max-width: 1799px) {
-  html body, body { padding-top: 0 !important; margin-top: 0 !important; }
-}
-@media screen and (max-width: 1599px) {
-  html body, body { padding-top: 0 !important; margin-top: 0 !important; }
-}
-@media screen and (max-width: 1408px) {
-  html body, body { padding-top: 0 !important; margin-top: 0 !important; }
-}
-@media screen and (max-width: 1216px) {
-  html body, body { padding-top: 0 !important; margin-top: 0 !important; }
-}
-@media screen and (max-width: 1024px) {
-  html body, body { padding-top: 0 !important; margin-top: 0 !important; }
-}
-@media screen and (max-width: 768px) {
-  html body, body { padding-top: 0 !important; margin-top: 0 !important; }
 }

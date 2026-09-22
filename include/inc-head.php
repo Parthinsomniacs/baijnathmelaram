@@ -1,5 +1,5 @@
 <?php
-$version = "3.0.29";
+$version = "3.0.82";
 ?>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">

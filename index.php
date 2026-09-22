@@ -43,8 +43,7 @@ $utm = "yes";
         <div class="banner-hero-main">
           <div class="section-title">
             <h1 class="banner-title">
-              <span class="banner-word-mask"><span class="banner-word-inner">GREEN</span></span><br>
-              <span class="banner-word-mask"><span class="banner-word-inner">RECYCLING</span></span><br>
+              <span class="banner-word-mask"><span class="banner-word-inner">GREEN RECYCLING</span></span><br>
               <span class="banner-word-mask"><span class="banner-word-inner banner-italic text-secondary">NAVIGATE</span></span> <span class="banner-word-mask"><span class="banner-word-inner">FUTURE</span></span>
             </h1>
           </div>
@@ -181,7 +180,7 @@ $utm = "yes";
 
 
 
-  <section id="section-about-us" class="section section-about-us white-bg section-stacked pb-0">
+  <section id="section-about-us" class="section section-about-us white-bg section-stacked">
     <!-- Subtle Background World Map Watermark -->
     <div class="about-bg-map-pattern" aria-hidden="true"></div>
 
@@ -195,10 +194,10 @@ $utm = "yes";
     </div>
 
     <div class="theme-padding pl-0">
-      <div class="columns is-vcentered is-variable about-columns-layout">
+      <div class="columns is-vcentered is-variable is-multiline about-columns-layout">
 
         <!-- FIRST COLUMN: Our Ship Image -->
-        <div class="column is-6-widescreen is-6-desktop is-12-tablet is-12-mobile about-col-ship">
+        <div class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen about-col-ship">
           <div class="about-hero-ship-box">
             <img src="<?php echo $imagesurl; ?>about/transparent-ship.webp"
               class="about-hero-ship-img"
@@ -208,7 +207,7 @@ $utm = "yes";
         </div>
 
         <!-- SECOND COLUMN: Content (Section Title H2, Description, 4 Badges) -->
-        <div class="column is-12-mobile is-12-tablet is-6-widescreen is-6-desktop about-col-content">
+        <div class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen about-col-content">
           <div class="about-ref-center">
             <!-- Eyebrow Tag -->
             <div class="about-ref-eyebrow">
@@ -332,13 +331,13 @@ $utm = "yes";
       </svg>
     </div>
     <!-- Top Zone: Title (WITH theme-padding) -->
-    <div class="theme-padding anchors-top-wrap text-center">
+    <div class="theme-padding anchors-top-wrap has-text-centered">
       <div class="about-ref-eyebrow" style="justify-content: center; margin-bottom: 12px;">
         <span class="about-eyebrow-line"></span>
-        <span class="about-eyebrow-text">OUR CORE PILLARS</span>
+        <span class="about-eyebrow-text has-text-centered">OUR CORE PILLARS</span>
         <span class="about-eyebrow-line"></span>
       </div>
-      <div class="section-title js-anchors-title text-center">
+      <div class="section-title js-anchors-title has-text-centered">
         <h2>
           <span class="word-mask"><span class="word-inner">Our</span></span>
           <span class="word-mask"><span class="word-inner text-secondary">Anchors</span></span>
@@ -353,9 +352,9 @@ $utm = "yes";
     <div class="anchor-cards-scroll-wrap" id="anchor-cards-scroll-wrap">
       <div class="theme-padding">
         <div class="anchor-cards-fan-outer">
-          <div class="columns is-variable is-4-desktop anchor-cards-fan-columns">
+          <div class="columns is-multiline is-variable is-4-desktop anchor-cards-fan-columns">
             <!-- Card 1: Environment -->
-            <div class="column is-3-desktop is-6-tablet is-12-mobile anchor-fan-col">
+            <div class="column is-12-mobile is-6-tablet is-3-desktop is-3-widscreen  anchor-fan-col">
               <div class="anchor-card anchor-card-pillar anchor-fan-card js-tilted-card card-1" data-card="1">
                 <span class="anchor-tilt-tooltip">HKC & EUSRR</span>
                 <span class="anchor-card-watermark" aria-hidden="true">01</span>
@@ -372,7 +371,7 @@ $utm = "yes";
             </div>
 
             <!-- Card 2: Safety -->
-            <div class="column is-3-desktop is-6-tablet is-12-mobile anchor-fan-col">
+            <div class="column is-12-mobile is-6-tablet is-3-desktop is-3-widscreen  anchor-fan-col">
               <div class="anchor-card anchor-card-pillar anchor-fan-card js-tilted-card card-2" data-card="2">
                 <span class="anchor-tilt-tooltip">Zero Harm</span>
                 <span class="anchor-card-watermark" aria-hidden="true">02</span>
@@ -389,7 +388,7 @@ $utm = "yes";
             </div>
 
             <!-- Card 3: Worker Welfare -->
-            <div class="column is-3-desktop is-6-tablet is-12-mobile anchor-fan-col">
+            <div class="column is-12-mobile is-6-tablet is-3-desktop is-3-widscreen  anchor-fan-col">
               <div class="anchor-card anchor-card-pillar anchor-fan-card js-tilted-card card-3" data-card="3">
                 <span class="anchor-tilt-tooltip">Worker Voice</span>
                 <span class="anchor-card-watermark" aria-hidden="true">03</span>
@@ -406,7 +405,7 @@ $utm = "yes";
             </div>
 
             <!-- Card 4: Today & Core Values -->
-            <div class="column is-3-desktop is-6-tablet is-12-mobile anchor-fan-col">
+            <div class="column is-12-mobile is-6-tablet is-3-desktop is-3-widscreen  anchor-fan-col">
               <div class="anchor-card anchor-card-values anchor-fan-card js-tilted-card card-4" data-card="4">
                 <span class="anchor-tilt-tooltip">Our Values</span>
                 <span class="anchor-card-watermark" aria-hidden="true">04</span>
@@ -548,10 +547,10 @@ $utm = "yes";
 
     <!-- 3-Column Showcase Track -->
     <div class="cap-three-col-wrapper">
-      <div class="columns">
+      <div class="columns is-multiline">
 
         <!-- Left Column: Section Indicator (Sticky) -->
-        <div class="column is-3-widescreen is-3-desktop is-12-tablet is-12-mobile cap-col-meta">
+        <div class="column is-12-mobile is-12-tablet is-12-desktop is-3-widescreen  cap-col-meta">
           <div class="cap-meta-header-wrap">
             <span class="cap-meta-index">01</span>
             <span class="cap-meta-label">OUR CAPABILITIES</span>
@@ -588,7 +587,7 @@ $utm = "yes";
         </div>
 
         <!-- Center Column: Vertical Capability List (Scrolls) -->
-        <div class="column is-5-widescreen is-5-desktop is-7-tablet is-12-mobile cap-col-list">
+        <div class="column is-12-mobile is-5-tablet is-6-desktop is-5-widescreen  cap-col-list">
           <ul class="cap-items-list">
             <li class="cap-item is-active" data-index="0">
               <span class="cap-item-text">Bulk Carrier</span>
@@ -621,24 +620,50 @@ $utm = "yes";
         </div>
 
         <!-- Right Column: Vessel Photos Stack (Sticky) -->
-        <div class="column is-4-widescreen is-4-desktop is-5-tablet is-12-mobile cap-col-visual">
+        <div class="column is-12-mobile is-7-tablet is-6-desktop is-4-widescreen   cap-col-visual">
           <div class="cap-sticky-visual-holder">
             <div class="cap-visual-frame">
-              <img src="<?php echo $imagesurl; ?>capabilities/bulk-carrier.jpg" alt="Bulk Carrier" class="cap-visual-img is-active" data-index="0" />
-              <img src="<?php echo $imagesurl; ?>capabilities/general-cargo.jpg" alt="General Cargo" class="cap-visual-img" data-index="1" />
-              <img src="<?php echo $imagesurl; ?>capabilities/container.jpg" alt="Container" class="cap-visual-img" data-index="2" />
-              <img src="<?php echo $imagesurl; ?>capabilities/tanker.jpg" alt="Tanker" class="cap-visual-img" data-index="3" />
-              <img src="<?php echo $imagesurl; ?>capabilities/roro-crew.jpg" alt="Roro &amp; Crew" class="cap-visual-img" data-index="4" />
-              <img src="<?php echo $imagesurl; ?>capabilities/fpso.jpg" alt="FPSO" class="cap-visual-img" data-index="5" />
-              <img src="<?php echo $imagesurl; ?>capabilities/military.jpg" alt="Military" class="cap-visual-img" data-index="6" />
-              <img src="<?php echo $imagesurl; ?>capabilities/research-vessel.jpg" alt="Research Vessel" class="cap-visual-img" data-index="7" />
-              <img src="<?php echo $imagesurl; ?>capabilities/others.jpg" alt="Others" class="cap-visual-img" data-index="8" />
+              <div class="cap-visual-card" data-index="0">
+                <h3 class="cap-card-title">Bulk Carrier</h3>
+                <img src="<?php echo $imagesurl; ?>capabilities/bulk-carrier.jpg" alt="Bulk Carrier" class="cap-visual-img is-active" data-index="0" />
+              </div>
+              <div class="cap-visual-card" data-index="1">
+                <h3 class="cap-card-title">General Cargo</h3>
+                <img src="<?php echo $imagesurl; ?>capabilities/general-cargo.jpg" alt="General Cargo" class="cap-visual-img" data-index="1" />
+              </div>
+              <div class="cap-visual-card" data-index="2">
+                <h3 class="cap-card-title">Container</h3>
+                <img src="<?php echo $imagesurl; ?>capabilities/container.jpg" alt="Container" class="cap-visual-img" data-index="2" />
+              </div>
+              <div class="cap-visual-card" data-index="3">
+                <h3 class="cap-card-title">Tanker</h3>
+                <img src="<?php echo $imagesurl; ?>capabilities/tanker.jpg" alt="Tanker" class="cap-visual-img" data-index="3" />
+              </div>
+              <div class="cap-visual-card" data-index="4">
+                <h3 class="cap-card-title">Roro &amp; Crew</h3>
+                <img src="<?php echo $imagesurl; ?>capabilities/roro-crew.jpg" alt="Roro &amp; Crew" class="cap-visual-img" data-index="4" />
+              </div>
+              <div class="cap-visual-card" data-index="5">
+                <h3 class="cap-card-title">FPSO</h3>
+                <img src="<?php echo $imagesurl; ?>capabilities/fpso.jpg" alt="FPSO" class="cap-visual-img" data-index="5" />
+              </div>
+              <div class="cap-visual-card" data-index="6">
+                <h3 class="cap-card-title">Military</h3>
+                <img src="<?php echo $imagesurl; ?>capabilities/military.jpg" alt="Military" class="cap-visual-img" data-index="6" />
+              </div>
+              <div class="cap-visual-card" data-index="7">
+                <h3 class="cap-card-title">Research Vessel</h3>
+                <img src="<?php echo $imagesurl; ?>capabilities/research-vessel.jpg" alt="Research Vessel" class="cap-visual-img" data-index="7" />
+              </div>
+              <div class="cap-visual-card" data-index="8">
+                <h3 class="cap-card-title">Others</h3>
+                <img src="<?php echo $imagesurl; ?>capabilities/others.jpg" alt="Others" class="cap-visual-img" data-index="8" />
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-    </div>
     </div>
 
   </section>
@@ -669,15 +694,15 @@ $utm = "yes";
 
       <!-- Item 01: Left Image + Right Content -->
       <div class="ext-row-item">
-        <div class="columns is-vcentered is-variable is-6">
-          <div class="column is-6 ext-col-media">
+        <div class="columns is-vcentered is-variable is-6 is-multiline row-ext-item">
+          <div class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen ext-col-media">
             <div class="ext-image-card">
               <img src="<?php echo $imagesurl; ?>extensions/1.jpg?v=<?php echo $version; ?>" alt="Baijnath Melaram Alloys Pvt Ltd" class="ext-card-img" />
               <div class="ext-image-overlay"></div>
               <div class="ext-image-curtain"></div>
             </div>
           </div>
-          <div class="column is-6 ext-col-info">
+          <div class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen ext-col-info">
             <div class="ext-info-card">
               <div class="ext-info-accent-line"></div>
               <h3 class="ext-item-title"><span class="ext-title-word-mask"><span class="ext-title-word-inner">Baijnath</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">Melaram</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">Alloys</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">Pvt</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">Ltd</span></span></h3>
@@ -695,8 +720,15 @@ $utm = "yes";
 
       <!-- Item 02: Left Content + Right Image -->
       <div class="ext-row-item is-reversed">
-        <div class="columns is-vcentered is-variable is-6">
-          <div class="column is-6 ext-col-info">
+        <div class="columns is-vcentered is-variable is-6 is-multiline row-ext-item">
+          <div class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen ext-col-media">
+            <div class="ext-image-card">
+              <img src="<?php echo $imagesurl; ?>extensions/2.jpg?v=<?php echo $version; ?>" alt="B Melaram & Sons" class="ext-card-img" />
+              <div class="ext-image-overlay"></div>
+              <div class="ext-image-curtain"></div>
+            </div>
+          </div>
+          <div class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen ext-col-info">
             <div class="ext-info-card">
               <div class="ext-info-accent-line"></div>
               <h3 class="ext-item-title"><span class="ext-title-word-mask"><span class="ext-title-word-inner">B</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">Melaram</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">&amp;</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">Sons</span></span></h3>
@@ -709,27 +741,20 @@ $utm = "yes";
               </div>
             </div>
           </div>
-          <div class="column is-6 ext-col-media">
-            <div class="ext-image-card">
-              <img src="<?php echo $imagesurl; ?>extensions/2.jpg?v=<?php echo $version; ?>" alt="B Melaram & Sons" class="ext-card-img" />
-              <div class="ext-image-overlay"></div>
-              <div class="ext-image-curtain"></div>
-            </div>
-          </div>
         </div>
       </div>
 
       <!-- Item 03: Left Image + Right Content -->
       <div class="ext-row-item">
-        <div class="columns is-vcentered is-variable is-6">
-          <div class="column is-6 ext-col-media">
+        <div class="columns is-vcentered is-variable is-6 is-multiline row-ext-item">
+          <div class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen ext-col-media">
             <div class="ext-image-card">
               <img src="<?php echo $imagesurl; ?>extensions/3.jpg?v=<?php echo $version; ?>" alt="Friends Corp." class="ext-card-img" />
               <div class="ext-image-overlay"></div>
               <div class="ext-image-curtain"></div>
             </div>
           </div>
-          <div class="column is-6 ext-col-info">
+          <div class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen ext-col-info">
             <div class="ext-info-card">
               <div class="ext-info-accent-line"></div>
               <h3 class="ext-item-title"><span class="ext-title-word-mask"><span class="ext-title-word-inner">Friends</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">Corp.</span></span></h3>
@@ -747,8 +772,15 @@ $utm = "yes";
 
       <!-- Item 04: Left Content + Right Image -->
       <div class="ext-row-item is-reversed">
-        <div class="columns is-vcentered is-variable is-6">
-          <div class="column is-6 ext-col-info">
+        <div class="columns is-vcentered is-variable is-6 is-multiline row-ext-item">
+          <div class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen ext-col-media">
+            <div class="ext-image-card">
+              <img src="<?php echo $imagesurl; ?>extensions/4.webp?v=<?php echo $version; ?>" alt="BM Educon LLP (TED)" class="ext-card-img" />
+              <div class="ext-image-overlay"></div>
+              <div class="ext-image-curtain"></div>
+            </div>
+          </div>
+          <div class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen ext-col-info">
             <div class="ext-info-card">
               <div class="ext-info-accent-line"></div>
               <h3 class="ext-item-title"><span class="ext-title-word-mask"><span class="ext-title-word-inner">BM</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">Educon</span></span> <span class="ext-title-word-mask"><span class="ext-title-word-inner">LLP</span></span></h3>
@@ -759,13 +791,6 @@ $utm = "yes";
                       <polyline points="12 5 19 12 12 19"></polyline>
                     </svg></span></a>
               </div>
-            </div>
-          </div>
-          <div class="column is-6 ext-col-media">
-            <div class="ext-image-card">
-              <img src="<?php echo $imagesurl; ?>extensions/4.webp?v=<?php echo $version; ?>" alt="BM Educon LLP (TED)" class="ext-card-img" />
-              <div class="ext-image-overlay"></div>
-              <div class="ext-image-curtain"></div>
             </div>
           </div>
         </div>
@@ -791,8 +816,8 @@ $utm = "yes";
       </div>
     </div>
 
-    <div class="container legacy-content-wrap">
-      <div class="columns is-variable is-8 legacy-columns">
+    <div class="theme-padding legacy-content-wrap">
+      <div class="columns is-variable is-8 is-multiline legacy-columns">
 
         <!-- Left Column: Sticky Title -->
         <div class="column is-5-desktop is-12-tablet legacy-col-left">
@@ -1130,9 +1155,13 @@ $utm = "yes";
             perPage: 2.5,
             gap: '20px',
           },
-          480: {
+          575: {
             perPage: 2,
-            gap: '16px',
+            gap: '14px',
+          },
+          480: {
+            perPage: 1.8,
+            gap: '12px',
           },
         },
       }).mount(window.splide?.Extensions || {});
