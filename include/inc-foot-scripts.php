@@ -1911,7 +1911,9 @@
 		if (!timelineSection || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
 		gsap.registerPlugin(ScrollTrigger);
 
-		const words = timelineSection.querySelectorAll(".timeline-word-inner");
+		const eyebrowLines = timelineSection.querySelectorAll(".c-eyebrow__line");
+		const eyebrowText = timelineSection.querySelector(".c-eyebrow span:not(.c-eyebrow__line)");
+		const words = timelineSection.querySelectorAll(".timeline-word-inner, .word-inner");
 		const leadDesc = timelineSection.querySelector(".timeline-lead-desc");
 		const spineFill = timelineSection.querySelector(".timeline-spine-fill");
 		const timelineRows = timelineSection.querySelectorAll(".timeline-row");
@@ -1920,31 +1922,56 @@
 		const headerTl = gsap.timeline({
 			scrollTrigger: {
 				trigger: timelineSection,
-				start: "top 78%",
+				start: "top 80%",
 				toggleActions: "play none none none"
 			}
 		});
 
+		if (eyebrowLines.length) {
+			headerTl.fromTo(eyebrowLines, {
+				scaleX: 0
+			}, {
+				scaleX: 1,
+				duration: 0.6,
+				ease: "power2.out"
+			}, 0);
+		}
+
+		if (eyebrowText) {
+			headerTl.fromTo(eyebrowText, {
+				y: 15,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.5,
+				ease: "power2.out"
+			}, 0.08);
+		}
+
 		if (words.length) {
-			headerTl.to(words, {
+			headerTl.fromTo(words, {
+				y: "115%",
+				opacity: 0
+			}, {
 				y: "0%",
 				opacity: 1,
 				duration: 0.85,
-				stagger: 0.07,
+				stagger: 0.08,
 				ease: "power3.out"
-			}, 0);
+			}, 0.12);
 		}
 
 		if (leadDesc) {
 			headerTl.fromTo(leadDesc, {
-				y: 30,
+				y: 25,
 				opacity: 0
 			}, {
 				y: 0,
 				opacity: 1,
 				duration: 0.7,
 				ease: "power2.out"
-			}, 0.18);
+			}, 0.25);
 		}
 
 		// Spine Fill Progress Line Scrub
@@ -2025,6 +2052,14 @@
 							right: "24px"
 						},
 						gap: "14px"
+					},
+					480: {
+						perPage: 1,
+						padding: {
+							left: "16px",
+							right: "16px"
+						},
+						gap: "10px"
 					}
 				}
 			});
@@ -2040,44 +2075,66 @@
 			if (nextBtn) {
 				nextBtn.addEventListener("click", () => qaSplide.go(">"));
 			}
+
+			// Enable click/tap toggle on QA cards
+			const qaCards = qaSection.querySelectorAll(".qa-slide-card");
+			qaCards.forEach(card => {
+				card.addEventListener("click", () => {
+					card.classList.toggle("is-active");
+				});
+			});
 		}
 
 		// Header entrance animation
 		if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
 			gsap.registerPlugin(ScrollTrigger);
 
-			const words = qaSection.querySelectorAll(".qa-word-inner");
+			const eyebrowLines = qaSection.querySelectorAll(".c-eyebrow__line");
+			const eyebrowText = qaSection.querySelector(".c-eyebrow span:not(.c-eyebrow__line)");
+			const words = qaSection.querySelectorAll(".qa-word-inner, .word-inner");
 			const leadDesc = qaSection.querySelector(".qa-lead-desc");
-			const sliderContainer = qaSection.querySelector(".qa-slider-container");
+			const sliderContainer = qaSection.querySelector(".qa-slider-fullwidth, #qa-slider");
+			const qaWatermarkSvg = qaSection.querySelector(".qa-bg-element svg");
 
 			const qaTl = gsap.timeline({
 				scrollTrigger: {
 					trigger: qaSection,
-					start: "top 78%",
+					start: "top 80%",
 					toggleActions: "play none none none"
 				}
 			});
 
+			if (eyebrowLines.length) {
+				qaTl.fromTo(eyebrowLines, { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power2.out" }, 0);
+			}
+
+			if (eyebrowText) {
+				qaTl.fromTo(eyebrowText, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 0.08);
+			}
+
 			if (words.length) {
-				qaTl.to(words, {
+				qaTl.fromTo(words, {
+					y: "115%",
+					opacity: 0
+				}, {
 					y: "0%",
 					opacity: 1,
 					duration: 0.85,
-					stagger: 0.07,
+					stagger: 0.06,
 					ease: "power3.out"
-				}, 0);
+				}, 0.12);
 			}
 
 			if (leadDesc) {
 				qaTl.fromTo(leadDesc, {
-					y: 30,
+					y: 25,
 					opacity: 0
 				}, {
 					y: 0,
 					opacity: 1,
 					duration: 0.7,
 					ease: "power2.out"
-				}, 0.18);
+				}, 0.25);
 			}
 
 			if (sliderContainer) {
@@ -2089,8 +2146,163 @@
 					opacity: 1,
 					duration: 0.8,
 					ease: "power2.out"
-				}, 0.28);
+				}, 0.35);
 			}
+
+			if (qaWatermarkSvg) {
+				gsap.to(qaWatermarkSvg, {
+					rotation: 90,
+					ease: "none",
+					scrollTrigger: {
+						trigger: qaSection,
+						start: "top bottom",
+						end: "bottom top",
+						scrub: 1.2
+					}
+				});
+			}
+		}
+	}
+
+	/** Alloy Manufacturing: Automotive Die Casting Text Animation **/
+	function initDieCastingSectionAnimation() {
+		const dieSection = document.querySelector("#section-die-casting");
+		if (!dieSection || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+		gsap.registerPlugin(ScrollTrigger);
+
+		const eyebrowLine = dieSection.querySelector(".die-casting-sticky-col .c-eyebrow__line");
+		const eyebrowText = dieSection.querySelector(".die-casting-sticky-col .c-eyebrow span:not(.c-eyebrow__line)");
+		const words = dieSection.querySelectorAll(".die-casting-heading .word-inner");
+		const desc = dieSection.querySelector(".die-casting-desc");
+		const topPoints = dieSection.querySelectorAll(".die-casting-content-block > .die-casting-points-list > .die-casting-point-item");
+		const subblock = dieSection.querySelector(".die-casting-subblock");
+		const grid = dieSection.querySelector(".die-casting-bg-grid");
+
+		const dieTl = gsap.timeline({
+			scrollTrigger: {
+				trigger: dieSection,
+				start: "top 78%",
+				toggleActions: "play none none none"
+			}
+		});
+
+		if (eyebrowLine) {
+			dieTl.fromTo(eyebrowLine, { scaleX: 0, transformOrigin: "left center" }, { scaleX: 1, duration: 0.6, ease: "power2.out" }, 0);
+		}
+
+		if (eyebrowText) {
+			dieTl.fromTo(eyebrowText, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 0.08);
+		}
+
+		if (words.length) {
+			dieTl.fromTo(words, {
+				y: "115%",
+				opacity: 0
+			}, {
+				y: "0%",
+				opacity: 1,
+				duration: 0.85,
+				stagger: 0.07,
+				ease: "power3.out"
+			}, 0.12);
+		}
+
+		if (desc) {
+			dieTl.fromTo(desc, { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "power2.out" }, 0.22);
+		}
+
+		if (topPoints.length) {
+			dieTl.fromTo(topPoints, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, stagger: 0.08, ease: "power2.out" }, 0.32);
+		}
+
+		if (subblock) {
+			gsap.fromTo(subblock, {
+				y: 30,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.8,
+				ease: "power2.out",
+				scrollTrigger: {
+					trigger: subblock,
+					start: "top 82%",
+					toggleActions: "play none none none"
+				}
+			});
+		}
+
+		if (grid) {
+			gsap.fromTo(grid, {
+				yPercent: -10
+			}, {
+				yPercent: 10,
+				ease: "none",
+				scrollTrigger: {
+					trigger: dieSection,
+					start: "top bottom",
+					end: "bottom top",
+					scrub: true
+				}
+			});
+		}
+	}
+
+	/** Alloy Manufacturing: Technical Files Download Section Animation **/
+	function initFilesSectionAnimation() {
+		const filesSection = document.querySelector("#section-files");
+		if (!filesSection || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+		gsap.registerPlugin(ScrollTrigger);
+
+		const eyebrowLine = filesSection.querySelector(".files-header .c-eyebrow__line");
+		const eyebrowText = filesSection.querySelector(".files-header .c-eyebrow span:not(.c-eyebrow__line)");
+		const words = filesSection.querySelectorAll(".files-heading .word-inner");
+		const tableRows = filesSection.querySelectorAll(".files-table tbody tr");
+		const tableWrap = filesSection.querySelector(".files-table-wrap");
+
+		const filesTl = gsap.timeline({
+			scrollTrigger: {
+				trigger: filesSection,
+				start: "top 78%",
+				toggleActions: "play none none none"
+			}
+		});
+
+		if (eyebrowLine) {
+			filesTl.fromTo(eyebrowLine, { scaleX: 0, transformOrigin: "left center" }, { scaleX: 1, duration: 0.6, ease: "power2.out" }, 0);
+		}
+
+		if (eyebrowText) {
+			filesTl.fromTo(eyebrowText, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 0.08);
+		}
+
+		if (words.length) {
+			filesTl.fromTo(words, {
+				y: "115%",
+				opacity: 0
+			}, {
+				y: "0%",
+				opacity: 1,
+				duration: 0.85,
+				stagger: 0.08,
+				ease: "power3.out"
+			}, 0.12);
+		}
+
+		if (tableRows.length) {
+			filesTl.fromTo(tableRows, {
+				y: 25,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.7,
+				stagger: 0.12,
+				ease: "power2.out",
+				clearProps: "all"
+			}, 0.25);
+		} else if (tableWrap) {
+			filesTl.fromTo(tableWrap, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.75, ease: "power2.out" }, 0.25);
 		}
 	}
 
@@ -2102,29 +2314,55 @@
 		if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
 		gsap.registerPlugin(ScrollTrigger);
 
-		const words = rawSection.querySelectorAll(".word-inner");
+		const eyebrowLines = rawSection.querySelectorAll(".c-eyebrow__line");
+		const eyebrowText = rawSection.querySelector(".c-eyebrow span:not(.c-eyebrow__line)");
+		const words = rawSection.querySelectorAll(".raw-materials-main-heading .word-inner, .word-inner");
 		const leadDesc = rawSection.querySelector(".raw-materials-lead-desc");
-		const eyebrow = rawSection.querySelector(".c-eyebrow");
 		const cardsTrack = rawSection.querySelector(".raw-materials-cards-track");
 		const cards = rawSection.querySelectorAll(".raw-material-card");
 
 		if (!cardsTrack || !cards.length) return;
 
-		// 1. Subtle, safe header entrance that never leaves text blank or hidden
-		const headerElements = [eyebrow, ...words, leadDesc].filter(Boolean);
-		if (headerElements.length) {
-			gsap.from(headerElements, {
-				y: 20,
-				opacity: 0.6,
+		// 1. Header entrance animation with word-mask reveal
+		const rawHeaderTl = gsap.timeline({
+			scrollTrigger: {
+				trigger: rawSection,
+				start: "top 80%",
+				toggleActions: "play none none none"
+			}
+		});
+
+		if (eyebrowLines.length) {
+			rawHeaderTl.fromTo(eyebrowLines, { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power2.out" }, 0);
+		}
+
+		if (eyebrowText) {
+			rawHeaderTl.fromTo(eyebrowText, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 0.08);
+		}
+
+		if (words.length) {
+			rawHeaderTl.fromTo(words, {
+				y: "115%",
+				opacity: 0
+			}, {
+				y: "0%",
+				opacity: 1,
+				duration: 0.85,
+				stagger: 0.07,
+				ease: "power3.out"
+			}, 0.12);
+		}
+
+		if (leadDesc) {
+			rawHeaderTl.fromTo(leadDesc, {
+				y: 25,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
 				duration: 0.7,
-				stagger: 0.05,
-				ease: "power2.out",
-				scrollTrigger: {
-					trigger: rawSection,
-					start: "top 85%",
-					toggleActions: "play none none none"
-				}
-			});
+				ease: "power2.out"
+			}, 0.25);
 		}
 
 		// 2. Pinned Horizontal Scroll
@@ -2155,6 +2393,13 @@
 				invalidateOnRefresh: true,
 				anticipatePin: 0
 			}
+		});
+
+		// Enable click/tap toggle on Raw Material cards
+		cards.forEach(card => {
+			card.addEventListener("click", () => {
+				card.classList.toggle("is-active");
+			});
 		});
 
 		// Refresh ScrollTrigger when images load to ensure precise scrollWidth
@@ -2410,6 +2655,8 @@
 			initYardSectionAnimation,
 			initTimelineSectionAnimation,
 			initQASectionAnimation,
+			initDieCastingSectionAnimation,
+			initFilesSectionAnimation,
 			initRawMaterialsSectionAnimation,
 			initGlobalParallaxExperience
 		];

@@ -1,5 +1,5 @@
 <?php
-$version = "3.0.82";
+$version = "3.1.20";
 ?>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,7 +26,6 @@ $version = "3.0.82";
   <link rel="stylesheet" type="text/css" href="<?php echo $cssurl; ?>swiper-bundle.min.css">
 <?php } ?>
 <link rel="stylesheet" type="text/css" href="<?php echo $cssurl; ?>all-custom.css?<?php echo $version; ?>">
-<link rel="stylesheet" type="text/css" href="<?php echo $cssurl; ?>smruti.css?<?php echo $version; ?>">
 <link rel="stylesheet" type="text/css" href="<?php echo $cssurl; ?>all-responsive.css?<?php echo $version; ?>">
 <!--End Common CSS-->
 <?php require_once $seo; ?>

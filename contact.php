@@ -8,7 +8,7 @@ $onepagemenu = "yes";
 $slider = "no";
 $sliderautoscroll = "no";
 $swiperjs = "no";
-$popup = "yes";
+$popup = "no";
 $counter = "no";
 $accordian = "no";
 $utm = "yes";
@@ -19,10 +19,6 @@ $utm = "yes";
 
 <head>
   <?php require_once $head; ?>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..900;1,300..900&family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="<?php echo $cssurl; ?>smruti.css?v=<?php echo time(); ?>">
 </head>
 
 <body>
@@ -33,10 +29,7 @@ $utm = "yes";
   <section id="contact-banner" class="section section-banner p-0">
     <div class="banner-image">
       <picture>
-        <source media="(max-width:600px)" srcset="<?php echo $imagesurl; ?>banner/banner-1-sm.webp" type="image/webp">
-        <source media="(max-width:1000px)" srcset="<?php echo $imagesurl; ?>banner/banner-1-md.webp" type="image/webp">
-        <source media="(max-width:1350px)" srcset="<?php echo $imagesurl; ?>banner/banner-1-lg.webp" type="image/webp">
-        <img src="<?php echo $imagesurl; ?>banner/banner-1-xl.webp" width="1920" height="750" alt="Contact Baijnath Melaram" class="contact-banner-img" />
+        <img src="<?php echo $imagesurl; ?>banner/contact-us-banner-new.jpg" width="1920" height="750" alt="Contact Baijnath Melaram" class="contact-banner-img" />
       </picture>
     </div>
 
@@ -45,16 +38,15 @@ $utm = "yes";
       <div class="theme-padding">
         <div class="section-kicker">
           <span class="section-kicker-line"></span>
-          <span class="section-kicker-text" style="color: #ffffff !important;">GET IN TOUCH</span>
+          <span class="section-kicker-text">GET IN TOUCH</span>
         </div>
         <div class="banner-divider"></div>
-        <div class="banner-content-row columns is-vcentered">
-          <div class="column is-12-mobile is-12-tablet is-10-desktop">
+        <div class="banner-content-row columns is-variable is-8 is-vcentered">
+          <div class="column is-12">
             <div class="section-title">
               <h1 class="banner-title">
-                <span class="banner-word-mask"><span class="banner-word-inner">Contact</span></span><br>
-                <span class="banner-word-mask"><span class="banner-word-inner text-secondary">Baijnath</span></span>
-                <span class="banner-word-mask"><span class="banner-word-inner">Melaram</span></span>
+                <span class="banner-word-mask"><span class="banner-word-inner">Contact</span></span>
+                <span class="banner-word-mask"><span class="banner-word-inner banner-italic text-secondary">Us</span></span>
               </h1>
             </div>
           </div>
@@ -64,21 +56,13 @@ $utm = "yes";
   </section>
 
   <main id="contact-page">
-    <!-- Minimal Background Decor Matching Website Visual Theme -->
-    <div class="bm-contact-bg-decor" aria-hidden="true">
-      <div class="bm-contact-glow bm-contact-glow-1"></div>
-      <div class="bm-contact-glow bm-contact-glow-2"></div>
-      <div class="bm-contact-glow bm-contact-glow-3"></div>
-      <div class="bm-contact-dot-grid"></div>
-      <div class="bm-contact-plus bm-contact-plus-1">+</div>
-      <div class="bm-contact-plus bm-contact-plus-2">+</div>
-      <div class="bm-contact-plus bm-contact-plus-3">+</div>
-    </div>
-
     <!-- ==========================================================================
          Section 1: Contact Highlight Cards (Matching Screenshot Top 3 Cards)
          ========================================================================== -->
     <section class="section-contact-cards">
+      <!-- Square Grid Background -->
+      <div class="contact-section-bg-square bg-decor-square" aria-hidden="true"></div>
+
       <div class="bm-cards-fullwidth-wrap">
         <div class="bm-cards-row">
           
@@ -138,6 +122,23 @@ $utm = "yes";
          Section 2: Map & Get in Touch Form (Matching Screenshot 2-Column Layout)
          ========================================================================== -->
     <section class="section-touch-interactive">
+      <!-- Nautical Compass Background Watermark -->
+      <div class="touch-bg-compass" aria-hidden="true">
+        <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="300" cy="300" r="280" stroke="rgba(229,145,47,0.18)" stroke-width="1.5" stroke-dasharray="4 8" />
+          <circle cx="300" cy="300" r="220" stroke="rgba(229,145,47,0.24)" stroke-width="1.2" />
+          <circle cx="300" cy="300" r="140" stroke="rgba(229,145,47,0.18)" stroke-width="1.5" stroke-dasharray="2 6" />
+          <circle cx="300" cy="300" r="60" stroke="rgba(229,145,47,0.28)" stroke-width="1.2" />
+          <!-- Compass Crosshairs & Navigation Marks -->
+          <line x1="300" y1="10" x2="300" y2="590" stroke="rgba(229,145,47,0.22)" stroke-width="1" stroke-dasharray="6 6" />
+          <line x1="10" y1="300" x2="590" y2="300" stroke="rgba(229,145,47,0.22)" stroke-width="1" stroke-dasharray="6 6" />
+          <path d="M300 20 L310 50 L300 42 L290 50 Z" fill="rgba(229,145,47,0.38)" />
+          <path d="M580 300 L550 310 L558 300 L550 290 Z" fill="rgba(229,145,47,0.28)" />
+          <path d="M300 580 L290 550 L300 558 L310 550 Z" fill="rgba(229,145,47,0.28)" />
+          <path d="M20 300 L50 290 L42 300 L50 310 Z" fill="rgba(229,145,47,0.28)" />
+        </svg>
+      </div>
+
       <div class="bm-touch-fullwidth-wrap">
         <div class="bm-touch-grid">
           
@@ -243,6 +244,9 @@ $utm = "yes";
          Section 3: Contacts Directory (Bespoke Editorial Architecture)
          ========================================================================== -->
     <section class="section-contacts-directory">
+      <!-- Square Grid Background -->
+      <div class="contact-section-bg-square bg-decor-square" aria-hidden="true"></div>
+
       <div class="bm-directory-fullwidth-wrap">
         <div class="contacts-layout">
           
@@ -402,7 +406,7 @@ $utm = "yes";
                 </div>
 
                 <!-- Madhur Agarwal -->
-                <div class="contacts-person-group" style="margin-top: 24px;">
+                <div class="contacts-person-group contacts-person-group-spaced">
                   <h4 class="contacts-person-name">Madhur Agarwal</h4>
                   <div class="contacts-meta-list">
                     <div class="contacts-meta-item">
@@ -768,6 +772,20 @@ $utm = "yes";
             });
           }
 
+          const touchCompassSvg = document.querySelector('.touch-bg-compass svg');
+          if (touchCompassSvg) {
+            gsap.to(touchCompassSvg, {
+              rotation: 140,
+              ease: 'none',
+              scrollTrigger: {
+                trigger: '.section-touch-interactive',
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: 1.2
+              }
+            });
+          }
+
           /* ------------------------------------------------------------------------
              D. Section 3: Directory Heading & Columns Reveal
           ------------------------------------------------------------------------ */
@@ -791,7 +809,7 @@ $utm = "yes";
             });
           }
 
-          const dirCols = document.querySelectorAll('.contacts-grid .contacts-col');
+          const dirCols = document.querySelectorAll('.contacts-grid .contacts-column');
           if (dirCols.length) {
             gsap.fromTo(dirCols, {
               y: 30,

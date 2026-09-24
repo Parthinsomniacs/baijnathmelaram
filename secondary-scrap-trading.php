@@ -28,33 +28,30 @@ $utm = "yes";
   <!-- ==========================================================================
        Section 1: Hero Banner
        ========================================================================== -->
-  <section id="section-banner" class="section section-banner p-0" style="height: auto !important; min-height: unset !important; position: relative !important;">
-    <div class="banner-image" style="position: relative;">
+  <section id="section-banner" class="section section-banner p-0">
+    <div class="banner-image">
       <picture>
         <source media="(max-width:600px)" srcset="<?php echo $imagesurl; ?>banner/scrap-trading-banner.webp?v=<?php echo $version; ?>" type="image/webp">
         <img src="<?php echo $imagesurl; ?>banner/scrap-trading-banner.webp?v=<?php echo $version; ?>" width="1920" height="880" alt="Secondary Scrap Trading - Friends Corp." />
       </picture>
       <div class="banner-video-overlay"></div>
+    </div>
 
-      <!-- Banner Content Overlay -->
-      <div class="banner-overlay-wrap" style="padding-bottom: clamp(60px, 8vw, 110px);">
-        <div class="theme-padding">
-          <div class="about-ref-eyebrow">
-            <span class="about-eyebrow-line"></span>
-            <span class="about-eyebrow-text" style="color: #ffffff !important;">SECONDARY SCRAP TRADING</span>
-          </div>
-          <div class="banner-divider"></div>
-          <div class="banner-content-row columns is-variable is-8 is-vcentered">
-            <div class="column is-12">
-              <div class="section-title">
-                <h1 class="banner-title">
-                  <span class="banner-word-mask"><span class="banner-word-inner">Friends</span></span>
-                  <span class="banner-word-mask"><span class="banner-word-inner banner-italic text-secondary">Corp.</span></span>
-                </h1>
-                <p class="banner-subtitle" style="color: rgba(255, 255, 255, 0.85); font-size: clamp(16px, 1.4vw, 22px); margin-top: 16px; max-width: 780px; line-height: 1.5;">
-                  Specialising in high-grade ferrous, non-ferrous, and alloy metal scrap responsibly sourced from green ship recycling operations in Bhavnagar &amp; Alang.
-                </p>
-              </div>
+    <!-- Banner Content Overlay -->
+    <div class="banner-overlay-wrap" style="padding-bottom: clamp(60px, 8vw, 110px);">
+      <div class="theme-padding">
+        <div class="about-ref-eyebrow">
+          <span class="about-eyebrow-line"></span>
+          <span class="about-eyebrow-text" style="color: #ffffff !important;">SECONDARY SCRAP TRADING</span>
+        </div>
+        <div class="banner-divider"></div>
+        <div class="banner-content-row columns is-variable is-8 is-vcentered">
+          <div class="column is-12">
+            <div class="section-title">
+              <h1 class="banner-title">
+                <span class="banner-word-mask"><span class="banner-word-inner">Friends</span></span>
+                <span class="banner-word-mask"><span class="banner-word-inner banner-italic text-secondary">Corp.</span></span>
+              </h1>
             </div>
           </div>
         </div>
@@ -69,13 +66,18 @@ $utm = "yes";
        Section 2: About / Overview & Core Pillars (Friends Corp) - Exact Design
        ========================================================================== -->
   <section id="section-about" class="section section-about scrap-editorial-about section-stacked">
+    <!-- Ambient Orange Square Grid Background Pattern -->
+    <div class="timeline-bg-grid" aria-hidden="true"></div>
+
     <div class="theme-padding">
-      
+
       <!-- TOP TIER: Editorial About Intro & Hero Frame -->
       <div class="scrap-editorial-top-row">
         <!-- Left Column: Big Headline & Editorial Narrative Split -->
         <div class="scrap-editorial-left">
-          <h2 class="scrap-editorial-main-title">ABOUT</h2>
+          <h2 class="scrap-editorial-main-title">
+            <span class="word-mask"><span class="word-inner">ABOUT</span></span>
+          </h2>
 
           <div class="scrap-editorial-desc-col">
             <p class="scrap-editorial-body-text">
@@ -119,7 +121,10 @@ $utm = "yes";
             <div class="scrap-pillar-card-top">
               <span class="scrap-pillar-num">01</span>
               <span class="scrap-pillar-arrow" aria-hidden="true">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
               </span>
             </div>
             <h4 class="scrap-pillar-card-title">TRUTH</h4>
@@ -138,7 +143,10 @@ $utm = "yes";
             <div class="scrap-pillar-card-top">
               <span class="scrap-pillar-num">02</span>
               <span class="scrap-pillar-arrow" aria-hidden="true">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
               </span>
             </div>
             <h4 class="scrap-pillar-card-title">TRUST</h4>
@@ -157,7 +165,10 @@ $utm = "yes";
             <div class="scrap-pillar-card-top">
               <span class="scrap-pillar-num">03</span>
               <span class="scrap-pillar-arrow" aria-hidden="true">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
               </span>
             </div>
             <h4 class="scrap-pillar-card-title">TRANSPARENCY</h4>
@@ -176,7 +187,10 @@ $utm = "yes";
             <div class="scrap-pillar-card-top">
               <span class="scrap-pillar-num">04</span>
               <span class="scrap-pillar-arrow" aria-hidden="true">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
               </span>
             </div>
             <h4 class="scrap-pillar-card-title">DEDICATION</h4>
@@ -222,25 +236,34 @@ $utm = "yes";
     </div>
 
     <div class="theme-padding" style="position: relative; z-index: 2;">
-      
+
       <!-- Section Header -->
       <div class="services-3r-header">
         <div class="about-ref-eyebrow mb-2">
-          <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
-          <span class="about-eyebrow-text" style="color: #e5912f;">OUR SERVICES</span>
-          <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
+          <span class="about-eyebrow-line about-eyebrow-line-orange"></span>
+          <span class="about-eyebrow-text about-eyebrow-text-orange">OUR SERVICES</span>
+          <span class="about-eyebrow-line about-eyebrow-line-orange"></span>
         </div>
         <div class="section-title">
           <h2>
-            <span>A Commitment to the 3 R's:</span><br />
-            <span class="text-secondary">Pioneering Sustainability in Our Expertise</span>
+            <span class="word-mask"><span class="word-inner">A</span></span>
+            <span class="word-mask"><span class="word-inner">Commitment</span></span>
+            <span class="word-mask"><span class="word-inner">to</span></span>
+            <span class="word-mask"><span class="word-inner">the</span></span>
+            <span class="word-mask"><span class="word-inner">3</span></span>
+            <span class="word-mask"><span class="word-inner">R's:</span></span><br />
+            <span class="word-mask"><span class="word-inner text-secondary">Pioneering</span></span>
+            <span class="word-mask"><span class="word-inner text-secondary">Sustainability</span></span>
+            <span class="word-mask"><span class="word-inner text-secondary">in</span></span>
+            <span class="word-mask"><span class="word-inner text-secondary">Our</span></span>
+            <span class="word-mask"><span class="word-inner text-secondary">Expertise</span></span>
           </h2>
         </div>
       </div>
 
       <!-- 3-Column Services Grid -->
       <div class="services-3r-grid">
-        
+
         <!-- Service 1: REDUCE -->
         <div class="services-3r-col">
           <div class="services-3r-icon-wrap" aria-hidden="true">
@@ -297,37 +320,33 @@ $utm = "yes";
        Section 3: Materials We Trade-In (Ferrous Products Showcase)
        ========================================================================== -->
   <section id="section-products" class="section section-scrap-ferrous-products section-scrap-ferrous-has-bg section-stacked">
-    <!-- Atmospheric Ambient Background & Blueprint Decor -->
-    <div class="scrap-ferrous-bg-decor" aria-hidden="true">
-      <div class="scrap-ferrous-glow scrap-ferrous-glow-1"></div>
-      <div class="scrap-ferrous-glow scrap-ferrous-glow-2"></div>
-      <div class="scrap-ferrous-glow scrap-ferrous-glow-3"></div>
-      <div class="scrap-ferrous-bg-grid"></div>
-      <div class="scrap-ferrous-plus scrap-ferrous-plus-1">+</div>
-      <div class="scrap-ferrous-plus scrap-ferrous-plus-2">+</div>
-      <div class="scrap-ferrous-plus scrap-ferrous-plus-3">+</div>
+    <!-- Square Grid Background -->
+    <div class="scrap-ferrous-bg-decor bg-decor-square" aria-hidden="true">
     </div>
 
     <div class="theme-padding" style="position: relative; z-index: 2;">
       <div class="scrap-ferrous-container">
-        
+
         <!-- Section Header Block -->
         <div class="scrap-ferrous-header text-center">
-          <div class="about-ref-eyebrow mb-2" style="justify-content: center;">
-            <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
-            <span class="about-eyebrow-text" style="color: #e5912f;">MATERIALS WE TRADE-IN</span>
-            <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
+          <div class="about-ref-eyebrow mb-2 about-ref-eyebrow-center">
+            <span class="about-eyebrow-line about-eyebrow-line-orange"></span>
+            <span class="about-eyebrow-text about-eyebrow-text-orange">MATERIALS WE TRADE-IN</span>
+            <span class="about-eyebrow-line about-eyebrow-line-orange"></span>
           </div>
           <div class="section-title">
             <h2 class="scrap-ferrous-heading">
-              <span>Materials We Trade-In</span> <span class="text-secondary">(Ferrous)</span>
+              <span class="word-mask"><span class="word-inner">Materials</span></span>
+              <span class="word-mask"><span class="word-inner">We</span></span>
+              <span class="word-mask"><span class="word-inner">Trade-In</span></span>
+              <span class="word-mask"><span class="word-inner text-secondary">(Ferrous)</span></span>
             </h2>
           </div>
         </div>
 
         <!-- 6-Product Cards Grid -->
         <div class="scrap-ferrous-grid">
-          
+
           <!-- Card 1: Tungsten Carbide Bits Scrap -->
           <div class="scrap-ferrous-card" data-card="0">
             <div class="scrap-ferrous-media">
@@ -488,7 +507,7 @@ $utm = "yes";
 
         <!-- Materials Showcase Bottom CTA Button -->
         <div class="scrap-ferrous-cta-wrap text-center">
-          <a href="javascript:void(0)" class="scrap-ferrous-cta-btn" onclick="openForm('enquire')">
+          <a href="contact.php" class="scrap-ferrous-cta-btn">
             <span class="btn-text">Enquire For Trading Material</span>
             <span class="btn-icon" aria-hidden="true">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
@@ -506,9 +525,9 @@ $utm = "yes";
   <!-- ==========================================================================
        Section: Materials We Trade-In (Non-Ferrous Products Showcase)
        ========================================================================== -->
-  <section id="section-non-ferrous-products" class="section section-scrap-ferrous-products section-stacked">
+  <section id="section-non-ferrous-products" class="section section-scrap-ferrous-products section-stacked section-non-ferrous-bg">
     <!-- Nautical Compass Background Watermark (Clean background) -->
-    <div class="materials-bg-compass nonferrous-bg-compass" aria-hidden="true">
+    <div class="materials-bg-compass nonferrous-bg-compass nonferrous-bg-compass-alt" aria-hidden="true">
       <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="300" cy="300" r="280" stroke="rgba(229,145,47,0.16)" stroke-width="1.5" stroke-dasharray="4 8" />
         <circle cx="300" cy="300" r="220" stroke="rgba(229,145,47,0.22)" stroke-width="1.2" />
@@ -525,24 +544,27 @@ $utm = "yes";
 
     <div class="theme-padding" style="position: relative; z-index: 2;">
       <div class="scrap-ferrous-container">
-        
+
         <!-- Section Header Block -->
         <div class="scrap-ferrous-header text-center">
-          <div class="about-ref-eyebrow mb-2" style="justify-content: center;">
-            <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
-            <span class="about-eyebrow-text" style="color: #e5912f;">MATERIALS WE TRADE-IN</span>
-            <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
+          <div class="about-ref-eyebrow mb-2 about-ref-eyebrow-center">
+            <span class="about-eyebrow-line about-eyebrow-line-orange"></span>
+            <span class="about-eyebrow-text about-eyebrow-text-orange">MATERIALS WE TRADE-IN</span>
+            <span class="about-eyebrow-line about-eyebrow-line-orange"></span>
           </div>
           <div class="section-title">
             <h2 class="scrap-ferrous-heading">
-              <span>Materials We Trade-In</span> <span class="text-secondary">(Non-Ferrous)</span>
+              <span class="word-mask"><span class="word-inner">Materials</span></span>
+              <span class="word-mask"><span class="word-inner">We</span></span>
+              <span class="word-mask"><span class="word-inner">Trade-In</span></span>
+              <span class="word-mask"><span class="word-inner text-secondary">(Non-Ferrous)</span></span>
             </h2>
           </div>
         </div>
 
         <!-- 12-Product Cards Grid -->
         <div class="scrap-ferrous-grid">
-          
+
           <!-- Card 1: Zorba -->
           <div class="scrap-ferrous-card" data-card="0">
             <div class="scrap-ferrous-media">
@@ -691,7 +713,7 @@ $utm = "yes";
 
         <!-- Materials Showcase Bottom CTA Button -->
         <div class="scrap-ferrous-cta-wrap text-center">
-          <a href="javascript:void(0)" class="scrap-ferrous-cta-btn" onclick="openForm('enquire')">
+          <a href="contact.php" class="scrap-ferrous-cta-btn">
             <span class="btn-text">Contact Us</span>
             <span class="btn-icon" aria-hidden="true">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
@@ -710,20 +732,13 @@ $utm = "yes";
        Section: Demolition & Dismantling (Split-Column Editorial Layout)
        ========================================================================== -->
   <section id="section-demolition" class="section section-demolition section-stacked">
-    <!-- Atmospheric Ambient Background & Blueprint Decor -->
-    <div class="demolition-bg-decor" aria-hidden="true">
-      <div class="demolition-glow demolition-glow-1"></div>
-      <div class="demolition-glow demolition-glow-2"></div>
-      <div class="demolition-glow demolition-glow-3"></div>
-      <div class="demolition-bg-grid"></div>
-      <div class="demolition-plus demolition-plus-1">+</div>
-      <div class="demolition-plus demolition-plus-2">+</div>
-      <div class="demolition-plus demolition-plus-3">+</div>
+    <!-- Square Grid Background -->
+    <div class="demolition-bg-decor bg-decor-square" aria-hidden="true">
     </div>
 
     <div class="theme-padding" style="position: relative; z-index: 2;">
       <div class="demolition-grid-row">
-        
+
         <!-- Left Column: Image -->
         <div class="demolition-media-col">
           <div class="demolition-image-card">
@@ -734,12 +749,12 @@ $utm = "yes";
         <!-- Right Column: Content -->
         <div class="demolition-content-col">
           <div class="about-ref-eyebrow mb-2">
-            <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
-            <span class="about-eyebrow-text" style="color: #e5912f;">DISMANTLING &amp; RECOVERY</span>
-            <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
+            <span class="about-eyebrow-line about-eyebrow-line-orange"></span>
+            <span class="about-eyebrow-text about-eyebrow-text-orange">DISMANTLING &amp; RECOVERY</span>
+            <span class="about-eyebrow-line about-eyebrow-line-orange"></span>
           </div>
           <h2 class="demolition-heading">
-            <span>Demol</span><span class="text-secondary">ition</span>
+            <span class="word-mask"><span class="word-inner">Demol</span><span class="word-inner text-secondary">ition</span></span>
           </h2>
           <div class="demolition-body-text">
             <p>
@@ -758,36 +773,57 @@ $utm = "yes";
   <!-- ==========================================================================
        Section: Premier Heavy-Duty Machinery Line
        ========================================================================== -->
-  <section id="section-heavy-machinery" class="section section-extensions section-stacked" style="background-color: transparent; background-image: none; padding: 0;">
-    
+  <section id="section-heavy-machinery" class="section section-extensions section-stacked hm-section-wrapper">
+    <!-- Nautical Compass Background Watermark -->
+    <div class="materials-bg-compass hm-bg-compass" aria-hidden="true">
+      <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="300" cy="300" r="280" stroke="rgba(229,145,47,0.16)" stroke-width="1.5" stroke-dasharray="4 8" />
+        <circle cx="300" cy="300" r="220" stroke="rgba(229,145,47,0.22)" stroke-width="1.2" />
+        <circle cx="300" cy="300" r="140" stroke="rgba(229,145,47,0.16)" stroke-width="1.5" stroke-dasharray="2 6" />
+        <circle cx="300" cy="300" r="60" stroke="rgba(229,145,47,0.24)" stroke-width="1.2" />
+        <line x1="300" y1="10" x2="300" y2="590" stroke="rgba(229,145,47,0.2)" stroke-width="1" stroke-dasharray="6 6" />
+        <line x1="10" y1="300" x2="590" y2="300" stroke="rgba(229,145,47,0.2)" stroke-width="1" stroke-dasharray="6 6" />
+        <path d="M300 20 L310 50 L300 42 L290 50 Z" fill="rgba(229,145,47,0.35)" />
+        <path d="M580 300 L550 310 L558 300 L550 290 Z" fill="rgba(229,145,47,0.25)" />
+        <path d="M300 580 L290 550 L300 558 L310 550 Z" fill="rgba(229,145,47,0.25)" />
+        <path d="M20 300 L50 290 L42 300 L50 310 Z" fill="rgba(229,145,47,0.25)" />
+      </svg>
+    </div>
+
     <!-- Top Content: Header & Row 1 -->
-    <div class="theme-padding" style="position: relative; z-index: 2; padding-top: clamp(70px, 7vw, 110px);">
-      
+    <div class="theme-padding hm-theme-padding-top">
+
       <!-- Section Header -->
-      <div class="extensions-head-wrap" style="margin-bottom: 60px;">
-        <div class="about-ref-eyebrow mb-2" style="justify-content: center;">
-          <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
-          <span class="about-eyebrow-text" style="color: #e5912f;">HEAVY-DUTY MACHINERY</span>
-          <span class="about-eyebrow-line" style="background: rgba(229, 145, 47, 0.6);"></span>
+      <div class="extensions-head-wrap hm-head-wrap">
+        <div class="about-ref-eyebrow mb-2 about-ref-eyebrow-center">
+          <span class="about-eyebrow-line about-eyebrow-line-orange"></span>
+          <span class="about-eyebrow-text about-eyebrow-text-orange">HEAVY-DUTY MACHINERY</span>
+          <span class="about-eyebrow-line about-eyebrow-line-orange"></span>
         </div>
         <h2 class="extensions-heading">
-          Premier Heavy-Duty Machinery Line:<br/>
-          <span class="ext-heading-accent">Unmatched Excellence</span>
+          <span class="word-mask"><span class="word-inner">Premier</span></span>
+          <span class="word-mask"><span class="word-inner">Heavy-Duty</span></span>
+          <span class="word-mask"><span class="word-inner">Machinery</span></span>
+          <span class="word-mask"><span class="word-inner">Line:</span></span><br />
+          <span class="ext-heading-accent">
+            <span class="word-mask"><span class="word-inner text-secondary">Unmatched</span></span>
+            <span class="word-mask"><span class="word-inner text-secondary">Excellence</span></span>
+          </span>
         </h2>
       </div>
-        
+
       <!-- Row 1: Left Image, Right Content -->
-      <div class="ext-row-item" style="margin-bottom: clamp(48px, 6.5vh, 76px);">
-        <div class="columns is-variable is-6 is-vcentered">
+      <div class="ext-row-item">
+        <div class="columns is-variable is-multiline is-vcentered">
           <!-- Left Image -->
-          <div class="column is-6">
-            <div class="ext-image-card" style="background: transparent; box-shadow: none; height: auto;">
-              <img src="<?php echo $imagesurl; ?>scrap-trading/heavy-transformer.jpg?v=<?php echo $version; ?>" alt="Copper Transformer Scrap" class="ext-card-img" style="border-radius: 12px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" loading="lazy" />
+          <div class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen">
+            <div class="ext-image-card hm-image-card">
+              <img src="<?php echo $imagesurl; ?>scrap-trading/heavy-transformer.jpg?v=<?php echo $version; ?>" alt="Copper Transformer Scrap" class="ext-card-img hm-card-img" loading="lazy" />
             </div>
           </div>
           <!-- Right Content -->
-          <div class="column is-6">
-            <div class="ext-info-card" style="padding: 20px 40px; min-height: auto;">
+          <div class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen">
+            <div class="ext-info-card">
               <!-- Compass Watermark -->
               <div class="ext-info-compass">
                 <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -799,7 +835,7 @@ $utm = "yes";
                   <path d="M20 300 L50 290 L42 300 L50 310 Z" fill="rgba(229,145,47,0.25)" />
                 </svg>
               </div>
-              
+
               <h3 class="ext-item-title">Copper Transformer Scrap</h3>
               <div class="ext-info-accent-line"></div>
               <p class="ext-item-desc">
@@ -812,12 +848,12 @@ $utm = "yes";
     </div>
 
     <!-- Full-Width Background Row 2: Right Image, Left Content -->
-    <div class="ext-row-item" style="background: linear-gradient(180deg, #fcfbfa 0%, #f7f3ed 50%, #fcfbfa 100%); width: 100%; padding: 60px 0;">
+    <div class="ext-row-item hm-mid-row">
       <div class="theme-padding">
-        <div class="columns is-variable is-6 is-vcentered">
+        <div class="columns is-variable is-multiline is-vcentered">
           <!-- Left Content -->
-          <div class="column is-6">
-            <div class="ext-info-card" style="padding: 20px 40px 20px 0; min-height: auto;">
+          <div class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen cols-order order-2">
+            <div class="ext-info-card hm-info-card-alt">
               <h3 class="ext-item-title">Large Motor Scrap</h3>
               <div class="ext-info-accent-line"></div>
               <p class="ext-item-desc">
@@ -826,9 +862,9 @@ $utm = "yes";
             </div>
           </div>
           <!-- Right Image -->
-          <div class="column is-6">
-            <div class="ext-image-card" style="background: transparent; box-shadow: none; height: auto;">
-              <img src="<?php echo $imagesurl; ?>scrap-trading/heavy-large-motor.jpg?v=<?php echo $version; ?>" alt="Large Motor Scrap" class="ext-card-img" style="border-radius: 12px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" loading="lazy" />
+          <div class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen">
+            <div class="ext-image-card hm-image-card">
+              <img src="<?php echo $imagesurl; ?>scrap-trading/heavy-large-motor.jpg?v=<?php echo $version; ?>" alt="Large Motor Scrap" class="ext-card-img hm-card-img" loading="lazy" />
             </div>
           </div>
         </div>
@@ -836,21 +872,21 @@ $utm = "yes";
     </div>
 
     <!-- Bottom Content: Row 3 -->
-    <div class="theme-padding" style="position: relative; z-index: 2; padding-top: clamp(48px, 6.5vh, 76px); padding-bottom: clamp(70px, 7vw, 110px);">
+    <div class="theme-padding hm-theme-padding-bottom">
       <!-- Row 3: Left Image, Right Content -->
       <div class="ext-row-item">
-        <div class="columns is-variable is-6 is-vcentered">
+        <div class="columns is-variable is-multiline is-vcentered">
           <!-- Left Image -->
-          <div class="column is-6">
-            <div class="ext-image-card" style="background: transparent; box-shadow: none; height: auto;">
-              <img src="<?php echo $imagesurl; ?>scrap-trading/heavy-copper-stator.jpg?v=<?php echo $version; ?>" alt="Copper Winding Stator Scrap" class="ext-card-img" style="border-radius: 12px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" loading="lazy" />
+          <div class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen">
+            <div class="ext-image-card hm-image-card">
+              <img src="<?php echo $imagesurl; ?>scrap-trading/heavy-copper-stator.jpg?v=<?php echo $version; ?>" alt="Copper Winding Stator Scrap" class="ext-card-img hm-card-img" loading="lazy" />
             </div>
           </div>
           <!-- Right Content -->
-          <div class="column is-6">
-            <div class="ext-info-card" style="padding: 20px 40px; min-height: auto;">
+          <div class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen">
+            <div class="ext-info-card">
               <!-- Compass Watermark -->
-              <div class="ext-info-compass" style="right: auto; left: -60px;">
+              <div class="ext-info-compass hm-compass-alt">
                 <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="300" cy="300" r="280" stroke="rgba(229,145,47,0.16)" stroke-width="1.5" stroke-dasharray="4 8" />
                   <circle cx="300" cy="300" r="220" stroke="rgba(229,145,47,0.22)" stroke-width="1.2" />
@@ -860,7 +896,7 @@ $utm = "yes";
                   <path d="M20 300 L50 290 L42 300 L50 310 Z" fill="rgba(229,145,47,0.25)" />
                 </svg>
               </div>
-              
+
               <h3 class="ext-item-title">Copper Winding Stator Scrap</h3>
               <div class="ext-info-accent-line"></div>
               <p class="ext-item-desc">
@@ -893,7 +929,7 @@ $utm = "yes";
       /* ======================================================================
          1. Hero Banner Text Reveal (Friends Corp.)
          ====================================================================== */
-      const heroBanner = document.querySelector('#secondary-scrap-banner');
+      const heroBanner = document.querySelector('#section-banner') || document.querySelector('#secondary-scrap-banner');
       if (heroBanner) {
         const heroEyebrow = heroBanner.querySelector('.about-ref-eyebrow');
         const heroDivider = heroBanner.querySelector('.banner-divider');
@@ -961,11 +997,13 @@ $utm = "yes";
       const aboutSec = document.getElementById('section-about');
       if (aboutSec) {
         const topRow = aboutSec.querySelector('.scrap-editorial-top-row');
-        const mainTitle = aboutSec.querySelector('.scrap-editorial-main-title');
-        const bodyText = aboutSec.querySelector('.scrap-editorial-body-text');
+        const mainWords = aboutSec.querySelectorAll('.scrap-editorial-main-title .word-inner');
+        const bodyTexts = aboutSec.querySelectorAll('.scrap-editorial-body-text');
         const heroFrame = aboutSec.querySelector('.scrap-editorial-hero-frame');
+        const bottomGrid = aboutSec.querySelector('.scrap-editorial-bottom-grid');
         const kickerCol = aboutSec.querySelector('.scrap-pillars-kicker-col');
         const pillarCards = aboutSec.querySelectorAll('.scrap-pillar-item-card');
+        const bottomNote = aboutSec.querySelector('.scrap-editorial-bottom-note');
 
         const aboutTl = gsap.timeline({
           scrollTrigger: {
@@ -975,30 +1013,31 @@ $utm = "yes";
           }
         });
 
-        if (mainTitle) {
-          aboutTl.fromTo(mainTitle, {
-            y: 30,
+        if (mainWords && mainWords.length) {
+          aboutTl.fromTo(mainWords, {
+            y: '115%',
             opacity: 0
           }, {
-            y: 0,
+            y: '0%',
             opacity: 1,
-            duration: 0.8,
+            duration: 0.85,
             ease: 'power3.out',
             clearProps: 'all'
           }, 0);
         }
 
-        if (bodyText) {
-          aboutTl.fromTo(bodyText, {
-            y: 20,
+        if (bodyTexts && bodyTexts.length) {
+          aboutTl.fromTo(bodyTexts, {
+            y: 24,
             opacity: 0
           }, {
             y: 0,
             opacity: 1,
-            duration: 0.6,
+            duration: 0.7,
+            stagger: 0.15,
             ease: 'power2.out',
             clearProps: 'all'
-          }, 0.25);
+          }, 0.15);
         }
 
         if (heroFrame) {
@@ -1013,23 +1052,22 @@ $utm = "yes";
             duration: 0.9,
             ease: 'power3.out',
             clearProps: 'all'
-          }, 0.15);
+          }, 0.2);
         }
 
         // Bottom Grid ScrollTrigger
-        const bottomGrid = aboutSec.querySelector('.scrap-editorial-bottom-grid');
         if (bottomGrid) {
           const bottomTl = gsap.timeline({
             scrollTrigger: {
               trigger: bottomGrid,
-              start: 'top 82%',
+              start: 'top 80%',
               toggleActions: 'play none none none'
             }
           });
 
           if (kickerCol) {
             bottomTl.fromTo(kickerCol, {
-              y: 24,
+              y: 25,
               opacity: 0
             }, {
               y: 0,
@@ -1042,18 +1080,31 @@ $utm = "yes";
 
           if (pillarCards && pillarCards.length) {
             bottomTl.fromTo(pillarCards, {
-              y: 30,
+              y: 35,
               opacity: 0,
               scale: 0.97
             }, {
               y: 0,
               opacity: 1,
               scale: 1,
-              duration: 0.65,
-              stagger: 0.08,
-              ease: 'back.out(1.3)',
+              duration: 0.7,
+              stagger: 0.1,
+              ease: 'power2.out',
               clearProps: 'all'
             }, 0.15);
+          }
+
+          if (bottomNote) {
+            bottomTl.fromTo(bottomNote, {
+              y: 20,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.65,
+              ease: 'power2.out',
+              clearProps: 'all'
+            }, 0.35);
           }
         }
       }
@@ -1063,7 +1114,9 @@ $utm = "yes";
          ====================================================================== */
       const servicesSec = document.getElementById('our-service');
       if (servicesSec) {
-        const header = servicesSec.querySelector('.services-3r-header');
+        const eyebrowLines = servicesSec.querySelectorAll('.about-eyebrow-line');
+        const eyebrowText = servicesSec.querySelector('.about-eyebrow-text');
+        const srvWords = servicesSec.querySelectorAll('.section-title .word-inner');
         const cols = servicesSec.querySelectorAll('.services-3r-col');
 
         const srvTl = gsap.timeline({
@@ -1074,17 +1127,24 @@ $utm = "yes";
           }
         });
 
-        if (header) {
-          srvTl.fromTo(header, {
-            y: 30,
+        if (eyebrowLines && eyebrowLines.length) {
+          srvTl.fromTo(eyebrowLines, { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: 'power2.out', clearProps: 'all' }, 0);
+        }
+        if (eyebrowText) {
+          srvTl.fromTo(eyebrowText, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out', clearProps: 'all' }, 0.08);
+        }
+        if (srvWords && srvWords.length) {
+          srvTl.fromTo(srvWords, {
+            y: '115%',
             opacity: 0
           }, {
-            y: 0,
+            y: '0%',
             opacity: 1,
-            duration: 0.75,
+            duration: 0.85,
+            stagger: 0.06,
             ease: 'power3.out',
             clearProps: 'all'
-          }, 0);
+          }, 0.12);
         }
 
         if (cols && cols.length) {
@@ -1094,11 +1154,11 @@ $utm = "yes";
           }, {
             y: 0,
             opacity: 1,
-            duration: 0.65,
+            duration: 0.7,
             stagger: 0.12,
             ease: 'power2.out',
             clearProps: 'all'
-          }, 0.2);
+          }, 0.3);
         }
 
         const compassSvg = servicesSec.querySelector('.services-bg-compass svg');
@@ -1121,8 +1181,11 @@ $utm = "yes";
          ====================================================================== */
       const ferrousSec = document.getElementById('section-products');
       if (ferrousSec) {
-        const fHeader = ferrousSec.querySelector('.scrap-ferrous-header');
+        const eyebrowLines = ferrousSec.querySelectorAll('.about-eyebrow-line');
+        const eyebrowText = ferrousSec.querySelector('.about-eyebrow-text');
+        const fWords = ferrousSec.querySelectorAll('.scrap-ferrous-heading .word-inner');
         const fCards = ferrousSec.querySelectorAll('.scrap-ferrous-card');
+        const fCta = ferrousSec.querySelector('.scrap-ferrous-cta-wrap');
 
         const ferrousTl = gsap.timeline({
           scrollTrigger: {
@@ -1132,45 +1195,51 @@ $utm = "yes";
           }
         });
 
-        if (fHeader) {
-          ferrousTl.fromTo(fHeader, {
-            y: 30,
+        if (eyebrowLines && eyebrowLines.length) {
+          ferrousTl.fromTo(eyebrowLines, { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: 'power2.out', clearProps: 'all' }, 0);
+        }
+        if (eyebrowText) {
+          ferrousTl.fromTo(eyebrowText, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out', clearProps: 'all' }, 0.08);
+        }
+        if (fWords && fWords.length) {
+          ferrousTl.fromTo(fWords, {
+            y: '115%',
             opacity: 0
           }, {
-            y: 0,
+            y: '0%',
             opacity: 1,
-            duration: 0.75,
+            duration: 0.85,
+            stagger: 0.07,
             ease: 'power3.out',
             clearProps: 'all'
-          }, 0);
+          }, 0.12);
         }
 
         if (fCards && fCards.length) {
           ferrousTl.fromTo(fCards, {
-            y: 40,
+            y: 35,
             opacity: 0
           }, {
             y: 0,
             opacity: 1,
-            duration: 0.7,
-            stagger: 0.1,
+            duration: 0.65,
+            stagger: 0.08,
             ease: 'power2.out',
             clearProps: 'all'
-          }, 0.2);
+          }, 0.25);
         }
 
-        const fCompassSvg = ferrousSec.querySelector('.ferrous-bg-compass svg');
-        if (fCompassSvg) {
-          gsap.to(fCompassSvg, {
-            rotation: 160,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: ferrousSec,
-              start: 'top bottom',
-              end: 'bottom top',
-              scrub: 1.2
-            }
-          });
+        if (fCta) {
+          ferrousTl.fromTo(fCta, {
+            y: 20,
+            opacity: 0
+          }, {
+            y: 0,
+            opacity: 1,
+            duration: 0.6,
+            ease: 'power2.out',
+            clearProps: 'all'
+          }, 0.45);
         }
       }
 
@@ -1179,8 +1248,11 @@ $utm = "yes";
          ====================================================================== */
       const nonFerrousSec = document.getElementById('section-non-ferrous-products');
       if (nonFerrousSec) {
-        const nfHeader = nonFerrousSec.querySelector('.scrap-ferrous-header');
+        const eyebrowLines = nonFerrousSec.querySelectorAll('.about-eyebrow-line');
+        const eyebrowText = nonFerrousSec.querySelector('.about-eyebrow-text');
+        const nfWords = nonFerrousSec.querySelectorAll('.scrap-ferrous-heading .word-inner');
         const nfCards = nonFerrousSec.querySelectorAll('.scrap-ferrous-card');
+        const nfCta = nonFerrousSec.querySelector('.scrap-ferrous-cta-wrap');
 
         const nfTl = gsap.timeline({
           scrollTrigger: {
@@ -1190,31 +1262,51 @@ $utm = "yes";
           }
         });
 
-        if (nfHeader) {
-          nfTl.fromTo(nfHeader, {
-            y: 30,
+        if (eyebrowLines && eyebrowLines.length) {
+          nfTl.fromTo(eyebrowLines, { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: 'power2.out', clearProps: 'all' }, 0);
+        }
+        if (eyebrowText) {
+          nfTl.fromTo(eyebrowText, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out', clearProps: 'all' }, 0.08);
+        }
+        if (nfWords && nfWords.length) {
+          nfTl.fromTo(nfWords, {
+            y: '115%',
             opacity: 0
           }, {
-            y: 0,
+            y: '0%',
             opacity: 1,
-            duration: 0.75,
+            duration: 0.85,
+            stagger: 0.07,
             ease: 'power3.out',
             clearProps: 'all'
-          }, 0);
+          }, 0.12);
         }
 
         if (nfCards && nfCards.length) {
           nfTl.fromTo(nfCards, {
-            y: 40,
+            y: 35,
             opacity: 0
           }, {
             y: 0,
             opacity: 1,
-            duration: 0.7,
-            stagger: 0.1,
+            duration: 0.65,
+            stagger: 0.08,
             ease: 'power2.out',
             clearProps: 'all'
-          }, 0.2);
+          }, 0.25);
+        }
+
+        if (nfCta) {
+          nfTl.fromTo(nfCta, {
+            y: 20,
+            opacity: 0
+          }, {
+            y: 0,
+            opacity: 1,
+            duration: 0.6,
+            ease: 'power2.out',
+            clearProps: 'all'
+          }, 0.45);
         }
 
         const nfCompassSvg = nonFerrousSec.querySelector('.nonferrous-bg-compass svg');
@@ -1233,45 +1325,222 @@ $utm = "yes";
       }
 
       /* ======================================================================
-         6. Section: Demolition & Dismantling (Split-Column Stagger Reveal)
+         6. Section: Demolition & Dismantling (Text & Media Reveal)
          ====================================================================== */
       const demoSec = document.getElementById('section-demolition');
       if (demoSec) {
-        const demoImg = demoSec.querySelector('.demolition-media-col');
-        const demoContent = demoSec.querySelector('.demolition-content-col');
+        const demoImg = demoSec.querySelector('.demolition-image-card');
+        const eyebrowLines = demoSec.querySelectorAll('.about-eyebrow-line');
+        const eyebrowText = demoSec.querySelector('.about-eyebrow-text');
+        const demoWords = demoSec.querySelectorAll('.demolition-heading .word-inner');
+        const demoParas = demoSec.querySelectorAll('.demolition-body-text p');
 
         const demoTl = gsap.timeline({
           scrollTrigger: {
             trigger: demoSec,
-            start: 'top 80%',
+            start: 'top 78%',
             toggleActions: 'play none none none'
           }
         });
 
         if (demoImg) {
           demoTl.fromTo(demoImg, {
-            x: -40,
-            opacity: 0
+            x: -35,
+            opacity: 0,
+            scale: 0.98
           }, {
             x: 0,
             opacity: 1,
+            scale: 1,
             duration: 0.85,
             ease: 'power3.out',
             clearProps: 'all'
           }, 0);
         }
 
-        if (demoContent) {
-          demoTl.fromTo(demoContent, {
-            x: 40,
+        if (eyebrowLines && eyebrowLines.length) {
+          demoTl.fromTo(eyebrowLines, { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: 'power2.out', clearProps: 'all' }, 0.05);
+        }
+        if (eyebrowText) {
+          demoTl.fromTo(eyebrowText, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out', clearProps: 'all' }, 0.1);
+        }
+        if (demoWords && demoWords.length) {
+          demoTl.fromTo(demoWords, {
+            y: '115%',
             opacity: 0
           }, {
-            x: 0,
+            y: '0%',
             opacity: 1,
             duration: 0.85,
+            stagger: 0.06,
             ease: 'power3.out',
             clearProps: 'all'
           }, 0.15);
+        }
+
+        if (demoParas && demoParas.length) {
+          demoTl.fromTo(demoParas, {
+            y: 25,
+            opacity: 0
+          }, {
+            y: 0,
+            opacity: 1,
+            duration: 0.7,
+            stagger: 0.15,
+            ease: 'power2.out',
+            clearProps: 'all'
+          }, 0.25);
+        }
+      }
+
+      /* ======================================================================
+         7. Section: Heavy-Duty Machinery Line (Header & Rows Stagger Reveal)
+         ====================================================================== */
+      const hmSec = document.getElementById('section-heavy-machinery');
+      if (hmSec) {
+        const eyebrowLines = hmSec.querySelectorAll('.hm-head-wrap .about-eyebrow-line');
+        const eyebrowText = hmSec.querySelector('.hm-head-wrap .about-eyebrow-text');
+        const hmWords = hmSec.querySelectorAll('.extensions-heading .word-inner');
+
+        const hmHeaderTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: hmSec,
+            start: 'top 80%',
+            toggleActions: 'play none none none'
+          }
+        });
+
+        if (eyebrowLines && eyebrowLines.length) {
+          hmHeaderTl.fromTo(eyebrowLines, { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: 'power2.out', clearProps: 'all' }, 0);
+        }
+        if (eyebrowText) {
+          hmHeaderTl.fromTo(eyebrowText, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out', clearProps: 'all' }, 0.08);
+        }
+        if (hmWords && hmWords.length) {
+          hmHeaderTl.fromTo(hmWords, {
+            y: '115%',
+            opacity: 0
+          }, {
+            y: '0%',
+            opacity: 1,
+            duration: 0.85,
+            stagger: 0.06,
+            ease: 'power3.out',
+            clearProps: 'all'
+          }, 0.12);
+        }
+
+        // Animate each of the 3 machinery rows individually on scroll
+        const hmRows = hmSec.querySelectorAll('.ext-row-item');
+        hmRows.forEach((row) => {
+          const imgCard = row.querySelector('.ext-image-card');
+          const infoCard = row.querySelector('.ext-info-card');
+          const title = row.querySelector('.ext-item-title');
+          const line = row.querySelector('.ext-info-accent-line');
+          const desc = row.querySelector('.ext-item-desc');
+          const compass = row.querySelector('.ext-info-compass');
+
+          const rowTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: row,
+              start: 'top 78%',
+              toggleActions: 'play none none none'
+            }
+          });
+
+          if (imgCard) {
+            rowTl.fromTo(imgCard, {
+              y: 35,
+              opacity: 0,
+              scale: 0.98
+            }, {
+              y: 0,
+              opacity: 1,
+              scale: 1,
+              duration: 0.85,
+              ease: 'power3.out',
+              clearProps: 'all'
+            }, 0);
+          }
+
+          if (infoCard) {
+            rowTl.fromTo(infoCard, {
+              y: 30,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.8,
+              ease: 'power2.out',
+              clearProps: 'all'
+            }, 0.12);
+          }
+
+          if (title) {
+            rowTl.fromTo(title, {
+              y: 20,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.6,
+              ease: 'power2.out',
+              clearProps: 'all'
+            }, 0.18);
+          }
+
+          if (line) {
+            rowTl.fromTo(line, {
+              scaleX: 0,
+              transformOrigin: 'left center'
+            }, {
+              scaleX: 1,
+              duration: 0.5,
+              ease: 'power2.out',
+              clearProps: 'all'
+            }, 0.25);
+          }
+
+          if (desc) {
+            rowTl.fromTo(desc, {
+              y: 20,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.65,
+              ease: 'power2.out',
+              clearProps: 'all'
+            }, 0.3);
+          }
+
+          if (compass) {
+            rowTl.fromTo(compass, {
+              rotation: -30,
+              opacity: 0
+            }, {
+              rotation: 0,
+              opacity: 0.6,
+              duration: 1,
+              ease: 'power2.out',
+              clearProps: 'all'
+            }, 0.2);
+          }
+        });
+
+        // Background compass watermark rotation on scroll
+        const hmCompassSvg = hmSec.querySelector('.hm-bg-compass svg');
+        if (hmCompassSvg) {
+          gsap.to(hmCompassSvg, {
+            rotation: 140,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: hmSec,
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: 1.2
+            }
+          });
         }
       }
 

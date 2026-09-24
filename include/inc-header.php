@@ -263,7 +263,7 @@ if (!$crmintegration || !$trackercodeintegration) { ?>
       </div>
     </div>
     <div class="column col-header has-text-right">
-      <a href="javascript:void(0)" class="header-contact-btn" onclick="openForm('enquire')">Contact Us</a>
+      <a href="contact.php" class="header-contact-btn">Contact Us</a>
     </div>
   </div>
 </header>

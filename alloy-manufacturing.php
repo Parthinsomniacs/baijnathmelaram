@@ -25,8 +25,8 @@ $utm = "yes";
   <?php echo $block_body_start; ?>
   <?php require_once $header; ?>
 
-  <section id="section-banner" class="section section-banner p-0" style="height: auto !important; min-height: unset !important; position: relative !important;">
-    <div class="banner-image" style="position: relative;">
+  <section id="section-banner" class="section section-banner p-0">
+    <div class="banner-image">
       <picture>
         <source media="(max-width:400px)" srcset="<?php echo $imagesurl; ?>alloys/banner/banner-1-xs.webp?v=<?php echo $version; ?>" type="image/webp">
         <source media="(max-width:600px)" srcset="<?php echo $imagesurl; ?>alloys/banner/banner-1-sm.webp?v=<?php echo $version; ?>" type="image/webp">
@@ -35,26 +35,26 @@ $utm = "yes";
         <img src="<?php echo $imagesurl; ?>alloys/banner/banner-1-xl.webp?v=<?php echo $version; ?>" width="1920" height="880" alt="Alloy Manufacturing Banner" />
       </picture>
       <div class="banner-video-overlay"></div>
+    </div>
 
-      <!-- Banner Content Overlay (Matches Reference Design) -->
-      <div class="banner-overlay-wrap" style="padding-bottom: clamp(60px, 8vw, 110px);">
-        <div class="theme-padding">
-          <div class="about-ref-eyebrow">
-            <span class="about-eyebrow-line"></span>
-            <span class="about-eyebrow-text" style="color: #ffffff !important;">ALLOY MANUFACTURING</span>
-          </div>
-          <div class="banner-divider"></div>
-          <div class="banner-content-row columns is-variable is-8 is-vcentered">
-            <div class="column is-12">
-              <div class="section-title">
-                <h1 class="banner-title">
-                  <span class="banner-word-mask"><span class="banner-word-inner">Baijnath</span></span>
-                  <span class="banner-word-mask"><span class="banner-word-inner">Melaram</span></span><br>
-                  <span class="banner-word-mask"><span class="banner-word-inner banner-italic text-secondary">Alloys</span></span>
-                  <span class="banner-word-mask"><span class="banner-word-inner text-secondary">Pvt.</span></span>
-                  <span class="banner-word-mask"><span class="banner-word-inner text-secondary">Ltd.</span></span>
-                </h1>
-              </div>
+    <!-- Banner Content Overlay (Matches Reference Design) -->
+    <div class="banner-overlay-wrap" style="padding-bottom: clamp(60px, 8vw, 110px);">
+      <div class="theme-padding">
+        <div class="about-ref-eyebrow">
+          <span class="about-eyebrow-line"></span>
+          <span class="about-eyebrow-text" style="color: #ffffff !important;">ALLOY MANUFACTURING</span>
+        </div>
+        <div class="banner-divider"></div>
+        <div class="banner-content-row columns is-variable is-8 is-vcentered">
+          <div class="column is-12">
+            <div class="section-title">
+              <h1 class="banner-title">
+                <span class="banner-word-mask"><span class="banner-word-inner">Baijnath</span></span>
+                <span class="banner-word-mask"><span class="banner-word-inner">Melaram</span></span><br>
+                <span class="banner-word-mask"><span class="banner-word-inner banner-italic text-secondary">Alloys</span></span>
+                <span class="banner-word-mask"><span class="banner-word-inner text-secondary">Pvt.</span></span>
+                <span class="banner-word-mask"><span class="banner-word-inner text-secondary">Ltd.</span></span>
+              </h1>
             </div>
           </div>
         </div>
@@ -388,7 +388,7 @@ $utm = "yes";
           <span class="c-eyebrow__line"></span>
           <span>APPLICATION &amp; CAPABILITY</span>
         </div>
-        <div class="section-title">
+        <div class="section-title mb-0">
           <h2 class="die-casting-heading">
             <span class="word-mask"><span class="word-inner">Automotive</span></span>
             <span class="word-mask"><span class="word-inner text-secondary">Die</span></span>

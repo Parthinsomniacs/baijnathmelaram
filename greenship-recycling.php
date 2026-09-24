@@ -8,7 +8,7 @@ $onepagemenu = "yes";
 $slider = "yes";
 $sliderautoscroll = "yes";
 $swiperjs = "no";
-$popup = "yes";
+$popup = "no";
 $counter = "yes";
 $accordian = "yes";
 $utm = "yes";
@@ -19,10 +19,6 @@ $utm = "yes";
 
 <head>
   <?php require_once $head; ?>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..800;1,300..800&family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="<?php echo $cssurl; ?>smruti.css?v=<?php echo time(); ?>">
 </head>
 
 <body>
@@ -62,7 +58,7 @@ $utm = "yes";
 
   <!-- We Value Our Environment Section (Sticky Stacking Cards Showcase matching Priya Blue) -->
   <section id="section-environment" class="section section-environment section-stacked">
-    
+
     <!-- Minimal Background Design Elements -->
     <div class="bm-env-bg-decor" aria-hidden="true">
       <!-- Ambient Atmospheric Light Blooms -->
@@ -80,7 +76,7 @@ $utm = "yes";
     </div>
 
     <div class="theme-padding">
-      
+
       <!-- Top Title & Description Header -->
       <div class="bm-env-header">
         <div class="section-kicker">
@@ -95,9 +91,9 @@ $utm = "yes";
             <span class="bm-word-mask"><span class="bm-word-inner bm-env-highlight">Environment</span></span>
           </h2>
         </div>
-        <p class="bm-env-main-desc">
-          By accomplishing <strong>SOC for HKC, COC for EU SRR from Class NK and AP-Moller Maersk RSRS Compliance</strong>, Baijnath Melaram has made a critical stride towards moving up to the perfect Green Ship Recycling Yard.
-        </p>
+        <h6 class="mb-5">
+          By accomplishing <b>SOC for HKC, COC for EU SRR from Class NK and AP-Moller Maersk RSRS Compliance</b>, Baijnath Melaram has made a critical stride towards moving up to the perfect Green Ship Recycling Yard.
+        </h6>
       </div>
 
       <!-- Sticky Stacking Cards Container -->
@@ -109,7 +105,6 @@ $utm = "yes";
             <div class="bm-env-card-content">
               <div class="bm-env-card-meta">
                 <span class="bm-env-card-index">01</span>
-                <span class="bm-env-card-dot">&bull;</span>
                 <span class="bm-env-card-tag">Containment &amp; Clean Zone</span>
               </div>
               <h3 class="bm-env-card-title">Zero Intertidal Spillage</h3>
@@ -127,7 +122,6 @@ $utm = "yes";
             <div class="bm-env-card-content">
               <div class="bm-env-card-meta">
                 <span class="bm-env-card-index">02</span>
-                <span class="bm-env-card-dot">&bull;</span>
                 <span class="bm-env-card-tag">Yard Infrastructure</span>
               </div>
               <h3 class="bm-env-card-title">Impermeable Floor</h3>
@@ -145,7 +139,6 @@ $utm = "yes";
             <div class="bm-env-card-content">
               <div class="bm-env-card-meta">
                 <span class="bm-env-card-index">03</span>
-                <span class="bm-env-card-dot">&bull;</span>
                 <span class="bm-env-card-tag">Marine Protection</span>
               </div>
               <h3 class="bm-env-card-title">Metal Slag Collector</h3>
@@ -163,7 +156,6 @@ $utm = "yes";
             <div class="bm-env-card-content">
               <div class="bm-env-card-meta">
                 <span class="bm-env-card-index">04</span>
-                <span class="bm-env-card-dot">&bull;</span>
                 <span class="bm-env-card-tag">3rd Party Audits</span>
               </div>
               <h3 class="bm-env-card-title">Environmental Impact Assessment</h3>
@@ -181,7 +173,6 @@ $utm = "yes";
             <div class="bm-env-card-content">
               <div class="bm-env-card-meta">
                 <span class="bm-env-card-index">05</span>
-                <span class="bm-env-card-dot">&bull;</span>
                 <span class="bm-env-card-tag">Heavy-Duty Operations</span>
               </div>
               <h3 class="bm-env-card-title">100% lifting</h3>
@@ -199,7 +190,7 @@ $utm = "yes";
 
   <!-- We Value Our Worker's Welfare Section (With Matching Header) -->
   <section id="section-welfare" class="section section-welfare section-stacked">
-    
+
     <!-- Minimal Background Design Elements -->
     <div class="bm-welfare-bg-decor" aria-hidden="true">
       <!-- Ambient Atmospheric Light Blooms -->
@@ -217,7 +208,7 @@ $utm = "yes";
     </div>
 
     <div class="theme-padding">
-      
+
       <!-- Top Title & Description Header (Matching We value our Environment) -->
       <div class="bm-env-header bm-welfare-header">
         <div class="section-kicker">
@@ -379,15 +370,15 @@ $utm = "yes";
         <!-- Centered Navigation Arrows (Reference Design Match) -->
         <div class="bm-welfare-slider-nav">
           <button type="button" class="bm-welfare-nav-arrow bm-welfare-nav-arrow--prev" aria-label="Previous Slide">
-            <svg width="34" height="20" viewBox="0 0 34 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="32" y1="10" x2="3" y2="10"></line>
-              <polyline points="11 3 3 10 11 17"></polyline>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
             </svg>
           </button>
           <button type="button" class="bm-welfare-nav-arrow bm-welfare-nav-arrow--next" aria-label="Next Slide">
-            <svg width="34" height="20" viewBox="0 0 34 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="2" y1="10" x2="31" y2="10"></line>
-              <polyline points="23 3 31 10 23 17"></polyline>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </button>
         </div>
@@ -437,11 +428,11 @@ $utm = "yes";
 
       <!-- Minimalist Architectural Safety Grid (Hover Reveal Details) -->
       <div class="safety-reveal-grid">
-        
+
         <!-- Card 1 -->
         <div class="safety-reveal-card is-active" data-safety-card="1">
           <div class="safety-reveal-icon-wrap">
-            <img src="<?php echo $imagesurl; ?>greenship-recycling/icon-certificate1.svg" width="84" height="84" alt="Tested and Certified Equipment" class="safety-reveal-icon safety-icon-svg" />
+            <img src="<?php echo $imagesurl; ?>greenship-recycling/1.svg" width="84" height="84" alt="Tested and Certified Equipment" class="safety-reveal-icon safety-icon-svg" />
           </div>
           <div class="safety-card-watermark" aria-hidden="true">01</div>
           <div class="safety-reveal-content">
@@ -454,7 +445,7 @@ $utm = "yes";
         <!-- Card 2 -->
         <div class="safety-reveal-card" data-safety-card="2">
           <div class="safety-reveal-icon-wrap">
-            <img src="<?php echo $imagesurl; ?>greenship-recycling/icon-certificate1.svg" width="84" height="84" alt="Flashback arrestor" class="safety-reveal-icon safety-icon-svg" />
+            <img src="<?php echo $imagesurl; ?>greenship-recycling/2.svg" width="84" height="84" alt="Flashback arrestor" class="safety-reveal-icon safety-icon-svg" />
           </div>
           <div class="safety-card-watermark" aria-hidden="true">02</div>
           <div class="safety-reveal-content">
@@ -467,7 +458,7 @@ $utm = "yes";
         <!-- Card 3 -->
         <div class="safety-reveal-card" data-safety-card="3">
           <div class="safety-reveal-icon-wrap">
-            <img src="<?php echo $imagesurl; ?>greenship-recycling/icon-certificate1.svg" width="84" height="84" alt="Three-way Gas Torches" class="safety-reveal-icon safety-icon-svg" />
+            <img src="<?php echo $imagesurl; ?>greenship-recycling/3.svg" width="84" height="84" alt="Three-way Gas Torches" class="safety-reveal-icon safety-icon-svg" />
           </div>
           <div class="safety-card-watermark" aria-hidden="true">03</div>
           <div class="safety-reveal-content">
@@ -480,7 +471,7 @@ $utm = "yes";
         <!-- Card 4 -->
         <div class="safety-reveal-card" data-safety-card="4">
           <div class="safety-reveal-icon-wrap">
-            <img src="<?php echo $imagesurl; ?>greenship-recycling/icon-certificate1.svg" width="84" height="84" alt="Asbestos Removal" class="safety-reveal-icon safety-icon-svg" />
+            <img src="<?php echo $imagesurl; ?>greenship-recycling/4.svg" width="84" height="84" alt="Asbestos Removal" class="safety-reveal-icon safety-icon-svg" />
           </div>
           <div class="safety-card-watermark" aria-hidden="true">04</div>
           <div class="safety-reveal-content">
@@ -493,7 +484,7 @@ $utm = "yes";
         <!-- Card 5 -->
         <div class="safety-reveal-card" data-safety-card="5">
           <div class="safety-reveal-icon-wrap">
-            <img src="<?php echo $imagesurl; ?>greenship-recycling/icon-certificate1.svg" width="84" height="84" alt="NEBOSH Approved PPE" class="safety-reveal-icon safety-icon-svg" />
+            <img src="<?php echo $imagesurl; ?>greenship-recycling/5.svg" width="84" height="84" alt="NEBOSH Approved PPE" class="safety-reveal-icon safety-icon-svg" />
           </div>
           <div class="safety-card-watermark" aria-hidden="true">05</div>
           <div class="safety-reveal-content">
@@ -506,7 +497,7 @@ $utm = "yes";
         <!-- Card 6 -->
         <div class="safety-reveal-card" data-safety-card="6">
           <div class="safety-reveal-icon-wrap">
-            <img src="<?php echo $imagesurl; ?>greenship-recycling/icon-certificate1.svg" width="84" height="84" alt="HSE Training Programs" class="safety-reveal-icon safety-icon-svg" />
+            <img src="<?php echo $imagesurl; ?>greenship-recycling/6.svg" width="84" height="84" alt="HSE Training Programs" class="safety-reveal-icon safety-icon-svg" />
           </div>
           <div class="safety-card-watermark" aria-hidden="true">06</div>
           <div class="safety-reveal-content">
@@ -519,7 +510,7 @@ $utm = "yes";
         <!-- Card 7 -->
         <div class="safety-reveal-card" data-safety-card="7">
           <div class="safety-reveal-icon-wrap">
-            <img src="<?php echo $imagesurl; ?>greenship-recycling/icon-certificate1.svg" width="84" height="84" alt="Emergency Preparedness & Mock Drills" class="safety-reveal-icon safety-icon-svg" />
+            <img src="<?php echo $imagesurl; ?>greenship-recycling/7.svg" width="84" height="84" alt="Emergency Preparedness & Mock Drills" class="safety-reveal-icon safety-icon-svg" />
           </div>
           <div class="safety-card-watermark" aria-hidden="true">07</div>
           <div class="safety-reveal-content">
@@ -679,7 +670,7 @@ $utm = "yes";
     </div>
 
     <div class="theme-padding">
-      
+
       <!-- Header -->
       <div class="bm-env-header bm-policy-header">
         <div class="section-kicker">
@@ -703,7 +694,7 @@ $utm = "yes";
 
         <!-- Top 3 Staggered Cards (Almond - Orange - Almond) -->
         <div class="sarip-cards-row sarip-cards-top">
-          
+
           <!-- Card 1 (Almond) -->
           <div class="sarip-box sarip-box-almond sarip-box-01">
             <div class="sarip-box-top">
@@ -756,7 +747,7 @@ $utm = "yes";
 
         <!-- Bottom 3 Staggered Cards (Orange - Almond - Orange) -->
         <div class="sarip-cards-row sarip-cards-bottom">
-          
+
           <!-- Card 4 (Orange - Extended into Image) -->
           <div class="sarip-box sarip-box-orange sarip-box-04">
             <div class="sarip-box-top">
@@ -825,7 +816,7 @@ $utm = "yes";
     </div>
 
     <div class="theme-padding">
-      
+
       <!-- Centered Section Header Bar -->
       <div class="yard-header-wrap">
         <!-- Keyword above Title -->
@@ -845,7 +836,7 @@ $utm = "yes";
 
       <!-- Main 2-Column Showcase Grid -->
       <div class="yard-showcase-grid">
-        
+
         <!-- Left: Clean Natural Yard Photo Card -->
         <div class="yard-photo-card-wrap">
           <div class="yard-photo-card">
@@ -855,22 +846,22 @@ $utm = "yes";
 
         <!-- Right: Light Theme Showcase Card with Animated India Map -->
         <div class="yard-light-master-card">
-          
+
           <!-- Content Left Inside Light Card -->
           <div class="yard-card-content">
-            
+
             <!-- Category Tag -->
             <div class="yard-card-tag">
               <svg class="yard-card-tag-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/>
-                <circle cx="12" cy="10" r="3"/>
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z" />
+                <circle cx="12" cy="10" r="3" />
               </svg>
               <span class="yard-card-tag-text">YARD</span>
             </div>
 
             <!-- Heading inside card -->
             <h3 class="yard-card-title">Ship Recycling Yard <span class="yard-card-title-highlight">No. 13,</span></h3>
-            
+
             <!-- Address Lines -->
             <p class="yard-card-address">
               S.B.Y., Alang - 364150 Dist. Bhavnagar,<br>
@@ -884,7 +875,7 @@ $utm = "yes";
             <div class="yard-phone-container">
               <a href="tel:+919879787952" class="yard-phone-circle-btn" aria-label="Call Yard">
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                  <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.02l-2.2 2.19z"/>
+                  <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.02l-2.2 2.19z" />
                 </svg>
               </a>
               <div class="yard-phone-info">
@@ -939,24 +930,12 @@ $utm = "yes";
         ------------------------------------------------------------------------ */
         const banner = document.querySelector('#greenship-banner');
         if (banner) {
-          const bannerImg = banner.querySelector('.greenship-banner-img');
           const kicker = banner.querySelector('.section-kicker');
           const bannerWords = banner.querySelectorAll('.banner-word-inner');
 
-          const heroTl = gsap.timeline({ delay: 0.15 });
-
-          if (bannerImg) {
-            heroTl.fromTo(bannerImg, {
-              scale: 1.08,
-              opacity: 0.75
-            }, {
-              scale: 1,
-              opacity: 1,
-              duration: 1.4,
-              ease: 'power2.out',
-              clearProps: 'transform'
-            }, 0);
-          }
+          const heroTl = gsap.timeline({
+            delay: 0.15
+          });
 
           if (kicker) {
             heroTl.fromTo(kicker, {
@@ -1003,13 +982,38 @@ $utm = "yes";
           });
 
           if (envKicker) {
-            envTl.fromTo(envKicker, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' }, 0);
+            envTl.fromTo(envKicker, {
+              y: 15,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.5,
+              ease: 'power2.out'
+            }, 0);
           }
           if (envWords.length) {
-            envTl.fromTo(envWords, { y: '115%', opacity: 0 }, { y: '0%', opacity: 1, duration: 0.85, stagger: 0.06, ease: 'power3.out' }, 0.1);
+            envTl.fromTo(envWords, {
+              y: '115%',
+              opacity: 0
+            }, {
+              y: '0%',
+              opacity: 1,
+              duration: 0.85,
+              stagger: 0.06,
+              ease: 'power3.out'
+            }, 0.1);
           }
           if (envDesc) {
-            envTl.fromTo(envDesc, { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: 'power2.out' }, 0.25);
+            envTl.fromTo(envDesc, {
+              y: 25,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.7,
+              ease: 'power2.out'
+            }, 0.25);
           }
 
           // Individual sticky card entrance
@@ -1055,13 +1059,38 @@ $utm = "yes";
           });
 
           if (welfareKicker) {
-            welfareTl.fromTo(welfareKicker, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' }, 0);
+            welfareTl.fromTo(welfareKicker, {
+              y: 15,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.5,
+              ease: 'power2.out'
+            }, 0);
           }
           if (welfareWords.length) {
-            welfareTl.fromTo(welfareWords, { y: '115%', opacity: 0 }, { y: '0%', opacity: 1, duration: 0.85, stagger: 0.06, ease: 'power3.out' }, 0.1);
+            welfareTl.fromTo(welfareWords, {
+              y: '115%',
+              opacity: 0
+            }, {
+              y: '0%',
+              opacity: 1,
+              duration: 0.85,
+              stagger: 0.06,
+              ease: 'power3.out'
+            }, 0.1);
           }
           if (welfareDesc) {
-            welfareTl.fromTo(welfareDesc, { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: 'power2.out' }, 0.25);
+            welfareTl.fromTo(welfareDesc, {
+              y: 25,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.7,
+              ease: 'power2.out'
+            }, 0.25);
           }
 
           if (welfareSlider) {
@@ -1102,13 +1131,38 @@ $utm = "yes";
           });
 
           if (safetyKicker) {
-            safetyTl.fromTo(safetyKicker, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' }, 0);
+            safetyTl.fromTo(safetyKicker, {
+              y: 15,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.5,
+              ease: 'power2.out'
+            }, 0);
           }
           if (safetyWords.length) {
-            safetyTl.fromTo(safetyWords, { y: '115%', opacity: 0 }, { y: '0%', opacity: 1, duration: 0.85, stagger: 0.06, ease: 'power3.out' }, 0.1);
+            safetyTl.fromTo(safetyWords, {
+              y: '115%',
+              opacity: 0
+            }, {
+              y: '0%',
+              opacity: 1,
+              duration: 0.85,
+              stagger: 0.06,
+              ease: 'power3.out'
+            }, 0.1);
           }
           if (safetyDesc) {
-            safetyTl.fromTo(safetyDesc, { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: 'power2.out' }, 0.25);
+            safetyTl.fromTo(safetyDesc, {
+              y: 25,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.7,
+              ease: 'power2.out'
+            }, 0.25);
           }
 
           if (safetyCards.length) {
@@ -1150,13 +1204,38 @@ $utm = "yes";
           });
 
           if (policyKicker) {
-            policyTl.fromTo(policyKicker, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' }, 0);
+            policyTl.fromTo(policyKicker, {
+              y: 15,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.5,
+              ease: 'power2.out'
+            }, 0);
           }
           if (policyWords.length) {
-            policyTl.fromTo(policyWords, { y: '115%', opacity: 0 }, { y: '0%', opacity: 1, duration: 0.85, stagger: 0.06, ease: 'power3.out' }, 0.1);
+            policyTl.fromTo(policyWords, {
+              y: '115%',
+              opacity: 0
+            }, {
+              y: '0%',
+              opacity: 1,
+              duration: 0.85,
+              stagger: 0.06,
+              ease: 'power3.out'
+            }, 0.1);
           }
           if (policyDesc) {
-            policyTl.fromTo(policyDesc, { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: 'power2.out' }, 0.25);
+            policyTl.fromTo(policyDesc, {
+              y: 25,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.7,
+              ease: 'power2.out'
+            }, 0.25);
           }
 
           if (policyCards.length) {
@@ -1201,9 +1280,34 @@ $utm = "yes";
             }
           });
 
-          if (p2Kicker) p2Tl.fromTo(p2Kicker, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' }, 0);
-          if (p2Words.length) p2Tl.fromTo(p2Words, { y: '115%', opacity: 0 }, { y: '0%', opacity: 1, duration: 0.85, stagger: 0.06, ease: 'power3.out' }, 0.1);
-          if (p2Desc) p2Tl.fromTo(p2Desc, { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: 'power2.out' }, 0.25);
+          if (p2Kicker) p2Tl.fromTo(p2Kicker, {
+            y: 15,
+            opacity: 0
+          }, {
+            y: 0,
+            opacity: 1,
+            duration: 0.5,
+            ease: 'power2.out'
+          }, 0);
+          if (p2Words.length) p2Tl.fromTo(p2Words, {
+            y: '115%',
+            opacity: 0
+          }, {
+            y: '0%',
+            opacity: 1,
+            duration: 0.85,
+            stagger: 0.06,
+            ease: 'power3.out'
+          }, 0.1);
+          if (p2Desc) p2Tl.fromTo(p2Desc, {
+            y: 25,
+            opacity: 0
+          }, {
+            y: 0,
+            opacity: 1,
+            duration: 0.7,
+            ease: 'power2.out'
+          }, 0.25);
 
           if (topBoxes.length) {
             gsap.fromTo(topBoxes, {
@@ -1299,13 +1403,38 @@ $utm = "yes";
           });
 
           if (yardKicker) {
-            yardTl.fromTo(yardKicker, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' }, 0);
+            yardTl.fromTo(yardKicker, {
+              y: 15,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.5,
+              ease: 'power2.out'
+            }, 0);
           }
           if (yardWords.length) {
-            yardTl.fromTo(yardWords, { y: '115%', opacity: 0 }, { y: '0%', opacity: 1, duration: 0.85, stagger: 0.06, ease: 'power3.out' }, 0.1);
+            yardTl.fromTo(yardWords, {
+              y: '115%',
+              opacity: 0
+            }, {
+              y: '0%',
+              opacity: 1,
+              duration: 0.85,
+              stagger: 0.06,
+              ease: 'power3.out'
+            }, 0.1);
           }
           if (yardMotto) {
-            yardTl.fromTo(yardMotto, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power2.out' }, 0.2);
+            yardTl.fromTo(yardMotto, {
+              y: 15,
+              opacity: 0
+            }, {
+              y: 0,
+              opacity: 1,
+              duration: 0.6,
+              ease: 'power2.out'
+            }, 0.2);
           }
 
           if (photoCard) {
@@ -1399,19 +1528,17 @@ $utm = "yes";
           focus: 'center',
           trimSpace: false,
           gap: '30px',
-          padding: { left: 0, right: 0 },
+          padding: {
+            left: 0,
+            right: 0
+          },
           arrows: false,
           pagination: false,
           speed: 650,
           easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
           updateOnMove: true,
           breakpoints: {
-            1300: {
-              perPage: 3,
-              gap: '24px',
-              focus: 'center'
-            },
-            992: {
+            1216: {
               perPage: 2,
               gap: '20px',
               focus: 0

@@ -1,4 +1,12 @@
 @media screen and (max-width: 1799px) {
+  .safety-reveal-card {
+    min-height: clamp(300px, 31vw, 400px);
+  }
+
+  .safety-reveal-icon-wrap img {
+    max-width: 90px;
+  }
+
   .about-desc p {
     font-size: clamp(18px, 1.8vw, 24px);
   }
@@ -17,9 +25,37 @@
     padding-top: 0 !important;
     margin-top: 0 !important;
   }
+
+  .section-qa,
+  #section-qa.section-qa {
+    padding-top: 100px;
+    padding-bottom: 110px;
+  }
+
+  .raw-material-card {
+    width: 360px;
+    height: 440px;
+  }
 }
 
 @media screen and (max-width: 1599px) {
+  .prime-acc-card {
+    padding: 20px;
+  }
+
+  .safety-reveal-icon-wrap img {
+    max-width: 90px;
+  }
+
+  .safety-reveal-card {
+    padding: clamp(20px, 2vw, 35px);
+  }
+
+  html#greenship-recycling body,
+  #greenship-recycling body {
+    padding-top: 0 !important;
+  }
+
   .cap-statement-text {
     font-size: 48px;
   }
@@ -44,9 +80,155 @@
   .footer-watermark-text {
     font-size: 114px;
   }
+
+  .section-qa,
+  #section-qa.section-qa {
+    padding-top: 90px;
+    padding-bottom: 100px;
+  }
+
+  .qa-header-wrap {
+    margin-bottom: 45px;
+  }
+
+  .raw-material-card {
+    width: 340px;
+    height: 420px;
+  }
+
+  .raw-materials-header-wrap {
+    margin-bottom: 25px;
+  }
 }
 
 @media screen and (max-width: 1408px) {
+  #section-about-bms.section-prime-about {
+    padding-top: 75px !important;
+    padding-bottom: 75px !important;
+  }
+
+  .prime-about-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: clamp(32px, 3.5vw, 44px) !important;
+  }
+
+  .prime-about-media-col {
+    order: 1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    align-self: center !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  .prime-about-content-col {
+    order: 2 !important;
+    width: 100% !important;
+  }
+
+  .prime-about-image-card {
+    position: relative !important;
+    width: 100% !important;
+    height: clamp(360px, 42vw, 500px) !important;
+    max-height: 500px !important;
+    aspect-ratio: 16 / 9.5 !important;
+    margin: 0 auto !important;
+    border-radius: 14px !important;
+  }
+
+  .prime-about-heading {
+    font-size: 38px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 18px !important;
+  }
+
+  .prime-about-lead {
+    font-size: 17px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 18px !important;
+  }
+
+  .prime-about-body {
+    gap: 12px !important;
+  }
+
+  .prime-about-body p {
+    font-size: 15px !important;
+    line-height: 1.68 !important;
+    margin-bottom: 4px !important;
+  }
+
+  #section-expertise.section-prime-expertise {
+    padding-top: 75px !important;
+    padding-bottom: 75px !important;
+  }
+
+  .prime-expertise-heading {
+    font-size: 38px !important;
+  }
+
+  .prime-products-heading {
+    font-size: 38px !important;
+  }
+
+  .prime-products-subtext {
+    font-size: 15px !important;
+  }
+
+  .product-card-media {
+    height: clamp(300px, 28vw, 380px) !important;
+  }
+
+  .prime-corp-heading {
+    font-size: 42px !important;
+  }
+
+  .prime-corp-desc {
+    font-size: 15px !important;
+  }
+
+  .prime-corp-content-block {
+    margin-bottom: 50px !important;
+  }
+
+  .prime-corp-grid {
+    gap: 20px !important;
+  }
+
+  .prime-corp-card {
+    height: 120px !important;
+    padding: 16px 20px !important;
+  }
+
+  .scrap-editorial-main-title {
+    font-size: 50px !important;
+  }
+
+  .scrap-editorial-hero-frame {
+    min-height: 400px !important;
+  }
+
+  .services-3r-header .section-title h2 {
+    font-size: 38px !important;
+  }
+
+  .demolition-heading {
+    font-size: 40px !important;
+  }
+
+  .demolition-image-card {
+    height: 440px !important;
+  }
+
+  .bm-welfare-slide-header {
+    min-height: 50px;
+  }
+
+  .bm-welfare-slide-card {
+    padding: 20px;
+  }
+
   .ext-item-title {
     font-size: 32px;
   }
@@ -119,9 +301,229 @@
   .footer-watermark-text {
     font-size: 100px;
   }
+
+  .sarip-box {
+    padding: 24px 20px;
+  }
+
+  .sarip-box-01 {
+    min-height: 320px;
+    margin-top: 60px;
+  }
+
+  .sarip-box-02 {
+    min-height: 420px;
+    margin-top: 60px;
+  }
+
+  .sarip-box-03 {
+    min-height: 420px;
+  }
+
+  .sarip-main-img-wrap {
+    height: 480px;
+    margin-top: -100px;
+  }
+
+  .sarip-cards-bottom {
+    margin-top: -100px;
+  }
+
+  .sarip-box-04 {
+    min-height: 400px;
+  }
+
+  .sarip-box-05 {
+    min-height: 320px;
+    margin-top: 60px;
+  }
+
+  .sarip-box-06 {
+    min-height: 380px;
+    margin-top: 20px;
+  }
+
+  .sarip-num {
+    font-size: 52px;
+  }
+
+  .yard-showcase-grid {
+    gap: 24px;
+  }
+
+  .yard-card-content {
+    padding: 22px 24px;
+  }
+
+  .yard-card-title {
+    font-size: 22px;
+  }
+
+  .yard-card-map-graphic {
+    max-width: 320px;
+  }
+
+  .section-qa,
+  #section-qa.section-qa {
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
+
+  .qa-header-wrap {
+    margin-bottom: 40px;
+  }
+
+  .qa-slide-card {
+    min-height: 400px;
+  }
+
+  .raw-material-card {
+    width: 320px;
+    height: 400px;
+  }
+
+  .raw-material-card-title {
+    font-size: 22px;
+  }
+
+  .raw-materials-header-wrap {
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 1216px) {
+
+  .prime-accordion-strip,
+  .prime-accordion-strip-duo {
+    flex-direction: column !important;
+    min-height: auto !important;
+  }
+
+  .prime-acc-card,
+  .prime-accordion-strip-duo .prime-acc-card {
+    flex: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border-right: none !important;
+    border-bottom: 1px solid #ede5d8 !important;
+    padding: 24px !important;
+  }
+
+  .prime-acc-card:last-child,
+  .prime-accordion-strip-duo .prime-acc-card:last-child {
+    border-bottom: none !important;
+  }
+
+  .prime-acc-card.is-active .acc-card-media,
+  .prime-accordion-strip-duo .prime-acc-card.is-active .acc-card-media {
+    height: clamp(280px, 34vw, 380px) !important;
+  }
+
+  .prime-products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+  }
+
+  .prime-corp-content-block {
+    max-width: 580px !important;
+    margin-bottom: 45px !important;
+  }
+
+  .prime-corp-heading {
+    font-size: 38px !important;
+  }
+
+  .prime-corp-grid {
+    gap: 16px !important;
+  }
+
+  .prime-corp-card {
+    height: 112px !important;
+    padding: 14px 18px !important;
+  }
+
+  .scrap-editorial-main-title {
+    font-size: 42px !important;
+  }
+
+  .scrap-editorial-top-row {
+    gap: 32px !important;
+  }
+
+  .scrap-editorial-hero-frame {
+    min-height: 360px !important;
+  }
+
+  .scrap-editorial-bottom-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  .scrap-pillars-kicker-col {
+    grid-column: span 2 !important;
+    margin-bottom: 12px !important;
+    padding-right: 0 !important;
+  }
+
+  .demolition-grid-row {
+    gap: 36px !important;
+  }
+
+  .demolition-heading {
+    font-size: 36px !important;
+  }
+
+  .demolition-image-card {
+    height: 400px !important;
+  }
+
+  .bm-cards-fullwidth-wrap,
+  .bm-touch-fullwidth-wrap,
+  .bm-directory-fullwidth-wrap,
+  .bm-prime-fullwidth-wrap {
+    padding: 0 60px;
+  }
+
+  .contacts-layout {
+    grid-template-columns: 240px 1fr;
+    gap: 36px;
+  }
+
+  .contacts-column {
+    padding: 32px 22px;
+  }
+
+  .bm-policy-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  .safety-reveal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .safety-reveal-card {
+    min-height: 290px;
+    border-right: 1px solid #ded7cc;
+    border-bottom: 1px solid #ded7cc;
+  }
+
+  .safety-reveal-card:nth-child(4n) {
+    border-right: 1px solid #ded7cc;
+  }
+
+  .safety-reveal-card:nth-child(2n) {
+    border-right: none;
+  }
+
+  .safety-reveal-card:nth-child(n+5) {
+    border-bottom: 1px solid #ded7cc;
+  }
+
+  .safety-reveal-card:nth-child(n+7) {
+    border-bottom: none;
+  }
+
   .extensions-rows-container {
     gap: 50px;
   }
@@ -269,9 +671,574 @@
   .footer-watermark-text {
     font-size: 86px;
   }
+
+  .sarip-box {
+    padding: 20px 18px;
+  }
+
+  .sarip-box-01 {
+    min-height: 300px;
+    margin-top: 50px;
+  }
+
+  .sarip-box-02 {
+    min-height: 380px;
+    margin-top: 50px;
+  }
+
+  .sarip-box-03 {
+    min-height: 380px;
+  }
+
+  .sarip-main-img-wrap {
+    height: 440px;
+    margin-top: -80px;
+  }
+
+  .sarip-cards-bottom {
+    margin-top: -80px;
+  }
+
+  .sarip-box-04 {
+    min-height: 360px;
+  }
+
+  .sarip-box-05 {
+    min-height: 300px;
+    margin-top: 50px;
+  }
+
+  .sarip-box-06 {
+    min-height: 350px;
+    margin-top: 15px;
+  }
+
+  .sarip-num {
+    font-size: 46px;
+  }
+
+  .sarip-box-desc {
+    max-width: 90%;
+    font-size: 14px;
+  }
+
+  .yard-showcase-grid {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 20px;
+  }
+
+  .yard-card-content {
+    padding: 20px;
+  }
+
+  .yard-card-title {
+    font-size: 20px;
+  }
+
+  .yard-card-address {
+    font-size: 13.5px;
+    margin-bottom: 14px;
+  }
+
+  .yard-card-divider {
+    margin-bottom: 16px;
+  }
+
+  .yard-card-map-area {
+    padding: 10px 10px 10px 0;
+  }
+
+  .yard-card-map-graphic {
+    max-width: 280px;
+    max-height: 270px;
+  }
+
+  .section-qa,
+  #section-qa.section-qa {
+    padding-top: 75px;
+    padding-bottom: 80px;
+  }
+
+  .qa-slide-card {
+    min-height: 380px;
+  }
+
+  .qa-bg-element {
+    width: 280px;
+    height: 280px;
+  }
+
+  .raw-material-card {
+    width: 300px;
+    height: 380px;
+  }
+
+  .raw-material-card-title {
+    font-size: 20px;
+  }
+
+  .raw-materials-cards-track {
+    gap: 20px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
+  .cols-order.order-2 {
+    order: 2;
+  }
+
+  .scrap-editorial-bottom-note {
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+
+  .scrap-editorial-divider {
+    margin: 20px 0;
+  }
+
+  .die-casting-sticky-col {
+    position: relative;
+    top: 0;
+  }
+
+  .safety-reveal-icon-wrap img {
+    max-width: 80px;
+  }
+
+  .bm-env-sticky-card {
+    border-radius: unset;
+  }
+
+  .bm-env-header h6 {
+    font-size: 18px;
+  }
+
+  .prime-accordion-strip,
+  .prime-accordion-strip-duo {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .prime-acc-card,
+  .prime-accordion-strip-duo .prime-acc-card {
+    flex: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border-right: none;
+    border-bottom: 1px solid #ede5d8;
+    padding: 24px;
+  }
+
+  .prime-acc-card:last-child {
+    border-bottom: none;
+  }
+
+  .prime-acc-card.is-active .acc-card-media,
+  .prime-accordion-strip-duo .prime-acc-card.is-active .acc-card-media {
+    height: clamp(260px, 32vw, 340px) !important;
+  }
+
+  .bm-expertise-axis-tag {
+    display: none;
+  }
+
+  #section-expertise.section-prime-expertise {
+    padding-top: 60px !important;
+    padding-bottom: 65px !important;
+  }
+
+  .prime-expertise-heading {
+    font-size: 32px !important;
+  }
+
+  .prime-expertise-desc {
+    font-size: 15px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .prime-products-heading {
+    font-size: 32px !important;
+  }
+
+  .prime-products-subtext {
+    font-size: 14.5px !important;
+  }
+
+  .prime-products-header {
+    margin-bottom: 36px !important;
+  }
+
+  .product-card-media {
+    height: clamp(260px, 32vw, 340px) !important;
+  }
+
+  .prime-corp-heading {
+    font-size: 34px !important;
+  }
+
+  .prime-corp-desc {
+    font-size: 14.5px !important;
+  }
+
+  .prime-corp-content-block {
+    max-width: 100% !important;
+    margin-bottom: 38px !important;
+  }
+
+  .prime-corp-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .prime-corp-card {
+    height: 108px !important;
+  }
+
+  .scrap-editorial-top-row {
+    grid-template-columns: 1fr !important;
+    gap: 0px !important;
+  }
+
+  .scrap-editorial-main-title {
+    font-size: 36px !important;
+  }
+
+  .scrap-editorial-hero-frame {
+    min-height: 320px !important;
+    clip-path: none !important;
+    border-radius: 8px !important;
+  }
+
+  .scrap-editorial-bottom-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .scrap-pillars-kicker-col {
+    grid-column: span 2 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .scrap-pillar-item-col {
+    border-left: none !important;
+    border-top: 1px solid var(--color-brand) !important;
+    padding-left: 0 !important;
+    padding-top: 16px !important;
+  }
+
+  .services-3r-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .services-3r-col:not(:last-child)::after {
+    display: none !important;
+  }
+
+  .services-3r-col:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+    padding-bottom: 24px !important;
+  }
+
+  .demolition-grid-row {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  .demolition-media-col {
+    order: 1 !important;
+  }
+
+  .demolition-content-col {
+    order: 2 !important;
+  }
+
+  .demolition-heading {
+    font-size: 32px !important;
+  }
+
+  .demolition-image-card {
+    height: 340px !important;
+  }
+
+  .prime-about-heading {
+    font-size: clamp(28px, 4vw, 42px) !important;
+  }
+
+  #prime-banner,
+  #prime-trading #prime-banner {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    max-height: none !important;
+  }
+
+  #prime-banner .banner-overlay-wrap {
+    padding-bottom: 48px !important;
+  }
+
+  #prime-banner .prime-banner-title {
+    font-size: clamp(24px, 3.8vw, 44px) !important;
+    line-height: 1.15 !important;
+  }
+
+  #section-about-bms.section-prime-about {
+    padding-top: 60px !important;
+    padding-bottom: 65px !important;
+  }
+
+  .prime-about-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 28px !important;
+  }
+
+  .prime-about-media-col {
+    order: 1 !important;
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  .prime-about-content-col {
+    order: 2 !important;
+    width: 100% !important;
+  }
+
+  .prime-about-image-card {
+    position: relative !important;
+    width: 100% !important;
+    height: clamp(300px, 44vw, 420px) !important;
+    max-height: 420px !important;
+    aspect-ratio: 16 / 10 !important;
+    border-radius: 14px !important;
+  }
+
+  .prime-about-heading {
+    font-size: 32px !important;
+    line-height: 1.22 !important;
+    margin-bottom: 16px !important;
+  }
+
+  .prime-about-lead {
+    font-size: 16px !important;
+    line-height: 1.58 !important;
+    margin-bottom: 16px !important;
+  }
+
+  .prime-about-body {
+    gap: 12px !important;
+  }
+
+  .prime-about-body p {
+    font-size: 14.5px !important;
+    line-height: 1.65 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .bm-cards-fullwidth-wrap,
+  .bm-touch-fullwidth-wrap,
+  .bm-directory-fullwidth-wrap,
+  .bm-prime-fullwidth-wrap {
+    padding: 0 40px;
+  }
+
+  .bm-cards-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  .bm-touch-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .bm-touch-map-col {
+    order: 2;
+  }
+
+  .bm-touch-form-col {
+    order: 1;
+  }
+
+  .bm-map-card {
+    min-height: 380px;
+  }
+
+  .contacts-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .contacts-title-col {
+    position: static;
+  }
+
+  .contacts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contacts-column {
+    border-right: none;
+    border-bottom: 1px solid #ede5d8;
+  }
+
+  .contacts-column:last-child {
+    border-bottom: none;
+  }
+
+  .sarip-cards-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .sarip-box {
+    padding: 20px 18px;
+  }
+
+  .sarip-box-01,
+  .sarip-box-02,
+  .sarip-box-03,
+  .sarip-box-04,
+  .sarip-box-05,
+  .sarip-box-06 {
+    margin-top: 0 !important;
+    min-height: 290px;
+    border-radius: 16px !important;
+  }
+
+  .sarip-main-img-wrap {
+    height: 380px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .sarip-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .sarip-cards-bottom {
+    margin-top: 0;
+  }
+
+  .sarip-num {
+    font-size: 40px;
+  }
+
+  .sarip-num-label {
+    width: 100%;
+    max-width: 100%;
+    font-size: 13px;
+  }
+
+  .sarip-box-desc {
+    max-width: 100%;
+    font-size: 13.5px;
+  }
+
+  .yard-header-wrap {
+    margin-bottom: 28px;
+  }
+
+  .yard-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .yard-photo-card-wrap {
+    min-height: 320px;
+    height: 320px;
+  }
+
+  .yard-light-master-card {
+    flex-direction: row;
+    min-height: 280px;
+    border-radius: 20px;
+  }
+
+  .yard-card-content {
+    flex: 0 0 54%;
+    max-width: 54%;
+    padding: 24px 22px;
+  }
+
+  .yard-card-map-area {
+    flex: 0 0 46%;
+    max-width: 46%;
+    padding: 10px 16px 10px 0;
+    min-height: auto;
+  }
+
+  .yard-card-map-graphic {
+    max-width: 280px;
+    max-height: 260px;
+  }
+
+  .yard-light-master-card:hover .yard-card-map-graphic {
+    transform: scale(1.04);
+  }
+
+  .welfare-slider .splide__slide .bm-welfare-slide-card {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  .welfare-slider .splide__slide .bm-welfare-slide-card:hover {
+    transform: translateY(-4px) !important;
+  }
+
+  .bm-welfare-slider-nav {
+    margin-top: 24px;
+  }
+
+  .bm-welfare-slide-header {
+    min-height: auto;
+  }
+
+  .bm-welfare-slide-desc {
+    min-height: auto;
+    margin-bottom: 16px;
+  }
+
+  .bm-welfare-slide-media {
+    height: 215px;
+  }
+
+  .bm-env-sticky-card {
+    position: relative;
+    top: 0;
+    margin-bottom: 28px;
+  }
+
+  .bm-env-card-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .bm-env-card-content {
+    padding: 28px 22px;
+    height: auto;
+  }
+
+  .bm-env-card-media {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    aspect-ratio: 16 / 9;
+  }
+
+  .bm-env-card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
   .legacy-main-heading br {
     display: none !important;
@@ -290,11 +1257,6 @@
 
   .ext-item-desc {
     max-width: 100%;
-  }
-
-  .ext-info-card {
-    max-height: 100%;
-    justify-content: start;
   }
 
   .extensions-rows-container {
@@ -693,9 +1655,549 @@
   .footer-watermark-text {
     font-size: 72px;
   }
+
+
+  .welfare-slider .splide__slide .bm-welfare-slide-card {
+    transform: translateY(44px);
+    opacity: 0.9;
+    box-shadow: none !important;
+  }
+
+
+  .welfare-slider .splide__slide.is-active .bm-welfare-slide-card {
+    transform: translateY(-24px);
+    opacity: 1;
+    border-color: #cbd5e1;
+    box-shadow: none !important;
+  }
+
+
+  .welfare-slider .splide__slide .bm-welfare-slide-card:hover {
+    transform: translateY(36px);
+    opacity: 1;
+    border-color: #e5912f !important;
+    box-shadow: none !important;
+  }
+
+  .welfare-slider .splide__slide.is-active .bm-welfare-slide-card:hover {
+    transform: translateY(-30px);
+    border-color: #e5912f !important;
+    box-shadow: none !important;
+  }
+
+
+  .bm-welfare-slider-nav {
+    margin-top: 20px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .section-qa,
+  #section-qa.section-qa {
+    padding-top: 65px;
+    padding-bottom: 70px;
+  }
+
+  .qa-header-wrap {
+    margin-bottom: 35px;
+  }
+
+  .qa-slide-card {
+    min-height: 360px;
+    border-radius: 14px;
+  }
+
+  .qa-slide-title {
+    font-size: 20px;
+  }
+
+  .qa-slide-content {
+    padding: 22px 20px;
+  }
+
+  .qa-bg-element {
+    width: 220px;
+    height: 220px;
+    top: -30px;
+    left: -30px;
+    opacity: 0.6;
+  }
+
+  #section-raw-materials.section-raw-materials {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 560px;
+    background-color: #fbf6ee !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 !important;
+  }
+
+  .raw-materials-pinned-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(16px, 2.5vh, 32px) 0;
+  }
+
+  .raw-material-card {
+    width: clamp(280px, 36vw, 360px);
+    height: clamp(360px, 48vh, 460px);
+    border-radius: 14px;
+  }
+
+  .raw-material-card-title {
+    font-size: 19px;
+  }
+
+  .raw-material-card-content {
+    padding: 20px 18px;
+  }
+
+  .raw-materials-track-wrapper {
+    margin-top: 20px;
+    padding: 10px 0;
+  }
+
+  .raw-materials-cards-track {
+    gap: 18px;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  #contact-banner .banner-overlay-wrap {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bm-info-card {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
+  .banner-overlay-wrap {
+    justify-content: center;
+  }
+
+  .bm-welfare-slide-top {
+    margin-bottom: 15px;
+  }
+
+  .bm-welfare-slide-media {
+    height: 300px;
+  }
+
+  .bm-env-header h6 {
+    font-size: 16px;
+  }
+
+  #greenship-banner .banner-title {
+    font-size: 34px;
+    line-height: 1.06;
+    text-align: center !important;
+  }
+
+  #greenship-banner .section-kicker {
+    margin-bottom: clamp(20px, 1.2vw, 16px) !important;
+    text-align: center !important;
+  }
+
+  #greenship-banner .banner-overlay-wrap {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  #prime-banner,
+  #prime-trading #prime-banner {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    max-height: none !important;
+  }
+
+  #prime-banner .banner-overlay-wrap {
+    padding-bottom: 36px !important;
+    justify-content: center !important;
+  }
+
+  #prime-banner .prime-banner-title {
+    font-size: clamp(22px, 5.2vw, 34px) !important;
+    line-height: 1.18 !important;
+    text-align: center !important;
+  }
+
+  #prime-banner .banner-phrase-nowrap {
+    white-space: normal !important;
+    display: inline !important;
+  }
+
+  #prime-banner .about-ref-eyebrow {
+    margin-bottom: 12px !important;
+  }
+
+  #section-about-bms.section-prime-about {
+    padding-top: 48px !important;
+    padding-bottom: 54px !important;
+  }
+
+  .prime-about-grid {
+    gap: 24px !important;
+  }
+
+  .prime-about-image-card {
+    height: clamp(230px, 48vw, 320px) !important;
+    max-height: 320px !important;
+    aspect-ratio: 16 / 10 !important;
+    border-radius: 12px !important;
+  }
+
+  .prime-about-heading {
+    font-size: 27px !important;
+    line-height: 1.24 !important;
+    margin-bottom: 14px !important;
+  }
+
+  .prime-about-lead {
+    font-size: 15.5px !important;
+    line-height: 1.55 !important;
+    margin-bottom: 14px !important;
+  }
+
+  .prime-about-body {
+    gap: 10px !important;
+  }
+
+  .prime-about-body p {
+    font-size: 14px !important;
+    line-height: 1.62 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .prime-products-header {
+    margin-bottom: 32px !important;
+  }
+
+  .prime-products-heading-row {
+    flex-direction: unset !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+
+  .prime-products-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .product-card-media {
+    height: 300px !important;
+  }
+
+  .product-card-hover-title {
+    bottom: 18px !important;
+    left: 18px !important;
+    right: 18px !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+  }
+
+  #section-expertise.section-prime-expertise {
+    padding-top: 48px !important;
+    padding-bottom: 54px !important;
+  }
+
+  .prime-expertise-heading {
+    font-size: 27px !important;
+  }
+
+  .prime-expertise-desc {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 20px !important;
+  }
+
+  .prime-acc-card,
+  .prime-accordion-strip-duo .prime-acc-card {
+    padding: 18px 16px !important;
+  }
+
+  .acc-card-title {
+    font-size: 18px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .acc-card-desc {
+    font-size: 13.5px !important;
+  }
+
+  .prime-acc-card.is-active .acc-card-media,
+  .prime-accordion-strip-duo .prime-acc-card.is-active .acc-card-media {
+    height: clamp(230px, 45vw, 300px) !important;
+  }
+
+  .prime-tabs-nav {
+    width: 100%;
+  }
+
+  .prime-tab-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 10px 14px;
+    font-size: 13.5px;
+  }
+
+  .prime-products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .prime-products-heading {
+    font-size: 28px !important;
+  }
+
+  .prime-products-subtext {
+    font-size: 14px !important;
+  }
+
+  .product-card-media {
+    height: 260px !important;
+  }
+
+  .product-card-hover-title {
+    font-size: 17px !important;
+    padding: 18px 16px !important;
+  }
+
+  .prime-corp-heading {
+    font-size: 28px !important;
+  }
+
+  .prime-corp-desc {
+    font-size: 14px !important;
+  }
+
+  .prime-corp-content-block {
+    margin-bottom: 32px !important;
+  }
+
+  .prime-corp-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+  }
+
+  .prime-corp-card {
+    height: 100px !important;
+    padding: 12px 16px !important;
+  }
+
+  .prime-corp-logo-svg {
+    max-width: 170px !important;
+    max-height: 52px !important;
+  }
+
+  .scrap-editorial-main-title {
+    font-size: 30px !important;
+  }
+
+  .scrap-editorial-hero-frame {
+    min-height: 280px !important;
+  }
+
+  .services-3r-header .section-title h2 {
+    font-size: 26px !important;
+  }
+
+  .services-3r-col {
+    padding: 20px 10px !important;
+  }
+
+  .demolition-heading {
+    font-size: 28px !important;
+  }
+
+  .demolition-image-card {
+    height: 280px !important;
+  }
+
+  .bm-cards-fullwidth-wrap,
+  .bm-touch-fullwidth-wrap,
+  .bm-directory-fullwidth-wrap,
+  .bm-prime-fullwidth-wrap {
+    padding: 0 20px;
+  }
+
+  .bm-cards-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .bm-info-card {
+    border-right: none;
+    border-bottom: 1px solid #e7dfd1;
+  }
+
+  .bm-info-card:last-child {
+    border-bottom: none;
+  }
+
+  .bm-form-row-2 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .contacts-column {
+    padding: 26px 18px;
+  }
+
+  .bm-touch-form-col {
+    padding: 26px 18px;
+  }
+
+  #contact-banner .banner-image {
+    min-height: 380px;
+  }
+
+  .sarip-cards-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .sarip-box {
+    border-radius: 16px !important;
+    margin-top: 0 !important;
+    min-height: auto;
+    padding: 22px 20px;
+  }
+
+  .sarip-box-top {
+    margin-bottom: 18px;
+  }
+
+  .sarip-main-img-wrap {
+    height: 280px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .sarip-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .sarip-cards-bottom {
+    margin-top: 0;
+  }
+
+  .sarip-num {
+    font-size: 38px;
+  }
+
+  .sarip-num-label {
+    width: 100%;
+    max-width: 100%;
+    font-size: 13px;
+  }
+
+  .sarip-box-desc {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  .yard-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .yard-photo-card-wrap {
+    min-height: 240px;
+    height: 240px;
+  }
+
+  .yard-photo-card {
+    border-radius: 18px;
+  }
+
+  .yard-light-master-card {
+    flex-direction: column;
+    min-height: auto;
+    border-radius: 18px;
+  }
+
+  .yard-card-content {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 22px 20px 14px;
+  }
+
+  .yard-card-title {
+    font-size: 20px;
+  }
+
+  .yard-card-address {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+
+  .yard-card-divider {
+    margin-bottom: 16px;
+  }
+
+  .yard-card-map-area {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 0 16px 20px;
+    min-height: 220px;
+  }
+
+  .yard-card-map-graphic {
+    max-width: 250px;
+    max-height: 220px;
+  }
+
+  .bm-policy-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .safety-reveal-grid {
+    grid-template-columns: 1fr;
+    border-radius: 16px;
+  }
+
+  .safety-reveal-card {
+    min-height: 290px;
+    padding: 26px 20px;
+    border-right: none !important;
+    border-bottom: 1px solid #ded7cc;
+  }
+
+  .safety-reveal-card:last-child {
+    border-bottom: none;
+  }
+
+  .safety-reveal-icon {
+    width: 68px;
+    height: 68px;
+  }
+
+  html#greenship-recycling body,
+  #greenship-recycling body {
+    padding-top: 0 !important;
+  }
+
+  #greenship-banner,
+  #greenship-recycling #greenship-banner {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    max-height: none !important;
+  }
+
+  #greenship-banner .banner-overlay-wrap {
+    padding-bottom: 36px !important;
+  }
 
   .ext-row-item .columns,
   .ext-row-item.is-reversed .columns {
@@ -711,11 +2213,6 @@
   .ext-image-card {
     height: 260px;
     border-radius: 0 !important;
-  }
-
-  .ext-info-card {
-    padding: 0;
-    min-height: auto;
   }
 
   .cap-col-visual {
@@ -1247,9 +2744,445 @@
   .impact-cards-outer {
     padding: 0;
   }
+
+  .section-qa,
+  #section-qa.section-qa {
+    padding-top: 50px;
+    padding-bottom: 55px;
+  }
+
+  .qa-header-wrap {
+    margin-bottom: 28px;
+  }
+
+  .qa-slide-card {
+    min-height: 340px;
+    border-radius: 12px;
+  }
+
+  .qa-slide-title {
+    font-size: 18px;
+  }
+
+  .qa-slide-desc {
+    font-size: 13.5px;
+  }
+
+  .qa-slide-content {
+    padding: 18px 16px;
+  }
+
+  .qa-nav-arrows {
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .qa-bg-element {
+    width: 180px;
+    height: 180px;
+    top: -20px;
+    left: -20px;
+    opacity: 0.45;
+  }
+
+  #section-raw-materials.section-raw-materials {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 520px;
+    background-color: #fbf6ee !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 !important;
+  }
+
+  .raw-materials-pinned-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(12px, 2vh, 24px) 0;
+  }
+
+  .raw-materials-header-wrap {
+    margin-bottom: 0;
+  }
+
+  .raw-materials-track-wrapper {
+    margin-top: clamp(12px, 2vh, 20px);
+    padding: 6px 0;
+  }
+
+  .raw-material-card {
+    width: clamp(260px, 42vw, 320px);
+    height: clamp(340px, 48vh, 440px);
+    border-radius: 12px;
+  }
+
+  .raw-material-card-title {
+    font-size: 18px;
+  }
+
+  .raw-material-card-desc {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .raw-material-card-content {
+    padding: 16px 14px;
+  }
+
+  .raw-materials-track-wrapper {
+    margin-top: 14px;
+    padding: 8px 0;
+  }
+
+  .raw-materials-cards-track {
+    gap: 14px;
+  }
+
+  .bm-info-card-icon {
+    margin-bottom: 10px;
+  }
+
+  .bm-info-card {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 @media screen and (max-width: 575px) {
+  .bm-info-card-icon svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .bm-info-card-icon {
+    margin-bottom: 0;
+  }
+
+  .scrap-editorial-bottom-note {
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+
+  .timeline-card-title {
+    font-size: clamp(18px, 1.8vw, 26px);
+  }
+
+  .timeline-year-text {
+    font-size: 24px;
+  }
+
+  .safety-reveal-icon-wrap img {
+    max-width: 60px;
+  }
+
+  .safety-reveal-card {
+    min-height: 260px;
+  }
+
+  .safety-reveal-card {
+    padding: 22px;
+  }
+
+  .safety-reveal-title {
+    font-size: 18px;
+  }
+
+  .bm-env-card-title {
+    font-size: 20px;
+  }
+
+  .bm-env-card-content {
+    padding: 22px 20px;
+    height: auto;
+  }
+
+  .bm-env-card-meta {
+    margin-bottom: 10px;
+  }
+
+  #greenship-recycling .section-kicker-text,
+  #greenship-recycling .banner-tag-text,
+  #greenship-recycling .yard-kicker-text {
+    font-size: 10px;
+    line-height: normal;
+  }
+
+  #greenship-recycling .section-kicker-line,
+  #greenship-recycling .banner-tag-plus,
+  #greenship-recycling .yard-kicker-line {
+
+    width: 14px;
+  }
+
+  #section-about-bms.section-prime-about {
+    padding-top: 40px !important;
+    padding-bottom: 45px !important;
+  }
+
+  .prime-about-grid {
+    gap: 20px !important;
+  }
+
+  .prime-about-image-card {
+    height: clamp(210px, 52vw, 270px) !important;
+    max-height: 270px !important;
+    border-radius: 10px !important;
+  }
+
+  .prime-about-heading {
+    font-size: 24px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .prime-about-lead {
+    font-size: 14.5px !important;
+    line-height: 1.52 !important;
+    margin-bottom: 12px !important;
+  }
+
+  #section-expertise.section-prime-expertise {
+    padding-top: 40px !important;
+    padding-bottom: 45px !important;
+  }
+
+  .prime-expertise-heading {
+    font-size: 24px !important;
+  }
+
+  .prime-expertise-desc {
+    font-size: 13.5px !important;
+    line-height: 1.58 !important;
+  }
+
+  .prime-tab-btn {
+    padding: 8px 10px !important;
+    font-size: 12.5px !important;
+  }
+
+  .prime-acc-card.is-active .acc-card-media,
+  .prime-accordion-strip-duo .prime-acc-card.is-active .acc-card-media {
+    height: clamp(210px, 50vw, 260px) !important;
+  }
+
+  .prime-products-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .prime-products-heading {
+    font-size: 24px !important;
+  }
+
+  .prime-products-subtext {
+    font-size: 13.5px !important;
+    line-height: 1.58 !important;
+  }
+
+  .prime-products-header {
+    margin-bottom: 28px !important;
+  }
+
+  .product-card-media {
+    height: 240px !important;
+  }
+
+  .product-card-hover-title {
+    font-size: 16px !important;
+    padding: 16px 14px !important;
+  }
+
+  .prime-corp-content-block {
+    margin-bottom: 28px !important;
+  }
+
+  .prime-corp-heading {
+    font-size: 24px !important;
+  }
+
+  .prime-corp-desc {
+    font-size: 13.5px !important;
+    line-height: 1.58 !important;
+  }
+
+  .prime-corp-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .prime-corp-card {
+    height: 90px !important;
+    padding: 12px 16px !important;
+  }
+
+  .prime-corp-logo-svg {
+    max-width: 160px !important;
+    max-height: 48px !important;
+  }
+
+  .prime-corp-overlay {
+    background: linear-gradient(180deg,
+        rgba(238, 222, 200, 0.90) 0%,
+        rgba(240, 226, 206, 0.82) 55%,
+        rgba(235, 216, 188, 0.66) 100%) !important;
+  }
+
+  .scrap-editorial-main-title {
+    font-size: 26px !important;
+  }
+
+  .scrap-editorial-hero-frame {
+    min-height: 240px !important;
+  }
+
+  .scrap-editorial-bottom-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0px !important;
+  }
+
+  .scrap-pillars-kicker-col {
+    grid-column: span 1 !important;
+  }
+
+  .services-3r-header .section-title h2 {
+    font-size: 24px !important;
+  }
+
+  .services-3r-desc {
+    font-size: 13.5px !important;
+  }
+
+  .demolition-heading {
+    font-size: 24px !important;
+  }
+
+  .demolition-image-card {
+    height: 240px !important;
+  }
+
+  .bm-welfare-slide-circle-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .bm-welfare-slide-circle-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .bm-welfare-slide-media {
+    height: 250px;
+  }
+
+  .bm-welfare-slider-nav {
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  #greenship-banner,
+  #greenship-recycling #greenship-banner {
+    min-height: 100vh !important;
+  }
+
+  #greenship-banner .banner-overlay-wrap {
+    padding-bottom: 24px !important;
+  }
+
+  #prime-banner,
+  #prime-trading #prime-banner {
+    min-height: 100vh !important;
+  }
+
+  #prime-banner .banner-overlay-wrap {
+    padding-bottom: 28px !important;
+  }
+
+  #prime-banner .prime-banner-title {
+    font-size: clamp(20px, 5.8vw, 28px) !important;
+    line-height: 1.2 !important;
+  }
+
+  .sarip-box {
+    padding: 20px 18px;
+    border-radius: 14px !important;
+  }
+
+  .sarip-main-img-wrap {
+    height: 230px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    border-radius: 14px;
+  }
+
+  .sarip-num {
+    font-size: 36px;
+  }
+
+  .sarip-kicker {
+    font-size: 10.5px;
+    margin-bottom: 10px;
+  }
+
+  .sarip-box-desc {
+    font-size: 13.5px;
+  }
+
+  .sarip-num-label {
+    font-size: 12.5px;
+  }
+
+  .yard-photo-card-wrap {
+    height: 210px;
+    min-height: 210px;
+  }
+
+  .yard-photo-card {
+    border-radius: 16px;
+  }
+
+  .yard-light-master-card {
+    border-radius: 16px;
+  }
+
+  .yard-card-content {
+    padding: 20px 18px 12px;
+  }
+
+  .yard-card-title {
+    font-size: 19px;
+  }
+
+  .yard-card-address {
+    font-size: 13.5px;
+  }
+
+  .yard-card-map-area {
+    padding: 0 14px 18px;
+    min-height: 200px;
+  }
+
+  .yard-card-map-graphic {
+    max-width: 230px;
+    max-height: 200px;
+  }
+
+  .yard-phone-circle-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .yard-phone-circle-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .yard-phone-number {
+    font-size: 15px;
+  }
+
   .legacy-main-heading {
     font-size: 24px !important;
   }
@@ -1681,17 +3614,111 @@
     padding-top: 0px !important;
   }
 
-  .section-title h2 {
-    font-size: 24px;
-    line-height: 30px;
+  .section-title h2,
+  .bm-env-main-heading {
+    font-size: 24px !important;
+    line-height: 30px !important;
+  }
+
+  .section-qa,
+  #section-qa.section-qa {
+    padding-top: 45px;
+    padding-bottom: 50px;
+  }
+
+  .qa-slide-card {
+    min-height: 320px;
+    border-radius: 10px;
+  }
+
+  .qa-slide-title {
+    font-size: 17px;
+  }
+
+  .qa-slide-desc {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .qa-slide-content {
+    padding: 16px 14px;
+  }
+
+  .qa-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  #section-raw-materials.section-raw-materials {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 480px;
+    background-color: #fbf6ee !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 !important;
+  }
+
+  .raw-materials-pinned-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  .raw-material-card {
+    width: clamp(240px, 68vw, 290px);
+    height: clamp(320px, 48vh, 400px);
+    border-radius: 10px;
+  }
+
+  .raw-material-card-title {
+    font-size: 17px;
+  }
+
+  .raw-material-card-desc {
+    font-size: 12.5px;
+    line-height: 1.45;
+  }
+
+  .raw-material-card-content {
+    padding: 14px 12px;
   }
 }
 
 @media screen and (max-width: 480px) {
+  .die-casting-desc {
+    margin-bottom: 20px;
+  }
+
+  .timeline-year-text {
+    font-size: 22px;
+  }
+
+  .timeline-row {
+    padding-left: 0;
+  }
+
+  .timeline-spine-line,
+  .timeline-node-dot {
+    display: none;
+  }
+
+  #greenship-banner .banner-title {
+    font-size: 30px;
+    line-height: 1.07;
+  }
 
   #section-banner .banner-title {
     font-size: 32px;
     line-height: 1.3;
+  }
+
+  #prime-banner .prime-banner-title {
+    font-size: 26px !important;
+    line-height: 1.22 !important;
   }
 
   .theme-logo img {
@@ -1740,24 +3767,118 @@
   .footer-watermark-text {
     font-size: 40px;
   }
+
+  .section-qa,
+  #section-qa.section-qa {
+    padding-top: 40px;
+    padding-bottom: 45px;
+  }
+
+  .qa-slide-card {
+    min-height: 300px;
+  }
+
+  .qa-slide-title {
+    font-size: 16px;
+  }
+
+  .qa-slide-content {
+    padding: 14px 12px;
+  }
+
+  .qa-arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+  .qa-arrow svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  #section-about-bms.section-prime-about {
+    padding-top: 34px !important;
+    padding-bottom: 38px !important;
+  }
+
+  .prime-about-image-card {
+    height: 200px !important;
+    max-height: 200px !important;
+  }
+
+  .prime-about-heading {
+    font-size: 22px !important;
+    line-height: 1.25 !important;
+  }
+
+  .prime-about-lead {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+
+  #section-raw-materials.section-raw-materials {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 460px;
+    background-color: #fbf6ee !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 !important;
+  }
+
+  .raw-materials-pinned-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px 0;
+  }
+
+  .raw-material-card {
+    width: clamp(230px, 72vw, 270px);
+    height: clamp(300px, 46vh, 370px);
+  }
+
+  .raw-material-card-title {
+    font-size: 16px;
+  }
+
+  .raw-material-card-content {
+    padding: 12px 10px;
+  }
+
+  .raw-materials-cards-track {
+    gap: 12px;
+  }
 }
 
 @media screen and (max-width: 420px) {
+  .bm-welfare-slide-card {
+    padding: 18px;
+    background: unset;
+  }
+
+  .bm-welfare-slide-title {
+    font-size: 18px;
+    margin-top: 5px;
+  }
+
+  #greenship-banner .banner-title {
+    font-size: 26px;
+    line-height: 1.07;
+  }
+
   .ext-item-title {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .ext-item-btn {
     font-size: 12px;
   }
 
-  .ext-item-title {
-    margin-bottom: 10px;
-    padding: 10px 0px;
-  }
-
   .ship-stat-num {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .anchor-card-desc {
@@ -1773,6 +3894,11 @@
   #section-banner .banner-title {
     font-size: 26px;
     line-height: 1.3;
+  }
+
+  #prime-banner .prime-banner-title {
+    font-size: 22px !important;
+    line-height: 1.22 !important;
   }
 
   .banner-ref-divider {
@@ -1881,6 +4007,122 @@
   .footer-watermark-text {
     font-size: 28px;
   }
+
+  .sarip-box {
+    padding: 18px 16px;
+    border-radius: 12px !important;
+  }
+
+  .sarip-main-img-wrap {
+    height: 200px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+  }
+
+  .sarip-num {
+    font-size: 32px;
+  }
+
+  .sarip-kicker {
+    font-size: 10px;
+    margin-bottom: 8px;
+  }
+
+  .sarip-box-desc {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .sarip-num-label {
+    font-size: 12px;
+  }
+
+  .yard-photo-card-wrap {
+    height: 180px;
+    min-height: 180px;
+  }
+
+  .yard-photo-card {
+    border-radius: 14px;
+  }
+
+  .yard-light-master-card {
+    border-radius: 14px;
+  }
+
+  .yard-card-content {
+    padding: 18px 16px 10px;
+  }
+
+  .yard-card-title {
+    font-size: 18px;
+  }
+
+  .yard-card-address {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .yard-card-divider {
+    margin-bottom: 14px;
+  }
+
+  .yard-card-map-area {
+    padding: 0 12px 16px;
+    min-height: 180px;
+  }
+
+  .yard-card-map-graphic {
+    max-width: 200px;
+    max-height: 175px;
+  }
+
+  .yard-phone-number {
+    font-size: 14px;
+  }
+
+  .section-qa,
+  #section-qa.section-qa {
+    padding-top: 35px;
+    padding-bottom: 40px;
+  }
+
+  .qa-slide-card {
+    min-height: 290px;
+  }
+
+  .qa-slide-title {
+    font-size: 15.5px;
+  }
+
+  #section-raw-materials.section-raw-materials {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 440px;
+    background-color: #fbf6ee !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 !important;
+  }
+
+  .raw-materials-pinned-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6px 0;
+  }
+
+  .raw-material-card {
+    width: clamp(220px, 74vw, 260px);
+    height: clamp(280px, 45vh, 350px);
+  }
+
+  .raw-material-card-title {
+    font-size: 15.5px;
+  }
 }
 
 @media screen and (max-width: 380px) {
@@ -1918,6 +4160,36 @@
   .footer-watermark-text {
     font-size: 25px;
   }
+
+  .qa-slide-card {
+    min-height: 280px;
+  }
+
+  .qa-slide-title {
+    font-size: 15px;
+  }
+
+  .qa-slide-desc {
+    font-size: 12.5px;
+  }
+
+  .qa-arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .raw-material-card {
+    width: 220px;
+    height: 290px;
+  }
+
+  .raw-material-card-title {
+    font-size: 15px;
+  }
+
+  .raw-material-card-desc {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 360px) {
@@ -1934,4 +4206,175 @@
     font-size: 23px;
   }
 
+  .sarip-box {
+    padding: 16px 14px;
+  }
+
+  .sarip-num {
+    font-size: 28px;
+  }
+
+  .yard-photo-card-wrap {
+    height: 160px;
+    min-height: 160px;
+  }
+
+  .yard-card-content {
+    padding: 16px 14px 10px;
+  }
+
+  .yard-card-title {
+    font-size: 17px;
+  }
+
+  .yard-card-map-graphic {
+    max-width: 180px;
+    max-height: 160px;
+  }
+
+  .qa-slide-card {
+    min-height: 270px;
+  }
+
+  .qa-slide-title {
+    font-size: 14.5px;
+  }
+
+  .qa-slide-content {
+    padding: 12px 10px;
+  }
+
+  #section-raw-materials.section-raw-materials {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 420px;
+    background-color: #fbf6ee !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 !important;
+  }
+
+  .raw-materials-pinned-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4px 0;
+  }
+
+  .raw-material-card {
+    width: clamp(210px, 76vw, 240px);
+    height: clamp(260px, 44vh, 330px);
+  }
+
+  .raw-material-card-title {
+    font-size: 14.5px;
+  }
+
+  .raw-material-card-content {
+    padding: 10px 8px;
+  }
+}
+
+/* ==========================================================================
+   Responsive Styles for Contact Page
+   ========================================================================== */
+@media screen and (max-width: 1024px) {
+
+  .bm-cards-fullwidth-wrap,
+  .bm-touch-fullwidth-wrap,
+  .bm-directory-fullwidth-wrap {
+    padding: 0 40px;
+  }
+
+  .bm-cards-row {
+    grid-template-columns: 1fr;
+  }
+
+  .bm-info-card {
+    border-right: none;
+    border-bottom: 1px solid #e7dfd1;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+
+  .bm-info-card:last-child {
+    border-bottom: none;
+  }
+
+  .bm-touch-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bm-map-card {
+    min-height: 400px;
+  }
+
+  .contacts-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contacts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contacts-column:nth-child(odd) {
+    border-right: 1px solid #e7ded2;
+  }
+
+  .contacts-column:nth-child(even) {
+    border-right: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .bm-cards-fullwidth-wrap,
+  .bm-touch-fullwidth-wrap,
+  .bm-directory-fullwidth-wrap {
+    padding: 0 20px;
+  }
+
+  .bm-map-card {
+    min-height: 300px;
+  }
+
+  .bm-touch-form-col {
+    padding: 24px 20px;
+  }
+
+  .bm-form-row-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .contacts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contacts-column {
+    border-right: none !important;
+    border-bottom: 1px solid #e7ded2;
+  }
+
+  .contacts-column:last-child {
+    border-bottom: none;
+  }
+
+  .contacts-heading {
+    font-size: 28px;
+  }
+
+  .bm-touch-heading {
+    font-size: 28px;
+  }
+
+  .touch-bg-compass {
+    top: -40px;
+    right: -40px;
+    width: 280px;
+    height: 280px;
+    opacity: 0.5;
+  }
 }
