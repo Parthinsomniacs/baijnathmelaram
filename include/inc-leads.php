@@ -10,6 +10,7 @@ if (isset($_POST) && !empty($_POST) && $_POST['contact'] == "" && $_POST['site_u
 	$lname = (isset($_POST['lname'])) ? mysqli_real_escape_string($connection, $_POST['lname']) : '';
 	$email = (isset($_POST['email'])) ? mysqli_real_escape_string($connection, $_POST['email']) : '';
 	$phone = (isset($_POST['phone'])) ? mysqli_real_escape_string($connection, $_POST['phone']) : '';
+	$countrycode = (isset($_POST['countrycode'])) ? mysqli_real_escape_string($connection, $_POST['countrycode']) : '';
 	$message = (isset($_POST['message'])) ? mysqli_real_escape_string($connection, $_POST['message']) : '';
 	$formtype = (isset($_POST['formtype'])) ? mysqli_real_escape_string($connection, $_POST['formtype']) : '';
 	$random_val = (isset($_POST['random_val'])) ? mysqli_real_escape_string($connection, $_POST['random_val']) : '';
@@ -50,19 +51,25 @@ if (isset($_POST) && !empty($_POST) && $_POST['contact'] == "" && $_POST['site_u
 		$errmsg .= 'Enter a valid Name. Only Alphabets accepted. ';
 	}
 
-	/*If site accepts Only India phone Number phone*/
+	/* Phone number validation */
 	if ($phone == "") {
 		$errorStatus = 1;
 		$errmsg .= 'Mobile Number is required. ';
-	} else if (!ctype_digit($phone)) {
+	} else if (!preg_match("/^[0-9+ \-]+$/", $phone)) {
 		$errorStatus = 1;
-		$errmsg .= 'Mobile Number should be numberic. ';
-	} else if (strlen($phone) != 10) {
-		$errorStatus = 1;
-		$errmsg .= 'Mobile Number should contain 10 digits. ';
-	} else if (!preg_match("/^[0]?[6789]\d{9}$/", $phone)) {
-		$errorStatus = 1;
-		$errmsg .= 'Provide proper mobile number. ';
+		$errmsg .= 'Mobile Number should be numeric. ';
+	} else if ($countrycode == '' || $countrycode == '+91' || $countrycode == '91') {
+		$cleanDigits = preg_replace("/\D/", "", $phone);
+		if (strlen($cleanDigits) != 10 || !preg_match("/^[6789]\d{9}$/", $cleanDigits)) {
+			$errorStatus = 1;
+			$errmsg .= 'Provide proper 10-digit mobile number. ';
+		}
+	} else {
+		$cleanDigits = preg_replace("/\D/", "", $phone);
+		if (strlen($cleanDigits) < 6 || strlen($cleanDigits) > 15) {
+			$errorStatus = 1;
+			$errmsg .= 'Provide proper mobile number. ';
+		}
 	}
 	/*Duplicate entry check on mobile number start*/
 	/*/else {
@@ -101,8 +108,8 @@ if (isset($_POST) && !empty($_POST) && $_POST['contact'] == "" && $_POST['site_u
 
 
 		if (in_array($random_val, $a)) {
-			$sql = "INSERT INTO leads (fname,lname,email,phone,formtype,message,random_val,utm_source,utm_medium,utm_campaign,utm_content,utm_term,utm_isource,utm_imedium,utm_icampaign,utm_icontent,utm_iterm,utm_initial_referrer,utm_last_referrer,utm_landing_page,utm_visits,browser_name,browser_version,browser_platform,ip_address,created_at)
-			values('$fname','$lname','$email','$phone','$formtype','$message','$random_val','$utm_source','$utm_medium','$utm_campaign','$utm_content','$utm_term','$utm_isource','$utm_imedium','$utm_icampaign','$utm_icontent','$utm_iterm','$utm_initial_referrer','$utm_last_referrer','$utm_landing_page','$utm_visits','$browser_name','$browser_version','$browser_platform','$ip_address','$currentimestamp')";
+			$sql = "INSERT INTO leads (fname,lname,email,cuntrycode,phone,formtype,message,random_val,utm_source,utm_medium,utm_campaign,utm_content,utm_term,utm_isource,utm_imedium,utm_icampaign,utm_icontent,utm_iterm,utm_initial_referrer,utm_last_referrer,utm_landing_page,utm_visits,browser_name,browser_version,browser_platform,ip_address,created_at)
+			values('$fname','$lname','$email','$countrycode','$phone','$formtype','$message','$random_val','$utm_source','$utm_medium','$utm_campaign','$utm_content','$utm_term','$utm_isource','$utm_imedium','$utm_icampaign','$utm_icontent','$utm_iterm','$utm_initial_referrer','$utm_last_referrer','$utm_landing_page','$utm_visits','$browser_name','$browser_version','$browser_platform','$ip_address','$currentimestamp')";
 		} else {
 			$sql = "INSERT INTO junkleads (fname,lname,email,phone,formtype,message,random_val,utm_source,utm_medium,utm_campaign,utm_content,utm_term,utm_isource,utm_imedium,utm_icampaign,utm_icontent,utm_iterm,utm_initial_referrer,utm_last_referrer,utm_landing_page,utm_visits,browser_name,browser_version,browser_platform,ip_address,created_at)
 			values('$fname','$lname','$email','$phone','$formtype','$message','$random_val','$utm_source','$utm_medium','$utm_campaign','$utm_content','$utm_term','$utm_isource','$utm_imedium','$utm_icampaign','$utm_icontent','$utm_iterm','$utm_initial_referrer','$utm_last_referrer','$utm_landing_page','$utm_visits','$browser_name','$browser_version','$browser_platform','$ip_address','$currentimestamp')";
@@ -120,7 +127,7 @@ if (isset($_POST) && !empty($_POST) && $_POST['contact'] == "" && $_POST['site_u
 			$sendEmail = true;
 			if ($sendEmail == true) {
 				if ($mode != 'test') {
-					echo '<script>window.location="' . $thankyou . '?reg=success&name=' . $name . '&phone=' . $phone . '&email=' . $email . '&formtype=' . $formtype . '"</script>';
+					echo '<script>window.location="' . $thankyou . '?reg=success&name=' . $name . '&countrycode=' . urlencode($countrycode) . '&phone=' . $phone . '&email=' . $email . '&formtype=' . $formtype . '"</script>';
 				} else {
 					require $leadsendmail;
 					echo 'Success<br/><br/>'; /*Success Message*/

@@ -65,7 +65,7 @@ $utm = "yes";
 
       <div class="bm-cards-fullwidth-wrap">
         <div class="bm-cards-row">
-          
+
           <!-- Card 1: Office Location -->
           <div class="bm-info-card">
             <div class="bm-info-card-icon" aria-hidden="true">
@@ -141,7 +141,7 @@ $utm = "yes";
 
       <div class="bm-touch-fullwidth-wrap">
         <div class="bm-touch-grid">
-          
+
           <!-- Left Column: Google Map Embed -->
           <div class="bm-touch-map-col">
             <div class="bm-map-card">
@@ -182,60 +182,61 @@ $utm = "yes";
               <span class="word-mask"><span class="word-inner">Touch</span></span>
             </h2>
 
-            <form id="contact-page-form" class="bm-touch-form" action="<?php echo $siteurl; ?>include/inc-leads.php" method="POST" autocomplete="off" novalidate>
-              <!-- System Hidden Fields for inc-leads.php -->
-              <input type="hidden" name="formtype" value="contact-page">
-              <input type="hidden" name="site_url" value="<?php echo $url; ?>">
-              <input type="hidden" name="contact" value="">
-              <input type="hidden" name="random_val" value="<?php echo $random_val; ?>">
-              <input type="hidden" name="tracker_code" value="<?php echo isset($_GET['tracker_code']) ? $_GET['tracker_code'] : ''; ?>">
-              <input type="hidden" name="gclid" value="<?php echo isset($_GET['gclid']) ? $_GET['gclid'] : ''; ?>">
-              <input type="hidden" name="countrycode" id="contact-selected-countrycode" value="+91">
-              <input type="hidden" name="fname" id="contact-fname" value="">
-              <input type="hidden" name="lname" id="contact-lname" value="">
-
-              <!-- 2x2 Fields Grid: Full name & Email Address -->
-              <div class="bm-form-row-2">
-                <div class="bm-input-group">
-                  <input type="text" class="bm-touch-input" name="fullname" id="contact-fullname" placeholder="Full name" required />
-                  <span class="bm-field-error" id="error-fullname"></span>
+            <div class="theme-modal-card-body">
+              <form class="nobottommargin" id="inquiry" name="scontactform" onsubmit="validateInquiryForm('inquiry')&disableButton()" action="<?php echo $siteurl; ?>include/inc-leads.php" method="post" novalidate autocomplete="off">
+                <div class="columns is-multiline is-mobile is-vcentered row-register">
+                  <div class="column is-12-mobile is-6-tablet is-6-desktop is-6-widescreen col-register">
+                    <div class="col-form">
+                      <input type="text" class="form-control fname" name="fname" id="inquiry-fname" placeholder="First Name*" min-length="1" max-length="100" required />
+                      <label class="error-msg fnameerror" id="inquiryformerror-1"></label>
+                    </div>
+                  </div>
+                  <div class="column is-12-mobile is-6-tablet is-6-desktop is-6-widescreen col-register">
+                    <div class="col-form">
+                      <input type="text" class="form-control lname" name="lname" id="inquiry-lname" placeholder="Last Name*" min-length="1" max-length="100" required />
+                      <label class="error-msg" id="inquiryformerror-2"></label>
+                    </div>
+                  </div>
+                  <div class="column is-12-mobile is-12-tablet is-12-desktop is-12-widescreen col-register">
+                    <div class="col-form custom-mobile-number mobile-with-country-code">
+                      <div class="country-code">
+                        <?php require_once $countrycode_inc; ?>
+                      </div>
+                      <div class="control phone-input-control">
+                        <input type="tel" class="form-control phone numeric custom-phone-control" name="phone" id="inquiry-phone" placeholder="Phone Number*" required>
+                      </div>
+                      <label class="error-msg" id="inquiryformerror-3"></label>
+                    </div>
+                  </div>
+                  <div class="column is-12-mobile is-12-tablet is-12-desktop is-12-widescreen col-register">
+                    <div class="col-form">
+                      <input type="text" class="form-control email" name="email" id="inquiry-email" placeholder="Email Address*" required>
+                      <label class="error-msg" id="inquiryformerror-4"></label>
+                    </div>
+                  </div>
+                  <?php if ($captcha) { ?>
+                    <div class="column is-12-mobile is-12-tablet is-12-desktop is-12-widescreen">
+                      <div class="col-form">
+                        <span class="captcha-sticky-query"><?= $math1 ?>+<?= $math2 ?>=</span>
+                        <input type="text" class="form-control captcha pl-80" name="captcha" id="inquiry-captcha" oninput="getvalue('inquiry',this.value)" placeholder="" required>
+                        <label class="error-msg" id="inquiryformerror-5"></label>
+                      </div>
+                      <input type="hidden" id="inquiry-query_result" name="query_result" value="<?= $captcharesult ?>">
+                    </div>
+                  <?php } ?>
+                  <input type="hidden" name="formtype" id="formtype" value="enquire" />
+                  <input type="hidden" name="tracker_code" value="<?php echo isset($_GET['tracker_code']) ? $_GET['tracker_code'] : ''; ?>">
+                  <input type="hidden" name="gclid" value="<?php echo isset($_GET['gclid']) ? $_GET['gclid'] : ''; ?>">
+                  <input type="hidden" name="site_url" value="<?= $url; ?>">
+                  <input type="hidden" name="contact" value="">
+                  <input type="hidden" name="random_val" value="<?php echo $random_val; ?>">
+                  <div class="column is-12-mobile is-12-tablet is-12-desktop is-12-widescreen col-register">
+                    <button class="btn btn-white full-width inquiry-submit" type="submit" id="inquiry-submit" name="submit" value="submit"><span>Submit</span></button>
+                  </div>
                 </div>
-                <div class="bm-input-group">
-                  <input type="email" class="bm-touch-input" name="email" id="contact-email" placeholder="Email Address" required />
-                  <span class="bm-field-error" id="error-email"></span>
-                </div>
-              </div>
-
-              <!-- 2x2 Fields Grid: Phone & Company -->
-              <div class="bm-form-row-2">
-                <div class="bm-input-group">
-                  <input type="tel" class="bm-touch-input" name="phone" id="contact-phone" placeholder="Phone" pattern="[0-9]{10}" required />
-                  <span class="bm-field-error" id="error-phone"></span>
-                </div>
-                <div class="bm-input-group">
-                  <input type="text" class="bm-touch-input" name="company" id="contact-company" placeholder="Company" />
-                  <span class="bm-field-error" id="error-company"></span>
-                </div>
-              </div>
-
-              <!-- Message Full Width -->
-              <div class="bm-input-group">
-                <textarea class="bm-touch-textarea" name="message" id="contact-message" placeholder="Message" rows="5" required></textarea>
-                <span class="bm-field-error" id="error-message"></span>
-              </div>
-
-              <!-- Submit Button Matching Screenshot -->
-              <div class="bm-submit-row">
-                <button type="submit" class="bm-touch-submit-btn" id="contact-submit-btn">
-                  <span>Submit Request</span>
-                </button>
-              </div>
-
-              <!-- Status Alert Notification -->
-              <div class="contact-status-alert" id="contact-status-alert" role="alert" tabindex="-1"></div>
-            </form>
+              </form>
+            </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -249,7 +250,7 @@ $utm = "yes";
 
       <div class="bm-directory-fullwidth-wrap">
         <div class="contacts-layout">
-          
+
           <!-- Left Column: Title -->
           <div class="contacts-title-col">
             <div class="bm-touch-kicker">
@@ -266,10 +267,10 @@ $utm = "yes";
 
           <!-- Right: 3 Architectural Columns -->
           <div class="contacts-grid">
-            
+
             <!-- Column 1: Registered Office, Ship Recycling Yard, Connect (Nitesh Agarwal) -->
             <div class="contacts-column">
-              
+
               <!-- 1. Registered Office -->
               <div class="contacts-block">
                 <span class="contacts-city-kicker">MUMBAI &bull; REGISTERED</span>
@@ -321,7 +322,7 @@ $utm = "yes";
 
             <!-- Column 2: Branch Office, Connect (Vinod Kumar Agarwal) -->
             <div class="contacts-column">
-              
+
               <!-- 1. Branch Office -->
               <div class="contacts-block">
                 <span class="contacts-city-kicker">BHAVNAGAR &bull; GUJARAT</span>
@@ -359,7 +360,7 @@ $utm = "yes";
 
             <!-- Column 3: Administrative Office, Connect (Bhupendra Kumar Agarwal & Madhur Agarwal) -->
             <div class="contacts-column">
-              
+
               <!-- 1. Administrative Office -->
               <div class="contacts-block">
                 <span class="contacts-city-kicker">MUMBAI &bull; CORPORATE HQ</span>
@@ -385,7 +386,7 @@ $utm = "yes";
               <!-- 2. Connect: Bhupendra Kumar Agarwal & Madhur Agarwal -->
               <div class="contacts-block">
                 <span class="contacts-connect-kicker">Connect</span>
-                
+
                 <!-- Bhupendra Kumar Agarwal -->
                 <div class="contacts-person-group">
                   <h4 class="contacts-person-name">Bhupendra Kumar Agarwal</h4>
@@ -438,167 +439,7 @@ $utm = "yes";
   <!-- Contact Page Interactive Scripts -->
   <script>
     (function() {
-      // 1. Form Controller & UI/UX Pro Max Validation
-      const form = document.getElementById('contact-page-form');
-      const alertBox = document.getElementById('contact-status-alert');
-      const submitBtn = document.getElementById('contact-submit-btn');
-
-      const fullnameInput = document.getElementById('contact-fullname');
-      const emailInput = document.getElementById('contact-email');
-      const phoneInput = document.getElementById('contact-phone');
-      const companyInput = document.getElementById('contact-company');
-      const messageInput = document.getElementById('contact-message');
-
-      const fnameHidden = document.getElementById('contact-fname');
-      const lnameHidden = document.getElementById('contact-lname');
-
-      function setFieldError(fieldId, errorText) {
-        const errorEl = document.getElementById('error-' + fieldId);
-        const inputEl = document.getElementById('contact-' + fieldId);
-        if (errorEl) {
-          errorEl.textContent = errorText;
-          errorEl.style.display = errorText ? 'block' : 'none';
-        }
-        if (inputEl) {
-          if (errorText) {
-            inputEl.classList.add('is-invalid');
-          } else {
-            inputEl.classList.remove('is-invalid');
-          }
-        }
-      }
-
-      function clearAllErrors() {
-        ['fullname', 'email', 'phone', 'company', 'message'].forEach(function(f) {
-          setFieldError(f, '');
-        });
-        if (alertBox) {
-          alertBox.className = 'contact-status-alert';
-          alertBox.textContent = '';
-          alertBox.style.display = 'none';
-        }
-      }
-
-      // Live validation on blur
-      if (fullnameInput) {
-        fullnameInput.addEventListener('blur', function() {
-          const val = this.value.trim();
-          if (!val) {
-            setFieldError('fullname', 'Please enter your full name.');
-          } else if (val.length < 2) {
-            setFieldError('fullname', 'Full name must be at least 2 characters.');
-          } else {
-            setFieldError('fullname', '');
-          }
-        });
-      }
-
-      if (emailInput) {
-        emailInput.addEventListener('blur', function() {
-          const val = this.value.trim();
-          if (!val) {
-            setFieldError('email', 'Please enter your email address.');
-          } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
-            setFieldError('email', 'Please enter a valid email address.');
-          } else {
-            setFieldError('email', '');
-          }
-        });
-      }
-
-      if (phoneInput) {
-        phoneInput.addEventListener('blur', function() {
-          const val = this.value.trim().replace(/\D/g, '');
-          if (!val) {
-            setFieldError('phone', 'Please enter your phone number.');
-          } else if (val.length < 10) {
-            setFieldError('phone', 'Phone number must be at least 10 digits.');
-          } else {
-            setFieldError('phone', '');
-          }
-        });
-      }
-
-      if (messageInput) {
-        messageInput.addEventListener('blur', function() {
-          const val = this.value.trim();
-          if (!val) {
-            setFieldError('message', 'Please provide your message.');
-          } else {
-            setFieldError('message', '');
-          }
-        });
-      }
-
-      if (form) {
-        form.addEventListener('submit', function(e) {
-          clearAllErrors();
-
-          const fullName = fullnameInput ? fullnameInput.value.trim() : '';
-          const email = emailInput ? emailInput.value.trim() : '';
-          const rawPhone = phoneInput ? phoneInput.value.trim() : '';
-          const cleanPhone = rawPhone.replace(/\D/g, '');
-          const company = companyInput ? companyInput.value.trim() : '';
-          const rawMessage = messageInput ? messageInput.value.trim() : '';
-
-          let hasError = false;
-
-          // 1. Full name check & split for inc-leads.php backend compatibility
-          if (!fullName || fullName.length < 2) {
-            setFieldError('fullname', 'Full name is required (at least 2 characters).');
-            hasError = true;
-          } else {
-            const nameParts = fullName.split(/\s+/);
-            const fname = nameParts[0] || '';
-            const lname = nameParts.slice(1).join(' ') || '.';
-            if (fnameHidden) fnameHidden.value = fname;
-            if (lnameHidden) lnameHidden.value = lname;
-          }
-
-          // 2. Email check
-          if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            setFieldError('email', 'Please enter a valid email address.');
-            hasError = true;
-          }
-
-          // 3. Phone check
-          if (!cleanPhone || cleanPhone.length < 10) {
-            setFieldError('phone', 'Please enter a valid 10-digit phone number.');
-            hasError = true;
-          } else if (phoneInput) {
-            phoneInput.value = cleanPhone;
-          }
-
-          // 4. Message check
-          if (!rawMessage) {
-            setFieldError('message', 'Please enter your message.');
-            hasError = true;
-          }
-
-          if (hasError) {
-            e.preventDefault();
-            if (alertBox) {
-              alertBox.textContent = 'Please correct the highlighted errors above.';
-              alertBox.className = 'contact-status-alert is-error';
-              alertBox.style.display = 'block';
-              alertBox.focus();
-            }
-            return false;
-          }
-
-          // Append company to message before submit if present
-          if (company && messageInput) {
-            messageInput.value = rawMessage + '\n\nCompany: ' + company;
-          }
-
-          // Button loading feedback
-          if (submitBtn) {
-            submitBtn.disabled = true;
-            submitBtn.style.opacity = '0.75';
-            submitBtn.innerHTML = '<span>Submitting Request...</span>';
-          }
-        });
-      }
+      // 1. Form Validation is now handled by validateInquiryForm() in inc-foot-scripts.php
 
       // 2. Interactive Map Switcher
       const mapIframe = document.getElementById('touch-google-map');
@@ -607,7 +448,9 @@ $utm = "yes";
       if (mapButtons.length && mapIframe) {
         mapButtons.forEach(function(btn) {
           btn.addEventListener('click', function() {
-            mapButtons.forEach(function(b) { b.classList.remove('is-active'); });
+            mapButtons.forEach(function(b) {
+              b.classList.remove('is-active');
+            });
             this.classList.add('is-active');
 
             const query = this.getAttribute('data-query');
@@ -644,7 +487,9 @@ $utm = "yes";
           const divider = banner.querySelector('.banner-divider');
           const bannerImg = banner.querySelector('.contact-banner-img');
 
-          const heroTl = gsap.timeline({ delay: 0.15 });
+          const heroTl = gsap.timeline({
+            delay: 0.15
+          });
 
           if (bannerImg) {
             heroTl.fromTo(bannerImg, {
@@ -840,4 +685,5 @@ $utm = "yes";
     })();
   </script>
 </body>
+
 </html>

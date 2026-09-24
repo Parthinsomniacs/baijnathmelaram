@@ -590,31 +590,103 @@ $utm = "yes";
         <div class="column is-12-mobile is-5-tablet is-6-desktop is-5-widescreen  cap-col-list">
           <ul class="cap-items-list">
             <li class="cap-item is-active" data-index="0">
-              <span class="cap-item-text">Bulk Carrier</span>
+              <a href="<?php echo $siteurl; ?>bulkcarrier.php" class="cap-item-link" title="View Bulk Carrier Ships">
+                <span class="cap-item-text">Bulk Carrier</span>
+                <span class="cap-item-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </span>
+              </a>
             </li>
             <li class="cap-item" data-index="1">
-              <span class="cap-item-text">General Cargo</span>
+              <a href="<?php echo $siteurl; ?>generalcargo.php" class="cap-item-link" title="View General Cargo Ships">
+                <span class="cap-item-text">General Cargo</span>
+                <span class="cap-item-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </span>
+              </a>
             </li>
             <li class="cap-item" data-index="2">
-              <span class="cap-item-text">Container</span>
+              <a href="<?php echo $siteurl; ?>container.php" class="cap-item-link" title="View Container Ships">
+                <span class="cap-item-text">Container</span>
+                <span class="cap-item-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </span>
+              </a>
             </li>
             <li class="cap-item" data-index="3">
-              <span class="cap-item-text">Tanker</span>
+              <a href="<?php echo $siteurl; ?>tanker.php" class="cap-item-link" title="View Tanker Ships">
+                <span class="cap-item-text">Tanker</span>
+                <span class="cap-item-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </span>
+              </a>
             </li>
             <li class="cap-item" data-index="4">
-              <span class="cap-item-text">Roro &amp; Crew</span>
+              <a href="<?php echo $siteurl; ?>rorocrew.php" class="cap-item-link" title="View Roro &amp; Crew Ships">
+                <span class="cap-item-text">Roro &amp; Crew</span>
+                <span class="cap-item-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </span>
+              </a>
             </li>
             <li class="cap-item" data-index="5">
-              <span class="cap-item-text">FPSO</span>
+              <a href="<?php echo $siteurl; ?>fpso.php" class="cap-item-link" title="View FPSO Ships">
+                <span class="cap-item-text">FPSO</span>
+                <span class="cap-item-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </span>
+              </a>
             </li>
             <li class="cap-item" data-index="6">
-              <span class="cap-item-text">Military</span>
+              <a href="<?php echo $siteurl; ?>military.php" class="cap-item-link" title="View Military Ships">
+                <span class="cap-item-text">Military</span>
+                <span class="cap-item-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </span>
+              </a>
             </li>
             <li class="cap-item" data-index="7">
-              <span class="cap-item-text">Research Vessel</span>
+              <a href="<?php echo $siteurl; ?>researchvessel.php" class="cap-item-link" title="View Research Vessel Ships">
+                <span class="cap-item-text">Research Vessel</span>
+                <span class="cap-item-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </span>
+              </a>
             </li>
             <li class="cap-item" data-index="8">
-              <span class="cap-item-text">Others</span>
+              <a href="<?php echo $siteurl; ?>others.php" class="cap-item-link" title="View Other Ships">
+                <span class="cap-item-text">Others</span>
+                <span class="cap-item-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </span>
+              </a>
             </li>
           </ul>
         </div>

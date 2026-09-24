@@ -21,7 +21,7 @@
 	<?php require_once $header; ?>
     <main class="page">
       <div class="card primary wow fadeInUp animated" data-wow-delay="0.3s">
-        <h1 class="title">Welcome to the insomniacs Admin!</h1>
+        <h1 class="title">Welcome to the Midnight Admin!</h1>
         <span><a href="#" class="link" target="_blank" style="color: #fff;">View Homepage <i class="icon fas fa-arrow-right"></i></a></span>
       </div>
       <div class="card chart wow fadeInUp animated" data-wow-delay="0.3s" id="views-chart">

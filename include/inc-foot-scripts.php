@@ -1,6 +1,8 @@
 <!--Common JS-->
 <?php require_once $alljs; ?>
+<script src="<?php echo $jsurl; ?>jquery.min.js"></script>
 <script src="<?php echo $jsurl; ?>lenis.min.js"></script>
+<script src="<?php echo $jsurl; ?>select2.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script>
@@ -794,6 +796,11 @@
 		// Initial activation (first item active by default)
 		setActiveCapability(0);
 
+		items.forEach((item, i) => {
+			item.addEventListener("mouseenter", () => setActiveCapability(i));
+			item.addEventListener("click", () => setActiveCapability(i));
+		});
+
 		// GSAP ScrollTrigger
 		if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
 			gsap.registerPlugin(ScrollTrigger);
@@ -1086,7 +1093,9 @@
 								counter.dataset.animated = "true";
 								const target = parseFloat(counter.getAttribute("data-target")) || 0;
 								const decimals = parseInt(counter.getAttribute("data-decimals"), 10) || 0;
-								const obj = { val: 0 };
+								const obj = {
+									val: 0
+								};
 								gsap.to(obj, {
 									val: target,
 									duration: 1.8,
@@ -1137,7 +1146,9 @@
 							counter.dataset.animated = "true";
 							const target = parseFloat(counter.getAttribute("data-target")) || 0;
 							const decimals = parseInt(counter.getAttribute("data-decimals"), 10) || 0;
-							const obj = { val: 0 };
+							const obj = {
+								val: 0
+							};
 							gsap.to(obj, {
 								val: target,
 								duration: 1.8,
@@ -2105,11 +2116,25 @@
 			});
 
 			if (eyebrowLines.length) {
-				qaTl.fromTo(eyebrowLines, { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power2.out" }, 0);
+				qaTl.fromTo(eyebrowLines, {
+					scaleX: 0
+				}, {
+					scaleX: 1,
+					duration: 0.6,
+					ease: "power2.out"
+				}, 0);
 			}
 
 			if (eyebrowText) {
-				qaTl.fromTo(eyebrowText, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 0.08);
+				qaTl.fromTo(eyebrowText, {
+					y: 15,
+					opacity: 0
+				}, {
+					y: 0,
+					opacity: 1,
+					duration: 0.5,
+					ease: "power2.out"
+				}, 0.08);
 			}
 
 			if (words.length) {
@@ -2187,11 +2212,26 @@
 		});
 
 		if (eyebrowLine) {
-			dieTl.fromTo(eyebrowLine, { scaleX: 0, transformOrigin: "left center" }, { scaleX: 1, duration: 0.6, ease: "power2.out" }, 0);
+			dieTl.fromTo(eyebrowLine, {
+				scaleX: 0,
+				transformOrigin: "left center"
+			}, {
+				scaleX: 1,
+				duration: 0.6,
+				ease: "power2.out"
+			}, 0);
 		}
 
 		if (eyebrowText) {
-			dieTl.fromTo(eyebrowText, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 0.08);
+			dieTl.fromTo(eyebrowText, {
+				y: 15,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.5,
+				ease: "power2.out"
+			}, 0.08);
 		}
 
 		if (words.length) {
@@ -2208,11 +2248,28 @@
 		}
 
 		if (desc) {
-			dieTl.fromTo(desc, { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "power2.out" }, 0.22);
+			dieTl.fromTo(desc, {
+				y: 25,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.7,
+				ease: "power2.out"
+			}, 0.22);
 		}
 
 		if (topPoints.length) {
-			dieTl.fromTo(topPoints, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, stagger: 0.08, ease: "power2.out" }, 0.32);
+			dieTl.fromTo(topPoints, {
+				y: 20,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.6,
+				stagger: 0.08,
+				ease: "power2.out"
+			}, 0.32);
 		}
 
 		if (subblock) {
@@ -2269,11 +2326,26 @@
 		});
 
 		if (eyebrowLine) {
-			filesTl.fromTo(eyebrowLine, { scaleX: 0, transformOrigin: "left center" }, { scaleX: 1, duration: 0.6, ease: "power2.out" }, 0);
+			filesTl.fromTo(eyebrowLine, {
+				scaleX: 0,
+				transformOrigin: "left center"
+			}, {
+				scaleX: 1,
+				duration: 0.6,
+				ease: "power2.out"
+			}, 0);
 		}
 
 		if (eyebrowText) {
-			filesTl.fromTo(eyebrowText, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 0.08);
+			filesTl.fromTo(eyebrowText, {
+				y: 15,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.5,
+				ease: "power2.out"
+			}, 0.08);
 		}
 
 		if (words.length) {
@@ -2302,7 +2374,15 @@
 				clearProps: "all"
 			}, 0.25);
 		} else if (tableWrap) {
-			filesTl.fromTo(tableWrap, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.75, ease: "power2.out" }, 0.25);
+			filesTl.fromTo(tableWrap, {
+				y: 30,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.75,
+				ease: "power2.out"
+			}, 0.25);
 		}
 	}
 
@@ -2333,11 +2413,25 @@
 		});
 
 		if (eyebrowLines.length) {
-			rawHeaderTl.fromTo(eyebrowLines, { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power2.out" }, 0);
+			rawHeaderTl.fromTo(eyebrowLines, {
+				scaleX: 0
+			}, {
+				scaleX: 1,
+				duration: 0.6,
+				ease: "power2.out"
+			}, 0);
 		}
 
 		if (eyebrowText) {
-			rawHeaderTl.fromTo(eyebrowText, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 0.08);
+			rawHeaderTl.fromTo(eyebrowText, {
+				y: 15,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				duration: 0.5,
+				ease: "power2.out"
+			}, 0.08);
 		}
 
 		if (words.length) {
@@ -3024,12 +3118,29 @@
 		return false;
 	}
 
-	function phonenumber(inputtxt) {
-		var phoneno = /^\(?([6-9]{1})\)?([0-9]{9})$/;
-		if (inputtxt.match(phoneno)) {
-			return true;
+	function phonenumber(inputtxt, obj) {
+		var selectedCode = "+91";
+		if (obj) {
+			var form = document.getElementById(obj);
+			if (form) {
+				var countrySelect = form.querySelector('.countrycode');
+				if (countrySelect && countrySelect.value) {
+					selectedCode = countrySelect.value;
+				}
+			}
 		} else {
-			return false;
+			var countrySelect = document.querySelector('.countrycode');
+			if (countrySelect && countrySelect.value) {
+				selectedCode = countrySelect.value;
+			}
+		}
+
+		var clean = (inputtxt || '').toString().replace(/[\s\-()]/g, '');
+		if (selectedCode === "+91" || selectedCode === "91") {
+			var phoneno = /^[6-9][0-9]{9}$/;
+			return phoneno.test(clean);
+		} else {
+			return clean.length >= 6 && clean.length <= 15 && /^[0-9]+$/.test(clean);
 		}
 	}
 
@@ -3106,7 +3217,7 @@
 		}
 
 
-		if (!phonenumber(document.getElementById(obj + '-phone').value)) {
+		if (!phonenumber(document.getElementById(obj + '-phone').value, obj)) {
 			setMsgID(obj + "formerror-3", "Enter Valid Mobile Number");
 			inp = 1;
 		} else {
@@ -3142,38 +3253,117 @@
 		return inp;
 	}
 
-	<?php if ($page == "home") { ?>
 
-		// document.getElementById('inquiry-submit').onclick = function() {
-		// 	validateInquiryForm('inquiry');
-		// };
-		// document.getElementById('inquiry-fname').oninput = function() {
-		// 	validateInquiryForm('inquiry');
-		// };
-		// document.getElementById('inquiry-lname').oninput = function() {
-		// 	validateInquiryForm('inquiry');
-		// };
-		// document.getElementById('inquiry-phone').oninput = function() {
-		// 	validateInquiryForm('inquiry');
-		// };
-		// document.getElementById('inquiry-email').oninput = function() {
-		// 	validateInquiryForm('inquiry');
-		// };
 
-		// document.getElementById('inquiry1-submit').onclick = function() {
-		// 	validateInquiryForm('inquiry1');
-		// };
-		// document.getElementById('inquiry1-fname').oninput = function() {
-		// 	validateInquiryForm('inquiry1');
-		// };
-		// document.getElementById('inquiry1-lname').oninput = function() {
-		// 	validateInquiryForm('inquiry1');
-		// };
-		// document.getElementById('inquiry1-phone').oninput = function() {
-		// 	validateInquiryForm('inquiry1');
-		// };
-		// document.getElementById('inquiry1-email').oninput = function() {
-		// 	validateInquiryForm('inquiry1');
-		// };
-	<?php } ?>
+	document.getElementById('inquiry-submit').onclick = function() {
+		validateInquiryForm('inquiry');
+	};
+	document.getElementById('inquiry-fname').oninput = function() {
+		validateInquiryForm('inquiry');
+	};
+	document.getElementById('inquiry-lname').oninput = function() {
+		validateInquiryForm('inquiry');
+	};
+	document.getElementById('inquiry-phone').oninput = function() {
+		validateInquiryForm('inquiry');
+	};
+	document.getElementById('inquiry-email').oninput = function() {
+		validateInquiryForm('inquiry');
+	};
+
+	// Select2 Initialization for Country Code with Flags & Search
+	$(document).ready(function() {
+		function formatCountry(state) {
+			if (!state.id) return state.text;
+			var flag = $(state.element).data('flag');
+			if (!flag) {
+				var match = state.text.match(/\(([A-Za-z]{2,})\)/);
+				if (match) flag = match[1].toLowerCase();
+			}
+			var flagHtml = flag ? '<img src="<?php echo $imagesurl; ?>flags/' + flag + '.png" class="country-real-flag" width="20" height="14" alt="' + flag + '" loading="lazy" onerror="this.style.display=\'none\'">' : '';
+			return $('<span class="select2-flag-item">' + flagHtml + ' <span class="select2-flag-name">' + state.text + '</span></span>');
+		}
+
+		function formatCountrySelection(state) {
+			if (!state.id) return state.text;
+			var flag = $(state.element).data('flag');
+			if (!flag) {
+				var match = state.text.match(/\(([A-Za-z]{2,})\)/);
+				if (match) flag = match[1].toLowerCase();
+			}
+			var dial = state.id ? (state.id.toString().startsWith('+') ? state.id : '+' + state.id) : state.text;
+			var flagHtml = flag ? '<img src="<?php echo $imagesurl; ?>flags/' + flag + '.png" class="country-real-flag" width="20" height="14" alt="' + flag + '" onerror="this.style.display=\'none\'">' : '';
+			return $('<span class="select2-flag-selected">' + flagHtml + ' <span class="select2-dial-code">' + dial + '</span></span>');
+		}
+
+		function matchCountry(params, data) {
+			if ($.trim(params.term) === '') {
+				return data;
+			}
+			if (typeof data.text === 'undefined') {
+				return null;
+			}
+			var term = params.term.toLowerCase().replace('+', '').trim();
+			var text = data.text.toLowerCase().replace('+', '');
+			var id = (data.id || '').toString().toLowerCase().replace('+', '');
+			var flag = ($(data.element).data('flag') || '').toString().toLowerCase();
+
+			if (text.indexOf(term) > -1 || id.indexOf(term) > -1 || flag.indexOf(term) > -1) {
+				return data;
+			}
+			return null;
+		}
+
+		$('.countrycode').each(function() {
+			var $this = $(this);
+			var $parentModal = $this.closest('.theme-modal');
+			var dropParent = $parentModal.length ? $parentModal : $(document.body);
+
+			$this.select2({
+				templateResult: formatCountry,
+				templateSelection: formatCountrySelection,
+				matcher: matchCountry,
+				dropdownParent: dropParent,
+				width: '100%',
+				searchInputPlaceholder: 'Search country or code...'
+			}).on('select2:open', function() {
+				// Prevent Lenis smooth scroll from hijacking mouse wheel on Select2 results
+				var $dropdown = $('.select2-dropdown');
+				$dropdown.attr('data-lenis-prevent', 'true');
+				$dropdown.find('.select2-results__options').attr('data-lenis-prevent', 'true');
+
+				var resultsList = document.querySelector('.select2-results__options');
+				if (resultsList) {
+					resultsList.setAttribute('data-lenis-prevent', 'true');
+					resultsList.addEventListener('wheel', function(e) {
+						e.stopPropagation();
+					}, { passive: true });
+				}
+			}).on('change', function() {
+				var formObj = $(this).closest('form').attr('id') || 'inquiry';
+				validateInquiryForm(formObj);
+			});
+		});
+
+		// Global listener to ensure mouse wheel inside select2 dropdown scrolls the list and does not scroll the background page
+		$(document).on('wheel', '.select2-results__options, .select2-dropdown', function(e) {
+			e.stopPropagation();
+		});
+	});
+
+	// document.getElementById('inquiry1-submit').onclick = function() {
+	// 	validateInquiryForm('inquiry1');
+	// };
+	// document.getElementById('inquiry1-fname').oninput = function() {
+	// 	validateInquiryForm('inquiry1');
+	// };
+	// document.getElementById('inquiry1-lname').oninput = function() {
+	// 	validateInquiryForm('inquiry1');
+	// };
+	// document.getElementById('inquiry1-phone').oninput = function() {
+	// 	validateInquiryForm('inquiry1');
+	// };
+	// document.getElementById('inquiry1-email').oninput = function() {
+	// 	validateInquiryForm('inquiry1');
+	// };
 </script>

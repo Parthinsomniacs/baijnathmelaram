@@ -80,7 +80,7 @@ $utm = "yes";
 
 <body class="<?php echo $page; ?> pt-0">
   <!-- SLIDER -->
-  <div class="thankyou-block col-middle theme-bg">
+  <div class="thankyou-block col-middle">
     <div class="col-middle-inner has-text-centered">
       <div class="container thankyou-block-inner">
         <?php if (isset($_GET['reg']) && $_GET['reg'] == 'success') { ?>
@@ -92,7 +92,7 @@ $utm = "yes";
         <?php } ?>
         <div class="thankyou-logo">
           <picture>
-            <img loading="lazy" src="<?php echo $imagesurl; ?>logo.webp" alt="<?php echo $sitename; ?> Logo">
+            <img loading="lazy" src="<?php echo $imagesurl; ?>logo-black.svg" alt="<?php echo $sitename; ?> Logo">
           </picture>
         </div>
       </div>

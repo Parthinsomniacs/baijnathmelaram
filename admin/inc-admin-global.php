@@ -66,8 +66,8 @@ $sitename = "insomniacs";
 $companyname = "insomniacs";
 $copyrightname = "insomniacs";
 $copyrighttext = "All Rights Reserved";
-$poweredby = "insomniacs";
-$poweredbylink = "https://insomniacs.in/?utm_source=" . $utmsource . "&amp;utm_medium=footerlink&amp;utm_campaign=poweredby";
+$poweredby = "Midnight";
+$poweredbylink = "https://themidnight.in/?utm_source=" . $utmsource . "&amp;utm_medium=footerlink&amp;utm_campaign=poweredby";
 $pagetype = "";
 
 $mediaslug = "media";

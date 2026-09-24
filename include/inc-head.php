@@ -1,5 +1,5 @@
 <?php
-$version = "3.1.20";
+$version = "3.1.27";
 ?>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,6 +25,8 @@ $version = "3.1.20";
 <?php if ($swiperjs == "yes") { ?>
   <link rel="stylesheet" type="text/css" href="<?php echo $cssurl; ?>swiper-bundle.min.css">
 <?php } ?>
+<link rel="stylesheet" type="text/css" href="<?php echo $cssurl; ?>country-flag.css?<?php echo $version; ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo $cssurl; ?>select2.min.css?<?php echo $version; ?>">
 <link rel="stylesheet" type="text/css" href="<?php echo $cssurl; ?>all-custom.css?<?php echo $version; ?>">
 <link rel="stylesheet" type="text/css" href="<?php echo $cssurl; ?>all-responsive.css?<?php echo $version; ?>">
 <!--End Common CSS-->

@@ -1,0 +1,16 @@
+
+
+Type : E:/laragon/www/baijnathmelaram/logs/dbtransaction.txt
+Message : {"fname":"test","lname":"test","countrycode":"+91","phone":"9898989898","email":"test@sfd.com","formtype":"enquire","tracker_code":"","gclid":"","site_url":"http:\/\/localhost:81\/baijnathmelaram\/","contact":"","random_val":"90123456789012345678","USOURCE":"","UMEDIUM":"","UCAMPAIGN":"","UCONTENT":"","UTERM":"","IREFERRER":"http%3A\/\/localhost%3A81\/baijnathmelaram\/secondary-scrap-trading.php","LREFERRER":"direct","ILANDPAGE":"http%3A\/\/localhost%3A81\/baijnathmelaram\/","VISITS":"94"}
+logged at : 2026-09-24 14:35:04
+=======================================================
+
+Type : E:/laragon/www/baijnathmelaram/logs/dbtransaction.txt
+Message : {"fname":"Parth","lname":"Makwana","countrycode":"+91","phone":"9999999999","email":"parth.makwana@insomniacs.in","formtype":"enquire","tracker_code":"","gclid":"","site_url":"http:\/\/localhost:81\/baijnathmelaram\/","contact":"","random_val":"34567890123456789012","USOURCE":"","UMEDIUM":"","UCAMPAIGN":"","UCONTENT":"","UTERM":"","IREFERRER":"http%3A\/\/localhost%3A81\/baijnathmelaram\/secondary-scrap-trading.php","LREFERRER":"direct","ILANDPAGE":"http%3A\/\/localhost%3A81\/baijnathmelaram\/","VISITS":"95"}
+logged at : 2026-09-24 15:17:57
+=======================================================
+
+Type : E:/laragon/www/baijnathmelaram/logs/dbtransaction.txt
+Message : {"fname":"test","lname":"test","countrycode":"+971","phone":"555-558-046","email":"test@test.com","formtype":"enquire","tracker_code":"","gclid":"","site_url":"http:\/\/localhost:81\/baijnathmelaram\/","contact":"","random_val":"90123456789012345678","USOURCE":"","UMEDIUM":"","UCAMPAIGN":"","UCONTENT":"","UTERM":"","IREFERRER":"http%3A\/\/localhost%3A81\/baijnathmelaram\/secondary-scrap-trading.php","LREFERRER":"direct","ILANDPAGE":"http%3A\/\/localhost%3A81\/baijnathmelaram\/","VISITS":"95"}
+logged at : 2026-09-24 15:20:10
+=======================================================

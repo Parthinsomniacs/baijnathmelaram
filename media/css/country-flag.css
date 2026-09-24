@@ -1,0 +1,1247 @@
+.country {
+    position: relative;
+    display: inline-block;
+}
+
+.country * {
+    box-sizing: border-box;
+}
+
+.country-flag {
+    height: 14px;
+    width: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
+    box-shadow: 0px 0px 1px 0px #888;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 5762px 15px;
+    background-image: url("../images/flags.webp");
+}
+.webp .country-flag {
+    background-image: url("../images/flags.webp");
+}
+.no-webp .country-flag {
+    background-image: url("../images/flags.webp");
+}
+
+.country-zw,
+.country-ws,
+.country-vg,
+.country-uz,
+.country-uk,
+.country-tv,
+.country-to,
+.country-tl,
+.country-tk,
+.country-tj,
+.country-tc,
+.country-ta,
+.country-su,
+.country-st,
+.country-ss,
+.country-si,
+.country-sh,
+.country-sd,
+.country-sc,
+.country-sb,
+.country-ps,
+.country-pn,
+.country-ph,
+.country-om,
+.country-nz,
+.country-nu,
+.country-nr,
+.country-ng,
+.country-nf,
+.country-nc,
+.country-my,
+.country-ms,
+.country-mp,
+.country-mn,
+.country-mk,
+.country-me,
+.country-md,
+.country-ly,
+.country-lv,
+.country-lk,
+.country-lc,
+.country-kz,
+.country-ky,
+.country-kw,
+.country-kp,
+.country-ki,
+.country-jo,
+.country-jm,
+.country-io,
+.country-im,
+.country-ie,
+.country-hu,
+.country-hr,
+.country-hn,
+.country-hm,
+.country-gw,
+.country-gs,
+.country-gi,
+.country-gb,
+.country-fk,
+.country-fj,
+.country-et,
+.country-er,
+.country-eh,
+.country-dm,
+.country-dg,
+.country-cx,
+.country-cu,
+.country-ck,
+.country-cc,
+.country-ca,
+.country-by,
+.country-bs,
+.country-bn,
+.country-bm,
+.country-ba,
+.country-az,
+.country-au,
+.country-as,
+.country-am,
+.country-ai,
+.country-ae,
+.country-ac {
+    height: 10px;
+}
+
+.country-us,
+.country-um,
+.country-py,
+.country-mh,
+.country-lr,
+.country-gu,
+.country-fm {
+    height: 11px;
+}
+
+.country-vu,
+.country-tt,
+.country-sv,
+.country-ni,
+.country-mx,
+.country-lu,
+.country-lt,
+.country-li,
+.country-km,
+.country-kg,
+.country-je,
+.country-ir,
+.country-ht,
+.country-gy,
+.country-gd,
+.country-fi,
+.country-de,
+.country-cv,
+.country-cr,
+.country-cq,
+.country-bz,
+.country-bi,
+.country-bh,
+.country-bg,
+.country-bd {
+    height: 12px;
+}
+
+.country-tg,
+.country-se,
+.country-pw,
+.country-pl,
+.country-kh,
+.country-gt,
+.country-ee,
+.country-ax,
+.country-ar {
+    height: 13px;
+}
+
+.country-xk,
+.country-va,
+.country-sm,
+.country-sj,
+.country-pg,
+.country-np,
+.country-no,
+.country-ne,
+.country-mc,
+.country-is,
+.country-il,
+.country-ga,
+.country-fo,
+.country-dk,
+.country-ch,
+.country-cd,
+.country-bv,
+.country-be,
+.country-al {
+    height: 15px;
+}
+
+.country-qa {
+    height: 8px;
+}
+
+.country-ac {
+    background-position: 0px 0;
+}
+
+.country-ad {
+    background-position: -22px 0;
+}
+
+.country-ae {
+    background-position: -44px 0;
+}
+
+.country-af {
+    background-position: -66px 0;
+}
+
+.country-ag {
+    background-position: -88px 0;
+}
+
+.country-ai {
+    background-position: -110px 0;
+}
+
+.country-al {
+    background-position: -132px 0;
+}
+
+.country-am {
+    background-position: -154px 0;
+}
+
+.country-ao {
+    background-position: -176px 0;
+}
+
+.country-aq {
+    background-position: -198px 0;
+}
+
+.country-ar {
+    background-position: -220px 0;
+}
+
+.country-as {
+    background-position: -242px 0;
+}
+
+.country-at {
+    background-position: -264px 0;
+}
+
+.country-au {
+    background-position: -286px 0;
+}
+
+.country-aw {
+    background-position: -308px 0;
+}
+
+.country-ax {
+    background-position: -330px 0;
+}
+
+.country-az {
+    background-position: -352px 0;
+}
+
+.country-ba {
+    background-position: -374px 0;
+}
+
+.country-bb {
+    background-position: -396px 0;
+}
+
+.country-bd {
+    background-position: -418px 0;
+}
+
+.country-be {
+    background-position: -440px 0;
+}
+
+.country-bf {
+    background-position: -460px 0;
+}
+
+.country-bg {
+    background-position: -482px 0;
+}
+
+.country-bh {
+    background-position: -504px 0;
+}
+
+.country-bi {
+    background-position: -526px 0;
+}
+
+.country-bj {
+    background-position: -548px 0;
+}
+
+.country-bl {
+    background-position: -570px 0;
+}
+
+.country-bm {
+    background-position: -592px 0;
+}
+
+.country-bn {
+    background-position: -614px 0;
+}
+
+.country-bo {
+    background-position: -636px 0;
+}
+
+.country-bq {
+    background-position: -658px 0;
+}
+
+.country-br {
+    background-position: -680px 0;
+}
+
+.country-bs {
+    background-position: -702px 0;
+}
+
+.country-bt {
+    background-position: -724px 0;
+}
+
+.country-bv {
+    background-position: -746px 0;
+}
+
+.country-bw {
+    background-position: -768px 0;
+}
+
+.country-by {
+    background-position: -790px 0;
+}
+
+.country-bz {
+    background-position: -812px 0;
+}
+
+.country-ca {
+    background-position: -834px 0;
+}
+
+.country-cc {
+    background-position: -856px 0;
+}
+
+.country-cd {
+    background-position: -878px 0;
+}
+
+.country-cf {
+    background-position: -900px 0;
+}
+
+.country-cg {
+    background-position: -922px 0;
+}
+
+.country-ch {
+    background-position: -944px 0;
+}
+
+.country-ci {
+    background-position: -961px 0;
+}
+
+.country-ck {
+    background-position: -983px 0;
+}
+
+.country-cl {
+    background-position: -1005px 0;
+}
+
+.country-cm {
+    background-position: -1027px 0;
+}
+
+.country-cn {
+    background-position: -1049px 0;
+}
+
+.country-co {
+    background-position: -1071px 0;
+}
+
+.country-cp {
+    background-position: -1093px 0;
+}
+
+.country-cq {
+    background-position: -1115px 0;
+}
+
+.country-cr {
+    background-position: -1137px 0;
+}
+
+.country-cu {
+    background-position: -1159px 0;
+}
+
+.country-cv {
+    background-position: -1181px 0;
+}
+
+.country-cw {
+    background-position: -1203px 0;
+}
+
+.country-cx {
+    background-position: -1225px 0;
+}
+
+.country-cy {
+    background-position: -1247px 0;
+}
+
+.country-cz {
+    background-position: -1269px 0;
+}
+
+.country-de {
+    background-position: -1291px 0;
+}
+
+.country-dg {
+    background-position: -1313px 0;
+}
+
+.country-dj {
+    background-position: -1335px 0;
+}
+
+.country-dk {
+    background-position: -1357px 0;
+}
+
+.country-dm {
+    background-position: -1379px 0;
+}
+
+.country-do {
+    background-position: -1401px 0;
+}
+
+.country-dz {
+    background-position: -1423px 0;
+}
+
+.country-ea {
+    background-position: -1445px 0;
+}
+
+.country-ec {
+    background-position: -1467px 0;
+}
+
+.country-ee {
+    background-position: -1489px 0;
+}
+
+.country-eg {
+    background-position: -1511px 0;
+}
+
+.country-eh {
+    background-position: -1533px 0;
+}
+
+.country-er {
+    background-position: -1555px 0;
+}
+
+.country-es {
+    background-position: -1577px 0;
+}
+
+.country-et {
+    background-position: -1599px 0;
+}
+
+.country-eu {
+    background-position: -1621px 0;
+}
+
+.country-ez {
+    background-position: -1643px 0;
+}
+
+.country-fi {
+    background-position: -1665px 0;
+}
+
+.country-fj {
+    background-position: -1687px 0;
+}
+
+.country-fk {
+    background-position: -1709px 0;
+}
+
+.country-fm {
+    background-position: -1731px 0;
+}
+
+.country-fo {
+    background-position: -1753px 0;
+}
+
+.country-fr {
+    background-position: -1775px 0;
+}
+
+.country-fx {
+    background-position: -1797px 0;
+}
+
+.country-ga {
+    background-position: -1819px 0;
+}
+
+.country-gb {
+    background-position: -1841px 0;
+}
+
+.country-gd {
+    background-position: -1863px 0;
+}
+
+.country-ge {
+    background-position: -1885px 0;
+}
+
+.country-gf {
+    background-position: -1907px 0;
+}
+
+.country-gg {
+    background-position: -1929px 0;
+}
+
+.country-gh {
+    background-position: -1951px 0;
+}
+
+.country-gi {
+    background-position: -1973px 0;
+}
+
+.country-gl {
+    background-position: -1995px 0;
+}
+
+.country-gm {
+    background-position: -2017px 0;
+}
+
+.country-gn {
+    background-position: -2039px 0;
+}
+
+.country-gp {
+    background-position: -2061px 0;
+}
+
+.country-gq {
+    background-position: -2083px 0;
+}
+
+.country-gr {
+    background-position: -2105px 0;
+}
+
+.country-gs {
+    background-position: -2127px 0;
+}
+
+.country-gt {
+    background-position: -2149px 0;
+}
+
+.country-gu {
+    background-position: -2171px 0;
+}
+
+.country-gw {
+    background-position: -2193px 0;
+}
+
+.country-gy {
+    background-position: -2215px 0;
+}
+
+.country-hk {
+    background-position: -2237px 0;
+}
+
+.country-hm {
+    background-position: -2259px 0;
+}
+
+.country-hn {
+    background-position: -2281px 0;
+}
+
+.country-hr {
+    background-position: -2303px 0;
+}
+
+.country-ht {
+    background-position: -2325px 0;
+}
+
+.country-hu {
+    background-position: -2347px 0;
+}
+
+.country-ic {
+    background-position: -2369px 0;
+}
+
+.country-id {
+    background-position: -2391px 0;
+}
+
+.country-ie {
+    background-position: -2413px 0;
+}
+
+.country-il {
+    background-position: -2435px 0;
+}
+
+.country-im {
+    background-position: -2457px 0;
+}
+
+.country-in {
+    background-position: -2479px 0;
+}
+
+.country-io {
+    background-position: -2501px 0;
+}
+
+.country-iq {
+    background-position: -2523px 0;
+}
+
+.country-ir {
+    background-position: -2545px 0;
+}
+
+.country-is {
+    background-position: -2567px 0;
+}
+
+.country-it {
+    background-position: -2589px 0;
+}
+
+.country-je {
+    background-position: -2611px 0;
+}
+
+.country-jm {
+    background-position: -2633px 0;
+}
+
+.country-jo {
+    background-position: -2655px 0;
+}
+
+.country-jp {
+    background-position: -2677px 0;
+}
+
+.country-ke {
+    background-position: -2699px 0;
+}
+
+.country-kg {
+    background-position: -2721px 0;
+}
+
+.country-kh {
+    background-position: -2743px 0;
+}
+
+.country-ki {
+    background-position: -2765px 0;
+}
+
+.country-km {
+    background-position: -2787px 0;
+}
+
+.country-kn {
+    background-position: -2809px 0;
+}
+
+.country-kp {
+    background-position: -2831px 0;
+}
+
+.country-kr {
+    background-position: -2853px 0;
+}
+
+.country-kw {
+    background-position: -2875px 0;
+}
+
+.country-ky {
+    background-position: -2897px 0;
+}
+
+.country-kz {
+    background-position: -2919px 0;
+}
+
+.country-la {
+    background-position: -2941px 0;
+}
+
+.country-lb {
+    background-position: -2963px 0;
+}
+
+.country-lc {
+    background-position: -2985px 0;
+}
+
+.country-li {
+    background-position: -3007px 0;
+}
+
+.country-lk {
+    background-position: -3029px 0;
+}
+
+.country-lr {
+    background-position: -3051px 0;
+}
+
+.country-ls {
+    background-position: -3073px 0;
+}
+
+.country-lt {
+    background-position: -3095px 0;
+}
+
+.country-lu {
+    background-position: -3117px 0;
+}
+
+.country-lv {
+    background-position: -3139px 0;
+}
+
+.country-ly {
+    background-position: -3161px 0;
+}
+
+.country-ma {
+    background-position: -3183px 0;
+}
+
+.country-mc {
+    background-position: -3205px 0;
+}
+
+.country-md {
+    background-position: -3226px 0;
+}
+
+.country-me {
+    background-position: -3248px 0;
+}
+
+.country-mf {
+    background-position: -3270px 0;
+}
+
+.country-mg {
+    background-position: -3292px 0;
+}
+
+.country-mh {
+    background-position: -3314px 0;
+}
+
+.country-mk {
+    background-position: -3336px 0;
+}
+
+.country-ml {
+    background-position: -3358px 0;
+}
+
+.country-mm {
+    background-position: -3380px 0;
+}
+
+.country-mn {
+    background-position: -3402px 0;
+}
+
+.country-mo {
+    background-position: -3424px 0;
+}
+
+.country-mp {
+    background-position: -3446px 0;
+}
+
+.country-mq {
+    background-position: -3468px 0;
+}
+
+.country-mr {
+    background-position: -3490px 0;
+}
+
+.country-ms {
+    background-position: -3512px 0;
+}
+
+.country-mt {
+    background-position: -3534px 0;
+}
+
+.country-mu {
+    background-position: -3556px 0;
+}
+
+.country-mv {
+    background-position: -3578px 0;
+}
+
+.country-mw {
+    background-position: -3600px 0;
+}
+
+.country-mx {
+    background-position: -3622px 0;
+}
+
+.country-my {
+    background-position: -3644px 0;
+}
+
+.country-mz {
+    background-position: -3666px 0;
+}
+
+.country-na {
+    background-position: -3688px 0;
+}
+
+.country-nc {
+    background-position: -3710px 0;
+}
+
+.country-ne {
+    background-position: -3732px 0;
+}
+
+.country-nf {
+    background-position: -3752px 0;
+}
+
+.country-ng {
+    background-position: -3774px 0;
+}
+
+.country-ni {
+    background-position: -3796px 0;
+}
+
+.country-nl {
+    background-position: -3818px 0;
+}
+
+.country-no {
+    background-position: -3840px 0;
+}
+
+.country-np {
+    background-position: -3862px 0;
+}
+
+.country-nr {
+    background-position: -3877px 0;
+}
+
+.country-nu {
+    background-position: -3899px 0;
+}
+
+.country-nz {
+    background-position: -3921px 0;
+}
+
+.country-om {
+    background-position: -3943px 0;
+}
+
+.country-pa {
+    background-position: -3965px 0;
+}
+
+.country-pe {
+    background-position: -3987px 0;
+}
+
+.country-pf {
+    background-position: -4009px 0;
+}
+
+.country-pg {
+    background-position: -4031px 0;
+}
+
+.country-ph {
+    background-position: -4053px 0;
+}
+
+.country-pk {
+    background-position: -4075px 0;
+}
+
+.country-pl {
+    background-position: -4097px 0;
+}
+
+.country-pm {
+    background-position: -4119px 0;
+}
+
+.country-pn {
+    background-position: -4141px 0;
+}
+
+.country-pr {
+    background-position: -4163px 0;
+}
+
+.country-ps {
+    background-position: -4185px 0;
+}
+
+.country-pt {
+    background-position: -4207px 0;
+}
+
+.country-pw {
+    background-position: -4229px 0;
+}
+
+.country-py {
+    background-position: -4251px 0;
+}
+
+.country-qa {
+    background-position: -4273px 0;
+}
+
+.country-re {
+    background-position: -4295px 0;
+}
+
+.country-ro {
+    background-position: -4317px 0;
+}
+
+.country-rs {
+    background-position: -4339px 0;
+}
+
+.country-ru {
+    background-position: -4361px 0;
+}
+
+.country-rw {
+    background-position: -4383px 0;
+}
+
+.country-sa {
+    background-position: -4405px 0;
+}
+
+.country-sb {
+    background-position: -4427px 0;
+}
+
+.country-sc {
+    background-position: -4449px 0;
+}
+
+.country-sd {
+    background-position: -4471px 0;
+}
+
+.country-se {
+    background-position: -4493px 0;
+}
+
+.country-sg {
+    background-position: -4515px 0;
+}
+
+.country-sh {
+    background-position: -4537px 0;
+}
+
+.country-si {
+    background-position: -4559px 0;
+}
+
+.country-sj {
+    background-position: -4581px 0;
+}
+
+.country-sk {
+    background-position: -4603px 0;
+}
+
+.country-sl {
+    background-position: -4625px 0;
+}
+
+.country-sm {
+    background-position: -4647px 0;
+}
+
+.country-sn {
+    background-position: -4669px 0;
+}
+
+.country-so {
+    background-position: -4691px 0;
+}
+
+.country-sr {
+    background-position: -4713px 0;
+}
+
+.country-ss {
+    background-position: -4735px 0;
+}
+
+.country-st {
+    background-position: -4757px 0;
+}
+
+.country-su {
+    background-position: -4779px 0;
+}
+
+.country-sv {
+    background-position: -4801px 0;
+}
+
+.country-sx {
+    background-position: -4823px 0;
+}
+
+.country-sy {
+    background-position: -4845px 0;
+}
+
+.country-sz {
+    background-position: -4867px 0;
+}
+
+.country-ta {
+    background-position: -4889px 0;
+}
+
+.country-tc {
+    background-position: -4911px 0;
+}
+
+.country-td {
+    background-position: -4933px 0;
+}
+
+.country-tf {
+    background-position: -4955px 0;
+}
+
+.country-tg {
+    background-position: -4977px 0;
+}
+
+.country-th {
+    background-position: -4999px 0;
+}
+
+.country-tj {
+    background-position: -5021px 0;
+}
+
+.country-tk {
+    background-position: -5043px 0;
+}
+
+.country-tl {
+    background-position: -5065px 0;
+}
+
+.country-tm {
+    background-position: -5087px 0;
+}
+
+.country-tn {
+    background-position: -5109px 0;
+}
+
+.country-to {
+    background-position: -5131px 0;
+}
+
+.country-tr {
+    background-position: -5153px 0;
+}
+
+.country-tt {
+    background-position: -5175px 0;
+}
+
+.country-tv {
+    background-position: -5197px 0;
+}
+
+.country-tw {
+    background-position: -5219px 0;
+}
+
+.country-tz {
+    background-position: -5241px 0;
+}
+
+.country-ua {
+    background-position: -5263px 0;
+}
+
+.country-ug {
+    background-position: -5285px 0;
+}
+
+.country-uk {
+    background-position: -5307px 0;
+}
+
+.country-um {
+    background-position: -5329px 0;
+}
+
+.country-un {
+    background-position: -5351px 0;
+}
+
+.country-us {
+    background-position: -5373px 0;
+}
+
+.country-uy {
+    background-position: -5395px 0;
+}
+
+.country-uz {
+    background-position: -5417px 0;
+}
+
+.country-va {
+    background-position: -5439px 0;
+}
+
+.country-vc {
+    background-position: -5456px 0;
+}
+
+.country-ve {
+    background-position: -5478px 0;
+}
+
+.country-vg {
+    background-position: -5500px 0;
+}
+
+.country-vi {
+    background-position: -5522px 0;
+}
+
+.country-vn {
+    background-position: -5544px 0;
+}
+
+.country-vu {
+    background-position: -5566px 0;
+}
+
+.country-wf {
+    background-position: -5588px 0;
+}
+
+.country-ws {
+    background-position: -5610px 0;
+}
+
+.country-xk {
+    background-position: -5632px 0;
+}
+
+.country-ye {
+    background-position: -5654px 0;
+}
+
+.country-yt {
+    background-position: -5676px 0;
+}
+
+.country-za {
+    background-position: -5698px 0;
+}
+
+.country-zm {
+    background-position: -5720px 0;
+}
+
+.country-zw {
+    background-position: -5742px 0;
+}
+
+@media (min-resolution: 2x) {
+    .country-flag {
+        background-image: url("../images/flags@2x.webp");
+    }
+}

@@ -1,0 +1,2126 @@
+{
+  "bulkcarrier": [
+    {
+      "name": "Year",
+      "type": "BULK CARRIER",
+      "year": "5500",
+      "ltd": "",
+      "raw": {
+        "lmt0v0gu": "Year",
+        "lmt0v0gy2": "Name of Ship",
+        "lmt0v0h01": "Type of Ship",
+        "lmt0v0h13": "LTD",
+        "lm0boc2w8": "1983-84",
+        "lm0boc35": "M.V. OREME - D",
+        "lm0boc3811": "5500",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "1984-85",
+      "type": "BULK CARRIER",
+      "year": "4853",
+      "ltd": "",
+      "raw": {
+        "lm0boc2w8": "1984-85",
+        "lm0boc35": "M.V. AL - JOHFFA",
+        "lm0boc3811": "4853",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "1985-86",
+      "type": "BULK CARRIER",
+      "year": "5620",
+      "ltd": "",
+      "raw": {
+        "lm0boc2w8": "1985-86",
+        "lm0boc35": "M.V. BRAVE",
+        "lm0boc3811": "5620",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "1986-87",
+      "type": "BULK CARRIER",
+      "year": "5885",
+      "ltd": "",
+      "raw": {
+        "lm0boc2w8": "1986-87",
+        "lm0boc35": "M.V. ZLETOVO",
+        "lm0boc3811": "5885",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "1991-92",
+      "type": "CEMENT BULK CARRIER",
+      "year": "3233",
+      "ltd": "",
+      "raw": {
+        "lm0boc2w8": "1991-92",
+        "lm0boc35": "M.V. DIANA",
+        "lm0boc3811": "3233",
+        "ln0965la": "CEMENT BULK CARRIER"
+      }
+    },
+    {
+      "name": "1993-94",
+      "type": "BULK CARRIER",
+      "year": "2247",
+      "ltd": "",
+      "raw": {
+        "lm0boc2w8": "1993-94",
+        "lm0boc35": "M.V. TAURUS",
+        "lm0boc3811": "2247",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "1993-94",
+      "type": "BULK CARRIER",
+      "year": "2255",
+      "ltd": "",
+      "raw": {
+        "lm0boc2w8": "1993-94",
+        "lm0boc35": "M.V. LAZERTA",
+        "lm0boc3811": "2255",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "M.V. TOLMIROS",
+      "type": "OBO",
+      "year": "1993-94",
+      "ltd": "21362.78",
+      "raw": {
+        "lm0boc2w8": "1993-94",
+        "lm0boc35": "M.V. TOLMIROS",
+        "lm0boc3811": "21362.78",
+        "ln0965la": "OBO"
+      }
+    },
+    {
+      "name": "M.V. AEGIALI",
+      "type": "OBO",
+      "year": "1995-96",
+      "ltd": "22397",
+      "raw": {
+        "lm0boc2w8": "1995-96",
+        "lm0boc35": "M.V. AEGIALI",
+        "lm0boc3811": "22397",
+        "ln0965la": "OBO"
+      }
+    },
+    {
+      "name": "M.V. STANDAR VIRTUE",
+      "type": "BULK CARRIER",
+      "year": "1998-99",
+      "ltd": "11793",
+      "raw": {
+        "lm0boc2w8": "1998-99",
+        "lm0boc35": "M.V. STANDAR VIRTUE",
+        "lm0boc3811": "11793",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "1998-99",
+      "type": "BULK CARRIER",
+      "year": "9876",
+      "ltd": "",
+      "raw": {
+        "lm0boc2w8": "1998-99",
+        "lm0boc35": "M.V. GENERAL BEM",
+        "lm0boc3811": "9876",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "1998-99",
+      "type": "BULK CARRIER",
+      "year": "2151",
+      "ltd": "",
+      "raw": {
+        "lm0boc2w8": "1998-99",
+        "lm0boc35": "M.V. ALMA",
+        "lm0boc3811": "2151",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "1998-99",
+      "type": "BULK CARRIER",
+      "year": "3182",
+      "ltd": "",
+      "raw": {
+        "lm0boc2w8": "1998-99",
+        "lm0boc35": "M.V. MYOHYANG-6",
+        "lm0boc3811": "3182",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "1998-99",
+      "type": "BULK CARRIER",
+      "year": "6765",
+      "ltd": "",
+      "raw": {
+        "lm0boc2w8": "1998-99",
+        "lm0boc35": "M.V. MIRA",
+        "lm0boc3811": "6765",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "M.V. BOTOSANI",
+      "type": "BULK CARRIER",
+      "year": "1998-99",
+      "ltd": "14396.69",
+      "raw": {
+        "lm0boc2w8": "1998-99",
+        "lm0boc35": "M.V. BOTOSANI",
+        "lm0boc3811": "14396.69",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "M.V. BARBARA-D",
+      "type": "LOG CARRIER",
+      "year": "1998-99",
+      "ltd": "3018.22",
+      "raw": {
+        "lm0boc2w8": "1998-99",
+        "lm0boc35": "M.V. BARBARA-D",
+        "lm0boc3811": "3018.22",
+        "ln0965la": "LOG CARRIER"
+      }
+    },
+    {
+      "name": "M.V. MSC LAURA",
+      "type": "BULK CARRIER",
+      "year": "1999-00",
+      "ltd": "10716",
+      "raw": {
+        "lm0boc2w8": "1999-00",
+        "lm0boc35": "M.V. MSC LAURA",
+        "lm0boc3811": "10716",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "M.V. URGUP",
+      "type": "OBO",
+      "year": "1999-00",
+      "ltd": "24278",
+      "raw": {
+        "lm0boc2w8": "1999-00",
+        "lm0boc35": "M.V. URGUP",
+        "lm0boc3811": "24278",
+        "ln0965la": "OBO"
+      }
+    },
+    {
+      "name": "1999-00",
+      "type": "BULK CARRIER",
+      "year": "3392",
+      "ltd": "",
+      "raw": {
+        "lm0boc2w8": "1999-00",
+        "lm0boc35": "M.V. GEMINY",
+        "lm0boc3811": "3392",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "2000-01",
+      "type": "BULK CARRIER",
+      "year": "5390",
+      "ltd": "",
+      "raw": {
+        "lm0boc2w8": "2000-01",
+        "lm0boc35": "M.V. SAABA",
+        "lm0boc3811": "5390",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "2001-02",
+      "type": "BULK CARRIER",
+      "year": "6499",
+      "ltd": "",
+      "raw": {
+        "lm0boc2w8": "2001-02",
+        "lm0boc35": "M.V. FLAG MARU",
+        "lm0boc3811": "6499",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "2001-02",
+      "type": "BULK CARRIER",
+      "year": "4232",
+      "ltd": "",
+      "raw": {
+        "lm0boc2w8": "2001-02",
+        "lm0boc35": "M.V. LEON",
+        "lm0boc3811": "4232",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "M.V. CONVEYAR",
+      "type": "SALT CARRIER",
+      "year": "2001-02",
+      "ltd": "17679",
+      "raw": {
+        "lm0boc2w8": "2001-02",
+        "lm0boc35": "M.V. CONVEYAR",
+        "lm0boc3811": "17679",
+        "ln0965la": "SALT CARRIER"
+      }
+    },
+    {
+      "name": "2002-03",
+      "type": "BULK CARRIER",
+      "year": "4738",
+      "ltd": "",
+      "raw": {
+        "lm0boc2w8": "2002-03",
+        "lm0boc35": "M.V. STAV ROULA",
+        "lm0boc3811": "4738",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "M.V. MICHALAKIS",
+      "type": "BULK CARRIER",
+      "year": "2004-05",
+      "ltd": "10670",
+      "raw": {
+        "lm0boc2w8": "2004-05",
+        "lm0boc35": "M.V. MICHALAKIS",
+        "lm0boc3811": "10670",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "2007-08",
+      "type": "CEMENT BULK CARRIER",
+      "year": "2450",
+      "ltd": "",
+      "raw": {
+        "lm0boc2w8": "2007-08",
+        "lm0boc35": "AGAME MNON",
+        "lm0boc3811": "2450",
+        "ln0965la": "CEMENT BULK CARRIER"
+      }
+    },
+    {
+      "name": "2008-09",
+      "type": "BULK CARRIER",
+      "year": "8319",
+      "ltd": "",
+      "raw": {
+        "lm0boc2w8": "2008-09",
+        "lm0boc35": "UNFAIR LADY",
+        "lm0boc3811": "8319",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "2008-09",
+      "type": "BULK CARRIER",
+      "year": "7296",
+      "ltd": "",
+      "raw": {
+        "lm0boc2w8": "2008-09",
+        "lm0boc35": "M.V. ELLISPONTOS",
+        "lm0boc3811": "7296",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "MOL THAMES",
+      "type": "CONTAINER SHIP",
+      "year": "2009-10",
+      "ltd": "19243",
+      "raw": {
+        "lm0boc2w8": "2009-10",
+        "lm0boc35": "MOL THAMES",
+        "lm0boc3811": "19243",
+        "ln0965la": "CONTAINER SHIP"
+      }
+    },
+    {
+      "name": "HANDY V",
+      "type": "BULK CARRIER",
+      "year": "2011-12",
+      "ltd": "11349",
+      "raw": {
+        "lm0boc2w8": "2011-12",
+        "lm0boc35": "HANDY V",
+        "lm0boc3811": "11349",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "CASTILLO DE SOUTOMAIOR",
+      "type": "BULK CARRIER",
+      "year": "2012-13",
+      "ltd": "13400",
+      "raw": {
+        "lm0boc2w8": "2012-13",
+        "lm0boc35": "CASTILLO DE SOUTOMAIOR",
+        "lm0boc3811": "13400",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "MV LIBERTY SPIRIT",
+      "type": "BULK CARRIER",
+      "year": "2012-13",
+      "ltd": "11310",
+      "raw": {
+        "lm0boc2w8": "2012-13",
+        "lm0boc35": "MV LIBERTY SPIRIT",
+        "lm0boc3811": "11310",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "M.V. MONA LIBERTY",
+      "type": "BULK CARRIER",
+      "year": "2015-16",
+      "ltd": "17503",
+      "raw": {
+        "lm0boc2w8": "2015-16",
+        "lm0boc35": "M.V. MONA LIBERTY",
+        "lm0boc3811": "17503",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "2015-16",
+      "type": "BULK CARRIER",
+      "year": "9412",
+      "ltd": "",
+      "raw": {
+        "lm0boc2w8": "2015-16",
+        "lm0boc35": "M.V. PREVENTER",
+        "lm0boc3811": "9412",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "2015-16",
+      "type": "BULK CARRIER",
+      "year": "9286",
+      "ltd": "",
+      "raw": {
+        "lm0boc2w8": "2015-16",
+        "lm0boc35": "M.V. PEARL RIVER",
+        "lm0boc3811": "9286",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "2015-16",
+      "type": "BULK CARRIER",
+      "year": "9726",
+      "ltd": "",
+      "raw": {
+        "lm0boc2w8": "2015-16",
+        "lm0boc35": "M.V. SEA LORD",
+        "lm0boc3811": "9726",
+        "ln0965la": "BULK CARRIER"
+      }
+    },
+    {
+      "name": "SKS TANARO",
+      "type": "OBO",
+      "year": "2019-20",
+      "ltd": "18715",
+      "raw": {
+        "lm0boc2w8": "2019-20",
+        "lm0boc35": "SKS TANARO",
+        "lm0boc3811": "18715",
+        "ln0965la": "OBO"
+      }
+    },
+    {
+      "name": "UNIVERSAL GREEN",
+      "type": "WOODCHIP CARRIER",
+      "year": "2019-20",
+      "ltd": "10640",
+      "raw": {
+        "lm0boc2w8": "2019-20",
+        "lm0boc35": "UNIVERSAL GREEN",
+        "lm0boc3811": "10640",
+        "ln0965la": "WOODCHIP CARRIER"
+      }
+    },
+    {
+      "name": "GRANDE SOLARIS",
+      "type": "BULKER",
+      "year": "2020-2021",
+      "ltd": "21100",
+      "raw": {
+        "lm0boc2w8": "2020-2021",
+        "lm0boc35": "GRANDE SOLARIS",
+        "lm0boc3811": "21100",
+        "ln0965la": "BULKER"
+      }
+    },
+    {
+      "name": "M.V.BERGE APO",
+      "type": "BULK CARRIER",
+      "year": "2022-23",
+      "ltd": "20668",
+      "raw": {
+        "lm0boc2w8": "2022-23",
+        "lm0boc35": "M.V.BERGE APO",
+        "lm0boc3811": "20668",
+        "ln0965la": "BULK CARRIER"
+      }
+    }
+  ],
+  "generalcargo": [
+    {
+      "name": "Year",
+      "type": "GENERAL CARGO",
+      "year": "3610",
+      "ltd": "",
+      "raw": {
+        "ln1bmuzj2": "Year",
+        "ln1bmuzt": "Name of Ship",
+        "ln1bmuzv2": "Type of Ship",
+        "ln1bmuzx3": "LTD",
+        "ln1bmv07": "1983-84",
+        "ln1bmv0f": "M.V. KOTA-BUANA",
+        "ln1bmv0j4": "3610",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "1989-90",
+      "type": "GENERAL CARGO",
+      "year": "5470",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "1989-90",
+        "ln1bmv0f": "M.V. \"INCA-91\"",
+        "ln1bmv0j4": "5470",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "1989-90",
+      "type": "MULTIPURPOSE GENERAL CARGO",
+      "year": "5629",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "1989-90",
+        "ln1bmv0f": "M.V. MERULA",
+        "ln1bmv0j4": "5629",
+        "ln1bmv0o1": "MULTIPURPOSE GENERAL CARGO"
+      }
+    },
+    {
+      "name": "1991-92",
+      "type": "GENERAL CARGO",
+      "year": "6520",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "1991-92",
+        "ln1bmv0f": "M.V. FENG HUA",
+        "ln1bmv0j4": "6520",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "1992-93",
+      "type": "GENERAL CARGO",
+      "year": "3760",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "1992-93",
+        "ln1bmv0f": "PHU YEN-02",
+        "ln1bmv0j4": "3760",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "M.V. GARCIEMS",
+      "type": "GENERAL CARGO",
+      "year": "1993-94",
+      "ltd": "3250.4",
+      "raw": {
+        "ln1bmv07": "1993-94",
+        "ln1bmv0f": "M.V. GARCIEMS",
+        "ln1bmv0j4": "3250.4",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "1994-95",
+      "type": "GENERAL CARGO",
+      "year": "7330",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "1994-95",
+        "ln1bmv0f": "M.V. NIKOLOZ BARATSHVILI",
+        "ln1bmv0j4": "7330",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "1996-97",
+      "type": "GENERAL CARGO",
+      "year": "5775",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "1996-97",
+        "ln1bmv0f": "M.V. VLADIMIR MORDVINOV",
+        "ln1bmv0j4": "5775",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "M.V. DALIA",
+      "type": "GENERAL CARGO",
+      "year": "1996-97",
+      "ltd": "3982.91",
+      "raw": {
+        "ln1bmv07": "1996-97",
+        "ln1bmv0f": "M.V. DALIA",
+        "ln1bmv0j4": "3982.91",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "M.V. BONTRADER",
+      "type": "GENERAL CARGO",
+      "year": "1996-97",
+      "ltd": "12518",
+      "raw": {
+        "ln1bmv07": "1996-97",
+        "ln1bmv0f": "M.V. BONTRADER",
+        "ln1bmv0j4": "12518",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "1996-97",
+      "type": "GENERAL CARGO",
+      "year": "3110",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "1996-97",
+        "ln1bmv0f": "M.V. WONDER",
+        "ln1bmv0j4": "3110",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "M.V. PLETWAL",
+      "type": "GENERAL CARGO",
+      "year": "1997-98",
+      "ltd": "2357.4",
+      "raw": {
+        "ln1bmv07": "1997-98",
+        "ln1bmv0f": "M.V. PLETWAL",
+        "ln1bmv0j4": "2357.4",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "1997-98",
+      "type": "GENERAL CARGO",
+      "year": "4545",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "1997-98",
+        "ln1bmv0f": "M.V. ZAVICHOST",
+        "ln1bmv0j4": "4545",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "1997-98",
+      "type": "GENERAL CARGO",
+      "year": "2102",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "1997-98",
+        "ln1bmv0f": "M.V. NOVORZHEV",
+        "ln1bmv0j4": "2102",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "1998-99",
+      "type": "GENERAL CARGO",
+      "year": "2347",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "1998-99",
+        "ln1bmv0f": "M.V. GRUMANT",
+        "ln1bmv0j4": "2347",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "1998-99",
+      "type": "GENERAL CARGO",
+      "year": "3543",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "1998-99",
+        "ln1bmv0f": "M.V. MOSKOVSKIY KOMSOMOLETS",
+        "ln1bmv0j4": "3543",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "1997-98",
+      "type": "GENERAL CARGO",
+      "year": "5000",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "1997-98",
+        "ln1bmv0f": "M.V. INDIAN VALOUR",
+        "ln1bmv0j4": "5000",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "1997-98",
+      "type": "GENERAL CARGO",
+      "year": "7735",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "1997-98",
+        "ln1bmv0f": "M.V. FREATZESCOS-M",
+        "ln1bmv0j4": "7735",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "1997-98",
+      "type": "GENERAL CARGO",
+      "year": "6800",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "1997-98",
+        "ln1bmv0f": "M.V. MAZO",
+        "ln1bmv0j4": "6800",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "M.V. JAVA RAINBOW",
+      "type": "GENERAL CARGO",
+      "year": "1997-98",
+      "ltd": "1491.6",
+      "raw": {
+        "ln1bmv07": "1997-98",
+        "ln1bmv0f": "M.V. JAVA RAINBOW",
+        "ln1bmv0j4": "1491.6",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "1999-00",
+      "type": "GENERAL CARGO",
+      "year": "2140",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "1999-00",
+        "ln1bmv0f": "M.V. GILBERT",
+        "ln1bmv0j4": "2140",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "1999-00",
+      "type": "GENERAL CARGO",
+      "year": "3484",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "1999-00",
+        "ln1bmv0f": "M.V. ASHAGLOBAL",
+        "ln1bmv0j4": "3484",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "1999-00",
+      "type": "GENERAL CARGO",
+      "year": "2193",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "1999-00",
+        "ln1bmv0f": "M.V. JINFA",
+        "ln1bmv0j4": "2193",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "1999-00",
+      "type": "GENERAL CARGO",
+      "year": "1446",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "1999-00",
+        "ln1bmv0f": "M.V. AL FARES",
+        "ln1bmv0j4": "1446",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2000-01",
+      "type": "GENERAL CARGO",
+      "year": "6273",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2000-01",
+        "ln1bmv0f": "M.V. MICHAL-R",
+        "ln1bmv0j4": "6273",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "M.V. LIVADIYA",
+      "type": "GENERAL CARGO",
+      "year": "2000-01",
+      "ltd": "941",
+      "raw": {
+        "ln1bmv07": "2000-01",
+        "ln1bmv0f": "M.V. LIVADIYA",
+        "ln1bmv0j4": "941",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2000-01",
+      "type": "GENERAL CARGO",
+      "year": "6222",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2000-01",
+        "ln1bmv0f": "M.T. ZARZIS",
+        "ln1bmv0j4": "6222",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2000-01",
+      "type": "GENERAL CARGO",
+      "year": "5352",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2000-01",
+        "ln1bmv0f": "M.V. SANGMON",
+        "ln1bmv0j4": "5352",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2000-01",
+      "type": "GENERAL CARGO",
+      "year": "4822",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2000-01",
+        "ln1bmv0f": "M.V. EODOR",
+        "ln1bmv0j4": "4822",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2000-01",
+      "type": "GENERAL CARGO",
+      "year": "4546",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2000-01",
+        "ln1bmv0f": "M.V. CARRIBEAN EXPRESS",
+        "ln1bmv0j4": "4546",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "M.V. MEGI",
+      "type": "GENERAL CARGO",
+      "year": "2000-01",
+      "ltd": "5640.4",
+      "raw": {
+        "ln1bmv07": "2000-01",
+        "ln1bmv0f": "M.V. MEGI",
+        "ln1bmv0j4": "5640.4",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "M.V. REGULES",
+      "type": "GENERAL CARGO",
+      "year": "2000-01",
+      "ltd": "2426.81",
+      "raw": {
+        "ln1bmv07": "2000-01",
+        "ln1bmv0f": "M.V. REGULES",
+        "ln1bmv0j4": "2426.81",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2001-02",
+      "type": "GENERAL CARGO",
+      "year": "7282",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2001-02",
+        "ln1bmv0f": "M.V. PROGRESO-I",
+        "ln1bmv0j4": "7282",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2001-02",
+      "type": "GENERAL CARGO",
+      "year": "2106",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2001-02",
+        "ln1bmv0f": "M.V. LADY NIVINE",
+        "ln1bmv0j4": "2106",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2001-02",
+      "type": "GENERAL CARGO",
+      "year": "1103",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2001-02",
+        "ln1bmv0f": "M.V. MIRIAM",
+        "ln1bmv0j4": "1103",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2001-02",
+      "type": "GENERAL CARGO",
+      "year": "3580",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2001-02",
+        "ln1bmv0f": "M.V. BRIGHT SEA",
+        "ln1bmv0j4": "3580",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2001-02",
+      "type": "GENERAL CARGO",
+      "year": "3265",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2001-02",
+        "ln1bmv0f": "M.V. WAHIBA",
+        "ln1bmv0j4": "3265",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2001-02",
+      "type": "GENERAL CARGO",
+      "year": "6986",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2001-02",
+        "ln1bmv0f": "M.V. MARINGA",
+        "ln1bmv0j4": "6986",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2001-02",
+      "type": "GENERAL CARGO",
+      "year": "5194",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2001-02",
+        "ln1bmv0f": "M.V. MAGNISIA",
+        "ln1bmv0j4": "5194",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "M.V. MASTER A-II",
+      "type": "GENERAL CARGO",
+      "year": "2001-02",
+      "ltd": "17790",
+      "raw": {
+        "ln1bmv07": "2001-02",
+        "ln1bmv0f": "M.V. MASTER A-II",
+        "ln1bmv0j4": "17790",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2001-02",
+      "type": "MULTIPURPOSE GENERAL CARGO",
+      "year": "9710",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2001-02",
+        "ln1bmv0f": "M.V. TAMATIKI",
+        "ln1bmv0j4": "9710",
+        "ln1bmv0o1": "MULTIPURPOSE GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2002-03",
+      "type": "GENERAL CARGO",
+      "year": "7700",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2002-03",
+        "ln1bmv0f": "M.V. MINERVA P",
+        "ln1bmv0j4": "7700",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2002-03",
+      "type": "GENERAL CARGO",
+      "year": "4740",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2002-03",
+        "ln1bmv0f": "M.V. ABU MOHAMED",
+        "ln1bmv0j4": "4740",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2002-03",
+      "type": "GENERAL CARGO",
+      "year": "7650",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2002-03",
+        "ln1bmv0f": "M.V. CIUDAD GUYANA",
+        "ln1bmv0j4": "7650",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2002-03",
+      "type": "GENERAL CARGO",
+      "year": "1099",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2002-03",
+        "ln1bmv0f": "M.V. FORWARD",
+        "ln1bmv0j4": "1099",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2002-03",
+      "type": "GENERAL CARGO",
+      "year": "4470",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2002-03",
+        "ln1bmv0f": "M.V. PACIFIC CARRIER",
+        "ln1bmv0j4": "4470",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2003-04",
+      "type": "GENERAL CARGO",
+      "year": "5298",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2003-04",
+        "ln1bmv0f": "M.V. IRAN SALAM",
+        "ln1bmv0j4": "5298",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2003-04",
+      "type": "GENERAL CARGO",
+      "year": "5203",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2003-04",
+        "ln1bmv0f": "M.V. OCEAN ICE",
+        "ln1bmv0j4": "5203",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "M.V. KOTA SURIA",
+      "type": "MULTIPURPOSE GENERAL CARGO",
+      "year": "2003-04",
+      "ltd": "8321.1",
+      "raw": {
+        "ln1bmv07": "2003-04",
+        "ln1bmv0f": "M.V. KOTA SURIA",
+        "ln1bmv0j4": "8321.1",
+        "ln1bmv0o1": "MULTIPURPOSE GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2004-05",
+      "type": "GENERAL CARGO",
+      "year": "5727",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2004-05",
+        "ln1bmv0f": "M.V. EASTERN STAR",
+        "ln1bmv0j4": "5727",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "M.V. ISKRA",
+      "type": "GENERAL CARGO",
+      "year": "2004-05",
+      "ltd": "4242.12",
+      "raw": {
+        "ln1bmv07": "2004-05",
+        "ln1bmv0f": "M.V. ISKRA",
+        "ln1bmv0j4": "4242.12",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2004-05",
+      "type": "GENERAL CARGO",
+      "year": "5395",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2004-05",
+        "ln1bmv0f": "D.V. AQUA SIERA",
+        "ln1bmv0j4": "5395",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2004-05",
+      "type": "GENERAL CARGO",
+      "year": "6552",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2004-05",
+        "ln1bmv0f": "M.T. POTI STAR",
+        "ln1bmv0j4": "6552",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "M.V. HUNTER",
+      "type": "GENERAL CARGO",
+      "year": "2005-06",
+      "ltd": "1760.9",
+      "raw": {
+        "ln1bmv07": "2005-06",
+        "ln1bmv0f": "M.V. HUNTER",
+        "ln1bmv0j4": "1760.9",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2005-06",
+      "type": "GENERAL CARGO",
+      "year": "1405",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2005-06",
+        "ln1bmv0f": "M.V. MERCS SAJINDA",
+        "ln1bmv0j4": "1405",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2006-07",
+      "type": "GENERAL CARGO",
+      "year": "1146",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2006-07",
+        "ln1bmv0f": "M.V. MERCS KIRINDA",
+        "ln1bmv0j4": "1146",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "M.T. SARADHA",
+      "type": "GENERAL CARGO",
+      "year": "2006-07",
+      "ltd": "755",
+      "raw": {
+        "ln1bmv07": "2006-07",
+        "ln1bmv0f": "M.T. SARADHA",
+        "ln1bmv0j4": "755",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2006-07",
+      "type": "MULTIPURPOSE GENERAL CARGO",
+      "year": "2050",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2006-07",
+        "ln1bmv0f": "M.V. FEEDER - 4",
+        "ln1bmv0j4": "2050",
+        "ln1bmv0o1": "MULTIPURPOSE GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2006-07",
+      "type": "MULTIPURPOSE GENERAL CARGO",
+      "year": "8696",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2006-07",
+        "ln1bmv0f": "M.V. SIMA - K",
+        "ln1bmv0j4": "8696",
+        "ln1bmv0o1": "MULTIPURPOSE GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2009-10",
+      "type": "GENERAL CARGO",
+      "year": "3003",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2009-10",
+        "ln1bmv0f": "MV AMIRAS",
+        "ln1bmv0j4": "3003",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2009-10",
+      "type": "GENERAL CARGO",
+      "year": "4333",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2009-10",
+        "ln1bmv0f": "M.V. PRINCESS LAYAN",
+        "ln1bmv0j4": "4333",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2010-11",
+      "type": "GENERAL CARGO",
+      "year": "2467",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2010-11",
+        "ln1bmv0f": "M.V. MONALISA",
+        "ln1bmv0j4": "2467",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2014-15",
+      "type": "GENERAL CARGO",
+      "year": "6850",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2014-15",
+        "ln1bmv0f": "MV ALEXANDER - 1",
+        "ln1bmv0j4": "6850",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2014-15",
+      "type": "GENERAL CARGO",
+      "year": "3659",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2014-15",
+        "ln1bmv0f": "M.V. MASAR TRADE",
+        "ln1bmv0j4": "3659",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2014-15",
+      "type": "GENERAL CARGO",
+      "year": "4369",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2014-15",
+        "ln1bmv0f": "M.V. AQUA STAR",
+        "ln1bmv0j4": "4369",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2015-16",
+      "type": "MULTIPURPOSE GENERAL CARGO",
+      "year": "4983",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2015-16",
+        "ln1bmv0f": "M.V. SANTOSH",
+        "ln1bmv0j4": "4983",
+        "ln1bmv0o1": "MULTIPURPOSE GENERAL CARGO"
+      }
+    },
+    {
+      "name": "M.V. AQUA PEARL",
+      "type": "GENERAL CARGO",
+      "year": "2015-16",
+      "ltd": "12252",
+      "raw": {
+        "ln1bmv07": "2015-16",
+        "ln1bmv0f": "M.V. AQUA PEARL",
+        "ln1bmv0j4": "12252",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "2016-17",
+      "type": "GENERAL CARGO",
+      "year": "9996",
+      "ltd": "",
+      "raw": {
+        "ln1bmv07": "2016-17",
+        "ln1bmv0f": "WIENIAWSKI",
+        "ln1bmv0j4": "9996",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    },
+    {
+      "name": "SZYMANOWSKI",
+      "type": "GENERAL CARGO",
+      "year": "2016-17",
+      "ltd": "10096",
+      "raw": {
+        "ln1bmv07": "2016-17",
+        "ln1bmv0f": "SZYMANOWSKI",
+        "ln1bmv0j4": "10096",
+        "ln1bmv0o1": "GENERAL CARGO"
+      }
+    }
+  ],
+  "container": [
+    {
+      "name": "Year",
+      "type": "CONTAINER",
+      "year": "2765",
+      "ltd": "",
+      "raw": {
+        "ln1c3atz8": "Year",
+        "ln1c3au6": "Name of Ship",
+        "ln1c3au82": "Type of Ship",
+        "ln1c3au913": "LTD",
+        "ln1c3aud6": "1996-97",
+        "ln1c3aug2": "M.V. BOYEVOY",
+        "ln1c3auh5": "2765",
+        "ln1c3aui5": "CONTAINER"
+      }
+    },
+    {
+      "name": "1997-98",
+      "type": "CONTAINER",
+      "year": "3262",
+      "ltd": "",
+      "raw": {
+        "ln1c3aud6": "1997-98",
+        "ln1c3aug2": "M.V. KOTAMAKMUR",
+        "ln1c3auh5": "3262",
+        "ln1c3aui5": "CONTAINER"
+      }
+    },
+    {
+      "name": "M.V. CARMEN CARA",
+      "type": "CONTAINER",
+      "year": "1998-99",
+      "ltd": "14521.3",
+      "raw": {
+        "ln1c3aud6": "1998-99",
+        "ln1c3aug2": "M.V. CARMEN CARA",
+        "ln1c3auh5": "14521.3",
+        "ln1c3aui5": "CONTAINER"
+      }
+    },
+    {
+      "name": "1998-99",
+      "type": "CONTAINER",
+      "year": "5903",
+      "ltd": "",
+      "raw": {
+        "ln1c3aud6": "1998-99",
+        "ln1c3aug2": "M.V. IGEN STAR",
+        "ln1c3auh5": "5903",
+        "ln1c3aui5": "CONTAINER"
+      }
+    },
+    {
+      "name": "2003-04",
+      "type": "CONTAINER",
+      "year": "8321",
+      "ltd": "",
+      "raw": {
+        "ln1c3aud6": "2003-04",
+        "ln1c3aug2": "M.V. KOTA SABAS",
+        "ln1c3auh5": "8321",
+        "ln1c3aui5": "CONTAINER"
+      }
+    },
+    {
+      "name": "MOL THAMES",
+      "type": "CONTAINER SHIP",
+      "year": "2009-10",
+      "ltd": "19243",
+      "raw": {
+        "ln1c3aud6": "2009-10",
+        "ln1c3aug2": "MOL THAMES",
+        "ln1c3auh5": "19243",
+        "ln1c3aui5": "CONTAINER SHIP"
+      }
+    },
+    {
+      "name": "M.V LYS",
+      "type": "CELLULAR CONTAINER",
+      "year": "2009-10",
+      "ltd": "17126",
+      "raw": {
+        "ln1c3aud6": "2009-10",
+        "ln1c3aug2": "M.V LYS",
+        "ln1c3auh5": "17126",
+        "ln1c3aui5": "CELLULAR CONTAINER"
+      }
+    },
+    {
+      "name": "APL TOPAZ",
+      "type": "CONTAINER SHIP",
+      "year": "2012-13",
+      "ltd": "17825",
+      "raw": {
+        "ln1c3aud6": "2012-13",
+        "ln1c3aug2": "APL TOPAZ",
+        "ln1c3auh5": "17825",
+        "ln1c3aui5": "CONTAINER SHIP"
+      }
+    },
+    {
+      "name": "MV MALACCA",
+      "type": "CONTAINER SHIP",
+      "year": "2013-14",
+      "ltd": "22245",
+      "raw": {
+        "ln1c3aud6": "2013-14",
+        "ln1c3aug2": "MV MALACCA",
+        "ln1c3auh5": "22245",
+        "ln1c3aui5": "CONTAINER SHIP"
+      }
+    },
+    {
+      "name": "HANJIN WASHINGTON",
+      "type": "CONTAINER SHIP",
+      "year": "2014-15",
+      "ltd": "25860",
+      "raw": {
+        "ln1c3aud6": "2014-15",
+        "ln1c3aug2": "HANJIN WASHINGTON",
+        "ln1c3auh5": "25860",
+        "ln1c3aui5": "CONTAINER SHIP"
+      }
+    },
+    {
+      "name": "2016/17",
+      "type": "CONTAINER SHIP",
+      "year": "",
+      "ltd": "11446",
+      "raw": {
+        "ln1c3aud6": "2016/17",
+        "ln1c3aug2": "WILL",
+        "ln1c3auh5": "11446",
+        "ln1c3aui5": "CONTAINER SHIP"
+      }
+    },
+    {
+      "name": "2018/19",
+      "type": "CONTAINER SHIP",
+      "year": "",
+      "ltd": "12400",
+      "raw": {
+        "ln1c3aud6": "2018/19",
+        "ln1c3aug2": "MAERSK PHUKET",
+        "ln1c3auh5": "12400",
+        "ln1c3aui5": "CONTAINER SHIP"
+      }
+    },
+    {
+      "name": "2018/19",
+      "type": "CONTAINER SHIP",
+      "year": "5889",
+      "ltd": "",
+      "raw": {
+        "ln1c3aud6": "2018/19",
+        "ln1c3aug2": "ISLAND CHIEF",
+        "ln1c3auh5": "5889",
+        "ln1c3aui5": "CONTAINER SHIP"
+      }
+    },
+    {
+      "name": "2020/21",
+      "type": "CONTAINER SHIP",
+      "year": "",
+      "ltd": "21731",
+      "raw": {
+        "ln1c3aud6": "2020/21",
+        "ln1c3aug2": "EVER DECENT",
+        "ln1c3auh5": "21731",
+        "ln1c3aui5": "CONTAINER SHIP"
+      }
+    }
+  ],
+  "tanker": [
+    {
+      "name": "Year",
+      "type": "OIL TANKER",
+      "year": "6015",
+      "ltd": "",
+      "raw": {
+        "ln1c4gmq7": "Year",
+        "ln1c4gmt3": "Name of Ship",
+        "ln1c4gmu6": "Type of Ship",
+        "ln1c4gmv8": "LTD",
+        "ln1c4gmz10": "1989-90",
+        "ln1c4gn114": "M.T. MH.ALBAKAR",
+        "ln1c4gn215": "6015",
+        "ln1c4gn314": "OIL TANKER"
+      }
+    },
+    {
+      "name": "1990-91",
+      "type": "OIL TANKER",
+      "year": "7000",
+      "ltd": "",
+      "raw": {
+        "ln1c4gmz10": "1990-91",
+        "ln1c4gn114": "MT. TT. ASTERIAS",
+        "ln1c4gn215": "7000",
+        "ln1c4gn314": "OIL TANKER"
+      }
+    },
+    {
+      "name": "M.T. COUGAR",
+      "type": "OIL TANKER",
+      "year": "1992-93",
+      "ltd": "14912",
+      "raw": {
+        "ln1c4gmz10": "1992-93",
+        "ln1c4gn114": "M.T. COUGAR",
+        "ln1c4gn215": "14912",
+        "ln1c4gn314": "OIL TANKER"
+      }
+    },
+    {
+      "name": "1993-94",
+      "type": "OIL TANKER",
+      "year": "5331",
+      "ltd": "",
+      "raw": {
+        "ln1c4gmz10": "1993-94",
+        "ln1c4gn114": "M.T. PAZIN",
+        "ln1c4gn215": "5331",
+        "ln1c4gn314": "OIL TANKER"
+      }
+    },
+    {
+      "name": "1995-96",
+      "type": "OIL TANKER",
+      "year": "2060",
+      "ltd": "",
+      "raw": {
+        "ln1c4gmz10": "1995-96",
+        "ln1c4gn114": "M.T. APSHERONSK",
+        "ln1c4gn215": "2060",
+        "ln1c4gn314": "OIL TANKER"
+      }
+    },
+    {
+      "name": "M.T. OCEANUS",
+      "type": "TANKER",
+      "year": "1996-97",
+      "ltd": "17171",
+      "raw": {
+        "ln1c4gmz10": "1996-97",
+        "ln1c4gn114": "M.T. OCEANUS",
+        "ln1c4gn215": "17171",
+        "ln1c4gn314": "TANKER"
+      }
+    },
+    {
+      "name": "1997-98",
+      "type": "OIL TANKER",
+      "year": "3673",
+      "ltd": "",
+      "raw": {
+        "ln1c4gmz10": "1997-98",
+        "ln1c4gn114": "M.T. PIONEER NAKODKI",
+        "ln1c4gn215": "3673",
+        "ln1c4gn314": "OIL TANKER"
+      }
+    },
+    {
+      "name": "2000-01",
+      "type": "OIL TANKER",
+      "year": "5540",
+      "ltd": "",
+      "raw": {
+        "ln1c4gmz10": "2000-01",
+        "ln1c4gn114": "M.T. PETROMERCEY",
+        "ln1c4gn215": "5540",
+        "ln1c4gn314": "OIL TANKER"
+      }
+    },
+    {
+      "name": "2000-01",
+      "type": "TANKER",
+      "year": "7476",
+      "ltd": "",
+      "raw": {
+        "ln1c4gmz10": "2000-01",
+        "ln1c4gn114": "M.T. RADER",
+        "ln1c4gn215": "7476",
+        "ln1c4gn314": "TANKER"
+      }
+    },
+    {
+      "name": "2002-03",
+      "type": "TANKER",
+      "year": "6482",
+      "ltd": "",
+      "raw": {
+        "ln1c4gmz10": "2002-03",
+        "ln1c4gn114": "M.T. ACCORD-I",
+        "ln1c4gn215": "6482",
+        "ln1c4gn314": "TANKER"
+      }
+    },
+    {
+      "name": "M.T. ATLAS",
+      "type": "TANKER",
+      "year": "2002-03",
+      "ltd": "16039",
+      "raw": {
+        "ln1c4gmz10": "2002-03",
+        "ln1c4gn114": "M.T. ATLAS",
+        "ln1c4gn215": "16039",
+        "ln1c4gn314": "TANKER"
+      }
+    },
+    {
+      "name": "2002-03",
+      "type": "TANKER",
+      "year": "7085",
+      "ltd": "",
+      "raw": {
+        "ln1c4gmz10": "2002-03",
+        "ln1c4gn114": "M.T. ASTYPALEA",
+        "ln1c4gn215": "7085",
+        "ln1c4gn314": "TANKER"
+      }
+    },
+    {
+      "name": "2003-04",
+      "type": "OIL TANKER",
+      "year": "1555",
+      "ltd": "",
+      "raw": {
+        "ln1c4gmz10": "2003-04",
+        "ln1c4gn114": "M.T. MOON TRADER",
+        "ln1c4gn215": "1555",
+        "ln1c4gn314": "OIL TANKER"
+      }
+    },
+    {
+      "name": "M.T. UNITED RELIANCE",
+      "type": "TANKER",
+      "year": "2003-04",
+      "ltd": "18865",
+      "raw": {
+        "ln1c4gmz10": "2003-04",
+        "ln1c4gn114": "M.T. UNITED RELIANCE",
+        "ln1c4gn215": "18865",
+        "ln1c4gn314": "TANKER"
+      }
+    },
+    {
+      "name": "2004-05",
+      "type": "OIL TANKER",
+      "year": "1446",
+      "ltd": "",
+      "raw": {
+        "ln1c4gmz10": "2004-05",
+        "ln1c4gn114": "M.T. STEF",
+        "ln1c4gn215": "1446",
+        "ln1c4gn314": "OIL TANKER"
+      }
+    },
+    {
+      "name": "2004-05",
+      "type": "OIL TANKER",
+      "year": "1376",
+      "ltd": "",
+      "raw": {
+        "ln1c4gmz10": "2004-05",
+        "ln1c4gn114": "M.T. COTSWORLD",
+        "ln1c4gn215": "1376",
+        "ln1c4gn314": "OIL TANKER"
+      }
+    },
+    {
+      "name": "2004-05",
+      "type": "OIL TANKER",
+      "year": "2699",
+      "ltd": "",
+      "raw": {
+        "ln1c4gmz10": "2004-05",
+        "ln1c4gn114": "M.T. NISHA II",
+        "ln1c4gn215": "2699",
+        "ln1c4gn314": "OIL TANKER"
+      }
+    },
+    {
+      "name": "M.T. TRADERS",
+      "type": "TANKER",
+      "year": "2004-05",
+      "ltd": "4110.11",
+      "raw": {
+        "ln1c4gmz10": "2004-05",
+        "ln1c4gn114": "M.T. TRADERS",
+        "ln1c4gn215": "4110.11",
+        "ln1c4gn314": "TANKER"
+      }
+    },
+    {
+      "name": "2004-05",
+      "type": "TANKER",
+      "year": "4525",
+      "ltd": "",
+      "raw": {
+        "ln1c4gmz10": "2004-05",
+        "ln1c4gn114": "M.T. DRAGGEN",
+        "ln1c4gn215": "4525",
+        "ln1c4gn314": "TANKER"
+      }
+    },
+    {
+      "name": "2005-06",
+      "type": "CHEMICAL TANKER",
+      "year": "2500",
+      "ltd": "",
+      "raw": {
+        "ln1c4gmz10": "2005-06",
+        "ln1c4gn114": "M.T. CARIBBEAN TRADER",
+        "ln1c4gn215": "2500",
+        "ln1c4gn314": "CHEMICAL TANKER"
+      }
+    },
+    {
+      "name": "M.T. RANGE",
+      "type": "CHEMICAL TANKER",
+      "year": "2006-07",
+      "ltd": "11954",
+      "raw": {
+        "ln1c4gmz10": "2006-07",
+        "ln1c4gn114": "M.T. RANGE",
+        "ln1c4gn215": "11954",
+        "ln1c4gn314": "CHEMICAL TANKER"
+      }
+    },
+    {
+      "name": "2007-08",
+      "type": "LPG TANKER",
+      "year": "2963",
+      "ltd": "",
+      "raw": {
+        "ln1c4gmz10": "2007-08",
+        "ln1c4gn114": "BABY",
+        "ln1c4gn215": "2963",
+        "ln1c4gn314": "LPG TANKER"
+      }
+    },
+    {
+      "name": "2008-09",
+      "type": "CHEMICAL TANKER",
+      "year": "2140",
+      "ltd": "",
+      "raw": {
+        "ln1c4gmz10": "2008-09",
+        "ln1c4gn114": "M.T. NARGES",
+        "ln1c4gn215": "2140",
+        "ln1c4gn314": "CHEMICAL TANKER"
+      }
+    },
+    {
+      "name": "M.T FAN",
+      "type": "OIL TANKER",
+      "year": "2008-09",
+      "ltd": "16046",
+      "raw": {
+        "ln1c4gmz10": "2008-09",
+        "ln1c4gn114": "M.T FAN",
+        "ln1c4gn215": "16046",
+        "ln1c4gn314": "OIL TANKER"
+      }
+    },
+    {
+      "name": "2009-10",
+      "type": "TANKER",
+      "year": "7790",
+      "ltd": "",
+      "raw": {
+        "ln1c4gmz10": "2009-10",
+        "ln1c4gn114": "MONTE CASINO",
+        "ln1c4gn215": "7790",
+        "ln1c4gn314": "TANKER"
+      }
+    },
+    {
+      "name": "2010-11",
+      "type": "CHEMICAL TANKER",
+      "year": "2160",
+      "ltd": "",
+      "raw": {
+        "ln1c4gmz10": "2010-11",
+        "ln1c4gn114": "MT KEFRE",
+        "ln1c4gn215": "2160",
+        "ln1c4gn314": "CHEMICAL TANKER"
+      }
+    },
+    {
+      "name": "ZEINAT-2",
+      "type": "CRUDE OIL TANKER",
+      "year": "2010-11",
+      "ltd": "15002",
+      "raw": {
+        "ln1c4gmz10": "2010-11",
+        "ln1c4gn114": "ZEINAT-2",
+        "ln1c4gn215": "15002",
+        "ln1c4gn314": "CRUDE OIL TANKER"
+      }
+    },
+    {
+      "name": "2010-11",
+      "type": "OIL & CHEMICAL TANKER",
+      "year": "9948",
+      "ltd": "",
+      "raw": {
+        "ln1c4gmz10": "2010-11",
+        "ln1c4gn114": "MT CHAMPION",
+        "ln1c4gn215": "9948",
+        "ln1c4gn314": "OIL & CHEMICAL TANKER"
+      }
+    },
+    {
+      "name": "2011-12",
+      "type": "OIL & CHEMICAL TANKER",
+      "year": "8612",
+      "ltd": "",
+      "raw": {
+        "ln1c4gmz10": "2011-12",
+        "ln1c4gn114": "ASPHALT VICTORY",
+        "ln1c4gn215": "8612",
+        "ln1c4gn314": "OIL & CHEMICAL TANKER"
+      }
+    },
+    {
+      "name": "OURANIA",
+      "type": "TANKER",
+      "year": "2011-12",
+      "ltd": "16499",
+      "raw": {
+        "ln1c4gmz10": "2011-12",
+        "ln1c4gn114": "OURANIA",
+        "ln1c4gn215": "16499",
+        "ln1c4gn314": "TANKER"
+      }
+    },
+    {
+      "name": "NAVAJO SPIRIT",
+      "type": "TANKER",
+      "year": "2012-13",
+      "ltd": "19500",
+      "raw": {
+        "ln1c4gmz10": "2012-13",
+        "ln1c4gn114": "NAVAJO SPIRIT",
+        "ln1c4gn215": "19500",
+        "ln1c4gn314": "TANKER"
+      }
+    },
+    {
+      "name": "2013-14",
+      "type": "TANKER",
+      "year": "3670",
+      "ltd": "",
+      "raw": {
+        "ln1c4gmz10": "2013-14",
+        "ln1c4gn114": "SULPHUR GLOBAL",
+        "ln1c4gn215": "3670",
+        "ln1c4gn314": "TANKER"
+      }
+    },
+    {
+      "name": "THERESA PACIFIC",
+      "type": "CHEMICAL TANKER",
+      "year": "2013-14",
+      "ltd": "14900",
+      "raw": {
+        "ln1c4gmz10": "2013-14",
+        "ln1c4gn114": "THERESA PACIFIC",
+        "ln1c4gn215": "14900",
+        "ln1c4gn314": "CHEMICAL TANKER"
+      }
+    },
+    {
+      "name": "GAS MAGIC",
+      "type": "LPG CARRIER",
+      "year": "2017-18",
+      "ltd": "10150",
+      "raw": {
+        "ln1c4gmz10": "2017-18",
+        "ln1c4gn114": "GAS MAGIC",
+        "ln1c4gn215": "10150",
+        "ln1c4gn314": "LPG CARRIER"
+      }
+    },
+    {
+      "name": "TIRUPATI",
+      "type": "TANKER",
+      "year": "2017-18",
+      "ltd": "23525",
+      "raw": {
+        "ln1c4gmz10": "2017-18",
+        "ln1c4gn114": "TIRUPATI",
+        "ln1c4gn215": "23525",
+        "ln1c4gn314": "TANKER"
+      }
+    },
+    {
+      "name": "COURCHEVILLE",
+      "type": "LPG CARRIER",
+      "year": "2017-18",
+      "ltd": "10150",
+      "raw": {
+        "ln1c4gmz10": "2017-18",
+        "ln1c4gn114": "COURCHEVILLE",
+        "ln1c4gn215": "10150",
+        "ln1c4gn314": "LPG CARRIER"
+      }
+    },
+    {
+      "name": "2021",
+      "type": "CHEMICAL TANKER",
+      "year": "2556",
+      "ltd": "",
+      "raw": {
+        "ln1c4gmz10": "2021",
+        "ln1c4gn114": "M.T. SHINE",
+        "ln1c4gn215": "2556",
+        "ln1c4gn314": "CHEMICAL TANKER"
+      }
+    },
+    {
+      "name": "M.T. JADE",
+      "type": "CRUDE OIL TANKER",
+      "year": "2022",
+      "ltd": "13138.4",
+      "raw": {
+        "ln1c4gmz10": "2022",
+        "ln1c4gn114": "M.T. JADE",
+        "ln1c4gn215": "13138.4",
+        "ln1c4gn314": "CRUDE OIL TANKER"
+      }
+    },
+    {
+      "name": "M.T. KAREN KNUTSEN",
+      "type": "SHUTTLE TANKER",
+      "year": "2022",
+      "ltd": "25865.8",
+      "raw": {
+        "ln1c4gmz10": "2022",
+        "ln1c4gn114": "M.T. KAREN KNUTSEN",
+        "ln1c4gn215": "25865.8",
+        "ln1c4gn314": "SHUTTLE TANKER"
+      }
+    }
+  ],
+  "rorocrew": [
+    {
+      "name": "Year",
+      "type": "RORO",
+      "year": "4568",
+      "ltd": "",
+      "raw": {
+        "ln1c4lo38": "Year",
+        "ln1c4lo6": "Name of Ship",
+        "ln1c4lo71": "Type of Ship",
+        "ln1c4lo81": "LTD",
+        "ln1c4loa12": "1995-96",
+        "ln1c4loc14": "M.V. MARSHAL ROKOSSOVSKY",
+        "ln1c4lod15": "4568",
+        "ln1c4loe14": "RORO"
+      }
+    },
+    {
+      "name": "M.V. KIDIRA",
+      "type": "CAR CARRIER",
+      "year": "2000-01",
+      "ltd": "10696.6",
+      "raw": {
+        "ln1c4loa12": "2000-01",
+        "ln1c4loc14": "M.V. KIDIRA",
+        "ln1c4lod15": "10696.6",
+        "ln1c4loe14": "CAR CARRIER"
+      }
+    },
+    {
+      "name": "ABBY G",
+      "type": "RORO",
+      "year": "2010-11",
+      "ltd": "19376",
+      "raw": {
+        "ln1c4loa12": "2010-11",
+        "ln1c4loc14": "ABBY G",
+        "ln1c4lod15": "19376",
+        "ln1c4loe14": "RORO"
+      }
+    },
+    {
+      "name": "2020/21",
+      "type": "CAR CARRIER",
+      "year": "",
+      "ltd": "12700",
+      "raw": {
+        "ln1c4loa12": "2020/21",
+        "ln1c4loc14": "EURO SPIRIT",
+        "ln1c4lod15": "12700",
+        "ln1c4loe14": "CAR CARRIER"
+      }
+    },
+    {
+      "name": "1997-98",
+      "type": "",
+      "year": "6326",
+      "ltd": "",
+      "raw": {
+        "ln1c4loa12": "1997-98",
+        "ln1c4loc14": "M.V. TEHODOR HEUSS",
+        "ln1c4lod15": "6326",
+        "ln1c4loe14": "PASS/RAIL FERRY"
+      }
+    },
+    {
+      "name": "2003-04",
+      "type": "",
+      "year": "7000",
+      "ltd": "",
+      "raw": {
+        "ln1c4loa12": "2003-04",
+        "ln1c4loc14": "M.V. FRANSES CO DI PAOLA",
+        "ln1c4lod15": "7000",
+        "ln1c4loe14": "PASS/RAIL FERRY"
+      }
+    },
+    {
+      "name": "D.V. OKKAI",
+      "type": "CAR CARRIER",
+      "year": "2004-05",
+      "ltd": "6294.7",
+      "raw": {
+        "ln1c4loa12": "2004-05",
+        "ln1c4loc14": "D.V. OKKAI",
+        "ln1c4lod15": "6294.7",
+        "ln1c4loe14": "CAR CARRIER"
+      }
+    }
+  ],
+  "military": [
+    {
+      "name": "Year",
+      "type": "MILITARY",
+      "year": "2329",
+      "ltd": "",
+      "raw": {
+        "ln1c5wp211": "Year",
+        "ln1c5wp414": "Name of Ship",
+        "ln1c5wp6": "Type of Ship",
+        "ln1c5wp615": "LTD",
+        "ln1c5wp912": "1992-93",
+        "ln1c5wpb14": "M.V. HMS PHOEBE",
+        "ln1c5wpc15": "2329",
+        "ln1c5wpd14": "MILITARY"
+      }
+    },
+    {
+      "name": "1992-93",
+      "type": "MILITARY",
+      "year": "1966",
+      "ltd": "",
+      "raw": {
+        "ln1c5wp912": "1992-93",
+        "ln1c5wpb14": "M.V. SAS PRESIDENT PRETERIUS",
+        "ln1c5wpc15": "1966",
+        "ln1c5wpd14": "MILITARY"
+      }
+    }
+  ],
+  "researchvessel": [
+    {
+      "name": "Year",
+      "type": "RESEARCH VESSEL",
+      "year": "3489",
+      "ltd": "",
+      "raw": {
+        "ln1c6hy23": "Year",
+        "ln1c6hy46": "Name of Ship",
+        "ln1c6hy59": "Type of Ship",
+        "ln1c6hy68": "LTD",
+        "ln1c6hyb1": "1999-00",
+        "ln1c6hyd1": "M.V. IGEN PEARL",
+        "ln1c6hye": "3489",
+        "ln1c6hye15": "RESEARCH VESSEL"
+      }
+    }
+  ],
+  "fpso": [
+    {
+      "name": "Year",
+      "type": "FPSO",
+      "year": "",
+      "ltd": "26293.5",
+      "raw": {
+        "ln1c59zl": "Year",
+        "ln1c59zn1": "Name of Ship",
+        "ln1c59zo2": "Type of Ship",
+        "ln1c59zp1": "LTD",
+        "ln1c59zt4": "2022/23",
+        "ln1c59zv5": "M.T. ROAR",
+        "ln1c59zw6": "26293.5",
+        "ln1c59zx5": "FPSO"
+      }
+    }
+  ]
+}

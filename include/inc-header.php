@@ -279,9 +279,13 @@ if (!$crmintegration || !$trackercodeintegration) { ?>
       </svg>
     </a>
   <?php } ?>
-  <?php /*/?><a href="javascript:void(0)" class="btn btn-primary sticky-btn-enquire" onclick="openForm('enquire')">Enquire Now</a>
-  <a href="javascript:void(0)" class="btn btn-primary sticky-btn-enquire sticky-brochure" onclick="openForm('brochure')">Download Brochure</a><?php /*/ ?>
+  <?php /*/?>
+  <a href="javascript:void(0)" class="btn btn-primary sticky-btn-enquire" onclick="openForm('enquire')">Enquire Now</a>
+  <a href="javascript:void(0)" class="btn btn-primary sticky-btn-enquire sticky-brochure" onclick="openForm('brochure')">Download Brochure</a>
+<?php /*/?>
 
+
+<?php /*/?>
   <div id="register-modal" class="theme-modal">
     <div class="theme-modal-background"></div>
     <div class="theme-modal-card">
@@ -343,4 +347,6 @@ if (!$crmintegration || !$trackercodeintegration) { ?>
       </div>
     </div>
   </div>
+  <?php /*/?>
+
 <?php } ?>

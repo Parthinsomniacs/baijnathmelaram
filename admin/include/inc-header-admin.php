@@ -1,8 +1,8 @@
 <div id="menu-trigger" class="menu-trigger insomenu-bars wow fadeInLeft animated" data-wow-delay="0.3s"><span></span></div>
 <nav class="sidebar wow fadeInLeft animated" data-wow-delay="0.3s">
-  <img class="logo" src="<?php echo $imagesurl; ?>logo.png" alt="<?php echo $sitename; ?> Logo">
+  <img class="logo" src="<?php echo $imagesurl; ?>theme-icon-transparent.svg" alt="<?php echo $sitename; ?> Logo">
   <?php if($page == "adminlogin"){ ?>   
-  <img class="inso-logo" src="<?php echo $imagesurl; ?>inso-logo-black.svg" alt="<?php echo $sitename; ?> Logo">
+  <img class="inso-logo" src="<?php echo $imagesurl; ?>logo.svg" alt="<?php echo $sitename; ?> Logo">
   <?php } ?>   
   <?php if(isset($_SESSION['username'])) { ?>
   <ul class="menu">

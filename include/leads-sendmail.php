@@ -61,7 +61,7 @@ $body = "<table width='100%' border='0'>
 						</tr>
 						<tr>
 						  <td style='border-bottom:1px solid #E4E4E4;font-size: 15px;padding-top: 9px;padding-bottom:9px;width: 50%;font-weight: bold;color: #999999;font-family: Tahoma,Geneva,sans-serif;'>Mobile Number</td>
-						  <td style='border-bottom: 1px solid #E4E4E4;font-size: 15px;padding-top: 9px;padding-bottom:9px;width: 50%;color: #999999;font-family: Tahoma,Geneva,sans-serif;'>" . $phone . "</td>
+						  <td style='border-bottom: 1px solid #E4E4E4;font-size: 15px;padding-top: 9px;padding-bottom:9px;width: 50%;color: #999999;font-family: Tahoma,Geneva,sans-serif;'>" . (!empty($countrycode) ? $countrycode . ' ' : '') . $phone . "</td>
 						</tr>
 						<tr style='height: 5px;line-height: 0;'>
 							<td colspan='2'>&nbsp;</td>
