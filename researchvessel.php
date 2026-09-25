@@ -53,7 +53,7 @@ $utm = "yes";
                 <polyline points="15 18 9 12 15 6"></polyline>
               </svg>
             </a>
-            <a href="<?php echo $siteurl; ?>others.php" class="ship-nav-btn" title="Next: Others" aria-label="Next">
+            <a href="<?php echo $siteurl; ?>greenship-recycling.php" class="ship-nav-btn" title="Next: Green Ship Recycling" aria-label="Next">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="9 18 15 12 9 6"></polyline>
               </svg>

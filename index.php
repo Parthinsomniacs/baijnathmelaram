@@ -678,7 +678,7 @@ $utm = "yes";
               </a>
             </li>
             <li class="cap-item" data-index="8">
-              <a href="<?php echo $siteurl; ?>others.php" class="cap-item-link" title="View Other Ships">
+              <a href="<?php echo $siteurl; ?>greenship-recycling.php" class="cap-item-link" title="View Green Ship Recycling">
                 <span class="cap-item-text">Others</span>
                 <span class="cap-item-arrow" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
